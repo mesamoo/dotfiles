@@ -7,9 +7,10 @@
 $font 								= "arimo-16#XFT"
 $font_bigger 						= "arimo-16#XFT"
 $font_bigger2 						= "arimo-18#XFT"
-#$FONT_TITLE 						= "XFT#Oxygen:size=14:weight=bold#Center"
-$FONT_TITLE 						= "XFT#arimo:size=17#Center"
-$FONT_TITLE2 						= "XFT#droid sans:size=18#Center"
+#$FONT_TITLE 						= "XFT#Oxygen:size=16:weight=bold#Center"
+$FONT_TITLE 						= "XFT#arimo:size=15#Center"
+#$FONT_TITLE2 						= "XFT#droid sans:size=16#Center"
+$FONT_TITLE2 						= "XFT#Oxygen:size=15:weight=bold#Center"
 
 PDecor {
 	Decor = "Default" {
@@ -41,7 +42,8 @@ PDecor {
 			FontColor {
 #				Focused 			= "#95AF9E"
 				Focused 			= "#cccccc"
-				FocusedSelected 	= "#EBFA60"                             
+				FocusedSelected 	= "#EBFA60"
+#				FocusedSelected 	= "#54B8F8"
 				Unfocused 			= "#cccccc"
 				UnfocusedSelected 	= "#cccccc"
 				}
