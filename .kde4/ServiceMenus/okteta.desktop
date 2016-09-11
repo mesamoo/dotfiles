@@ -1,0 +1,27 @@
+[Desktop Entry]
+Type=Service
+Actions=_SEPARATOR_;Okteta;Okteta_(Root);MadEdit;wxHexeditor;_SEPARATOR_;
+X-KDE-Priority=TopLevel
+X-KDE-Submenu=HexEdit
+ServiceTypes=KonqPopupMenu/Plugin,all/allfiles
+Encoding=UTF-8
+
+[Desktop Action Okteta]
+Name=Okteta
+Icon=okteta
+Exec=/usr/bin/okteta %U
+
+[Desktop Action Okteta_(Root)]
+Name=Okteta_(Root)
+Icon=okteta
+Exec=kdesu /usr/bin/okteta %U
+
+[Desktop Action MadEdit]
+Name=MadEdit
+Icon=madedit.xpm
+Exec=/usr/bin/madedit %f
+
+[Desktop Action wxHexeditor]
+Name=wxHexeditor
+Icon=okteta
+Exec=/usr/bin/wxHexEditor %U

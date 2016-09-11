@@ -1,0 +1,100 @@
+#
+# 	Part of kde-service-menu-pdf Version 0.5
+# 	Copyright (C) 2011 Giuseppe Benigno <giuseppe.benigno(at)gmail.com>
+#
+# 	This program is free software: you can redistribute it and/or modify
+# 	it under the terms of the GNU General Public License as published by
+# 	the Free Software Foundation, either version 3 of the License, or
+# 	(at your option) any later version.
+#
+# 	This program is distributed in the hope that it will be useful,
+# 	but WITHOUT ANY WARRANTY; without even the implied warranty of
+# 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# 	GNU General Public License for more details.
+#
+# 	You should have received a copy of the GNU General Public License
+# 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/pdf;
+Icon=image
+TryExec=pdfimages_kmenu.sh
+Actions=all;selected;_SEPARATOR_;all_usr;selected_usr;_SEPARATOR_;all_own;selected_own;
+Name=pdfimages service menu
+Name[de]=pdfimages Servicemenü
+Name[es]=Menú de pdfimages
+Name[gl]=Menu de pdfimages
+X-KDE-Submenu=Extract images
+X-KDE-Submenu[de]=Bilder herausziehen
+X-KDE-Submenu[es]=Extraer imágenes
+X-KDE-Submenu[gl]=Extrair images
+X-KDE-Submenu[it]=Estrai immagini
+
+[Desktop Action all]
+Icon=image
+Name=From all pages
+Name[de]=Von allen Seiten
+Name[es]=Todas las páginas
+Name[gl]=De todas as páginas
+Name[it]=Da tutte le pagine
+Exec=pdfimages_kmenu.sh en all "%f"
+Exec[de]=pdfimages_kmenu.sh de all "%f"
+Exec[it]=pdfimages_kmenu.sh it all "%f"
+
+[Desktop Action all_usr]
+Icon=preferences-desktop-user-password
+Name=From all pages (with user password)
+Name[de]=Von allen Seiten (Mit Benutzerpasswort)
+Name[es]=Todas las páginas (con clave de usuario)
+Name[gl]=De todas as páginas (com contra-sinal de usuário)
+Name[it]=Da tutte le pagine (con password utente)
+Exec=pdfimages_kmenu.sh en all_usr "%f"
+Exec[de]=pdfimages_kmenu.sh de all_usr "%f"
+Exec[it]=pdfimages_kmenu.sh it all_usr "%f"
+
+[Desktop Action all_own]
+Icon=preferences-desktop-cryptography
+Name=From all pages (with main password)
+Name[de]=Von allen Seiten (Mit Besitzerpasswort)
+Name[es]=Todas las páginas (con clave de proprietario)
+Name[gl]=De todas as páginas (com contra-sinal de proprietário)
+Name[it]=Da tutte le pagine (con password proprietario)
+Exec=pdfimages_kmenu.sh en all_own "%f"
+Exec[de]=pdfimages_kmenu.sh de all_own "%f"
+Exec[it]=pdfimages_kmenu.sh it all_own "%f"
+
+[Desktop Action selected]
+Icon=image
+Name=From selected page range
+Name[de]=Von bestimmten Seiten
+Name[es]=Del rango de páginas seleccionado
+Name[gl]=Dum rango de páginas selecionado
+Name[it]=Dalle pagine selezionate
+Exec=pdfimages_kmenu.sh en selected "%f"
+Exec[de]=pdfimages_kmenu.sh de selected "%f"
+Exec[it]=pdfimages_kmenu.sh it selected "%f"
+
+[Desktop Action selected_usr]
+Icon=preferences-desktop-user-password
+Name=From selected page range (with user password)
+Name[de]=Von bestimmten Seiten (Mit Benutzerpasswort)
+Name[es]=Del rango de páginas seleccionado (con clave de usuario)
+Name[gl]=Dum rango de páginas selecionado (com contra-sinal de usuário)
+Name[it]=Dalle pagine selezionate (con password utente)
+Exec=pdfimages_kmenu.sh en selected_usr "%f"
+Exec[de]=pdfimages_kmenu.sh de selected_usr "%f"
+Exec[it]=pdfimages_kmenu.sh it selected_usr "%f"
+
+[Desktop Action selected_own]
+Icon=preferences-desktop-cryptography
+Name=From selected page range (with main password)
+Name[de]=Von bestimmten Seiten (Mit Besitzerpasswort)
+Name[es]=Del rango de páginas seleccionado (con clave de proprietario)
+Name[gl]=Dum rango de páginas selecionado (com contra-sinal de proprietário)
+Name[it]=Dalle pagine selezionate (con password proprietario)
+Exec=pdfimages_kmenu.sh en selected_own "%f"
+Exec[de]=pdfimages_kmenu.sh de selected_own "%f"
+Exec[it]=pdfimages_kmenu.sh it selected_own "%f"

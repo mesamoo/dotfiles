@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Service
+Encoding=UTF-8
+ServiceTypes=KonqPopupMenu/Plugin,application/ogg,audio/vorbis,application/x-ogg,audio/ogg,audio/x-vorbis+ogg,audio/x-mp3,audio/mpeg,audio/mp3,audio/flac,audio/x-flac,audio/x-flac+ogg,audio/x-oggflac,audio/mp4,audio/x-m4a,audio/mp4,audio/x-m4a,audio/x-ms-wma,video/3gpp,audio/3gpp,video/3gpp2,audio/3gpp2,audio/x-8svx,audio/8svx,audio/x-aiff,audio/aiff,audio/aac,audio/ac3,audio/x-aiff,audio/aiff,audio/mp4,audio/amr,audio/3gpp,audio/3gpp2,audio/amr-wb,audio/3gpp,audio/x-ape,video/x-msvideo,video/x-flv,video/flv,audio/midi,video/x-matroska,audio/x-mod,video/quicktime,audio/mpeg,audio/mpa,audio/mp2,audio/x-mp2,video/mp4,video/mpeg,audio/x-musepack,audio/musepack,video/ogg,audio/ogg,audio/opus,audio/vnd.rn-realaudio,application/vnd.rn-realmedia,video/vnd.rn-realvideo,application/x-shorten,audio/x-speex,audio/x-speex+ogg,audio/x-tta,audio/x-wavpack,video/webm,video/x-ms-wmv,video/x-ms-asf,audio/x-wav,audio/wav
+Icon=soundkonverter
+Actions=ConvertWithSoundkonverter;
+
+[Desktop Action ConvertWithSoundkonverter]
+Name=Convert with soundKonverter
+Icon=soundkonverter
+Exec=soundkonverter %F

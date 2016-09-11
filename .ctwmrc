@@ -1,0 +1,955 @@
+#===============#
+# ~./ctwmrc     # user file for LAPE
+#===============#
+#       "man ctwm"
+
+IgnoreLockModifier
+NoBackingStore
+IgnoreLockModifier
+
+##============================CONTENTS=============================##
+ ### -- Features users can define
+ ### -- Keyboard input focus options
+ ### -- Appearance of the title bar of each window
+ ### -- Other aspects of "Look and Feel"
+ ### -- Specifying Fonts
+ ### -- Specifying colours for parts of the display
+ ### -- Icon manager
+ ### -- Multiple workspaces: virtual desktops
+ ### -- IconRegion: where iconised windows go
+ ### -- Define some useful functions
+ ### -- Mouse button actions in different contexts
+ ### -- Actions invoked by keyboard buttons without the mouse
+ ### -- Using the keyboard to warp to a new workspace or window
+ ### -- Additional Button actions which invoke menus
+ ### -- Define the menus to be used
+##===================================================================##
+
+### -- Features users can define --
+## WARNING If you make changes, make sure your new version works before
+# you log out. If the file generates errors because you edit it wrongly
+# you may not be able to log in easily.
+
+### -- Keyboard input focus options --
+
+## Use sloppy focus. This means that mouse pointer moves out of a window
+## onto root window focus remains with original window until a new one
+## is selected
+#SloppyFocus
+
+## Use this to ensure focus is set only by clicking (as in Windows)
+ClickToFocus
+
+##Transient windows get focus automatically when created.  Useful
+##with programs that have keyboard shortcuts that pop up windows.
+AutoFocusToTransients
+
+##This variable indicates that ctwm will not set the focus on the
+##corresponding window when the pointer is in an IconManager.
+#NoIconManagerFocus
+
+# Does not work in older versions of ctwm
+#SaveWorkspaceFocus
+
+### -- Appearance of the title bar of each window --
+
+# Uncomment the following line to disable title bars completely
+# NoTitle
+
+# If you don't want title bars on everything (e.g. the iconmanager or the
+# the workspace manager, your clock, etc. specify this here.
+
+NoTitle
+{ # things I don't want title bars on
+  "pointer"
+  "TWM Icon Manager"
+  "WorkSpaceManager"
+  "xclock"
+  "xexit"
+  "xbiff"
+  "xeyes"
+  "oclock"
+  "xload"
+  # This is a sun utility:
+  #"perfmeter"
+  #"X-3D"
+  "xdaliclock"
+  "Tgif"
+  "Xgraphic"
+  "xv"
+  "battery"
+  "alsamixer"
+  "cet_start"
+  "seet_start"
+  "lxpanel"
+  "gtk-recordMyDestop frame"
+}
+
+
+# Action buttons on the title bar: By default the iconiser (minimiser) button
+# is at top left and the resize button at top right. This cannot be changed.
+# However we can include other buttons.
+
+# We show below how to put a "close" button (with an "X" logo) on the
+# right next to the resize button, and just inside it a button with
+# zoom options and some other behaviours.
+
+# Buttons need bitmaps. Built in bitmaps provided by ctwm are:
+# built-in bitmaps ":resize" :iconify  "opendot" ":question" ":xlogo"
+# built-in bitmaps ":resize" "menu12" "opendot" ":question" ":xlogo"
+
+## Format for buttons
+# <buttonlocation> "<icon name>" = <action>
+
+TitleButtonBorderWidth 0
+TitlePadding 1
+#TitleButtonShadowDepth 2
+FramePadding 1
+TitleButtonShadowDepth 0
+
+## from glow
+#LeftTitleButton "xpm:white.xpm" {
+#    Button1 : f.menu "ToolMenu"
+#}
+#LeftTitleButton "xpm:green.xpm" {
+#    Button1 : f.zoom
+#    Button2 : f.horizoom
+#    Button3 : f.fullzoom
+#}
+#LeftTitleButton "xpm:blue.xpm" {
+#    Button1 : f.iconify
+#}
+## RightTitleButton "xpm:yellow.xpm" {
+##     Button1 : f.squeeze
+## }
+## RightTitleButton "xpm:template.xpm" {
+## }
+## RightTitleButton "xpm:red.xpm" {
+##     Button1 : f.delete
+##     Button3 : f.destroy
+## }
+
+# Buttons on right of title bar go from left to right,
+# ending with the built in resize button at the right end.
+
+#RightTitleButton "xpm:template.xpm" {
+#    Button1 : f.zoom
+#}
+
+# Next a button that invokes a menu defined below in the menu section
+#RightTitleButton "menu12" = f.menu "WinOpsMenu"
+#RightTitleButton ":question" = f.menu "WinOpsMenu"
+
+#RightTitleButton "xpm:red.xpm" {
+#    Button1 : f.destroy
+#}
+
+# Just inside the resize button, put a "close" button with a big "X"
+#RightTitleButton       "xpm:zzz.xpm"           = f.delete
+#RightTitleButton       "xpm:white.xpm"         = f.delete
+#RightTitleButton       ":xpm:cross"            = f.delete
+#RightTitleButton       "menu12"                = f.delete
+#RightTitleButton       ":xlogo"                = f.delete
+
+
+### -- Other aspects of "Look and Feel" --
+
+## Turns off the feature  toggling  the  workspace  manager  state
+## to/from  map/button state when you press ctrl and the workspace
+## manager window is in focus.
+DontToggleWorkSpaceManagerState
+
+## Stop windows from moving off the screen when pushed past the end
+# Uncomment if you want this constraint
+# DontMoveOff
+
+## Use full window image rather than outline when moving a window
+# If too slow on your terminal, then comment this out.
+#OpaqueMove
+
+## Use full window image rather than outline when resizing a window
+#OpaqueResize
+NoOpaqueResize
+
+## Place new windows 'at random' rather than asking user to place them
+# If you comment this out each new window comes up as a "wire frame"
+# which you have to move with the mouse then click button 1
+RandomPlacement
+
+## Make titlebars short rather than full window width
+# SqueezeTitle
+
+## Add title bar to transient windows as well as permanent ones
+DecorateTransients
+
+## Uncomment the next line to stop highlighting of borders of current
+#  active window. If you turn this on it interferes with border colour
+# specification (see BorderColor below)
+# NoHighlight
+
+## Useful on LCD monitors
+####NoTitleHighlight
+## from glow: put window name in the centre (default left)
+#TitleJustification  "center"
+
+## Move cursor into a window when it is de-iconified (maximised)
+# Uncomment if you want this behaviour
+# WarpCursor
+
+## Specify windows to be in the "warp ring".
+# This variable specifies a list of windows  along which the
+# f.warpring function cycles. If no argument is given, all the
+# windows are in the ring.
+#     WindowRing {xterm1 xterm2 Emacs XVed netscape ...etc... }
+WindowRing
+
+## Show what's happening when window is (de)iconified. The number
+# specifies intermediate frames per zoom between window and icon
+# Reduce the number if your machine is slow. Increase the number to slow
+# down the "zoom" effect.
+Zoom 850
+
+## IconifyByUnmapping
+#  This variable indicates that windows  should  be  iconified  by
+#  being  unmapped  without trying to map any icons.
+IconifyByUnmapping
+
+# Make ctwm try to restore screen correctly after kill and restart
+RestartPreviousState
+
+## Control of window borders. Later we attach actions to borders (frames)
+
+## Width of window borders
+# If too small, it is hard to select a border. If too large, the borders
+# take up too much space. This default seems acceptable
+# It is overridden by 3D borders
+BorderWidth 4
+## This value is used for 3d borders
+ThreeDBorderWidth 4
+
+## you can stop some windows having borders, e.g.
+# NoBorder { win1 win2 win3  }
+NoBorder{ "RC_MESSAGE" }
+
+## WindowGeometries {
+##   "npviewer.bin"  "+0+0"
+## }
+
+## Give borders a 3-D appearance. Comment this out if you prefer "flat"
+# borders. (If this is on the BorderWidth value is ignored.)
+UseThreeDBorders
+#From glow
+#UseThreeDWMap
+
+#From glow
+#RestartPreviousState
+
+## Allow individual clients to set border width if they want to
+# If you uncomment this, the initial borderwidth specified when
+# a window is created will be preserved. Othewise the window manager
+# will decide
+# ClientBorderWidth
+
+## Make selected menu items appear to depress.
+# Comment this out if you prefer less fussy flat menus
+UseThreeDMenus
+
+# Give title-bars a 3-d appearance
+####UseThreeDTitles
+
+# Useful on LCD display
+# Change depth in title bar to show which window is in focus
+####SunkFocusWindowTitle
+
+##Use  resizing  cursors  when  the  pointer  is  on  the window border
+
+BorderResizeCursors
+
+### -- Specifying Fonts --
+
+## You can use "xfontsel" and "xlsfonts" utilities to find out which
+# fonts are available on your system. The fonts specified below
+# should be available in all.
+
+## Select some nice clear fonts (you may want smaller ones for a low
+# resolution screen)
+
+# For window label on title bar
+# (A proportional font, like helvetica, can save space)
+#TitleFont "-*-helvetica-bold-r-normal-*-17-*"
+TitleFont "-*-helvetica-bold-r-normal-*-20-*"
+#TitleFont "-*-helvetica-*-14-*"
+#TitleFont "10x20"
+# TitleFont "12x24"
+# Other possibilities
+# TitleFont "-*-helvetica-bold-r-*-14-*"
+# TitleFont "-*-helvetica-bold-r-*-17-*"
+# TitleFont "-*-helvetica-bold-r-*-18-*"
+# TitleFont "-*-helvetica-bold-r-*-20-*"
+# TitleFont "9x15"
+# TitleFont "9x15bold"
+
+# Fonts in menus
+#MenuFont "-*-helvetica-bold-r-*-14-*"
+MenuFont "-*-helvetica-bold-r-normal-*-20-*"
+#MenuFont "-*-helvetica-bold-r-*-17-*"
+#MenuFont  "9x15bold"
+#MenuFont  "10x20"
+#MenuFont "-*-helvetic-bold-r-*-20-*"
+
+# Fonts labelling icons (minimised windows)
+IconFont "-*-helvetica-bold-r-*-14-*"
+#IconFont  "8x13bold"
+
+# Font for the iconmanager
+IconManagerFont "-*-helvetica-bold-r-*-12-*"
+IconManagerFont "-*-helvetica-bold-r-normal-*-17-*"
+#IconManagerFont "-*-times-bold-r-*-12-*"
+#IconManagerFont "8x13bold"
+
+# Font for the Workspace Manager
+WorkSpaceFont "-*-helvetica-bold-r-*-12-*"
+
+# Alternative fixed with fonts
+# IconManagerFont "8x13bold"
+# IconManagerFont "8x13bold"
+# IconManagerFont "9x15bold"
+
+# Alternative, smaller fonts
+# TitleFont "8x13"
+# MenuFont  "8x13"
+# IconFont  "8x13"
+
+# Others: 6x13 7x13 9x15 9x15bold 10x20 a14 12x24
+
+# Fonts for the numbers showing sizes of windows as you resize them
+#ResizeFont "9x15bold"
+ResizeFont "-*-helvetica-bold-r-*-14-*"
+
+
+# -- Autoraising --
+# If set, a window is automatically raised whenever the pointer has come to
+# rest in it for the amount of time (in milliseconds) specified by the
+# RaiseDelay variable. Unfortunately disables mouse actions for that time!
+# Uncomment next line if you want autoraising. Or you can specify a list of
+# windows ot be autoraised. See the man file
+# AutoRaise
+
+# Set autorase delay in milliseconds: 400 = 0.4 secs, 5000 = 5 secs
+# RaiseDelay 400
+
+### -- Specifying colours for parts of the display --
+
+# from glow
+InterpolateMenuColors
+#
+Color
+{
+  # Foreground and background colours for text on title bars
+  TitleForeground "white"
+  TitleBackground "midnight blue"
+  #  TitleBackground "gray40"
+  # A more conventional option
+  # TitleForeground "black"
+  # TitleBackground "gray"
+
+  # Colour of the border of active window
+  # You can use different colours for different sorts of windows.
+  # See the man file
+  # Set border colour for current window (if NoHighlight is not on)
+  #BorderColor "gray60"
+  ## OR if you prefer something more fancy:
+    BorderColor "gold"
+
+  # Colour of border for non-current window
+  BorderTileBackground "gray20"
+  # BorderTileBackground "red"
+
+  # This is used only if NoHighlight is turned on. Used for stippling
+  # BorderTileForeground "black"
+
+  # Colours of iconified windows
+    IconForeground              "white"
+    IconBackground              "gray40"
+    # some options
+    # IconForeground            "black"
+    # IconBackground            "gray"
+    IconBorderColor             "gray"
+
+    IconManagerBackground       "gray80"
+    ####IconManagerBackground   "#006"
+    IconManagerForeground       "black"
+
+  # Colours for "pop-up" menus
+#       MenuTitleForeground     "black"
+#       MenuTitleBackground     "gray"
+#
+    MenuForeground              "gray90"
+    MenuBackground              "gray20"
+
+# from glow
+##      MenuBackground          "#686B9F"
+##      MenuForeground          "white"
+      MenuTitleBackground       "gray90"
+      MenuTitleForeground       "blue"
+#
+      MapWindowBackground       "DeepSkyBlue1" {
+          "rxvt" "#369"
+          "gvim"  "#afa"
+          "cmvc"  "#faa"
+          "gimp"  "#f88"
+          "xterm" "#afa"
+#       "xdvi" "orange"
+          "xdvik" "gray60"
+          "Xpdf" "pink"
+#       "Firefox" "yellow"
+#       "Mozilla" "yellow"
+      }
+      MapWindowForeground       "Black" {
+          "rxvt" "White"
+      }
+}
+
+
+# ## In case you have a machine without colour try something like this:
+# Monochrome
+# {
+#   TitleForeground "black"
+#   TitleBackground "gray"
+#
+#   BorderColor "black"
+#
+#   IconForeground "black"
+#   IconBackground "gray"
+#   IconBorderColor "gray"
+#
+#   MenuTitleForeground "black"
+#   MenuTitleBackground "gray"
+#
+#   MenuForeground "black"
+#   MenuBackground "white"
+# }
+
+
+### -- Icon manager --
+
+## The icon manager lists the windows in the current workspace (unless
+# they are in the "dontshow" list. You can open and close those windows
+# by clicking on their label in the icon manager.
+
+# Even if we don't show the Icon manager by default, we still set it up.
+# Then the two functions f.showiconmgr f.hideiconmgr can be used to show
+# and hide it.
+
+# Put icon manager at right hand edge, down somewhat
+# leave room for a clock or something like xeyes.
+# Specify the width (100) and a nominal height (30). The actual height
+# will depend on the number of entries and the font size chosen.
+# You may have to increase the width to accommodate windows with long titles.
+#IconManagerGeometry "100x30-0+115"
+#IconManagerGeometry "100x30-150+115"
+#IconManagerGeometry "100x30+1030+115"
+## for use with lape monitor
+#IconManagerGeometry "100x30-5+115"
+## for use with narrower monitor
+IconManagerGeometry "150x30-0+115"
+
+# Alterantively, put the icon manager at the top right if you prefer
+# IconManagerGeometry "100x30-0+0"
+
+# Comment out this line to suppress the icon manager. It can then
+# be displayed by the f.showiconmgr function.
+ShowIconManager
+
+# Uncomment this to get iconmanager to list windows alphabetically
+# The default is order of original creation, i.e. latest last.
+ SortIconManager
+
+# Give the icon manager a 3-D look
+# Comment this out for a less fussy, "flat" appearance of iconmanager
+# UseThreeDIconManagers
+
+# Things we don't want the icon manager to list
+IconManagerDontShow
+{
+  "xclock"
+  "xdaliclock"
+  "oclock"
+  "xeyes"
+  "xpostit"
+  "xconsole"
+  "xexit"
+  "exitwidget"
+  "xbiff"
+  "No Name"
+  "xload"
+  "perfmeter"
+  "XXX"
+}
+
+### -- Multiple workspaces: virtual desktops --
+
+# Uncomment this to enable visible workspace manager
+ShowWorkSpaceManager
+
+# from glow
+DontPaintRootWindow
+
+# Start up with the workspace manager visible
+StartInMapState
+
+# Specify the number of workspaces, what should go in them, and how they
+# should look when "current" or not current. Add more if you wish.
+
+# You can use different foreground and background colours for different
+# workspaces, though that is not obligatory.
+# Using different colours for bg-root helps remind you which workspace you
+# are currently working in.
+# See "man ctwm" for more options
+
+WorkSpaces
+{
+ #Name        bg     fg      bg-root
+  "Page 1"  {"gray" "black" "cyan4"}
+  "Page 2"  {"gray" "black" "gray50"}
+  "Page 3"  {"gray" "black" "gray50"}
+  "Page 4"  {"gray" "black" "gray50"}
+  "Page 5"  {"gray" "black" "gray50"}
+  "Page 6"  {"gray" "black" "gray50"}
+  "Page 7"  {"gray" "black" "gray50"}
+  "Page 8"  {"gray" "black" "gray50"}
+  "Page 9"  {"gray" "black" "gray50"}
+  "Page 10"  {"gray" "black" "gray50"}
+}
+
+# Add more of those if you wish. You may then need to adjust the "columns"
+# parameter and width and height, in the geometry specification, below.
+
+# Make the "current" work space stand out on the map of workspaces.
+# The middle colour is the background it shows
+MapWindowCurrentWorkSpace { "gray40" "white" "gray15" }
+
+# NOTE: which geometry you use for the workspace manager, below, should
+# determine how you specify icon placement using IconRegion, further down.
+
+## Workspace manager in two columns, with space for icons below.
+# Width 120, height 90, against right edge, 30 pixels up from bottom.
+# WorkSpaceManagerGeometry    "300x80-0-30" 6
+# WorkSpaceManagerGeometry    "200x80+945+750" 3
+# WorkSpaceManagerGeometry    "200x80-0-60" 3
+# Or in three columns
+#WorkSpaceManagerGeometry    "240x85-0-60" 3
+#WorkSpaceManagerGeometry    "252x85-0-60" 3
+
+# Or in four columns
+#WorkSpaceManagerGeometry    "300x85-0-60" 4
+# Or in two columns five rows
+#WorkSpaceManagerGeometry    "150x270-0-20" 2
+####WorkSpaceManagerGeometry    "100x250+1340+650" 2
+WorkSpaceManagerGeometry    "100x250+0+115" 2
+# The last number is the number of columns.
+
+## Another possibility for workspacemanager: bottom right, 4 columns
+# with corresponding possible icon region
+# WorkSpaceManagerGeometry    "200x45-0-0" 4
+# IconRegion "1040x500-0-75" South East 5 5
+
+## Specify that certain windows should always go in certain workspaces
+# You may have to experiment to find out what name goes on the title
+# of the window, and use that in the Occupy list.
+Occupy
+{
+  "XCONSOLE"    {"Page 1"}
+  "CONSOLE"     {"Page 1"}
+  "Main"        {"Page 1"}
+  "BASE"        {"Page 1"}
+  "xexit"       {"Page 1"}
+  "LAP610"      {"Page 2"}
+##  "thunderbird" {"page 2"}
+}
+
+## Specify which items should be in every workspace
+OccupyAll
+{
+  "XBiff"
+  "XClock"
+  "TWM"
+  "TWM Icon Manager"
+  "WorkSpaceManager"
+  "perfmeter"
+  "xload"
+  "oclock"
+  "xclock"
+  "xdaliclock"
+  "rclock"
+  "xclipboard"
+  #"X-3D"
+  "xeyes"
+  "XXX"
+    "battery"
+    "aumix"
+    "alsamixer"
+    "ALSA Mixer"
+    "cet_start"
+    "seet_start"
+    "Sound"
+    "gnome-control-center"
+    "nm-connection-editor"
+    #"pulseaudio-equalizer-gtk"
+    "pavucontrol"
+    "panel"
+}
+
+
+### -- IconRegion: where iconised windows go
+## Needs to be coordinated with WorkSpaceManagerGeometry (above)
+
+## IconRegion <geomstring> <vgrav> <hgrav> <gridwidth>  <gridheight>
+# This  variable  specifies an area on the root window in which icons are
+# placed if no specific icon  location is provided by the client.
+
+## Put icons along bottom of window, starting below workspace manager
+# Change these figures if you change icon fonts, or workspace manager geometry
+## Suitable for a high resolution screen
+#IconRegion "1024x55+-0-0" South East 20 5
+# IconRegion "1152x55+-0-0" South East 20 5
+## Suitable for lower resolution (reduce first number to shift icons to left)
+IconRegion "1024x55+-0-0" South East 20 5
+## or
+#IconRegion "=820x55+300-0" South East 20 5
+
+
+### -- Define some useful functions --
+
+# These user-defined functions are used below, e.g. in associating
+# actions with buttons or menu items.
+
+# If you click in a context activating this, raise the window,
+# whereas if you hold the button down and drag it move the window.
+Function "raise-or-move"
+{
+  f.move
+  f.deltastop
+  f.raise
+}
+
+Function "GoLEFT"
+{ f.prevworkspace
+  f.unfocus
+}
+
+Function "GoRIGHT"
+{ f.nextworkspace
+  f.unfocus
+}
+
+
+# The move function needs this parameter set.
+# How many pixels to move before 'raise' becomes 'move' (etc.)
+MoveDelta 5
+
+# If you click then iconify, otherwise drag to move
+Function "iconify-or-move"
+{
+   f.move
+   f.deltastop
+   f.iconify
+}
+
+### -- Mouse button actions in different contexts --
+
+## WARNING: some mice have only two buttons. They are then interpreted as
+# buttons 1 and 3.
+# It is usually possible to set things up so that invoking button2 is done
+# by pressing 1 and 3 together (or 1 quickly followed by 3 in some cases.)
+
+# Button action specifications take the form:
+#       Button = KEYS : CONTEXT : FUNCTION
+#
+# where
+#
+#       KEYS is one or more of m, s, c
+#            m=Meta
+#               LEFT or RIGHT or Diamond (on suns),
+#                ALT on X terminals or PCs
+#            s=SHIFT
+#            c=CTRL
+#
+#       CONTEXT is one or more of r, i, w, t, f, m, all
+#               r=root,i=icon,w=window,
+#               t=title,f=frame,
+#               m=iconmanager,
+#               all=all contexts
+#
+#       FUNCTION - a ctwm function or menu specification
+#           e.g. f.resize, f.move, f.menu etc.
+
+## Button actions without modifier keys in "root" window.
+# Just invoke one of the three main menus defined below.
+#
+Button1 =   : r     : f.menu "MainMenu"
+Button2 =   : r     : f.menu "MiscMenu"
+Button3 =   : r     : f.menu "ToolMenu"
+#Button3 =   : r     : f.menu "MainMenu"
+
+# On the title bar, make button raise or lower the window with a click
+# or move it by dragging
+Button1 =   : t     : f.function "raise-or-move"
+
+# On the window frame (or border) let button 1 do raise with a click
+# or resize with drag
+Button1 =   : f     : f.resize
+
+# Button 2 on title bar or frame will raise to top or lower to bottom of pile
+# Note, "t|f" means "t or f" (titlebar or frame)
+Button2 =   : t|f   : f.raiselower
+
+# Button 3 on title bar or frame will iconify (minimise) the window
+####Button3 =   : t|f   : f.iconify
+Button3 =   : t|f   : f.menu "WinOpsMenu"
+
+# NB don't define actions for the buttons inside windows: that is up to
+# the process in the window to handle.
+
+# Moving or expanding iconified windows
+Button1 =       : i     : f.function "iconify-or-move"
+Button2 =       : i     : f.move
+Button3 =       : i     : f.iconify
+
+# Make button 1 with Meta key (Alt, or Left, etc) move any window.
+Button1 =  m    : t|w|i : f.move
+
+# With meta, button 2 will raise or lower (redundant really)
+Button2 =  m    : t|i : f.raiselower
+
+# With meta, button 2 or 3 in window will resize
+Button2 =  m    : w    : f.resize
+Button3 =  m    : w    : f.resize
+
+# With meta, button 3 on titlebar or icon will iconify/deiconify
+Button3 =  m    : t|i : f.iconify
+
+# Make button 1 with shift in window make focus stick to that window
+
+Button1 = s|c : w : f.focus
+
+## Later we associate mouse buttons with menus
+
+### -- Actions invoked by keyboard buttons without the mouse --
+
+
+ # Volume control keys
+
+  "XF86AudioLowerVolume"   = : r : ! "xterm -geometry 15x30-1+1 -fn 6x9 -e alsamixer &"
+#  "XF86AudioLowerVolume"   = : r : ! " /usr/bin/pulseaudio-equalizer-gtk &"
+#  "XF86AudioLowerVolume"   = : r : ! "aumix -v -10 &"
+#  "XF86AudioRaiseVolume"   = : r : ! "aumix -v +10 &"
+#  "XF86AudioMute"          = : r : ! "aumix -v 0 &"
+
+# Shift+F1 raises or lowers the current window
+"F1"    =  s    : all   : f.raiselower
+
+# Shift + Uparrow key does the same
+#"Up"    =  s    : all   : f.raiselower
+# Control + Uparrow key does the same
+"Up"    =  c    : all   : f.raiselower
+
+###XTerm*BodyFont: -b&h-*-medium-r-*-sans-17-*-*-*-m-*-*-*
+
+# start xterm
+#"F1"    =       : r     :  ! "xterm -sb -sl 500 -j -ls -geom 90x42+0+0 -fn 10x20 &"
+"F1"    =       : r     :  ! "xterm -sb -sl 500 -j -ls  -geom 90x44+0-5 -fn 10x20&"
+#"F1"    =  c    : all   :  ! "xterm -sb -sl 500 -j -geom 90x43+0+0 -fn 10x20 &"
+"F1"    =  c    : all   :  ! "xterm -sb -sl 500 -j -ls -geom 95x45+0-5  &"
+"F2"    =       : r     :  ! "xterm -sb -sl 500 -j -ls -fn 9x15 -geom 70x20+0+0 &"
+"F2"    =  c    : all   :  ! "xterm -sb -sl 500 -j -ls -fn 9x15 -geom 70x20+0+0 &"
+"F3"    =  c    : all   :  ! "xterm -sb -sl 500 -j -ls  -geom 95x44+0-0  -fn 10x20 &"
+"F4"    =       : r     :  ! "xclipboard -geometry 800x100 &"
+"F5"    =       : r     :  ! "xterm -geometry 60x18+10+10 -fn 8x13 -e aumix &"
+
+# start firefox
+#"F3"    =       : r     :  ! "/usr/local/bin/firefox -geometry 980x780+0+0  &"
+
+# And if you wish, shift or Control key + F10
+# "F10"   =  s    : all   : f.raiselower
+# "F10"   =  c    : all   : f.raiselower
+
+# Assigning current window to a new workspace. This makes a little map
+# pop up. You can then select where the window should go.
+"F1"      =  m    : all   : f.occupy
+
+
+# Keyboard accelerators in MWM style
+# Meta key + Function key on top row
+"F3"    =  m    : all   : f.lower       # Lower
+"F4"    =  m    : all   : f.delete      # Close (i.e. kill the process)
+"F5"    =  m    : all   : f.zoom        # Zoom vertical and back
+"F6"    =  m    : all   : f.twmrc           # Re-read .ctwmrc
+"F7"    =  m    : all   : f.horizoom    # Zoom horizontally
+"F9"    =  m    : all   : f.iconify     # Minimize
+"F10"   =  m    : all   : f.fullzoom        # Maximize
+
+
+### -- Using the keyboard to warp to a new workspace or window --
+
+# Use Meta+Shift with Fn to go to workspace n
+"F1"  =  m|s    : all   : f.gotoworkspace "Page 1"
+"F2"  =  m|s    : all   : f.gotoworkspace "Page 2"
+"F3"  =  m|s    : all   : f.gotoworkspace "Page 3"
+"F4"  =  m|s    : all   : f.gotoworkspace "Page 4"
+
+# Use control +Meta key plus left or right arrow to go to next or previous
+# workspace (next and previous in the order listed in workspace definitions.)
+#"Left"  =  c    : all   : f.prevworkspace
+"Left"  =  c    : all   : f.function "GoLEFT"
+#"Right" =  c    : all   : f.nextworkspace
+"Right" =  c    : all   : f.function "GoRIGHT"
+
+## Warping through the windows.
+# Use meta+shift + Up arrow key
+"Up"      =  m|s  : all   : f.warpring "next"
+
+# Warping in the reverse direction with the Down Arrow key
+# Doesn't seem to work
+# "Down"    =  m|s  : all   : f.warpring "prev"
+
+## This prevents warping to windows in other workspaces
+# comment it out if you wish to warp to arbitrary other windows.
+WarpRingOnScreen
+
+## Not sure these are useful. Warp to iconmanager, and go up or down
+# Control key plus Up or Down arrow.
+# "Up"    =  c    : all   : f.upiconmgr
+# "Down"  =  c    : all   : f.downiconmgr
+
+
+### -- Additional Button actions which invoke menus --
+
+# Control+mouse button on on title or frame of window
+Button1 =  c    : t|f   : f.menu "MainMenu"
+Button2 =  c    : t|f   : f.menu "MiscMenu"
+Button3 =  c    : t|f   : f.menu "ToolMenu"
+
+# Control+mouse button in root window
+Button1 =  c    : r   : f.menu "TwmWindows"
+Button3 =  c    : r   : f.menu "TwmWorkspaces"
+
+# Shift+Meta+mouse button anywhere:
+Button1 =  m|s  : all   : f.menu "MainMenu"
+Button2 =  m|s  : all   : f.menu "MiscMenu"
+Button3 =  m|s  : all   : f.menu "ToolMenu"
+
+## Another possibility
+# Button1 =  m|c  : all   : f.menu "ZoomMenu"
+
+"v"     =  c    : r     :  ! "/usr/bin/gnome-control-center sound &"
+
+### -- Define the menus to be used --
+# Main Right Button Tools
+menu "ToolMenu"
+{
+####  "PIN/UnPIN"               f.pin
+####  "XV"                      ! "cd xv;xterm -cm -fn 10x20 -geometry 20x3-5+5 +sb -e xv -geometry -5+5 &"
+  ""                            f.separator
+  "main"                    f.title
+#	"Seamonkey"                  ! "/usr/local/bin/seamonkey -geometry 980x780+0+0  &"
+	"dolphin"					! "dolphin &"   
+	"Konsole"					! "konsole &"
+	"Xterm"						! "xterm &"
+	"MidnightCommander"			! "xterm -title MidnightCommander -e mc &"
+	"Konq"						! "konqueror &"
+	"VirtualBox"				! "VirtualBox &"	
+	"icecat"					! "icecat &"	
+  "SOUND"                       f.title
+    "PA Vol"                    ! "/usr/bin/pavucontrol &"
+    "Alsa Vol"                  ! "xterm -geometry 15x30-1+1 -fn 6x9 -e alsamixer &"
+    "Gnome-vol"                 ! " /usr/bin/gnome-control-center sound &"
+	"Alsamixer-G"               ! "alsamixergui -c 0  &"
+	"Gnome Recorder"             ! "/usr/bin/gnome-sound-recorder &"
+	"Nitrogen"                   ! "nitrogen &"   
+  "SCREEN"                      f.title
+  ""                            f.separator
+  "LXRANDR"                     ! "/usr/bin/lxrandr &"
+  ""                            f.separator
+  
+#  "KEYS"                        f.title
+#  "Swap keys"                   !"keys/capslock &"
+#  "Swap Caps Lock"              !"keys/capslock &"
+#  "Swap Caps Lock"             !"xmodmap .xmodmap-swaps-lap6 &"
+
+  ""                            f.separator
+  ""                            f.separator
+	"RE-READ .ctwmrc"             f.twmrc
+}
+
+
+# Basic ctwm functions
+menu "MainMenu"
+{
+####  "PIN/UnPIN"               f.pin
+  "CTwm Menu"                   f.title
+#    "Gnome-vol"                 ! "gnome-volume-control &"
+#    "Alsamixer-G"               ! "alsamixergui -c 0  &"
+	"dolphin"					! "dolphin &"
+    "konsole"                   ! "konsole  &"
+    "Xterm"                     ! "xterm &"
+  ""                            f.separator
+    "Grey25"                    !"xsetroot -solid 'gray25' &"
+    "Grey85"                    !"xsetroot -solid 'gray85' &"
+  ""                            f.separator
+	"Show Icon Manager"           f.showiconmgr
+	"Hide Icon Manager"           f.hideiconmgr
+    "tint2"                     ! "tint2 &"  
+#  "Occupy Workspace"            f.occupy
+  "Refresh Screen"              f.refresh
+#  "Xclipboard"                  !"xclipboard -geometry 700x100 &"
+  ""                            f.separator
+  "Restart CTwm"                f.restart
+  ""                            f.separator
+  "RE-READ .ctwmrc"             f.twmrc
+  ""                            f.separator
+  "Exit CTWM"                   f.quit  ## Kill ctwm. May abort whole session
+}
+
+# Basic window operations
+menu "WinOpsMenu"
+{
+#    "PIN/UnPIN"                 f.pin
+    "Window Ops"                f.title
+    "Lower"                     f.lower
+    "Iconify"                   f.iconify
+    ""                          f.separator
+    "Zoom Menu"                 f.title
+    "Zoom vert"                 f.zoom
+    "Zoom full"                 f.fullzoom
+    "Zoom horiz"                f.horizoom 
+    ""                          f.separator
+    "Close"                     f.delete
+    "Destroy"                   f.destroy
+    ""                          f.separator
+    "Re-read .ctwmrc"           f.twmrc
+}
+
+menu "ZoomMenu"
+{
+    "PIN/UnPIN"                 f.pin
+    "Zoom Menu"                 f.title
+    "Zoom vert"                 f.zoom
+    "Zoom full"                 f.fullzoom
+    "Zoom horiz"                f.horizoom
+}
+
+# Standard utility menu
+menu "MiscMenu"
+{
+  "PIN/UnPIN"                   f.pin
+  "Misc Menu"                   f.title
+  ""                            f.separator
+  "Top users"                   !"xterm +sb -e top &"
+  ""                            f.separator
+  "Font Selector"               !"xfontsel -geometry 600x250 &"
+  ""                            f.separator
+  "Find Windows"                f.menu "TwmWindows"
+  "GoTo Workspace"              f.menu "TwmWorkspaces"
+}
+

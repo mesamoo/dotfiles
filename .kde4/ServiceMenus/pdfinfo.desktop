@@ -1,0 +1,41 @@
+#
+# 	Part of kde-service-menu-pdf Version 0.5
+# 	Copyright (C) 2011 Giuseppe Benigno <giuseppe.benigno(at)gmail.com>
+#
+# 	This program is free software: you can redistribute it and/or modify
+# 	it under the terms of the GNU General Public License as published by
+# 	the Free Software Foundation, either version 3 of the License, or
+# 	(at your option) any later version.
+#
+# 	This program is distributed in the hope that it will be useful,
+# 	but WITHOUT ANY WARRANTY; without even the implied warranty of
+# 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# 	GNU General Public License for more details.
+#
+# 	You should have received a copy of the GNU General Public License
+# 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/pdf;
+Icon=help-about
+TryExec=pdfinfo_kmenu.sh
+Actions=info;
+Name=pdfinfo service menu
+Name[gl]=Menu de pdfinfo
+Name[de]=pdfinfo Servicemenü
+Name[es]=Menú de pdfinfo
+Name[gl]=Menu de pdfinfo
+
+[Desktop Action info]
+Icon=help-about
+Name=Document information
+Name[de]=Dokument-Informationen
+Name[es]=Información del documento
+Name[gl]=Informaçom do documento
+Name[it]=Informazioni sul documento
+Exec=pdfinfo_kmenu.sh en info "%f"
+Exec[de]=pdfinfo_kmenu.sh de info "%f"
+Exec[it]=pdfinfo_kmenu.sh it info "%f"

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Service
+Encoding=UTF-8
+ServiceTypes=KonqPopupMenu/Plugin,application/ogg,audio/vorbis,application/x-ogg,audio/ogg,audio/x-vorbis+ogg,audio/x-mp3,audio/mpeg,audio/mp3,audio/flac,audio/x-flac,audio/x-flac+ogg,audio/x-oggflac,audio/mp4,audio/x-m4a,audio/x-musepack,audio/musepack,audio/x-wavpack
+Icon=soundkonverter_replaygain
+Actions=AddReplayGainWithSoundkonverter;
+
+[Desktop Action AddReplayGainWithSoundkonverter]
+Name=Add Replay Gain with soundKonverter
+Icon=soundkonverter-replaygain
+Exec=soundkonverter --replaygain %F

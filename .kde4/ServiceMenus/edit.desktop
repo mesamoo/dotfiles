@@ -1,0 +1,68 @@
+[Desktop Entry]
+Type=Service
+Actions=_SEPARATOR_;codeLite;Geany;Juffed;Kate;kDevelop;Komodo;MadEdit;Sublime;Tea;vsCode;_SEPARATOR_;Kwrite;_SEPARATOR_;
+X-KDE-Priority=TopLevel
+X-KDE-Submenu=Text_Edit
+ServiceTypes=KonqPopupMenu/Plugin,all/allfiles
+Encoding=UTF-8
+
+[Desktop Action brackets]
+# brackets is fucked as far as directly opening files
+Name=brackets
+Icon=/opt/brackets/appshell32.png
+Exec=/opt/brackets/Brackets %F
+
+[Desktop Action codeLite]
+Name=codeLite
+Icon=/usr/share/icons/hicolor/22x22/apps/im-irc.png
+Exec=/usr/bin/codelite %U
+
+[Desktop Action Geany]
+Name=Geany
+Icon=/usr/share/icons/hicolor/22x22/apps/alacarte.png
+Exec=/usr/bin/geany %U
+
+[Desktop Action Juffed]
+Name=Juffed
+Icon=juffed
+Exec=/usr/bin/juffed %U
+
+[Desktop Action Kate]
+Name=Kate
+Icon=kate
+Exec=/usr/bin/kate %U
+
+[Desktop Action kDevelop]
+Name=kDevelop
+Icon=kdevelop
+Exec=/usr/bin/kdevelop %U
+
+[Desktop Action Komodo]
+Name=Komodo
+Icon=/opt/komodo/share/icons/komodo16.png
+Exec=/opt/komodo/bin/komodo %U
+
+[Desktop Action MadEdit]
+Name=MadEdit
+Icon=madedit.xpm
+Exec=/usr/bin/madedit %f
+
+[Desktop Action Sublime]
+Name=Sublime Text
+Icon=/home/bin/bin/SublimeText2/Icon/16x16/sublime_text.png
+Exec=/home/bin/bin/SublimeText2/sublime_text %U
+
+[Desktop Action Tea]
+Name=Tea
+Icon=/usr/share/pixmaps/tea-editor.png
+Exec=/usr/bin/tea %U
+
+[Desktop Action Kwrite]
+Name=Kwrite
+Icon=kate
+Exec=/usr/bin/kwrite %U
+
+[Desktop Action vsCode]
+Name=vsCode
+Icon=/opt/VSCode/resources/app/vso.png
+Exec=/opt/VSCode/Code %U

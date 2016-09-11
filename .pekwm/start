@@ -1,0 +1,41 @@
+#!/bin/sh
+# PekWM start file
+# This file is a simple shell script; It gets run on pekwm startup, after 
+# the theme and all config has loaded if it is set executable  (chmod +x start).
+# It gets re-run every time pekwm is restarted.
+#
+#export DE="kde"          #removed AGAIN 2016-08 breaks menu and other functions
+seq 0 1 | xargs -l1 -I@ compton -b -d :0.@ --config ~/.compton.config &
+numlockx &
+setxkbmap -option ctrl:nocaps &
+~/.pekwm/scripts/display-xset.sh &
+#nitrogen --restore &
+feh --bg-scale ~/.pekwm/scripts/walls/0.jpg &
+yakuake &
+nvidia-settings
+xfce4-panel &
+# wallpaper changer section START
+# wallpaper folder MUST only contain jpg images or only 7 images will work on 8 screens
+# specifically, delete the .desktop file or script will have small (but acceptable) inconsistant behaviour
+python ~/.pekwm/scripts/switchbg.py ~/.pekwm/scripts/walls/ -s 0.10 &
+# wallpaper changer section END
+kwalletmanager &
+akonadictl start &
+akonaditray &
+conky &
+~/.pekwm/scripts/YADstartBaloo.sh
+pnmixer &
+#albert &
+owncloud &
+knemo &
+~/bin/rainlendar2/rainlendar2 &
+klipper &
+kmix &
+gnome-activity-journal &
+#cairo-clock &
+##empathy &
+#kopete &
+#pidgin &
+conky --config=/home/dh84/.conkyrc.leftclockW &
+artha &
+~/.pekwm/scripts/flipWacom.sh &

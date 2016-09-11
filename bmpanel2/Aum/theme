@@ -1,0 +1,107 @@
+theme
+	name Aum
+	author sizakor <http://sizakor.deviantart.com/>
+	# License: Creative Commons Attribution-Noncommercial-Share Alike 3.0
+
+panel
+	position bottom
+	background tile.png
+		
+empty 2
+
+desktop_switcher
+	idle
+		left_corner ds-left-idle.png
+		left ds-left-idle.png
+		center ds-tile-idle.png
+		right ds-right-idle.png
+		right_corner ds-right-idle.png
+		
+	pressed
+		left_corner ds-left-active.png
+		left ds-left-active.png
+		center ds-tile-active.png
+		right ds-right-active.png
+		right_corner ds-right-active.png
+
+launchbar
+	icon_size 16 16
+	
+empty 2
+
+taskbar
+	idle
+		left tb-lr-idle.png
+		center empty.png
+		right tb-lr-idle.png
+		font Droid Sans bold 8
+			color 224 202 161
+			offset 5 1
+			shadow_offset -1 -1
+			shadow_color 25 23 19
+		icon_offset 0 0
+
+	idle_highlight
+		left tb-left-hover.png
+		center tb-tile-hover.png
+		right tb-right-hover.png
+		font Droid Sans bold 8
+			color 19 17 13
+			offset 5 1
+			shadow_offset 1 1
+			shadow_color 96 91 81
+		icon_offset 0 0
+	
+	pressed
+		left tb-left-active.png
+		center tb-tile-active.png
+		right tb-right-active.png
+		font Droid Sans bold 8
+			color 19 17 13
+			offset 5 1
+			shadow_offset 1 1
+			shadow_color 183 162 121
+		icon_offset 1 1
+		
+	pressed_highlight
+		left tb-left-active-hover.png
+		center tb-tile-active-hover.png
+		right tb-right-active-hover.png
+		font Droid Sans bold 8
+			color 19 17 13
+			offset 5 1
+			shadow_offset 1 1
+			shadow_color 200 178 135
+		icon_offset 1 1
+
+	task_max_width 200
+	default_icon default_icon.png
+
+empty 2
+
+systray
+	icon_size 16 16
+	icon_spacing 2
+	
+	background
+                left systray-left.png
+                center systray-tile.png
+                right systray-right.png
+empty 2
+
+clock	
+	font Droid Sans bold 8
+		color 19 17 13
+		offset 1 1
+		shadow_offset 1 1
+		shadow_color 183 162 121
+		align center
+
+	time_format %A %d %B %H:%M
+	
+	background
+                left clock-left.png
+                center clock-tile.png
+                right clock-right.png
+
+empty 2

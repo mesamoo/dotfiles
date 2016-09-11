@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Service
+Name=Compare Two Folders
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin,inode/directory
+Actions=Komparetwofolder;
+X-KDE-Priority=TopLevel
+
+[Desktop Action Komparetwofolder]
+Name=Compare Two Folders
+Icon=kompare
+Exec=kompare -c %U
+

@@ -1,0 +1,21 @@
+[Desktop Entry]
+Type=Service
+Actions=_SEPARATOR_;Kwrite;KolourPaint;Komparetwo;_SEPARATOR_;
+X-KDE-Priority=TopLevel
+ServiceTypes=KonqPopupMenu/Plugin,all/allfiles
+Encoding=UTF-8
+
+[Desktop Action Kwrite]
+Name=Kwrite
+Icon=kate
+Exec=/usr/bin/kwrite %U
+
+[Desktop Action KolourPaint]
+Name=KolourPaint
+Icon=kolourpaint
+Exec=/usr/bin/kolourpaint %U
+
+[Desktop Action Komparetwo]
+Name=Compare Two Files
+Icon=kompare
+Exec=kompare -c %U

@@ -1,0 +1,168 @@
+#
+# 	Part of kde-service-menu-pdf Version 0.5
+# 	Copyright (C) 2011 Giuseppe Benigno <giuseppe.benigno(at)gmail.com>
+#
+# 	This program is free software: you can redistribute it and/or modify
+# 	it under the terms of the GNU General Public License as published by
+# 	the Free Software Foundation, either version 3 of the License, or
+# 	(at your option) any later version.
+#
+# 	This program is distributed in the hope that it will be useful,
+# 	but WITHOUT ANY WARRANTY; without even the implied warranty of
+# 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# 	GNU General Public License for more details.
+#
+# 	You should have received a copy of the GNU General Public License
+# 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/pdf;
+Icon=application-pdf
+TryExec=ghostscript_kmenu.sh
+Actions=optimize;_SEPARATOR_;png16m;png256;png16;pnggray;pngmono;pngalpha;_SEPARATOR_;jpeggray;jpeg;_SEPARATOR_;tiffg3;tiffg32d;tiffg4;
+Name=ghostscript service menu
+Name[de]=Gehostscript Servicemenü
+Name[es]=Menú de ghostscript
+Name[gl]=Menu de ghostscript
+X-KDE-Submenu=Ghostscript
+
+[Desktop Action optimize]
+Icon=dialog-ok
+Name=Optimize document
+Name[de]=Dokument optimieren
+Name[es]=Optimizar documento
+Name[gl]=Optimizar documento
+Name[it]=Ottimizza documento
+Exec=ghostscript_kmenu.sh en optimize "%f"
+Exec[de]=ghostscript_kmenu.sh de optimize "%f"
+Exec[it]=ghostscript_kmenu.sh it optimize "%f"
+
+################################################################################
+
+[Desktop Action png16m]
+Icon=image-png
+Name=Convert to png (full colors)
+Name[de]=Als PNG umwandeln (alle Farben)
+Name[es]=Convertir a png (todos los colores)
+Name[gl]=Converter em png (todas as cores)
+Name[it]=Converti in png (full colors)
+Exec=ghostscript_kmenu.sh en png16m "%f"
+Exec[de]=ghostscript_kmenu.sh de png16m "%f"
+Exec[it]=ghostscript_kmenu.sh it png16m "%f"
+
+[Desktop Action png256]
+Icon=image-png
+Name=Convert to png (256 colors)
+Name[de]=Als PNG umwandeln (256 Farben)
+Name[es]=Convertir a png (256 colores)
+Name[gl]=Converter em png (256 cores)
+Name[it]=Converti in png (256 colors)
+Exec=ghostscript_kmenu.sh en png256 "%f"
+Exec[de]=ghostscript_kmenu.sh de png256 "%f"
+Exec[it]=ghostscript_kmenu.sh it png256 "%f"
+
+[Desktop Action png16]
+Icon=image-png
+Name=Convert to png (16 colors)
+Name[de]=Als PNG umwandeln (16 Farben)
+Name[es]=Convertir a png (16 colores)
+Name[gl]=Converter em png (16 cores)
+Name[it]=Converti in png (16 colors)
+Exec=ghostscript_kmenu.sh en png16 "%f"
+Exec[de]=ghostscript_kmenu.sh de png16 "%f"
+Exec[it]=ghostscript_kmenu.sh it png16 "%f"
+
+[Desktop Action pnggray]
+Icon=image-png
+Name=Convert to png (gray tones)
+Name[de]=Als PNG umwandeln (Graustufen)
+Name[es]=Convertir a png (tonos de gris)
+Name[gl]=Converter em png (tons aborralhados)
+Name[it]=Converti in png (toni di grigio)
+Exec=ghostscript_kmenu.sh en pnggray "%f"
+Exec[de]=ghostscript_kmenu.sh de pnggray "%f"
+Exec[it]=ghostscript_kmenu.sh it pnggray "%f"
+
+[Desktop Action pngmono]
+Icon=image-png
+Name=Convert to png (black and white)
+Name[de]=Als PNG umwandeln (schwarz / weiß)
+Name[es]=Convertir a png (blanco y negro)
+Name[gl]=Converter em png (branco e negro)
+Name[it]=Converti in png (bianco e nero)
+Exec=ghostscript_kmenu.sh en pngmono "%f"
+Exec[de]=ghostscript_kmenu.sh de pngmono "%f"
+Exec[it]=ghostscript_kmenu.sh it pngmono "%f"
+
+[Desktop Action pngalpha]
+Icon=image-png
+Name=Convert to png (transparency)
+Name[de]=Als PNG umwandeln (transparent)
+Name[es]=Convertir a png (con transparencia)
+Name[gl]=Converter em png (com transparéncia)
+Name[it]=Converti in png (con trasparenza)
+Exec=ghostscript_kmenu.sh en pngalpha "%f"
+Exec[de]=ghostscript_kmenu.sh de pngalpha "%f"
+Exec[it]=ghostscript_kmenu.sh it pngalpha "%f"
+
+################################################################################
+
+[Desktop Action jpeggray]
+Icon=image-jpeg
+Name=Convert to jpeg (gray tones)
+Name[de]=Als JPG umwandeln (Graustufen)
+Name[es]=Convertir a jpeg (tonos de gris)
+Name[gl]=Converter em jpeg (tons aborralhados)
+Name[it]=Converti in jpeg (toni di grigio)
+Exec=ghostscript_kmenu.sh en jpeggray "%f"
+Exec[de]=ghostscript_kmenu.sh de jpeggray "%f"
+Exec[it]=ghostscript_kmenu.sh it jpeggray "%f"
+
+[Desktop Action jpeg]
+Icon=image-jpeg
+Name=Convert to jpeg (color)
+Name[de]=Als JPG umwandeln (Farbe)
+Name[es]=Convertir a jpeg (color)
+Name[gl]=Converter em jpeg (cor)
+Name[it]=Converti in jpeg (colore)
+Exec=ghostscript_kmenu.sh en jpeg "%f"
+Exec[de]=ghostscript_kmenu.sh de jpeg "%f"
+Exec[it]=ghostscript_kmenu.sh it jpeg "%f"
+
+################################################################################
+
+[Desktop Action tiffg3]
+Icon=application-postscript
+Name=Convert to fax (G3 encoding)
+Name[de]=Als tiff umwandeln (G3 encoding)
+Name[es]=Convertir a fax (codificación G3)
+Name[gl]=Converter em fax (codificaçom G3 encoding)
+Name[it]=Converti in fax (codifica G3)
+Exec=ghostscript_kmenu.sh en tiffg3 "%f"
+Exec[de]=ghostscript_kmenu.sh de tiffg3 "%f"
+Exec[it]=ghostscript_kmenu.sh it tiffg3 "%f"
+
+[Desktop Action tiffg32d]
+Icon=application-postscript
+Name=Convert to fax (2-D G3 encoding)
+Name[de]=Als tiff umwandeln (2-D G3 encoding)
+Name[es]=Convertir a fax (codificación 2-D G3)
+Name[gl]=Converter em fax (codificaçom 2-D G3)
+Name[it]=Converti in fax (codifica 2-D G3)
+Exec=ghostscript_kmenu.sh en tiffg32d "%f"
+Exec[de]=ghostscript_kmenu.sh de tiffg3 "%f"
+Exec[it]=ghostscript_kmenu.sh it tiffg3 "%f"
+
+[Desktop Action tiffg4]
+Icon=application-postscript
+Name=Convert to fax (G4 encoding)
+Name[de]=Als tiff umwandeln (G4 encoding)
+Name[es]=Convertir a fax (codificación G4)
+Name[gl]=Converter em fax (codificaçom G4)
+Name[it]=Converti in fax (codifica G4)
+Exec=ghostscript_kmenu.sh en tiffg4 "%f"
+Exec[de]=ghostscript_kmenu.sh de tiffg4 "%f"
+Exec[it]=ghostscript_kmenu.sh it tiffg4 "%f"

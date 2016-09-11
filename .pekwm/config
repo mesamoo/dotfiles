@@ -1,0 +1,44 @@
+INCLUDE = "$_PEKWM_ETC_PATH/config_system"
+
+Files {
+    Theme = "~/.pekwm/themes/The_Western_Lands"
+}
+
+MoveResize {
+    EdgeAttract = "15"
+    EdgeResist = "8"
+    WindowAttract = "15"
+    WindowResist = "8"
+}
+
+Screen {
+    Workspaces = "8"
+    WorkspacesPerRow = "8"
+#    WorkspaceNames = "root;mail;ff;pale;chro;mium;work;xtra"
+    WorkspaceNames = "root;mail;pmoon;ffox;chro;mium;web;xtra"
+#    WorkspaceNames = "0;1;2;3;4;5;6;7"
+    ShowStatusWindow = "false"
+    ShowWorkspaceIndicator = "0"
+
+#following allows xfce panels to respond properly (top and bottom -1 for far right)
+#    EdgeSize = "36 40 -1 -1"
+    EdgeSize = "-1 -1 -1 -1"
+    EdgeIndent = "true"
+    Placement {
+        Model = "CenteredOnParent Smart MouseCentered"
+    }
+}
+
+Menu {
+# Defines how menus act on mouse input.
+# Possible values are: "ButtonPress ButtonRelease DoubleClick Motion"
+# To make submenus open on mouse over, comment the default Enter,
+# uncomment the alternative, and reload pekwm.
+ 
+	Select = "Motion"
+	#Enter = "ButtonPress"
+	Enter = "Motion"
+	Exec = "ButtonRelease"
+	FocusOpacity = "100"
+	UnfocusOpacity = "100"
+    }    

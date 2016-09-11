@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=image/svg+xml;
+X-KDE-StartupNotify=false
+X-KDE-Priority=TopLevel
+Actions=Compress;
+
+[Desktop Action Compress]
+Name=.svg -> .svgz
+Name[en]=Compress (.svg -> .svgz)
+Name[fi]=Pakkaa (.svg -> .svgz)
+Exec=$(kde4-config --localprefix)share/kde4/services/ServiceMenus/svg-svgz-svg/svg-svgz.sh
+Icon=image-svg+xml-compressed

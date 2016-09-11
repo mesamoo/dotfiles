@@ -1,0 +1,99 @@
+#
+# 	Part of kde-service-menu-pdf Version 0.5
+# 	Copyright (C) 2011 Giuseppe Benigno <giuseppe.benigno(at)gmail.com>
+#
+# 	This program is free software: you can redistribute it and/or modify
+# 	it under the terms of the GNU General Public License as published by
+# 	the Free Software Foundation, either version 3 of the License, or
+# 	(at your option) any later version.
+#
+# 	This program is distributed in the hope that it will be useful,
+# 	but WITHOUT ANY WARRANTY; without even the implied warranty of
+# 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# 	GNU General Public License for more details.
+#
+# 	You should have received a copy of the GNU General Public License
+# 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/pdf;
+Icon=image
+TryExec=pdftoppm_kmenu.sh
+Actions=all;selected;_SEPARATOR_;all_usrpwd;selected_usrpwd;_SEPARATOR_;all_ownpwd;selected_ownpwd;
+Name=pdftoppm service menu
+Name[es]=Menú de pdftoppm
+Name[gl]=Menu de pdftoppm
+X-KDE-Submenu=Convert to images
+X-KDE-Submenu[de]=Als PPM umwandeln
+X-KDE-Submenu[es]=Convertir a imágenes
+X-KDE-Submenu[gl]=Converter em images
+X-KDE-Submenu[it]=Converti in immagini
+
+[Desktop Action all]
+Icon=image
+Name=All pages
+Name[de]=Alle Seiten
+Name[es]=Todas las páginas
+Name[gl]=Todas as páginas
+Name[it]=Tutte le pagine
+Exec=pdftoppm_kmenu.sh en all "%f"
+Exec[de]=pdftoppm_kmenu.sh de all "%f"
+Exec[it]=pdftoppm_kmenu.sh it all "%f"
+
+[Desktop Action all_usrpwd]
+Icon=preferences-desktop-user-password
+Name=All pages (with user password)
+Name[de]=Alle Seiten (mit Benutzerpasswort)
+Name[es]=Todas las páginas (con clave de usuario)
+Name[gl]=Todas as páginas (com contra-sinal de usuário)
+Name[it]=Tutte le pagine (con password utente)
+Exec=pdftoppm_kmenu.sh en all_usr "%f"
+Exec[de]=pdftoppm_kmenu.sh de all_usr "%f"
+Exec[it]=pdftoppm_kmenu.sh it all_usr "%f"
+
+[Desktop Action all_ownpwd]
+Icon=preferences-desktop-cryptography
+Name=All pages (with owner password)
+Name[de]=Alle Seiten (mit Masterpasswort)
+Name[es]=Todas las páginas (con clave de proprietario)
+Name[gl]=Todas as páginas (com contra-sinal de proprietário)
+Name[it]=Tutte le pagine (con password proprietario)
+Exec=pdftoppm_kmenu.sh en all_own "%f"
+Exec[de]=pdftoppm_kmenu.sh de all_own "%f"
+Exec[it]=pdftoppm_kmenu.sh it all_own "%f"
+
+[Desktop Action selected]
+Icon=image
+Name=Select pages range
+Name[de]=Seitenbereich wählen
+Name[es]=Rango de páginas seleccionado
+Name[gl]=Um rango de páginas selecionado
+Name[it]=Seleziona le pagine
+Exec=pdftoppm_kmenu.sh en selected "%f"
+Exec[de]=pdftoppm_kmenu.sh de selected "%f"
+Exec[it]=pdftoppm_kmenu.sh it selected "%f"
+
+[Desktop Action selected_usrpwd]
+Icon=preferences-desktop-user-password
+Name=Select pages range (with user password)
+Name[de]=Seitenbereich wählen (mit Benutzerpasswort)
+Name[es]=Rango de páginas seleccionado (con clave de usuario)
+Name[gl]=Um rango de páginas selecionado (com contra-sinal de usuário)
+Name[it]=Seleziona le pagine (con password utente)
+Exec=pdftoppm_kmenu.sh en selected_usr "%f"
+Exec[de]=pdftoppm_kmenu.sh de selected_usr "%f"
+Exec[it]=pdftoppm_kmenu.sh it selected_usr "%f"
+
+[Desktop Action selected_ownpwd]
+Icon=preferences-desktop-cryptography
+Name=Select pages range (with owner password)
+Name[de]=Seitenbereich wählen (mit Masterpasswort)
+Name[es]=Rango de páginas seleccionado (con clave de proprietario)
+Name[gl]=Um rango de páginas selecionado (com contra-sinal de proprietário)
+Name[it]=Seleziona le pagine (con password proprietario)
+Exec=pdftoppm_kmenu.sh en selected_own "%f"
+Exec[de]=pdftoppm_kmenu.sh de selected_own "%f"
+Exec[it]=pdftoppm_kmenu.sh it selected_own "%f"

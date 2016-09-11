@@ -1,0 +1,13 @@
+# Sending all kinds of files recursively from a directory to Krename
+[Desktop Entry]
+Type=Service
+Name=KRename (with subfolders)
+X-KDE-Priority=TopLevel
+ServiceTypes=KonqPopupMenu/Plugin,inode/directory
+X-KDE-ExcludeServiceTypes=kdedevice/*
+Actions=rename;
+
+[Desktop Action rename]
+Exec=krename -r %U
+Icon=krename 
+Name=KRename (with subfolders)

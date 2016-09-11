@@ -1,0 +1,25 @@
+# cleanbak.desktop
+# By Jason Harris  [ jharris@30doradus.org ]
+# with fixes by Micha Scholl
+#
+# 1. Delete all files matching "*~" from the selected director[y|ies]
+# 2. Move all files matching "*~" from the selected director[y|ies] 
+#    to ~/.local/share/Trash/
+#
+[Desktop Entry]
+Type=Service
+Name=Clean Backup Files (*~)
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin,inode/directory
+Actions=DeleteBackupFiles;TrashBackupFiles;
+X-KDE-Submenu=Clean Backup Files (*~)
+
+[Desktop Action DeleteBackupFiles]
+Name=Delete
+Icon=edit-delete
+Exec=cleanbak_del.sh %u
+
+[Desktop Action TrashBackupFiles]
+Name=Move to Trash
+Icon=user-trash
+Exec=cleanbak_trash.sh %u
+

@@ -1,0 +1,27 @@
+After creating the pleasures series, there were just a few things that still did noy satisfy/ I was happy with most of the buttons, but there were a few details that still bothered me.
+
+
+Rather than create new packages for each modification and improvement, it made sense to have 1 directory with the pixmaps, and just include the textfiles for the themes. It means that you may have a few extra pixmaps, but overall the download size is reduced 
+
+
+magic night     
+www.box-look.org/p/1017979
+
+magic night is apparantly a mod of playbillblue    
+www.box-look.org/p/1017801
+https://www.box-look.org/p/1018040  
+
+A couple of pixmaps from AXONCOLORS are included, as much as I would love to use the topbar image for active windows there is something that  creates a transparant hole between the titlebar and application any time I try to use it. The menu bar seems to work, see the beautiful mind theme.
+
+######################################################################
+
+These themes use non standard, but open source fonts available from google (arimo and droid), mozilla (fira) and kde.org (oxygen)
+
+It should be easy to replace these with your own favorites, a couple of commented options are included
+
+I use a lot of kde apps, and the oxygen style, this window style works nicely with those colors as well as looking nice with a variety of darker themes.
+
+there are a few extra pixmaps in the theme dir, did not see the need to remove them, and they may be useful for your own mods
+
+
+have fun

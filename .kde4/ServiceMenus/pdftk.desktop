@@ -1,0 +1,274 @@
+#
+# 	Part of kde-service-menu-pdf Version 0.5
+# 	Copyright (C) 2011 Giuseppe Benigno <giuseppe.benigno(at)gmail.com>
+#
+# 	This program is free software: you can redistribute it and/or modify
+# 	it under the terms of the GNU General Public License as published by
+# 	the Free Software Foundation, either version 3 of the License, or
+# 	(at your option) any later version.
+#
+# 	This program is distributed in the hope that it will be useful,
+# 	but WITHOUT ANY WARRANTY; without even the implied warranty of
+# 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# 	GNU General Public License for more details.
+#
+# 	You should have received a copy of the GNU General Public License
+# 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/pdf;
+Icon=preferences-system
+TryExec=pdftk_kmenu.sh
+Actions=join;add;_SEPARATOR_;extract;extract_all_even;extract_all_odd;burst;remove;_SEPARATOR_;rotate_left;rotate_right;overturn;restore;_SEPARATOR_;repair;watermark;stamp;_SEPARATOR_;lock;unlock;_SEPARATOR_;attach_files;unattach_files;_SEPARATOR_;uncompress;compress;_SEPARATOR_;info;
+Name=pdftk service menu
+Name[de]=pdftk Servicemenü
+Name[es]=Menú de pdftk
+Name[gl]=Menu de pdftk
+X-KDE-Submenu=PDFtk
+
+[Desktop Action join]
+Icon=list-add
+Name=Join selected documents (selection order)
+Name[de]=Ausgewählte Dokumente vereinigen (Auswahlreihenfolge)
+Name[es]=Unir los documentos seleccionados (en orden de selección)
+Name[gl]=Unir documentos selecionados (na orde da seleçom)
+Name[it]=Unisci i documenti selezionati (ordine di selezione)
+Exec=pdftk_kmenu.sh en join %F
+Exec[de]=pdftk_kmenu.sh de join %F
+Exec[it]=pdftk_kmenu.sh it join %F
+
+[Desktop Action add]
+Icon=document-new
+Name=Add another document
+Name[de]=Ein weiteres Dokument hinzufügen
+Name[es]=Añadir otro documento
+Name[gl]=Engadir outro documento
+Name[it]=Aggiungi un altro documento
+Exec=pdftk_kmenu.sh en add "%f"
+Exec[de]=pdftk_kmenu.sh de add "%f"
+Exec[it]=pdftk_kmenu.sh it add "%f"
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+
+[Desktop Action extract]
+Icon=document-export
+Name=Extract pages
+Name[de]=Seiten herausziehen
+Name[es]=Extraer páginas
+Name[gl]=Extrair páginas
+Name[it]=Estrai pagine
+Exec=pdftk_kmenu.sh en extract "%f"
+Exec[de]=pdftk_kmenu.sh de extract "%f"
+Exec[it]=pdftk_kmenu.sh it extract "%f"
+
+[Desktop Action extract_all_even]
+Icon=document-export
+Name=Extract all even pages
+Name[de]=Alle geraden Seiten herausziehen
+Name[es]=Extraer todas las páginas pares
+Name[gl]=Extrair todas as páginas pares
+Name[it]=Estrai tutte le pagine pari
+Exec=pdftk_kmenu.sh en extract_even "%f"
+Exec[de]=pdftk_kmenu.sh de extract_even "%f"
+Exec[it]=pdftk_kmenu.sh it extract_even "%f"
+
+[Desktop Action extract_all_odd]
+Icon=document-export
+Name=Extract all odd pages
+Name[de]=Alle ungeraden Seiten herausziehen
+Name[es]=Extraer todas las páginas impares
+Name[gl]=Extrair todas as páginas impares
+Name[it]=Estrai tutte le pagine dispari
+Exec=pdftk_kmenu.sh en extract_odd "%f"
+Exec[de]=pdftk_kmenu.sh de extract_odd "%f"
+Exec[it]=pdftk_kmenu.sh it extract_odd "%f"
+
+[Desktop Action burst]
+Icon=document-export
+Name=Burst
+Name[de]=Alle Seiten einzeln herausziehen
+Name[es]=Dividir
+Name[gl]=Dividir
+Name[it]=Dividi completamente
+Exec=pdftk_kmenu.sh en burst "%f"
+Exec[de]=pdftk_kmenu.sh de burst "%f"
+Exec[it]=pdftk_kmenu.sh it burst "%f"
+
+[Desktop Action remove]
+Icon=list-remove
+Name=Remove pages
+Name[de]=Seiten entfernen
+Name[es]=Eliminar páginas
+Name[gl]=Eliminar págians
+Name[it]=Rimuovi pagine
+Exec=pdftk_kmenu.sh en remove "%f"
+Exec[de]=pdftk_kmenu.sh de remove "%f"
+Exec[it]=pdftk_kmenu.sh it remove "%f"
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+
+[Desktop Action rotate_left]
+Icon=object-rotate-left
+Name=Rotate to left
+Name[de]=Nach links drehen
+Name[es]=Rotar a la izquierda
+Name[gl]=Rotar para a esquerda
+Name[it]=Ruota a sinistra
+Exec=pdftk_kmenu.sh en left "%f"
+Exec[de]=pdftk_kmenu.sh de left "%f"
+Exec[it]=pdftk_kmenu.sh it left "%f"
+
+[Desktop Action rotate_right]
+Icon=object-rotate-right
+Name=Rotate to right
+Name[de]=Nach rechts drehen
+Name[es]=Rotar a la derecha
+Name[gl]=Rotar para a direita
+Name[it]=Ruota a destra
+Exec=pdftk_kmenu.sh en right "%f"
+Exec[de]=pdftk_kmenu.sh de right "%f"
+Exec[it]=pdftk_kmenu.sh it right "%f"
+
+[Desktop Action overturn]
+Icon=go-down
+Name=Overturn
+Name[de]=Umdrehen
+Name[es]=Invertir
+Name[gl]=Inverter
+Name[it]=Capovolgi
+Exec=pdftk_kmenu.sh en overturn "%f"
+Exec[de]=pdftk_kmenu.sh de overturn "%f"
+Exec[it]=pdftk_kmenu.sh it overturn "%f"
+
+[Desktop Action restore]
+Icon=document-revert
+Name=Restore original rotation
+Name[es]=Restaurar a la rotación original
+Name[gl]=Restaurar a rotaçom original
+Name[it]=Ripristina rotazione originale
+Exec=pdftk_kmenu.sh en restore "%f"
+Exec[de]=pdftk_kmenu.sh de restore "%f"
+Exec[it]=pdftk_kmenu.sh it restore "%f"
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+
+[Desktop Action repair]
+Icon=dialog-ok
+Name=Repair
+Name[de]=Reparieren
+Name[es]=Reparar
+Name[it]=Ripara
+Name[gl]=Reparar
+Exec=pdftk_kmenu.sh en repair "%f"
+Exec[de]=pdftk_kmenu.sh de repair "%f"
+Exec[it]=pdftk_kmenu.sh it repair "%f"
+
+[Desktop Action watermark]
+Icon=feed-subscribe
+Name=Watermark pages
+Name[de]=Seiten mit Wasserzeichen versehen
+Name[es]=Poner filigrana a las páginas
+Name[gl]=Filigranar páginas
+Name[it]=Filigrana le pagine
+Exec=pdftk_kmenu.sh en watermark "%f"
+Exec[de]=pdftk_kmenu.sh de watermark "%f"
+Exec[it]=pdftk_kmenu.sh it watermark "%f"
+
+[Desktop Action stamp]
+Icon=feed-subscribe
+Name=Stamp pages
+Name[de]=Seiten stempeln
+Name[es]=Sellar las páginas
+Name[gl]=Cobrir páginas
+Name[it]=Copri le pagine
+Exec=pdftk_kmenu.sh en stamp "%f"
+Exec[de]=pdftk_kmenu.sh de stamp "%f"
+Exec[it]=pdftk_kmenu.sh it stamp "%f"
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+
+[Desktop Action lock]
+Icon=object-locked
+Name=Lock
+Name[de]=Mit Passwort sperren
+Name[es]=Bloquear
+Name[gl]=Trancar
+Name[it]=Blocca
+Exec=pdftk_kmenu.sh en lock "%f"
+Exec[de]=pdftk_kmenu.sh de lock "%f"
+Exec[it]=pdftk_kmenu.sh it lock "%f"
+
+[Desktop Action unlock]
+Icon=object-unlocked
+Name=Unlock
+Name[de]=Entsperren
+Name[es]=Desbloquear
+Name[gl]=Destrancar
+Name[it]=Sblocca
+Exec=pdftk_kmenu.sh en unlock "%f"
+Exec[de]=pdftk_kmenu.sh de unlock "%f"
+Exec[it]=pdftk_kmenu.sh it unlock "%f"
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+
+[Desktop Action attach_files]
+Icon=archive-insert
+Name=Attach arbitrary file
+Name[de]=Datei anhängen
+Name[es]=Adjuntar un fichero
+Name[gl]=Anexar ficheiro
+Name[it]=Aggiungi un allegato
+Exec=pdftk_kmenu.sh en attach "%f"
+Exec[de]=pdftk_kmenu.sh de attach "%f"
+Exec[it]=pdftk_kmenu.sh it attach "%f"
+
+[Desktop Action unattach_files]
+Icon=archive-remove
+Name=Extract all attached files
+Name[de]=Alle angehängten Dateien entpacken
+Name[es]=Extraer todos los ficheros adjuntados
+Name[gl]=Extrair todos os ficheiros anexados
+Name[it]=Estrai gli allegati
+Exec=pdftk_kmenu.sh en unattach "%f"
+Exec[de]=pdftk_kmenu.sh de unattach "%f"
+Exec[it]=pdftk_kmenu.sh it unattach "%f"
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+
+[Desktop Action uncompress]
+Icon=arrow-up
+Name=Uncompress
+Name[de]=Dekomprimieren
+Name[es]=Descomprimir
+Name[gl]=Descomprimir
+Name[it]=Decomprimi
+Exec=pdftk_kmenu.sh en uncompress "%f"
+Exec[de]=pdftk_kmenu.sh de uncompress "%f"
+Exec[it]=pdftk_kmenu.sh it uncompress "%f"
+
+[Desktop Action compress]
+Icon=arrow-down
+Name=Compress
+Name[de]=Komprimieren
+Name[es]=Comprimir
+Name[gl]=Comprimir
+Name[it]=Comprimi
+Exec=pdftk_kmenu.sh en compress "%f"
+Exec[de]=pdftk_kmenu.sh de compress "%f"
+Exec[it]=pdftk_kmenu.sh it compress "%f"
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------
+
+[Desktop Action info]
+Icon=help-about
+Name=Document information
+Name[de]=Dokument Informationen
+Name[es]=Información del documento
+Name[gl]=Informações do documento
+Name[it]=Informazioni sul documento
+Exec=pdftk_kmenu.sh en info "%f"
+Exec[de]=pdftk_kmenu.sh de info "%f"
+Exec[it]=pdftk_kmenu.sh it info "%f"

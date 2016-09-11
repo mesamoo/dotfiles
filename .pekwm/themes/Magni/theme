@@ -1,0 +1,254 @@
+# Port of xfce maG theme by p0ng (p0ng.com.br)
+# by crimeboy (celo.wordpress.com)
+# r2
+
+
+$FONT = "Lucida Grande-7#XFT"
+
+PDecor {
+
+Decor = "DEFAULT" {
+	Title {
+		Height = "21"
+		Pad = "-8 2 0 0"
+
+		Focused = "Image title-fo.xpm"
+		Unfocused = "Image title-un.xpm"
+
+		Tab {
+			Focused = "Image title-fo.xpm"
+			FocusedSelected = "Image title-fo.xpm"
+			Unfocused = "Image title-un.xpm"
+			UnfocusedSelected = "Image title-un.xpm"
+		}
+		Separator {
+			Focused = "Image sep-fo.xpm"
+			Unfocused = "Image sep-un.xpm"
+		}
+		Font {
+			Focused = "$FONT#Left"
+		}
+		FontColor {
+			Focused = "#666666"
+			FocusedSelected = "#000000"
+			Unfocused = "#999999"
+			UnfocusedSelected = "#666666"
+		}
+		Buttons {
+			Right {
+				Focused = "Image bt-close-fo.xpm"
+				Unfocused = "Image bt-close-un.xpm"
+				Selected = "Image bt-close-un.xpm"
+				Button = "1" { Actions = "Close" }
+				Button = "3" { Actions = "Kill" }
+			}
+			Right {
+				Focused = "Image bt-max-fo.xpm"
+				Unfocused = "Image bt-max-un.xpm"
+				Selected = "Image bt-max-un.xpm"
+				Button = "1" { Actions = "Toggle Maximized 1 1" }
+			}
+			Right {
+				Focused = "Image bt-min-fo.xpm"
+				Unfocused = "Image bt-min-un.xpm"
+				Selected = "Image bt-min-un.xpm"
+				Button = "1" { Actions = "Set Iconified" }
+			}		
+			Left {
+				Focused = "Image bt-tl-fo.xpm"
+				Unfocused = "Image bt-tl-un.xpm"
+				Selected = "Image bt-tl-fo.xpm"
+				Button = "1" { Actions = "Set Iconified" }
+			}		
+
+		}
+		Border {
+			Focused {
+				Left = "Image bd-vert.xpm"
+				Right = "Image bd-vert.xpm"
+				BottomLeft = "Image bd-bl.xpm"
+				Bottom = "Image bd-horz.xpm"
+				BottomRight = "Image bd-br.xpm"
+				TopLeft = "EMPTY"
+				Top = "EMPTY"
+				TopRight = "EMPTY"
+			}
+			Unfocused {
+				Left = "Image bd-vert-un.xpm"
+				Right = "Image bd-vert-un.xpm"
+				BottomLeft = "Image bd-bl-un.xpm"
+				Bottom = "Image bd-horz-un.xpm"
+				BottomRight = "Image bd-br-un.xpm"
+				TopLeft = "EMPTY"
+				Top = "EMPTY"
+				TopRight = "EMPTY"
+				Text = "#111111"
+			}
+		}
+	}
+}
+
+Decor = "MENU" {
+	Title {
+		Height = "0"
+		Pad = "5 0 4 0"
+
+		Focused = "Empty"
+		Unfocused = "Empty"
+
+		Tab {
+			Focused = "Solid #dcdcdc"
+			FocusedSelected = "Solid #aaaaaa"
+			Unfocused = "Solid #efefef"
+			UnfocusedSelected = "Solid #cfcfcf"
+		}
+		Separator {
+			Focused = "Empty"
+			Unfocused = "Empty"
+		}
+		Font {
+			Focused = "$FONT#CENTER"
+		}
+		FontColor {
+			Focused = "#000000"
+			FocusedSelected = "#000000"
+			Unfocused = "#000000"
+			UnfocusedSelected = "#000000"
+		}
+		Border {
+			Focused {
+				TopLeft = "Image cse-fo.xpm"
+				Top = "Image bd-horz.xpm"
+				TopRight = "Image csd-fo.xpm"
+				Left = "Image bd-vert.xpm"
+				Right = "Image bd-vert.xpm"
+				BottomLeft = "Image bd-bl.xpm"
+				Bottom = "Image bd-horz.xpm"
+				BottomRight = "Image bd-br.xpm"
+			}
+			Unfocused {
+				TopLeft = "Image cse-un.xpm"
+				Top = "Image bd-horz-un.xpm"
+				TopRight = "Image csd-un.xpm"
+				Left = "Image bd-vert-un.xpm"
+				Right = "Image bd-vert-un.xpm"
+				BottomLeft = "Image bd-bl-un.xpm"
+				Bottom = "Image bd-horz-un.xpm"
+				BottomRight = "Image bd-br-un.xpm"
+			}
+		}
+	}
+}
+
+
+Decor = "STATUSWINDOW" {
+	Title {
+		Height = "21"
+		Pad = "5 0 4 0"
+
+		Focused = "Empty"
+		Unfocused = "Empty"
+
+		Tab {
+			Focused = "Solid #D9D102"
+			FocusedSelected = "Solid #D9D102"
+			Unfocused = "Solid #efefef"
+			UnfocusedSelected = "Solid #cfcfcf"
+		}
+		Separator {
+			Focused = "Empty"
+			Unfocused = "Empty"
+		}
+		Font {
+			Focused = "$FONT#CENTER"
+		}
+		FontColor {
+			Focused = "#000000"
+			FocusedSelected = "#000000"
+			Unfocused = "#000000"
+			UnfocusedSelected = "#000000"
+		}
+		Border {
+			Focused {
+				TopLeft = "Image cse-fo.xpm"
+				Top = "Image bd-horz.xpm"
+				TopRight = "Image csd-fo.xpm"
+				Left = "Image bd-vert.xpm"
+				Right = "Image bd-vert.xpm"
+				BottomLeft = "Image bd-bl.xpm"
+				Bottom = "Image bd-horz.xpm"
+				BottomRight = "Image bd-br.xpm"
+			}
+			Unfocused {
+				TopLeft = "Image cse-un.xpm"
+				Top = "Image bd-horz-un.xpm"
+				TopRight = "Image csd-un.xpm"
+				Left = "Image bd-vert-un.xpm"
+				Right = "Image bd-vert-un.xpm"
+				BottomLeft = "Image bd-bl-un.xpm"
+				Bottom = "Image bd-horz-un.xpm"
+				BottomRight = "Image bd-br-un.xpm"			}
+		}
+	}
+}
+
+
+}
+
+
+Harbour {
+    Texture = "Image harbour.xpm"
+}
+
+
+Menu {
+    Focused {
+	Font = "$FONT"
+	Background = "Solid #ddd200"
+        Item = "Solid #e6e6e6 1x1"
+        Separator = "Solid #aaaaaa 0x1"
+        Arrow = "Solid #aaaaaa 2x2"
+        Text = "#000000"
+    }
+    Unfocused {
+	Font = "$FONT"
+        Background = "Solid #383838"
+        Item = "Solid #e6e6e6 1x1"
+        Separator = "Solid #8e8e8e 0x1"
+        Arrow = "Solid #8e8e8e 2x2"
+        Text = "#8e8e8e"
+    }
+    Selected {
+	Font = "$FONT"
+        Background = "Solid #ddd200"
+        Item = "Solid #c1c1c1 1x1"
+        Arrow = "Solid #000000 2x2"
+        Text = "#000000"
+    }
+Pad = "2 2 5 5"
+
+}
+
+CmdDialog {
+  Font = "$FONT"
+  Texture = "Solid #e6e6e6"
+  Text = "#000000"
+  Pad = "2 2 5 5"
+}
+
+WorkspaceIndicator {
+  Font = "$FONT"
+  Backgrount = "Solid #cccccc"
+  Text = "#cccccc"
+  Pad = "2 2 2 2"
+  }
+Status {
+  Font = "$FONT"
+  Texture = "Solid #e6e6e6"
+  Text = "#000000"
+  Pad = "2 2 5 5"
+}
+
+Root {
+	Command = "lxpanel"
+}

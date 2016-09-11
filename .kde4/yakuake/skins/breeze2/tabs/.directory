@@ -1,0 +1,11 @@
+[Dolphin]
+HeaderColumnWidths=292,117,195,84,119,84,84,107,102,182,384,84
+SortOrder=1
+SortRole=type
+Timestamp=2015,7,7,15,53,6
+Version=3
+ViewMode=1
+VisibleRoles=Icons_text,Icons_size,Details_text,Details_size,Details_date,Details_type,Details_rating,Details_tags,Details_comment,Details_imageSize,Details_destination,Details_permissions,Details_owner,Details_group,CustomizedDetails
+
+[Settings]
+HiddenFilesShown=true

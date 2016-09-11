@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Service
+Name=Compare Two Files
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin,text/plain
+Actions=Komparetwo;
+
+[Desktop Action Komparetwo]
+Name=Compare Two Files
+Icon=kompare
+Exec=kompare -c %U
+

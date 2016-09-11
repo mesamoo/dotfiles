@@ -1,0 +1,28 @@
+QMenuBar {
+    background-color: rgba(23, 23, 23, 255);
+}
+
+QMenuBar::item {
+    spacing: 3px; /* spacing between menu bar items */
+    padding: 1px 4px;
+    background: transparent;
+    /*background: rgba(216, 77, 79, 255);*/
+    /*border-radius: 4px;*/
+}
+
+QMenuBar::item:selected { /* when selected using mouse or keyboard */
+   /* background: #2B2B2C;*/
+    background: rgba(46, 108, 201, 255);
+    color: rgba(255, 255, 255, 255);    
+}
+
+QMenuBar::item:pressed {
+    background: #888888;*/
+    /*background: rgba(46, 108, 201, 255);*/
+}
+
+/*QMenuBar::item:hover {
+    /*background: #2B2B2C;*/
+    background: rgba(46, 108, 201, 255);
+    color: rgba(255, 255, 255, 255);    
+}*/

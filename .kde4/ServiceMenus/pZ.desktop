@@ -1,0 +1,39 @@
+[Desktop Entry]
+#pzip-dh
+GenericName=p-Zip GUI
+Type=Service
+ServiceTypes=all/all
+ExcludeServiceTypes=device/*,media/*
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin,all/all
+Actions=peazipadd;peazipext;peazipextfolder;peazipexthere;peazipopen;
+Terminal=false
+Icon=peazip
+X-KDE-Submenu=peaZip
+X-KDE-Icon=peazip
+#X-KDE-Priority=TopLevel
+##################
+
+[Desktop Action peazipadd]
+Exec=peazip -add2archive %F
+Icon=peazip
+Name=Archive with PeaZip
+
+[Desktop Action peazipext]
+Exec=peazip -ext2full %F
+Icon=peazip
+Name=Extract with PeaZip
+
+[Desktop Action peazipextfolder]
+Exec=peazip -ext2folder %F
+Icon=peazip
+Name=Extract here to new folder with PeaZip
+
+[Desktop Action peazipexthere]
+Exec=peazip -ext2here %F
+Icon=peazip
+Name=Extract here with PeaZip
+
+[Desktop Action peazipopen]
+Exec=peazip -ext2browse %F
+Icon=peazip
+Name=Open with PeaZip

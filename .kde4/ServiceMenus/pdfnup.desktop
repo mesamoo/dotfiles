@@ -1,0 +1,133 @@
+#
+# 	Part of kde-service-menu-pdf Version 0.5
+# 	Copyright (C) 2011 Giuseppe Benigno <giuseppe.benigno(at)gmail.com>
+#
+# 	This program is free software: you can redistribute it and/or modify
+# 	it under the terms of the GNU General Public License as published by
+# 	the Free Software Foundation, either version 3 of the License, or
+# 	(at your option) any later version.
+#
+# 	This program is distributed in the hope that it will be useful,
+# 	but WITHOUT ANY WARRANTY; without even the implied warranty of
+# 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# 	GNU General Public License for more details.
+#
+# 	You should have received a copy of the GNU General Public License
+# 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/pdf;
+Icon=page-4sides
+TryExec=pdfnup_kmenu.sh
+Actions=nup_2x1;nup_2x2;nup_2x3;nup_2x4;nup_custom;
+Name=pdfnup service menu
+Name[de]=pdfnup Servicemenü
+Name[es]=Menú de pdfnup
+Name[gl]=Menu de pdfnup
+X-KDE-Submenu=Repaginate
+X-KDE-Submenu[de]=Seiten pro Blatt
+X-KDE-Submenu[es]=Repaginar
+X-KDE-Submenu[fr]=Repaginate
+X-KDE-Submenu[gl]=Repaginar
+X-KDE-Submenu[it]=Rimpagina
+X-KDE-Submenu[pt]=Repaginate
+X-KDE-Submenu[sr]=Repaginate
+X-KDE-Submenu[sr@Latn]=Repaginate
+
+[Desktop Action nup_2x1]
+Icon=page-2sides
+Name=Convert 2x1 (2 pages per sheet)
+Name[de]=Umwandeln nach 2x1 (2 Seiten pro Blatt)
+Name[es]=Convertir a 2x1 (2 páginas por hoja)
+Name[fr]=Conversion 2x1 (2 pages par feuille)
+Name[gl]=Converter em 2x1 (2 páginas por folha)
+Name[it]=Rimpagina 2x1 (2 pagine per foglio)
+Name[pt]=Converter em 2x1 (2 páginas por folha)
+Name[sr]=Конверзија 2x1 (2 стране по листу)
+Name[sr@Latn]=Konverzija 2x1 (2 strane po listu)
+Exec=pdfnup_kmenu.sh en nup_2x1 "%f"
+Exec[de]=pdfnup_kmenu.sh de nup_2x1 "%f"
+Exec[fr]=pdfnup_kmenu.sh fr nup_2x1 "%f"
+Exec[it]=pdfnup_kmenu.sh it nup_2x1 "%f"
+Exec[sr]=pdfnup_kmenu.sh sr nup_2x1 "%f"
+Exec[sr@Latn]=pdfnup_kmenu.sh sr@Latn nup_2x1 "%f"
+Exec[pt]=pdfnup_kmenu.sh pt nup_2x1 "%f"
+
+[Desktop Action nup_2x2]
+Icon=page-4sides
+Name=Convert 2x2 (4 pages per sheet)
+Name[de]=Umwandeln nach 2x2 (4 Seiten pro Blatt)
+Name[es]=Convertir a 2x2 (4 páginas por hoja)
+Name[fr]=Conversion 2x2 (4 pages par feuille)
+Name[gl]=Converter em 2x2 (4 páginas por folha)
+Name[it]=Rimpagina 2x2 (4 pagine per foglio)
+Name[sr]=Конверзија 2x2 (4 стране по листу)
+Name[sr@Latn]=Konverzija 2x2 (4 strane po listu)
+Name[pt]=Converter em 2x2 (4 páginas por folha)
+Exec=pdfnup_kmenu.sh en nup_2x2 "%f"
+Exec[de]=pdfnup_kmenu.sh de nup_2x2 "%f"
+Exec[fr]=pdfnup_kmenu.sh fr nup_2x2 "%f"
+Exec[it]=pdfnup_kmenu.sh it nup_2x2 "%f"
+Exec[sr]=pdfnup_kmenu.sh sr nup_2x2 "%f"
+Exec[sr@Latn]=pdfnup_kmenu.sh sr@Latn nup_2x2 "%f"
+Exec[pt]=pdfnup_kmenu.sh pt nup_2x2 "%f"
+
+[Desktop Action nup_2x3]
+Icon=page-3sides
+Name=Convert 2x3 (6 pages per sheet)
+Name[de]=Umwandeln nach 2x3 (6 Seiten pro Blatt)
+Name[es]=Convertir a 2x3 (6 páginas por hoja)
+Name[fr]=Conversion 2x3 (6 pages par feuille)
+Name[gl]=Converter em 2x3 (6 páginas por folha)
+Name[it]=Rimpagina 2x3 (6 pagine per foglio)
+Name[sr]=Конверзија 2x3 (6 страница по листу)
+Name[sr@Latn]=Konverzija 2x3 (6 stranica po listu)
+Name[pt]=Converter em 2x3 (6 páginas por folha)
+Exec=pdfnup_kmenu.sh en nup_2x3 "%f"
+Exec[de]=pdfnup_kmenu.sh de nup_2x3 "%f"
+Exec[fr]=pdfnup_kmenu.sh fr nup_2x3 "%f"
+Exec[it]=pdfnup_kmenu.sh it nup_2x3 "%f"
+Exec[sr]=pdfnup_kmenu.sh sr nup_2x3 "%f"
+Exec[sr@Latn]=pdfnup_kmenu.sh sr@Latn nup_2x3 "%f"
+Exec[pt]=pdfnup_kmenu.sh pt nup_2x3 "%f"
+
+[Desktop Action nup_2x4]
+Icon=page-4sides
+Name=Convert 2x4 (8 pages per sheet)
+Name[de]=Umwandeln nach 2x4 (8 Seiten pro Blatt)
+Name[es]=Convertir a 2x4 (8 páginas por hoja)
+Name[fr]=Conversion 2x4 (8 pages par feuille)
+Name[gl]=Converter em 2x4 (8 páginas por folha)
+Name[it]=Rimpagina 2x4 (8 pagine per foglio)
+Name[sr]=Конверзија 2x4 (8 страница по листу)
+Name[sr@Latn]=Konverzija 2x4 (8 stranica po listu)
+Name[pt]=Converter em 2x4 (8 páginas por folha)
+Exec=pdfnup_kmenu.sh en nup_2x4 "%f"
+Exec[de]=pdfnup_kmenu.sh de nup_2x4 "%f"
+Exec[fr]=pdfnup_kmenu.sh fr nup_2x4 "%f"
+Exec[it]=pdfnup_kmenu.sh it nup_2x4 "%f"
+Exec[pt]=pdfnup_kmenu.sh pt nup_2x4 "%f"
+Exec[sr]=pdfnup_kmenu.sh sr nup_2x4 "%f"
+Exec[sr@Latn]=pdfnup_kmenu.sh sr@Latn nup_2x4 "%f"
+
+[Desktop Action nup_custom]
+Icon=page-simple
+Name=Custom Repagination
+Name[de]=Eigene Konstellation
+Name[es]=Conversión personalizada
+Name[fr]=Conversion personalisée
+Name[gl]=Conversom personalizada
+Name[it]=Rimpaginazione personalizzata
+Name[sr]=Персонализована конверзија
+Name[sr@Latn]=Personalizovana konverzija
+Name[pt]=Conversão personalizada
+Exec=pdfnup_kmenu.sh en nup_custom "%f"
+Exec[de]=pdfnup_kmenu.sh de nup_custom "%f"
+Exec[fr]=pdfnup_kmenu.sh fr nup_custom "%f"
+Exec[it]=pdfnup_kmenu.sh it nup_custom "%f"
+Exec[sr]=pdfnup_kmenu.sh sr nup_custom "%f"
+Exec[sr@Latn]=pdfnup_kmenu.sh sr@Latn nup_custom "%f"
+Exec[pt]=pdfnup_kmenu.sh pt nup_custom "%f"

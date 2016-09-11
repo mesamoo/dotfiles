@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=all/all;
+Actions=backup;
+Encoding=UTF-8
+
+[Desktop Action backup]
+Type=Application
+Name=Create backup
+Icon=tab-duplicate
+Exec=kde-cp %f %f.`date +%%Y%%m%%d%%H%%M%%S`

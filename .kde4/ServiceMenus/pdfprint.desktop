@@ -1,0 +1,38 @@
+#
+# 	Part of kde-service-menu-pdf Version 0.5
+# 	Copyright (C) 2011 Giuseppe Benigno <giuseppe.benigno(at)gmail.com>
+#
+# 	This program is free software: you can redistribute it and/or modify
+# 	it under the terms of the GNU General Public License as published by
+# 	the Free Software Foundation, either version 3 of the License, or
+# 	(at your option) any later version.
+#
+# 	This program is distributed in the hope that it will be useful,
+# 	but WITHOUT ANY WARRANTY; without even the implied warranty of
+# 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# 	GNU General Public License for more details.
+#
+# 	You should have received a copy of the GNU General Public License
+# 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/pdf;
+Icon=printer
+TryExec=pdfprint_kmenu.sh
+Actions=print;
+Name=print pdf service menu
+Name[de]=pdf drucken Servicemenü
+Name[it]=Stampa pdf Servicemenü
+X-KDE-Submenu=PDF Print
+
+[Desktop Action print]
+Icon=printer
+Name=Print selected documents (selection order)
+Name[de]=Ausgewählte Dokumente drucken (Auswahlreihenfolge)
+Name[it]=Stampa i documenti selezionati (in ordine di selezione)
+Exec=pdfprint_kmenu.sh en print %F
+Exec[de]=pdfprint_kmenu.sh de print %F
+Exec[it]=pdfprint_kmenu.sh it print %F

@@ -1,0 +1,34 @@
+#
+# wmf-converter, uses the wmf2svg and wmf2eps commands.
+# It creates converted files in the same directory as the original files
+#
+# It does not check for previously existing files.
+# this Servicemenu is based on "Image Service Menu" by Jens Benecke
+# and wouldn't have been possible without the 
+# Service Menu Tutorial by Aaron J. Seigo,
+# http://developer.kde.org/documentation/tutorials/dot/servicemenus.html
+# Any errors are my own, any successes are credited to Jens, Aaron,
+# and the authors of wmf2svg and wmf2eps and libwmf.
+#
+# wmf-converter by David herman ob1@yifan.net
+# Released under the same license as the KDE core distribution (GPL 2.0)
+#
+
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=image/x-emf;
+Actions=convToPDF;convToTIFF;
+X-KDE-Submenu=Convert WMF to ...
+
+[Desktop Action convToPDF]
+Type=Application
+Name=pdf
+Icon=image
+Exec=unoconv %f
+
+[Desktop Action convToTIFF]
+Type=Application
+Name=tiff
+Icon=image
+Exec=unoconv -f tiff %f

@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=image/svg+xml-compressed;
+X-KDE-StartupNotify=false
+X-KDE-Priority=TopLevel
+Actions=Decompress;
+
+[Desktop Action Decompress]
+Name=.svgz -> .svg
+Name[en]=Decompress (.svgz -> .svg)
+Name[fi]=Pura (.svgz -> .svg)
+Exec=$(kde4-config --localprefix)share/kde4/services/ServiceMenus/svg-svgz-svg/svgz-svg.sh
+Icon=image-svg+xml

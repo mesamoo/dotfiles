@@ -1,0 +1,14 @@
+# Dolphin File Name Copy Tool (DFNCT) by Dan MacDonald aka danboid 2013
+#
+#This service menu streamlines the process of copying the full path of a file or directory in a format suitable
+#for use in scripts or command lines. It requires kdialog.
+[Desktop Entry]
+ServiceTypes=KonqPopupMenu/Plugin,inode/directory,inode/directory-locked,all/allfiles,inode/directory-hidden
+Actions=DFNCT
+Icon=utilities-terminal
+Type=Service
+X-KDE-Priority=TopLevel
+[Desktop Action DFNCT]
+Exec=kdialog --title "Dolphin File Name Copy Tool" --inputbox "Copy the current file name and path" "'%f' "
+Icon=utilities-terminal
+Name=Dolphin File Name Copy Tool

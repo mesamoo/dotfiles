@@ -1,0 +1,26 @@
+#
+# ~/.xprofile
+# sourced by /etc/lxdm/Xsession
+
+if which dbus-launch >/dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
+    eval "$(dbus-launch --sh-syntax --exit-with-session)"
+fi
+
+# Environment variables
+#
+export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+#export QT_STYLE_OVERRIDE=gtk
+#following line changed from "PATH=$PATH:/home/username/bin/
+PATH=$PATH:~/bin/
+export PATH
+#
+##################################
+#added 2015-12-28
+# commented, modified below, 12016-01-22
+#QT_STYLE_OVERRIDE=gtk
+#QT_QPA_PLATFORMTHEME=qt5ct
+##################################
+# added export 2016-01-22 and changed to lxqt
+export QT_STYLE_OVERRIDE=gtk
+export QT_QPA_PLATFORMTHEME=lxqt
+export VAGRANT_DEFAULT_PROVIDER = "virtualbox"

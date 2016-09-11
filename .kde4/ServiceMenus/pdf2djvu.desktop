@@ -1,0 +1,62 @@
+#
+# 	Part of servicemenu-encfs Version 0.5
+# 	Copyright (C) 2011 Giuseppe Benigno <giuseppe.benigno(at)gmail.com>
+#
+# 	This program is free software: you can redistribute it and/or modify
+# 	it under the terms of the GNU General Public License as published by
+# 	the Free Software Foundation, either version 3 of the License, or
+# 	(at your option) any later version.
+#
+# 	This program is distributed in the hope that it will be useful,
+# 	but WITHOUT ANY WARRANTY; without even the implied warranty of
+# 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# 	GNU General Public License for more details.
+#
+# 	You should have received a copy of the GNU General Public License
+# 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/pdf;
+Icon=djvu
+TryExec=pdf2djvu_kmenu.sh
+Actions=300_dpi;600_dpi;dpi;_SEPARATOR_;advanced;
+Name=pdf2djvu service menu
+Name[es]=Menú de pdf2djvu
+X-KDE-Submenu=&Convert to DjVu
+X-KDE-Submenu[it]=Converti in DjVu
+X-KDE-Submenu[es]=Convertir a DjVu
+
+[Desktop Action 300_dpi]
+Icon=djvu
+Name=Resolution: 300 DPI
+Name[it]=Risoluzione: 300 DPI
+Name[es]=Resolución: 300 DPI
+Exec=pdf2djvu_kmenu.sh en dpi300 %F
+Exec[it]=pdf2djvu_kmenu.sh it dpi300 %F
+
+[Desktop Action 600_dpi]
+Icon=djvu
+Name=Resolution: 600 DPI
+Name[it]=Risoluzione: 600 DPI
+Name[es]=Resolución: 600 DPI
+Exec=pdf2djvu_kmenu.sh en dpi600 %F
+Exec[it]=pdf2djvu_kmenu.sh it dpi600 %F
+
+[Desktop Action dpi]
+Icon=configure
+Name=Custom resolution
+Name[it]=Risoluzione personalizzata
+Name[es]=Resolución personalizada
+Exec=pdf2djvu_kmenu.sh en dpi %F
+Exec[it]=pdf2djvu_kmenu.sh it dpi %F
+
+[Desktop Action advanced]
+Icon=preferences-system
+Name=Advanced options
+Name[it]=Opzioni avanzate
+Name[es]=Opciones avanzadas
+Exec=pdf2djvu_kmenu.sh en advanced %F
+Exec[it]=pdf2djvu_kmenu.sh it advanced %F
