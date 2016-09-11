@@ -1,6 +1,6 @@
-# Western lands
+# Western Sky
 #borders from magni theme
-#rainbow originally from 
+#rainbow originally from axon kolors
 # use a monospace font for proper viewing of theme file
 
 
@@ -27,8 +27,8 @@ PDecor {
 				}
 
 			Separator {
-				Focused 			= "Image 0-tab-separator-Focused.png"
-				Unfocused 			= "Image 0-tab-separator-Unocused.png"
+				Focused 			= "Image 0-tab-separator-FocusedALT.png"
+				Unfocused 			= "Image 0-tab-separator-UnocusedALT.png"
 				}
 
 			Font {
@@ -170,8 +170,8 @@ PDecor {
 					}
 
 			Separator {
-					Focused 		= "Image 0-tab-separator-Focused.png"
-					Unfocused 		= "Image 0-tab-separator-Unocused.png"
+					Focused 		= "Image 0-tab-separator-FocusedALT.png"
+					Unfocused 		= "Image 0-tab-separator-UnocusedALT.png"
 					}
 
 			Font {
@@ -275,8 +275,8 @@ PDecor {
 				}
 
 			Separator {
-				Focused 			= "Image 0-tab-separator-Focused.png"
-				Unfocused 			= "Image 0-tab-separator-Unocused.png"
+				Focused 			= "Image 0-tab-separator-FocusedALT.png"
+				Unfocused 			= "Image 0-tab-separator-UnocusedALT.png"
 				}
 
 			Font {
@@ -370,8 +370,8 @@ PDecor {
 				}
 
 			Separator {
-				Focused 			= "Image 0-tab-separator-Focused.png"
-				Unfocused 			= "Image 0-tab-separator-Unocused.png"
+				Focused 			= "Image 0-tab-separator-FocusedALT.png"
+				Unfocused 			= "Image 0-tab-separator-UnocusedALT.png"
 				}
 
 			Font {
@@ -456,8 +456,8 @@ PDecor {
 				}
 
 			Separator {
-				Focused 			= "Image 0-tab-separator-Focused.png"
-				Unfocused 			= "Image 0-tab-separator-Unocused.png"
+				Focused 			= "Image 0-tab-separator-FocusedALT.png"
+				Unfocused 			= "Image 0-tab-separator-UnocusedALT.png"
 				}
 
 			Font {

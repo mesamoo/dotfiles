@@ -1,8 +1,7 @@
-# Western lands
+# verdant land
 #borders from magni theme
 #rainbow originally from 
 # use a monospace font for proper viewing of theme file
-
 
 $font 								= "arimo-16#XFT"
 $font_bigger 						= "arimo-16#XFT"
@@ -27,8 +26,8 @@ PDecor {
 				}
 
 			Separator {
-				Focused 			= "Image 0-tab-separator-Focused.png"
-				Unfocused 			= "Image 0-tab-separator-Unocused.png"
+				Focused 			= "Image 0-tab-separator-FocusedALT.png"
+				Unfocused 			= "Image 0-tab-separator-UnocusedALT.png"
 				}
 
 			Font {
@@ -170,8 +169,8 @@ PDecor {
 					}
 
 			Separator {
-					Focused 		= "Image 0-tab-separator-Focused.png"
-					Unfocused 		= "Image 0-tab-separator-Unocused.png"
+					Focused 		= "Image 0-tab-separator-FocusedALT.png"
+					Unfocused 		= "Image 0-tab-separator-UnocusedALT.png"
 					}
 
 			Font {
@@ -275,8 +274,8 @@ PDecor {
 				}
 
 			Separator {
-				Focused 			= "Image 0-tab-separator-Focused.png"
-				Unfocused 			= "Image 0-tab-separator-Unocused.png"
+				Focused 			= "Image 0-tab-separator-FocusedALT.png"
+				Unfocused 			= "Image 0-tab-separator-UnocusedALT.png"
 				}
 
 			Font {
@@ -370,8 +369,8 @@ PDecor {
 				}
 
 			Separator {
-				Focused 			= "Image 0-tab-separator-Focused.png"
-				Unfocused 			= "Image 0-tab-separator-Unocused.png"
+				Focused 			= "Image 0-tab-separator-FocusedALT.png"
+				Unfocused 			= "Image 0-tab-separator-UnocusedALT.png"
 				}
 
 			Font {
@@ -456,8 +455,8 @@ PDecor {
 				}
 
 			Separator {
-				Focused 			= "Image 0-tab-separator-Focused.png"
-				Unfocused 			= "Image 0-tab-separator-Unocused.png"
+				Focused 			= "Image 0-tab-separator-FocusedALT.png"
+				Unfocused 			= "Image 0-tab-separator-UnocusedALT.png"
 				}
 
 			Font {
@@ -644,27 +643,27 @@ Harbour {
 Menu {
 		Pad 						= "3 3 6 3"
 			Focused {
-				Font 				= "$font_bigger2"
+				Font 				= "$font_bigger"
 #				Background 			= "Solid #171717"
 				Background 			= "Solid #0d0d0d"
 				Item 				= "arrow-focus"
-				Text 				= "#82C1E9" 
+				Text 				= "#55c762" 
 				Separator 			= "Image 0-Menu-separator-default.png"
 				Arrow 				= "Image 0-Menu-Focused-arrow.png"
 				}
 	
 			Unfocused {
-				Font 				= "$font_bigger2"
+				Font 				= "$font_bigger"
 #				Background 			= "Solid #171717"
 				Background 			= "Solid #0d0d0d"
 				Item 				= "arrow-focus"
-				Text 				= "#82C1E9"
+				Text 				= "#55c762"
 				Separator 			= "Image 0-Menu-separator-default.png"
 				Arrow 				= "Image 0-Menu-Unfocused-arrow.png"
 				}
 	
 			Selected {
-				Font 				= "$font_bigger2"
+				Font 				= "$font_bigger"
 #				Background 			= "Solid #171717"
 				Background 			= "Solid #0d0d0d"
 				Item 				= "arrow-sel"   

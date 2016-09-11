@@ -75,19 +75,19 @@ Separator {}
 				Entry = "OpenBroadcast" { Actions = "Exec /home/dh84/obs-studio-portable/runOBS" }
 		Separator {}
 		Separator {}
+				Entry = "cantata" { Actions = "Exec cantata" }
+				Entry = "gmpc" { Actions = "Exec gmpc" }
+				Entry = "clementine" { Actions = "Exec clementine" }
+				Entry = "nuvolaplayer3" { Actions = "Exec nuvolaplayer3" }
+				Entry = "pithos" { Actions = "Exec pithos" }
+		Separator {}
+		Separator {}
 		                Entry = "eidete" { Actions = "Exec eidete" }
 		                Entry = "kazam" { Actions = "Exec kazam" }
 		                Entry = "recorditnow" { Actions = "Exec recorditnow" }
 		                Entry = "recordMyDesktop" { Actions = "Exec gtk-recordMyDesktop" }
 		                Entry = "simplerecord" { Actions = "Exec simplescreenrecorder" }
 		                Entry = "vokoscreen" { Actions = "Exec vokoscreen" }
-		Separator {}
-		Separator {}
-				Entry = "cantata" { Actions = "Exec cantata" }
-				Entry = "gmpc" { Actions = "Exec gmpc" }
-				Entry = "clementine" { Actions = "Exec clementine" }
-				Entry = "nuvolaplayer3" { Actions = "Exec nuvolaplayer3" }
-				Entry = "pithos" { Actions = "Exec pithos" }
 		Separator {}
 		Separator {}
 				Entry = "alsamixer" { Actions = "Exec $TERM -title alsamixer -e alsamixer" }
@@ -240,9 +240,12 @@ Separator {}
 		Separator {}
 				Entry = "Midnight Commander" { Actions = "Exec $TERM -title MidnightCommander -e mc" }
 				Entry = "nano" { Actions = "Exec $TERM -title NanoEdit -e nano" }
+				Entry = "git-cola" { Actions = "Exec git-cola" }
+				Entry = "qgit" { Actions = "Exec qgit" }
+				
+		Separator {}
+		Separator {}
 				Entry = "krename" { Actions = "Exec krename" }
-		Separator {}
-		Separator {}
 				Entry = "hardinfo" { Actions = "Exec hardinfo" }
 				Entry = "ksysguard" { Actions = "Exec ksysguard" }
 		Separator {}
