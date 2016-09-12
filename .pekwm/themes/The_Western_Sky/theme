@@ -3,14 +3,19 @@
 #rainbow originally from axon kolors
 # use a monospace font for proper viewing of theme file
 
+#	$font 								= "arimo-16#XFT"
+#	$font_bigger 						= "arimo-16#XFT"
+#	$font_bigger2 						= "arimo-18#XFT"
+#	$FONT_TITLE 						= "XFT#Oxygen:size=16:weight=bold#Center"
+#	$FONT_TITLE 						= "XFT#arimo:size=15#Center"
+#	$FONT_TITLE2 						= "XFT#droid sans:size=16#Center"
+#	$FONT_TITLE2 						= "XFT#Oxygen:size=15:weight=bold#Center"
 
-$font 								= "arimo-16#XFT"
-$font_bigger 						= "arimo-16#XFT"
-$font_bigger2 						= "arimo-18#XFT"
-#$FONT_TITLE 						= "XFT#Oxygen:size=16:weight=bold#Center"
-$FONT_TITLE 						= "XFT#arimo:size=15#Center"
-#$FONT_TITLE2 						= "XFT#droid sans:size=16#Center"
-$FONT_TITLE2 						= "XFT#Oxygen:size=15:weight=bold#Center"
+$font 								= "XFT#fira sans light:size=14"
+$font_bigger 						= "XFT#fira sans Light:size=16"
+$font_bigger2 						= "XFT#fira sans ExtraLight:size=14:weight=bold"
+$FONT_TITLE 						= "XFT#fira sans ExtraLlight:size=14:weight=bold#Center"
+$FONT_TITLE2						= "XFT#fira sans light:size=14:weight=bold#Center"
 
 PDecor {
 	Decor = "Default" {
@@ -40,12 +45,10 @@ PDecor {
 				}
 
 			FontColor {
-#				Focused 			= "#95AF9E"
-				Focused 			= "#cccccc"
-				FocusedSelected 	= "#EBFA60"
-#				FocusedSelected 	= "#54B8F8"
-				Unfocused 			= "#cccccc"
-				UnfocusedSelected 	= "#cccccc"
+				Focused 			= "#82C1E9"
+				FocusedSelected 	= "#ffffff"
+				Unfocused 			= "#82C1E9"
+				UnfocusedSelected 	= "#82C1E9"
 				}
 
 			Buttons {
@@ -53,7 +56,7 @@ PDecor {
 					Focused 		= "Image 0-Button-far-right-Focused.png"
 					Unfocused 		= "Image 0-Button-far-right-Unfocused.png"
 					Hoover 			= "Image 8-Button-close-Hoover-Red.png"
-					Pressed 		= "Image 8-Button-close-Pressed-Red.png"
+					Pressed 		= "Image 9-Button-close-Pressed-Red.png"
 					Button 			= "1" { Actions = "Close" }
 					Button 			= "3" { Actions = "Kill" }
 					}
@@ -62,7 +65,7 @@ PDecor {
 					Focused 		= "Image 0-Button-default.png"
 					Unfocused 		= "Image 0-Button-default.png"
 					Hoover 			= "Image 8-Button-max-Hoover-teal.png"
-					Pressed 		= "Image 8-Button-max-Pressed-teal.png"
+					Pressed 		= "Image 9-Button-max-Pressed-teal.png"
 					Button 			= "1" { Actions = "Toggle Maximized 1 1" }
 					Button 			= "3" { Actions = "Maxfill False True" }
 					}
@@ -71,7 +74,7 @@ PDecor {
 					Focused 		= "Image 0-Button-default.png"
 					Unfocused 		= "Image 0-Button-default.png"
 					Hoover 			= "Image 8-Button-min-Hoover-green.png"
-					Pressed 		= "Image 8-Button-min-Pressed-green.png"
+					Pressed 		= "Image 9-Button-min-Pressed-green.png"
 					Button 			= "1" { Actions = "Set Iconified" }
 					}
 
@@ -87,7 +90,6 @@ PDecor {
 
 			Border {
 				Focused {
-					#Top 			= "Image 1-Border-Focused-top-white.png"
 					Top 			= "Image bd-horz1.png"
 					TopRight 		= "Image bd-tr1.png"
 					TopLeft 		= "Image bd-tl1.png"
@@ -99,7 +101,6 @@ PDecor {
 					}
 					
 				Unfocused {				
-					#Top 			= "Image 0-Border-Unfocused-top-blu.png"
 					Top 			= "Image bd-horz-un2.png"
 					TopRight 		= "Image bd-tr-un2.png"
 					TopLeft 		= "Image bd-tl-un2.png"
@@ -151,11 +152,11 @@ PDecor {
 		}
 
 # Decor = "noKlose" needs "noKlose" specified in autoproperties to do anything, 
-# otherwise does nothing
-# Window set to have sticky, maximize and minimize buttons only (no close button)
+# otherwise does nothing Windows set to use "noKlose" decore
+# will have sticky, maximize and minimize buttons only (no close button)
 # close button location (far right) has a second minimize button  
 # (2 minimize buttons, min-max-min)
-# prevent accidental application quit
+# to prevent accidental application quit of apps that won't (or improperly) close to tray
 	
 	Decor = "noKlose" {
 		Title {
@@ -184,7 +185,6 @@ PDecor {
 					}
 
 			FontColor {
-#					Focused 		= "#95AF9E"
 					Focused 		= "#cccccc"
 					FocusedSelected = "#EBFA60"                             
 					Unfocused 		= "#cccccc"
@@ -196,7 +196,7 @@ PDecor {
 					Focused 		= "Image 0-Button-far-right-Focused.png"
 					Unfocused 		= "Image 0-Button-far-right-Unfocused.png"
 					Hoover 			= "Image 8-Button-min-Hoover-green-right.png"
-					Pressed 		= "Image 8-Button-min-Pressed-green-right.png"
+					Pressed 		= "Image 9-Button-min-Pressed-green-right.png"
 					Button 			= "1" { Actions = "Set Iconified" }
 					}
 
@@ -204,7 +204,7 @@ PDecor {
 					Focused 		= "Image 0-Button-default.png"
 					Unfocused 		= "Image 0-Button-default.png"
 					Hoover 			= "Image 8-Button-max-Hoover-teal.png"
-					Pressed 		= "Image 8-Button-max-Pressed-teal.png"
+					Pressed 		= "Image 9-Button-max-Pressed-teal.png"
 					Button 			= "1" { Actions = "Toggle Maximized 1 1" }
 					Button 			= "3" { Actions = "Maxfill False True" }
 					}
@@ -213,7 +213,7 @@ PDecor {
 					Focused 		= "Image 0-Button-default.png"
 					Unfocused 		= "Image 0-Button-default.png"
 					Hoover 			= "Image 8-Button-min-Hoover-green.png"
-					Pressed 		= "Image 8-Button-min-Pressed-green.png"
+					Pressed 		= "Image 9-Button-min-Pressed-green.png"
 					Button 			= "1" { Actions = "Set Iconified" }
 					}
 
@@ -229,7 +229,6 @@ PDecor {
 				
 			Border {
 				Focused {
-					#Top 			= "Image 1-Border-Focused-top-white.png"
 					Top 			= "Image bd-horz1.png"
 					TopRight 		= "Image bd-tr1.png"
 					TopLeft 		= "Image bd-tl1.png"
@@ -241,7 +240,6 @@ PDecor {
 					}
 					
 				Unfocused {				
-					#Top 			= "Image 0-Border-Unfocused-top-blu.png"
 					Top 			= "Image bd-horz-un2.png"
 					TopRight 		= "Image bd-tr-un2.png"
 					TopLeft 		= "Image bd-tl-un2.png"
@@ -289,7 +287,6 @@ PDecor {
 				}
 
 			FontColor {
-#				Focused 			= "#95AF9E"
 				Focused 			= "#cccccc"
 				FocusedSelected 	= "#EBFA60"                             
 				Unfocused 			= "#cccccc"
@@ -301,7 +298,7 @@ PDecor {
 				Focused 			= "Image 0-Button-far-right-Focused.png"
 				Unfocused 			= "Image 0-Button-far-right-Unfocused.png"
 				Hoover 				= "Image 8-Button-min-Hoover-green-right.png"
-				Pressed 			= "Image 8-Button-min-Pressed-green-right.png"
+				Pressed 			= "Image 9-Button-min-Pressed-green-right.png"
 				Button 				= "1" { Actions = "Set Iconified" }
 				}
 
@@ -309,7 +306,7 @@ PDecor {
 				Focused 			= "Image 0-Button-default.png"
 				Unfocused 			= "Image 0-Button-default.png"
 				Hoover 				= "Image 8-Button-max-Hoover-teal.png"
-				Pressed 			= "Image 8-Button-max-Pressed-teal.png"
+				Pressed 			= "Image 9-Button-max-Pressed-teal.png"
 				Button 				= "1" { Actions = "Toggle Maximized 1 1" }
 				Button 				= "3" { Actions = "Maxfill False True" }
 				}
@@ -326,7 +323,6 @@ PDecor {
 
 			Border {
 				Focused {
-					#Top 			= "Image 1-Border-Focused-top-white.png"
 					Top 			= "Image bd-horz1.png"
 					TopRight 		= "Image bd-tr1.png"
 					TopLeft 		= "Image bd-tl1.png"
@@ -338,7 +334,6 @@ PDecor {
 					}
 					
 				Unfocused {				
-					#Top 			= "Image 0-Border-Unfocused-top-blu.png"
 					Top 			= "Image bd-horz-un2.png"
 					TopRight 		= "Image bd-tr-un2.png"
 					TopLeft 		= "Image bd-tl-un2.png"
@@ -384,7 +379,6 @@ PDecor {
 				}
 
 			FontColor {
-#				Focused 			= "#95AF9E"
 				Focused 			= "#cccccc"
 				FocusedSelected 	= "#EBFA60"                             
 				Unfocused 			= "#cccccc"
@@ -396,7 +390,7 @@ PDecor {
 				Focused 			= "Image 0-Button-far-right-Focused.png"
 				Unfocused 			= "Image 0-Button-far-right-Unfocused.png"
 				Hoover 				= "Image 8-Button-min-Hoover-green-right.png"
-				Pressed 			= "Image 8-Button-min-Pressed-green-right.png"
+				Pressed 			= "Image 9-Button-min-Pressed-green-right.png"
 				Button 				= "1" { Actions = "Set Iconified" }
 				}
 
@@ -412,7 +406,6 @@ PDecor {
 
 			Border {
 				Focused {
-					#Top 			= "Image 1-Border-Focused-top-white.png"
 					Top 			= "Image bd-horz1.png"
 					TopRight 		= "Image bd-tr1.png"
 					TopLeft 		= "Image bd-tl1.png"
@@ -424,7 +417,6 @@ PDecor {
 					}
 					
 				Unfocused {				
-					#Top 			= "Image 0-Border-Unfocused-top-blu.png"
 					Top 			= "Image bd-horz-un2.png"
 					TopRight 		= "Image bd-tr-un2.png"
 					TopLeft 		= "Image bd-tl-un2.png"
@@ -470,7 +462,6 @@ PDecor {
 				}
 
 			FontColor {
-#				Focused 			= "#95AF9E"
 				Focused 			= "#cccccc"
 				FocusedSelected 	= "#EBFA60"                             
 				Unfocused 			= "#cccccc"
@@ -482,7 +473,7 @@ PDecor {
 				Focused 			= "Image 0-Button-far-right-Focused.png"
 				Unfocused 			= "Image 0-Button-far-right-Unfocused.png"
 				Hoover 				= "Image 8-Button-close-Hoover-Red.png"
-				Pressed 			= "Image 8-Button-close-Pressed-Red.png"
+				Pressed 			= "Image 9-Button-close-Pressed-Red.png"
 				Button 				= "1" { Actions = "Close" }
 				Button 				= "3" { Actions = "Kill" }
 				}
@@ -499,7 +490,6 @@ PDecor {
 
 			Border {
 				Focused {
-					#Top 			= "Image 1-Border-Focused-top-white.png"
 					Top 			= "Image bd-horz1.png"
 					TopRight 		= "Image bd-tr1.png"
 					TopLeft 		= "Image bd-tl1.png"
@@ -511,7 +501,6 @@ PDecor {
 					}
 					
 				Unfocused {				
-					#Top 			= "Image 0-Border-Unfocused-top-blu.png"
 					Top 			= "Image bd-horz-un2.png"
 					TopRight 		= "Image bd-tr-un2.png"
 					TopLeft 		= "Image bd-tl-un2.png"
@@ -646,28 +635,25 @@ Harbour {
 Menu {
 		Pad 						= "3 3 6 3"
 			Focused {
-				Font 				= "$font_bigger2"
-#				Background 			= "Solid #171717"
+				Font 				= "$font_bigger"
 				Background 			= "Solid #0d0d0d"
 				Item 				= "arrow-focus"
-				Text 				= "#82C1E9" 
+				Text 				= "#8bd0fa" 
 				Separator 			= "Image 0-Menu-separator-default.png"
 				Arrow 				= "Image 0-Menu-Focused-arrow.png"
 				}
 	
 			Unfocused {
-				Font 				= "$font_bigger2"
-#				Background 			= "Solid #171717"
+				Font 				= "$font_bigger"
 				Background 			= "Solid #0d0d0d"
 				Item 				= "arrow-focus"
-				Text 				= "#82C1E9"
+				Text 				= "#8bd0fa"
 				Separator 			= "Image 0-Menu-separator-default.png"
 				Arrow 				= "Image 0-Menu-Unfocused-arrow.png"
 				}
 	
 			Selected {
 				Font 				= "$font_bigger2"
-#				Background 			= "Solid #171717"
 				Background 			= "Solid #0d0d0d"
 				Item 				= "arrow-sel"   
 				Text 				= "#FFFFFF"       

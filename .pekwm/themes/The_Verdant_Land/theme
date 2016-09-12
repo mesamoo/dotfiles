@@ -39,10 +39,11 @@ PDecor {
 
 			FontColor {
 #				Focused 			= "#95AF9E"
-				Focused 			= "#cccccc"
-				FocusedSelected 	= "#EBFA60"                             
-				Unfocused 			= "#cccccc"
-				UnfocusedSelected 	= "#cccccc"
+				Focused 			= "#bbbbbb"
+#				FocusedSelected 	= "#EBFA60"
+				FocusedSelected 	= "#63e770"
+				Unfocused 			= "#bbbbbb"
+				UnfocusedSelected 	= "#bbbbbb"
 				}
 
 			Buttons {
@@ -647,7 +648,7 @@ Menu {
 #				Background 			= "Solid #171717"
 				Background 			= "Solid #0d0d0d"
 				Item 				= "arrow-focus"
-				Text 				= "#55c762" 
+				Text 				= "#63e770" 
 				Separator 			= "Image 0-Menu-separator-default.png"
 				Arrow 				= "Image 0-Menu-Focused-arrow.png"
 				}
