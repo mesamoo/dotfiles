@@ -128,7 +128,7 @@ PDecor {
 			Border {
 				Focused {
 					TopLeft 		= "Image 3-Menu-default-top-left-Focus2.png"
-					Top 			= "Image 0-Menu-default-top-thickRainbow-Focus2.png#scaled"
+					Top 			= "Image 0-Menu-default-top-thickRainbow-Focus3.png#scaled"
 					TopRight 		= "Image 3-Menu-default-top-right-Focus2.png"
 					Left 			= "Image 3-Menu-default-left-Focus.png"
 					Right 			= "Image 3-Menu-default-right-Focus.png"
