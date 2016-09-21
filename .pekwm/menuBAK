@@ -68,65 +68,47 @@ Separator {}
 	}
 	Submenu = "Media" {
 		Separator {}
-		        Submenu = "Audio" {
-		              Separator {}
 				Entry = "Flacon" { Actions = "Exec flacon" }
 				Entry = "k3b" { Actions = "Exec k3b" }
 				Entry = "kid3" { Actions = "Exec kid3" }
 				Entry = "Audacity" { Actions = "Exec audacity" }
 				Entry = "OpenBroadcast" { Actions = "Exec /home/dh84/obs-studio-portable/runOBS" }
-		              Separator {}
-		              Separator {}
-				Entry = "alsamixer" { Actions = "Exec $TERM -title alsamixer -e alsamixer" }
-			       Separator {}
-			       Separator {}
-			}
-		        Submenu = "Player" {
-		              Separator {}
+		Separator {}
+		Separator {}
 				Entry = "cantata" { Actions = "Exec cantata" }
 				Entry = "gmpc" { Actions = "Exec gmpc" }
 				Entry = "clementine" { Actions = "Exec clementine" }
 				Entry = "nuvolaplayer3" { Actions = "Exec nuvolaplayer3" }
-				Separator {}
-				Separator {}
 				Entry = "pithos" { Actions = "Exec pithos" }
-				Entry = "PyRadio (terminal)" { Actions = "Exec $TERM -title PyRadio -e pyradio /usr/share/doc/packages/python-pyradio/stations.csv" }
-                            Separator {}
-                            Separator {}
-				Entry = "flashplayer" { Actions = "Exec flashplayer" }
-				Entry = "vlc" { Actions = "Exec vlc" }
-				Entry = "smplayer" { Actions = "Exec smplayer" }
-				Entry = "umplayer" { Actions = "Exec umplayer" }
-			       Separator {}
-			       Separator {}
-			}
-			Submenu = "Synth" {
-			       Separator {}
-				Entry = "qjackctl" { Actions = "Exec qjackctl" }
-				Entry = "vmpk" { Actions = "Exec vmpk" }
-				Entry = "Bristol-arp" { Actions = "Exec startBristol -jack -arp2600 -scale 2.0" }
-				Entry = "synthv1_jack" { Actions = "Exec synthv1_jack" }
-				Separator {}
-				Separator {}
-			}
 		Separator {}
 		Separator {}
-		        Submenu = "RecDesk" {
-		                Separator {}
 		                Entry = "eidete" { Actions = "Exec eidete" }
 		                Entry = "kazam" { Actions = "Exec kazam" }
 		                Entry = "recorditnow" { Actions = "Exec recorditnow" }
 		                Entry = "recordMyDesktop" { Actions = "Exec gtk-recordMyDesktop" }
 		                Entry = "simplerecord" { Actions = "Exec simplescreenrecorder" }
 		                Entry = "vokoscreen" { Actions = "Exec vokoscreen" }
-		                Separator {}
-		        }
+		Separator {}
+		Separator {}
+				Entry = "alsamixer" { Actions = "Exec $TERM -title alsamixer -e alsamixer" }
+				Entry = "PyRadio (terminal)" { Actions = "Exec $TERM -title PyRadio -e pyradio /usr/share/doc/packages/python-pyradio/stations.csv" }
+		Separator {}
+		Separator {}
+				Entry = "flashplayer" { Actions = "Exec flashplayer" }
+				Entry = "vlc" { Actions = "Exec vlc" }
+				Entry = "smplayer" { Actions = "Exec smplayer" }
+				Entry = "umplayer" { Actions = "Exec umplayer" }
 		Separator {}
 		Separator {}
 				Entry = "kodi" { Actions = "Exec kodi" }
 				Entry = "miniTube" { Actions = "Exec minitube" }
 				Entry = "smtube" { Actions = "Exec smtube" }
 		Separator {}		
+		Separator {}
+				Entry = "qjackctl" { Actions = "Exec qjackctl" }
+				Entry = "vmpk" { Actions = "Exec vmpk" }
+				Entry = "Bristol-arp" { Actions = "Exec startBristol -jack -arp2600 -scale 2.0" }
+				Entry = "synthv1_jack" { Actions = "Exec synthv1_jack" }
 		Separator {}
 	}
 	Submenu = "Net" {
@@ -145,6 +127,8 @@ Separator {}
 		}
 	Submenu = "Office" {
 		Separator {}
+		Entry = "Recoll" { Actions = "Exec recoll" }
+		Separator {}
 				#Entry = "LO - Calc" { Actions = "Exec libreoffice --calc" }
 				#Entry = "LoDraw" { Actions = "Exec libreoffice --draw" }
 				#Entry = "LO - Impress" { Actions = "Exec libreoffice --impress" }
@@ -155,11 +139,6 @@ Separator {}
 				Entry = "LoWrite" { Actions = "Exec lowriter" }
 		Separator {}
 		Separator {}
-			       Entry = "Artha" { Actions = "Exec artha" }
-				Entry = "qStarDict" { Actions = "Exec qstardict" }
-				Entry = "Recoll" { Actions = "Exec recoll" }
-		Separator {}
-		Separator {}
 				Entry = "AbiWord" { Actions = "Exec abiword" }
 				Entry = "CalligraWord" { Actions = "Exec calligrawords" }
 				Entry = "wpsOffice" { Actions = "Exec /usr/bin/wps" }
@@ -167,11 +146,14 @@ Separator {}
 		Separator {}
 				Entry = "Pagestream" { Actions = "Exec /opt/pgs/50/Run-PageStream5" }
 				Entry = "Scribus" { Actions = "Exec scribus" }
+		Separator {}
+		Separator {}
+				#Entry = "Artha" { Actions = "Exec artha" }
+				#Entry = "qStarDict" { Actions = "Exec qstardict" }
 		#Separator {}
 				#Entry = "gaj" { Actions = "Exec gnome-activity-journal"}
 				#Entry = "Okular" { Actions = "Exec okular" }
-		Separator {}
-		Separator {}
+		#Separator {}
 				Entry = "qOwnNotes" { Actions = "Exec QOwnNotes" }              
 				Entry = "zim" { Actions = "Exec zim" }                
 		Separator {}                
@@ -188,17 +170,19 @@ Separator {}
 		Separator {}
 				Entry = "kcalc" { Actions = "Exec kcalc" }
 				Entry = "kmag" { Actions = "Exec kmag" }
-		Separator {}
-		Separator {}
 				#Entry = "kSnapShot" { Actions = "Exec ksnapshot" }
 				Entry = "hotshots" { Actions = "Exec hotshots" }
 				Entry = "spectacle" { Actions = "Exec spectacle" }
 				Entry = "vector-screenshot" { Actions = "Exec take-vector-screenshot" }
 				Entry = "StopWatch" { Actions = "Exec kronometer" }
-#		Separator {}
-#		Separator {}
-#				Entry = "gip" { Actions = "Exec gip" }
-#				Entry = "ipqalc" { Actions = "Exec ipQalc" }            
+		Separator {}
+		Separator {}
+				Entry = "gip" { Actions = "Exec gip" }
+				Entry = "ipqalc" { Actions = "Exec ipQalc" }
+		Separator {}
+		Separator {}
+				Entry = "Artha" { Actions = "Exec artha" }
+				Entry = "qStarDict" { Actions = "Exec qstardict" }                
 		Separator {}
 				#Entry = "Okular" { Actions = "Exec okular" }
 		#Separator {}
@@ -260,6 +244,13 @@ Separator {}
 				Entry = "ksysguard-su" { Actions = "Exec kdesu ksysguard" }
 		Separator {}
 		Separator {}
+				Entry = "Midnight Commander" { Actions = "Exec $TERM -title MidnightCommander -e mc" }
+				Entry = "nano" { Actions = "Exec $TERM -title NanoEdit -e nano" }
+				Entry = "git-cola" { Actions = "Exec git-cola" }
+				Entry = "qgit" { Actions = "Exec qgit" }
+				
+		Separator {}
+		Separator {}
 				Entry = "krename" { Actions = "Exec krename" }
 				Entry = "hardinfo" { Actions = "Exec hardinfo" }
 				Entry = "ksysguard" { Actions = "Exec ksysguard" }
@@ -268,12 +259,6 @@ Separator {}
 				Entry = "kdf" { Actions = "Exec kdf" }
 				Entry = "filelight" { Actions = "Exec filelight" }
 				Entry = "gPartEd" { Actions = "Exec kdesu gparted" }
-		Separator {}
-		Separator {}
-				Entry = "Midnight Commander" { Actions = "Exec $TERM -title MidnightCommander -e mc" }
-				Entry = "nano" { Actions = "Exec $TERM -title NanoEdit -e nano" }
-				Entry = "git-cola" { Actions = "Exec git-cola" }
-				Entry = "qgit" { Actions = "Exec qgit" }
 		Separator {}
 		Separator {}
 				#Entry = "Etcher" { Actions = "Exec /home/bin/0000_AppImages/Etcher-x64.AppImage" }
@@ -296,37 +281,33 @@ Separator {}
 				#Entry = "klipper" { Actions = "Exec klipper" }
 		#Separator {}
 		#Separator {}
+				#Entry = "Artha" { Actions = "Exec artha" }
 				Entry = "NoteCase" { Actions = "Exec notecase" }
 				Entry = "kontact    " { Actions = "Exec kontact" }
 				Entry = "thunderbird" { Actions = "Exec thunderbird" }
 				Entry = "CairoClock" { Actions = "Exec cairo-clock" }
 		Separator {}
 		Separator {}
+				Entry = "YakYak" { Actions = "Exec /home/dh84/bin/yakyak/yakyak" }
 				Entry = "kopete" { Actions = "Exec kopete" }
 				Entry = "pidgin" { Actions = "Exec pidgin" }
-				Entry = "YakYak" { Actions = "Exec /home/dh84/bin/yakyak/yakyak" }
 		Separator {}
 		Separator {}
 				Entry = "Dolphin-su" { Actions = "Exec kdesu dolphin" }
 		Separator {}
 		Separator {}
-		        Submenu = "tray" {
-		              Entry = "akonaditray" { Actions = "Exec akonaditray" }
-		              Entry = "Artha" { Actions = "Exec artha" }
 				Entry = "conky" { Actions = "Exec conky" }
 				Entry = "empathy" { Actions = "Exec empathy" }
-				Entry = "gaj" { Actions = "Exec gnome-activity-journal"}
 				Entry = "gkrellm" { Actions = "Exec gkrellm" }
 				Entry = "guake" { Actions = "Exec guake" }
+                            Entry = "akonaditray" { Actions = "Exec akonaditray" }
 				Entry = "krunner" { Actions = "Exec krunner" }
 				Entry = "owncloud client" { Actions = "Exec owncloud"}
-			}
-				
+				Entry = "gaj" { Actions = "Exec gnome-activity-journal"}
 		Separator {}
 	}
 	Submenu = "config" {
 		Separator {}
-		        Submenu = "pek" {
 				Entry = "Edit Pek Menu" { Actions = "Exec tea /home/dh84/.pekwm/menu" }
 				Entry = "Edit Pek Start" { Actions = "Exec tea /home/dh84/.pekwm/start" }
 				Entry = "Edit Pek AutoProp" { Actions = "Exec tea /home/dh84/.pekwm/autoproperties"}
@@ -348,7 +329,6 @@ Separator {}
 				#Entry = "Edit conkyrc" { Actions = "Exec kwrite ~/.conkyrc" }
 				#Entry = "Edit compton" { Actions = "Exec kwrite ~/.compton.config" }
 				#
-			}
 		Separator {}
 		Separator {}
 				Entry = "gtk-chtheme" { Actions = "Exec gtk-chtheme" }

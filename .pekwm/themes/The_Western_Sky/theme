@@ -127,25 +127,25 @@ PDecor {
 			
 			Border {
 				Focused {
-					TopLeft 		= "Image 3-Menu-default-top-left.png"
-					Top 			= "Image 0-Menu-default-top-thickRainbow.png#scaled"
-					TopRight 		= "Image 3-Menu-default-top-right.png"
-					Left 			= "Image 3-Menu-default-left.png"
-					Right 			= "Image 3-Menu-default-right.png"
-					BottomLeft 		= "Image 3-Menu-default-bottom-left.png"
-					Bottom 			= "Image 3-Menu-default-bottom.png"
-					BottomRight 	= "Image 3-Menu-default-bottom-right.png"
+					TopLeft 		= "Image 3-Menu-default-top-left-Focus2.png"
+					Top 			= "Image 0-Menu-default-top-thickRainbow-Focus2.png#scaled"
+					TopRight 		= "Image 3-Menu-default-top-right-Focus2.png"
+					Left 			= "Image 3-Menu-default-left-Focus.png"
+					Right 			= "Image 3-Menu-default-right-Focus.png"
+					BottomLeft 		= "Image 3-Menu-default-bottom-left-Focus.png"
+					Bottom 			= "Image 3-Menu-default-bottom-Focus.png"
+					BottomRight 	= "Image 3-Menu-default-bottom-right-Focus.png"
 					}
 				
 				Unfocused {
-					TopLeft 		= "Image 3-Menu-default-top-left.png"
-					Top 			= "Image 3-Menu-default-top.png" 
-					TopRight 		= "Image 3-Menu-default-top-right.png"
-					Left 			= "Image 3-Menu-default-left.png"
-					Right 			= "Image 3-Menu-default-right.png"
-					BottomLeft 		= "Image 3-Menu-default-bottom-left.png"
-					Bottom 			= "Image 3-Menu-default-bottom.png"
-					BottomRight 	= "Image 3-Menu-default-bottom-right.png"
+					TopLeft 		= "Image 3-Menu-default-top-left-Focus2.png"
+					Top 			= "Image 0-Menu-default-top-Focus.png" 
+					TopRight 		= "Image 3-Menu-default-top-right-Focus2.png"
+					Left 			= "Image 3-Menu-default-left-Focus.png"
+					Right 			= "Image 3-Menu-default-right-Focus.png"
+					BottomLeft 		= "Image 3-Menu-default-bottom-left-Focus.png"
+					Bottom 			= "Image 3-Menu-default-bottom-Focus.png"
+					BottomRight 	= "Image 3-Menu-default-bottom-right-Focus.png"
 					}
 				}
 			}		
@@ -633,7 +633,7 @@ Harbour {
 }
 	
 Menu {
-		Pad 						= "3 3 6 3"
+		Pad 						= "0 2 6 6"
 			Focused {
 				Font 				= "$font_bigger"
 				Background 			= "Solid #0d0d0d"
@@ -650,6 +650,7 @@ Menu {
 				Text 				= "#8bd0fa"
 				Separator 			= "Image 0-Menu-separator-default.png"
 				Arrow 				= "Image 0-Menu-Unfocused-arrow.png"
+				#Arrow 				= "Image 0-Menu-Focused-arrow.png"
 				}
 	
 			Selected {

@@ -21,7 +21,6 @@ python ~/.pekwm/scripts/switchbg.py ~/.pekwm/scripts/walls/ -s 0.10 &
 # wallpaper changer section END
 kwalletmanager &
 akonadictl start &
-akonaditray &
 conky &
 ~/.pekwm/scripts/YADstartBaloo.sh
 pnmixer &
@@ -37,5 +36,6 @@ gnome-activity-journal &
 #kopete &
 #pidgin &
 conky --config=/home/dh84/.conkyrc.leftclockW &
+akonaditray &
 artha &
 ~/.pekwm/scripts/flipWacom.sh &
