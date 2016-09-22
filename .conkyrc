@@ -93,17 +93,17 @@ ${color Dark Slate Gray}${hr 1}${font :size=8}
 #
 
 ##${color white}NET:${font :normal}
-${color white}${font Arimo:style=normal:size=12:antialias=true}eth0 up:   ${upspeed enp7s0}/s${alignr}${totalup enp7s0} total 
-  ${upspeedgraph enp7s0 15,281 000000 ffffff}${font :size=4}
+${color white}${font Arimo:style=normal:size=12:antialias=true}eth0 up:   ${upspeed enp7s0}/s${alignr}${totalup enp7s0} Tot  
+  ${upspeedgraph enp7s0 15,281 000000 ffffff}${font :size=6}
 
-${font Arimo:style=normal:size=12:antialias=true}eth0 Down:  ${downspeed enp7s0}/s${alignr}${totaldown enp7s0} total 
-  ${downspeedgraph enp7s0 15,281 000000 ffffff}${font :size=4}
+${font Arimo:style=normal:size=12:antialias=true}eth0 Down:  ${downspeed enp7s0}/s${alignr}${totaldown enp7s0} Tot  
+  ${downspeedgraph enp7s0 15,281 000000 ffffff}${font :size=6}
 
 ${color white}${font Arimo:style=normal:size=12:antialias=true}wlan up:   ${upspeed wlp0s26u1u6}/s ${alignr}${totalup wlp0s26u1u6} Tot 
-  ${upspeedgraph wlp0s26u1u6 15,281 000000 ffffff}${font :size=4}
+  ${upspeedgraph wlp0s26u1u6 15,281 000000 ffffff}${font :size=6}
  
- ${font Arimo:style=normal:size=12:antialias=true}wlan down:  ${downspeed wlp0s26u1u6}/s${alignr}${totaldown wlp0s26u1u6} Tot
-  ${downspeedgraph wlp0s26u1u6 15,281 000000 ffffff}${font :size=10}
+ ${font Arimo:style=normal:size=12:antialias=true}wlan down:  ${downspeed wlp0s26u1u6}/s${alignr}${totaldown wlp0s26u1u6} Tot 
+  ${downspeedgraph wlp0s26u1u6 15,281 000000 ffffff}${font :size=8}
 
 ${font Arimo:style=normal:size=14:antialias=true}ssid: ${alignr}${wireless_essid wlp0s26u1u6}
 quality: ${wireless_link_qual_perc wlp0s26u1u6}% ${alignr}Rate: ${wireless_bitrate wlp0s26u1u6}${font :size=8}
