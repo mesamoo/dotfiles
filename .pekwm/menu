@@ -6,7 +6,7 @@ RootMenu = "Pekwm " {
 Separator {}
 			Entry = " " { Actions = "Dynamic  ~/.pekwm/menu-script/time00"}
 			Entry = " " { Actions = "Dynamic  ~/.pekwm/menu-script/time0"}
-Separator {}     
+Separator {}
 				#Entry = "virtualbox" { Actions = "Exec VirtualBox" }
 				#Entry = "virtualbox" { Actions = "Exec VirtualBox --platformtheme kde" }
 				Entry = "Dolphin" { Actions = "Exec dolphin" }
@@ -18,7 +18,7 @@ Separator {}
 				#Entry = "kpat" { Actions = "Exec kpat" }
 				#Entry = "krename" { Actions = "Exec krename" }
 Separator {}
-        
+
 Separator {}
 	Submenu = "Edit" {
 		Separator {}
@@ -26,7 +26,7 @@ Separator {}
 				Entry = "brackets" { Actions = "Exec brackets" }
 				Entry = "gedit" { Actions = "Exec gedit" }
 				Entry = "juffed" { Actions = "Exec juffed" }
-				Entry = "kate" { Actions = "Exec kate" }
+				Entry = "kate" { Actions = "Exec juffed" }
 				Entry = "madedit" { Actions = "Exec madedit" }
 				Entry = "sublime2" { Actions = "Exec ~/bin/SublimeText2/sublime_text" }
 				Entry = "tea" { Actions = "Exec tea" }
@@ -126,7 +126,7 @@ Separator {}
 				Entry = "kodi" { Actions = "Exec kodi" }
 				Entry = "miniTube" { Actions = "Exec minitube" }
 				Entry = "smtube" { Actions = "Exec smtube" }
-		Separator {}		
+		Separator {}
 		Separator {}
 	}
 	Submenu = "Net" {
@@ -172,9 +172,9 @@ Separator {}
 				#Entry = "Okular" { Actions = "Exec okular" }
 		Separator {}
 		Separator {}
-				Entry = "qOwnNotes" { Actions = "Exec QOwnNotes" }              
-				Entry = "zim" { Actions = "Exec zim" }                
-		Separator {}                
+				Entry = "qOwnNotes" { Actions = "Exec QOwnNotes" }
+				Entry = "zim" { Actions = "Exec zim" }
+		Separator {}
 	}
 
 	Submenu = "Util" {
@@ -198,7 +198,7 @@ Separator {}
 #		Separator {}
 #		Separator {}
 #				Entry = "gip" { Actions = "Exec gip" }
-#				Entry = "ipqalc" { Actions = "Exec ipQalc" }            
+#				Entry = "ipqalc" { Actions = "Exec ipQalc" }
 		Separator {}
 				#Entry = "Okular" { Actions = "Exec okular" }
 		#Separator {}
@@ -259,7 +259,7 @@ Separator {}
 				Entry = "Dolphin-su" { Actions = "Exec kdesu dolphin" }
 				Entry = "ksysguard-su" { Actions = "Exec kdesu ksysguard" }
 		Separator {}
-		Separator {}		
+		Separator {}
 				Entry = "ksysguard" { Actions = "Exec ksysguard" }
 				Entry = "hardinfo" { Actions = "Exec hardinfo" }
 				Entry = "kDiskFree" { Actions = "Exec kdf" }
@@ -320,25 +320,25 @@ Separator {}
 				Entry = "krunner" { Actions = "Exec krunner" }
 				Entry = "owncloud client" { Actions = "Exec owncloud"}
 			}
-				
+
 		Separator {}
 	}
 	Submenu = "config" {
 		Separator {}
 		        Submenu = "pek" {
-				Entry = "Edit Pek Menu" { Actions = "Exec tea ~/.pekwm/menu" }
-				Entry = "Edit Pek Start" { Actions = "Exec tea ~/.pekwm/start" }
-				Entry = "Edit Pek AutoProp" { Actions = "Exec tea ~/.pekwm/autoproperties"}
-				Entry = "Edit Pek Config" { Actions = "Exec tea ~/.pekwm/config" }
-				Entry = "Edit conkyrc" { Actions = "Exec tea ~/.conkyrc" }
-				Entry = "Edit compton" { Actions = "Exec tea ~/.compton.config" }
+				#Entry = "Edit Pek Menu" { Actions = "Exec tea ~/.pekwm/menu" }
+				#Entry = "Edit Pek Start" { Actions = "Exec tea ~/.pekwm/start" }
+				#Entry = "Edit Pek AutoProp" { Actions = "Exec tea ~/.pekwm/autoproperties"}
+				#Entry = "Edit Pek Config" { Actions = "Exec tea ~/.pekwm/config" }
+				#Entry = "Edit conkyrc" { Actions = "Exec tea ~/.conkyrc" }
+				#Entry = "Edit compton" { Actions = "Exec tea ~/.compton.config" }
 				#
-				#Entry = "Edit Pek Menu" { Actions = "Exec kate ~/.pekwm/menu" }
-				#Entry = "Edit Pek Start" { Actions = "Exec kate ~/.pekwm/start" }
-				#Entry = "Edit Pek AutoProp" { Actions = "Exec kate ~/.pekwm/autoproperties"}
-				#Entry = "Edit Pek Config" { Actions = "Exec kate ~/.pekwm/config" }
-				#Entry = "Edit conkyrc" { Actions = "Exec kate ~/.conkyrc" }
-				#Entry = "Edit compton" { Actions = "Exec kate ~/.compton.config" }
+				Entry = "Edit Pek Menu" { Actions = "Exec juffed ~/.pekwm/menu" }
+				Entry = "Edit Pek Start" { Actions = "Exec juffed ~/.pekwm/start" }
+				Entry = "Edit Pek AutoProp" { Actions = "Exec juffed ~/.pekwm/autoproperties"}
+				Entry = "Edit Pek Config" { Actions = "Exec juffed ~/.pekwm/config" }
+				Entry = "Edit conkyrc" { Actions = "Exec juffed ~/.conkyrc" }
+				Entry = "Edit compton" { Actions = "Exec juffed ~/.compton.config" }
 				#
 				#Entry = "Edit Pek Menu" { Actions = "Exec kwrite ~/.pekwm/menu" }
 				#Entry = "Edit Pek Start" { Actions = "Exec kwrite ~/.pekwm/start" }
@@ -407,7 +407,7 @@ Separator {}
 	}
 Separator {}
 }
-	Separator {}			
+	Separator {}
 }
 
 WindowMenu = "Window Menu" {
