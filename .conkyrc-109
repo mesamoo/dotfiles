@@ -1,0 +1,114 @@
+double_buffer yes
+update_interval 2
+own_window yes
+own_window_title conky
+## following needed for kde, but puts conky on top layer
+#own_window_type override
+#xfce panel likes next (hide conky from window list)
+own_window_type desktop
+#own_window_type normal
+own_window_class conky
+own_window_argb_visual yes
+#own_window_argb_value 210
+#own_window_argb_value sets background transparancy when own_window_transparent
+own_window_argb_value 100
+own_window_transparent
+##own_window_transparent yes
+#own_window_transparent no
+own_window_hints undecorated,below,skip_taskbar,sticky,skip_pager
+#own_window_hints below,sticky
+#background no
+#background yes
+use_xft yes
+override_utf8_locale no
+#xftfont Bitstream Vera Sans Mono:size=10
+#xftfont Bitstream Vera Sans:size=14
+xftfont Arimo:size=14
+#xftfont Goudy Bookletter 1911:style=Bold
+xftalpha 0.9
+draw_shades no
+# draw_shades yes
+draw_outline no
+# draw_outline yes 
+draw_borders no
+uppercase no
+use_spacer none
+border_width 0
+default_color gold
+default_shade_color white
+#default_outline_color white
+default_outline_color 
+alignment top_right
+minimum_size 202
+maximum_size 200
+gap_x 18
+# gap_y 120
+TEXT
+#
+
+${font :Arimo:style=bold:size=14:antialias=true}${color Chartreuse}${if_running mpd}${alignc}$mpd_artist
+${font Arimo:style=normal:size=14:antialias=true}${alignc}${mpd_album 30}
+${alignc}${mpd_title 30}${color white}${font :size=6}
+
+ ${font :normal}${mpd_elapsed} / ${mpd_length}${alignr}${mpd_bar 4,100}${color white}${font :size=4}
+$endif
+#
+
+${font Arimo:style=bold:size=16:antialias=true}${alignc}${color white}${time %A %b %e, %l:%M %P}
+${color white}${font Arimo:style=normal:size=14:antialias=true}${alignc}uptime: $uptime
+${font Arimo:style=normal:size=14:antialias=true}${color white}${alignc}$kernel${font :size=6} 
+
+${color Dark Slate Gray}${hr 1}{font :size=14}
+
+${font Hack:size=16:antialias=true}${color gold}cpu load ${alignr}${color white}$cpu%
+#${font :bold}Temperature: ${alignr}${hwmon atk0110:00 temp}C
+${alignr}${cpugraph 15,279 000000 ffffff}
+#
+${font Hack:style=normal:size=14:antialias=true} Load ${alignr}$loadavg
+ Processes ${alignr}$processes | $running_processes active${font :size=8}
+
+${font Hack:size=16:antialias=true}${color gold}cpu use${alignr}${color Tomato}${cpubar 4,100}${color white}
+${font Hack:style=bold:size=14:antialias=true}${color white} ${top name 1}${alignr}${top cpu 1}
+${font Hack:style=normal:size=14:antialias=true}${color white} ${top name 2}${alignr}${top cpu 2}
+${font Hack:style=normal:size=14:antialias=true} ${top name 3}${alignr} ${top cpu 3}${font :size=8}
+#${font Hack:style=normal:size=14:antialias=true} ${top name 4}${alignr} ${top cpu 4}${font :size=8}
+
+${font Hack:size=16:antialias=true}${color gold}memory: ${memperc}%${alignr}${color Tomato}${membar 4,100}${color white}
+${font Hack:style=normal:size=14:antialias=true}${mem} / ${memmax}
+${font Hack:style=bold:size=14:antialias=true}${color white} ${top_mem name 1}${alignr} ${top_mem mem_res 1}
+${font Hack:style=normal:size=14:antialias=true}${color white} ${top_mem name 2}${alignr} ${top_mem mem_res 2}
+ ${top_mem name 3}${alignr} ${top_mem mem_res 3}
+# ${top_mem name 4}${alignr} ${top_mem mem_res 4}${font :size=10}
+# 
+${color Dark Slate Gray}${hr 1}${font :size=6}
+#
+
+${font Hack:style=bold:size=14:antialias=true}${color gold}/${alignr}${color tomato}${fs_bar 4,100 /}
+${font Hack:style=normal:size=12:antialias=true}${color white} ${fs_size /} / ${fs_free /} free${font :size=8}
+
+${font Hack:size=14:antialias=true}${color gold}/home${alignr}${color Tomato}${fs_bar 4,100 /home}
+ ${font Hack:style=normal:size=12:antialias=true}${color white}${fs_size /home} / ${fs_free /home} free${font :size=12}
+# 
+${color Dark Slate Gray}${hr 1}${font :size=8}
+#
+
+##${color white}NET:${font :normal}
+${color white}${font Arimo:style=normal:size=12:antialias=true}eth0 up:   ${upspeed enp7s0}/s${alignr}${totalup enp7s0} Tot  
+  ${upspeedgraph enp7s0 15,281 000000 ffffff}${font :size=6}
+
+${font Arimo:style=normal:size=12:antialias=true}eth0 Down:  ${downspeed enp7s0}/s${alignr}${totaldown enp7s0} Tot  
+  ${downspeedgraph enp7s0 15,281 000000 ffffff}${font :size=6}
+
+${color white}${font Arimo:style=normal:size=12:antialias=true}wlan up:   ${upspeed wlp0s26u1u6}/s ${alignr}${totalup wlp0s26u1u6} Tot 
+  ${upspeedgraph wlp0s26u1u6 15,281 000000 ffffff}${font :size=6}
+ 
+ ${font Arimo:style=normal:size=12:antialias=true}wlan down:  ${downspeed wlp0s26u1u6}/s${alignr}${totaldown wlp0s26u1u6} Tot 
+  ${downspeedgraph wlp0s26u1u6 15,281 000000 ffffff}${font :size=8}
+
+${font Arimo:style=normal:size=14:antialias=true}ssid: ${alignr}${wireless_essid wlp0s26u1u6}
+quality: ${wireless_link_qual_perc wlp0s26u1u6}% ${alignr}Rate: ${wireless_bitrate wlp0s26u1u6}${font :size=8}
+
+  ${font Hack:style=normal:size=14:antialias=true} Wan IP:${color gold}$alignr${execi 600 ~/.pekwm/scripts/wan-ip.sh}  
+${font :size=4}  
+${font Arimo:size=14:antialias=true}${alignc}${color white}${time %A %b %e, %l:%M %P}${font :size=6}
+#${desktop_number}
