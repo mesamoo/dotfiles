@@ -132,16 +132,56 @@ Separator {}
 	}
 	Submenu = "Net" {
 		Separator {}
-				Entry = "gip" { Actions = "Exec gip" }
-				Entry = "ipqalc" { Actions = "Exec ipQalc" }
-		Separator {}
-		Separator {}
+		Submenu = "browsers" {
+			Separator {}
+				Entry = "chrome-unstable" { Actions = "Exec google-chrome-unstable" }
+				Entry = "chrome-slow" { Actions = "Exec google-chrome-stable" }
+				Entry = "chromium" { Actions = "Exec chromium" }
+			Separator {}
+			Separator {}
+				Entry = "firefox" { Actions = "Exec firefox" }
+				Entry = "firefox-dev" { Actions = "Exec firefox-dev" }
+				Entry = "icecat" { Actions = "Exec icecat" }
+				Entry = "palemoon" { Actions = "Exec /opt/palemoon/palemoon" }
+				Entry = "seamonkey" { Actions = "Exec seamonkey" }
+			Separator {}
+			Separator {}
+				Entry = "min" { Actions = "Exec min" }
+			Separator {}
+			Separator {}
+				Entry = "opera" { Actions = "Exec opera" }
+				Entry = "otter" { Actions = "Exec otter-browser" }
+				Entry = "rekonq" { Actions = "Exec rekonq" }
+				Entry = "vivaldi" { Actions = "Exec /opt/vivaldi/vivaldi" }
+				Entry = "vivaldi-beta" { Actions = "Exec /opt/vivaldi-beta/vivaldi" }
+			Separator {}
+		}
+		#Separator {}
+		Submenu = "chat-IM" {
+			Separator {}
+				Entry = "konversation" { Actions = "Exec konversation" }
+			Separator {}
+				Entry = "YakYak" { Actions = "Exec ~/bin/yakyak/yakyak" }
+				Entry = "pidgin" { Actions = "Exec pidgin" }
+				Entry = "kopete" { Actions = "Exec kopete" }
+				Entry = "empathy" { Actions = "Exec empathy" }
+			Separator {}
+		}
+		#Separator {}
+		Submenu = "tools" {
 				Entry = "linssid" { Actions = "Exec gksu linssid" }
 				Entry = "nettool" { Actions = "Exec gnome-nettool" }
 				Entry = "wireshark" { Actions = "Exec gksu wireshark" }
 				Entry = "zenmap" { Actions = "Exec gksu zenmap" }
+		}
+		#Separator {}
+		Submenu = "util" {
+				Entry = "gip" { Actions = "Exec gip" }
+				Entry = "ipqalc" { Actions = "Exec ipQalc" }
+		}
 		Separator {}
 				#Entry = "knemo" { Actions = "Exec knemo" }
+				Entry = "ktorrent" { Actions = "Exec ktorrent" }
 		Separator {}
 		}
 	Submenu = "Office" {
@@ -202,6 +242,9 @@ Separator {}
 #				Entry = "ipqalc" { Actions = "Exec ipQalc" }
 		Separator {}
 				#Entry = "Okular" { Actions = "Exec okular" }
+				Entry = "catfish" { Actions = "Exec catfish" }
+				Entry = "tracker-needle" { Actions = "Exec tracker-needle" }
+				Entry = "tracker-prefs" { Actions = "Exec tracker-preferences" }
 		#Separator {}
 	}
 	Submenu = "Virt" {
@@ -220,38 +263,6 @@ Separator {}
 				Entry = "start w7_2011" { Actions = "Exec vboxmanage startvm w7_2011-dh" }
 		Separator {}
         }
-	Submenu = "Web" {
-		Separator {}
-				Entry = "chrome-unstable" { Actions = "Exec google-chrome-unstable" }
-				Entry = "chrome-slow" { Actions = "Exec google-chrome-stable" }
-				Entry = "chromium" { Actions = "Exec chromium" }
-		Separator {}
-		Separator {}
-				Entry = "firefox" { Actions = "Exec firefox" }
-				Entry = "firefox-dev" { Actions = "Exec firefox-dev" }
-				Entry = "icecat" { Actions = "Exec icecat" }
-				Entry = "palemoon" { Actions = "Exec /opt/palemoon/palemoon" }
-				Entry = "seamonkey" { Actions = "Exec seamonkey" }
-		Separator {}
-		Separator {}
-				Entry = "min" { Actions = "Exec min" }
-		Separator {}
-		Separator {}
-				Entry = "opera" { Actions = "Exec opera" }
-				Entry = "otter" { Actions = "Exec otter-browser" }
-				Entry = "rekonq" { Actions = "Exec rekonq" }
-				Entry = "vivaldi" { Actions = "Exec /opt/vivaldi/vivaldi" }
-				Entry = "vivaldi-beta" { Actions = "Exec /opt/vivaldi-beta/vivaldi" }
-		Separator {}
-		Separator {}
-				Entry = "YakYak" { Actions = "Exec ~/bin/yakyak/yakyak" }
-				Entry = "pidgin" { Actions = "Exec pidgin" }
-				Entry = "kopete" { Actions = "Exec kopete" }
-				Entry = "empathy" { Actions = "Exec empathy" }
-				Entry = "ktorrent" { Actions = "Exec ktorrent" }
-		Separator {}
-	}
-
 Separator {}
 Separator {}
 	Submenu = "System" {

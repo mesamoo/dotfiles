@@ -1,6 +1,6 @@
 #!/bin/sh
 # PekWM start file
-# This file is a simple shell script; It gets run on pekwm startup, after 
+# This file is a simple shell script; It gets run on pekwm startup, after
 # the theme and all config has loaded if it is set executable  (chmod +x start).
 # It gets re-run every time pekwm is restarted.
 #
@@ -39,3 +39,11 @@ conky --config=/home/dh84/.conkyrc.leftclockW &
 akonaditray &
 artha &
 ~/.pekwm/scripts/flipWacom.sh &
+gdbus call -e -d org.freedesktop.DBus -o /org/freedesktop/DBus -m org.freedesktop.DBus.StartServiceByName org.freedesktop.Tracker1 0 &
+/usr/lib/tracker-miner-fs &
+/usr/lib/tracker-extract &
+/usr/lib/tracker-miner-user-guides &
+/usr/lib/tracker-miner-apps &
+
+
+
