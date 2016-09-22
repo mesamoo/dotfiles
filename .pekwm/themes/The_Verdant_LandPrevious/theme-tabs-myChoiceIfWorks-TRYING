@@ -1,33 +1,35 @@
-# verdant land
-#borders from magni theme
-#rainbow originally from 
-# use a monospace font for proper viewing of theme file
+# WESTERNlANDS RE-WRITE / Cleanup
+# use a monospace font for proper viewing
 
-$font 								= "arimo-16#XFT"
+# my teal font color 		#16D4EC
+# my yello font color 		#95AF9E
+
+#$font 								= "arimo-16#XFT"
+$font 								= "droid sans-16#XFT"
 $font_bigger 						= "arimo-16#XFT"
+#$font_bigger 						= "droid sans-17#XFT"
 $font_bigger2 						= "arimo-18#XFT"
-#$FONT_TITLE 						= "XFT#Oxygen:size=14:weight=bold#Center"
-$FONT_TITLE 						= "XFT#arimo:size=17#Center"
+$FONT_TITLE 						= "XFT#Oxygen:size=14:weight=bold#Center"
 $FONT_TITLE2 						= "XFT#droid sans:size=18#Center"
 
 PDecor {
 	Decor = "Default" {
 		Title {
-				Height 				= "27"
+				Height 				= "28"
 				Pad 				= "2 3 1 1"
 				Focused 			= "Image 0-Title-default.png"
 				Unfocused 			= "Image 0-Title-default.png"
 
 			Tab {
-				Focused 			= "Image 0-Title-default.png"
+				Focused 			= "Image 0-Title-Focused.png"
 				FocusedSelected 	= "Image 0-Title-default.png"
 				Unfocused 			= "Image 0-Title-default.png"
 				UnfocusedSelected 	= "Image 0-Title-default.png"
 				}
 
 			Separator {
-				Focused 			= "Image 0-tab-separator-FocusedALT.png"
-				Unfocused 			= "Image 0-tab-separator-UnocusedALT.png"
+				Focused 			= "Image 0-tab-separator-Focused.png"
+				Unfocused 			= "Image 0-tab-separator-Unocused.png"
 				}
 
 			Font {
@@ -39,19 +41,18 @@ PDecor {
 
 			FontColor {
 #				Focused 			= "#95AF9E"
-				Focused 			= "#bbbbbb"
-#				FocusedSelected 	= "#EBFA60"
-				FocusedSelected 	= "#63e770"
-				Unfocused 			= "#bbbbbb"
-				UnfocusedSelected 	= "#bbbbbb"
+				Focused 			= "#cccccc"
+				FocusedSelected 	= "#EBFA60"                             
+				Unfocused 			= "#cccccc"
+				UnfocusedSelected 	= "#cccccc"
 				}
 
 			Buttons {
 				Right {
 					Focused 		= "Image 0-Button-far-right-Focused.png"
 					Unfocused 		= "Image 0-Button-far-right-Unfocused.png"
-					Hoover 			= "Image 8-Button-close-Hoover-Red.png"
-					Pressed 		= "Image 8-Button-close-Pressed-Red.png"
+					Hoover 			= "Image 8-Button-close-Hoover.png"
+					Pressed 		= "Image 8-Button-close-Pressed.png"
 					Button 			= "1" { Actions = "Close" }
 					Button 			= "3" { Actions = "Kill" }
 					}
@@ -85,29 +86,26 @@ PDecor {
 
 			Border {
 				Focused {
-					#Top 			= "Image 1-Border-Focused-top-white.png"
-					Top 			= "Image 6-Border-horz1.png"
-					TopRight 		= "Image 6-Border-top-right1.png"
-					TopLeft 		= "Image 6-Border-top-left1.png"
-					Left 			= "Image 6-Border-vert.png"
-					Right 			= "Image 6-Border-vert.png"
-					BottomLeft 		= "Image 6-Border-bottom-left.png"
-					Bottom 			= "Image 6-Border-horz1.png"
-					BottomRight 	= "Image 6-Border-bottom-right.png"
+					TopLeft 		= "Image 0-Border-Focused-top-left.png.png"
+					Top 			= "Image 0-Border-Focused-top-yello.png"					
+					TopRight 		= "Image 0-Border-Focused-top-right.png"
+					Left 			= "Image 0-Border-Focused-left.png"
+					Right 			= "Image 0-Border-Focused-right.png"
+					BottomLeft 		= "Image 0-Border-Focused-bottom-left.png"
+					Bottom 			= "Image 0-Border-Focused-bottom.png"
+					BottomRight 	= "Image 0-Border-Focused-bottom-right.png"
 					}
-					
-				Unfocused {				
-					#Top 			= "Image 0-Border-Unfocused-top-bottom-leftu.png"
-					Top 			= "Image 6-Border-horz-unFocused2.png"
-					TopRight 		= "Image 6-Border-top-right-unFocused2.png"
-					TopLeft 		= "Image 6-Border-top-left-unFocused2.png"
-					Left 			= "Image 6-Border-vert-unFocused.png"
-					Right 			= "Image 6-Border-vert-unFocused.png"
-					BottomLeft 		= "Image 6-Border-bottom-left-unFocused2.png"
-					Bottom 			= "Image 6-Border-horz-unFocused2.png"
-					BottomRight 	= "Image 6-Border-bottom-right-unFocused2.png"
-					}					
-					
+
+				Unfocused {
+					TopLeft 		= "Image 0-Border-Unfocused-top-left.png"
+					Top 			= "Image 0-Border-Unfocused-top-blu.png"
+					TopRight 		= "Image 0-Border-Unfocused-top-right.png"
+					Left 			= "Image 0-Border-Unfocused-left.png"
+					Right 			= "Image 0-Border-Unfocused-right.png"
+					BottomLeft 		= "Image 0-Border-Unfocused-bottom-left.png"
+					Bottom 			= "Image 0-Border-Unfocused-bottom-white.png"
+					BottomRight 	= "Image 0-Border-Unfocused-bottom-right.png"
+					}
 				}
 			}
 		}
@@ -124,54 +122,48 @@ PDecor {
 			
 			Border {
 				Focused {
-					TopLeft 		= "Image 3-Menu-default-top-left.png"
-					Top 			= "Image 0-Menu-default-top-thickRainbow.png#scaled"
-					TopRight 		= "Image 3-Menu-default-top-right.png"
-					Left 			= "Image 3-Menu-default-left.png"
-					Right 			= "Image 3-Menu-default-right.png"
-					BottomLeft 		= "Image 3-Menu-default-bottom-left.png"
-					Bottom 			= "Image 3-Menu-default-bottom.png"
-					BottomRight 	= "Image 3-Menu-default-bottom-right.png"
+					TopLeft 		= "Image top-left-menu.png"
+#					Top 			= "Image top-menu.png"
+					Top 			= "Image menu-title3.png#scaled"
+					TopRight 		= "Image top-right-menu.png"
+					Left 			=  "Image left-menu.png"
+					Right 			= "Image right-menu.png"
+					BottomLeft 		= "Image bottom-left-menu.png"
+					Bottom 			= "Image bottom-menu.png"
+					BottomRight 	= "Image bottom-right-menu.png"
 					}
 				
 				Unfocused {
-					TopLeft 		= "Image 3-Menu-default-top-left.png"
-					Top 			= "Image 3-Menu-default-top.png" 
-					TopRight 		= "Image 3-Menu-default-top-right.png"
-					Left 			= "Image 3-Menu-default-left.png"
-					Right 			= "Image 3-Menu-default-right.png"
-					BottomLeft 		= "Image 3-Menu-default-bottom-left.png"
-					Bottom 			= "Image 3-Menu-default-bottom.png"
-					BottomRight 	= "Image 3-Menu-default-bottom-right.png"
+					TopLeft 		= "Image top-left-menu.png"
+					Top 			= "Image top-menu.png" 
+					TopRight 		= "Image top-right-menu.png"
+					Left 			= "Image left-menu.png"
+					Right 			= "Image right-menu.png"
+					BottomLeft 		= "Image bottom-left-menu.png"
+					Bottom 			= "Image bottom-menu.png"
+					BottomRight 	= "Image bottom-right-menu.png"
 					}
 				}
 			}		
 		}
 
-# Decor = "noKlose" needs "noKlose" specified in autoproperties to do anything, 
-# otherwise does nothing
-# Window set to have sticky, maximize and minimize buttons only (no close button)
-# close button location (far right) has a second minimize button  
-# (2 minimize buttons, min-max-min)
-# prevent accidental application quit
-	
 	Decor = "noKlose" {
 		Title {
-				Height 				= "27"
+				Height 				= "28"
 				Pad 				= "2 3 1 1"
 				Focused 			= "Image 0-Title-default.png"
 				Unfocused 			= "Image 0-Title-default.png"
 
 			Tab {
-					Focused 		= "Image 0-Title-default.png"
+					Focused 		= "Image 0-Title-Focused.png"
 					FocusedSelected = "Image 0-Title-default.png"
 					Unfocused 		= "Image 0-Title-default.png"
 					UnfocusedSelected = "Image 0-Title-default.png"
 					}
 
 			Separator {
-					Focused 		= "Image 0-tab-separator-FocusedALT.png"
-					Unfocused 		= "Image 0-tab-separator-UnocusedALT.png"
+					Focused 		= "Image 0-tab-separator-Focused.png"
+					Unfocused 		= "Image 0-tab-separator-Unocused.png"
 					}
 
 			Font {
@@ -193,8 +185,8 @@ PDecor {
 				Right {
 					Focused 		= "Image 0-Button-far-right-Focused.png"
 					Unfocused 		= "Image 0-Button-far-right-Unfocused.png"
-					Hoover 			= "Image 8-Button-min-Hoover-green-right.png"
-					Pressed 		= "Image 8-Button-min-Pressed-green-right.png"
+					Hoover 			= "Image 8-Button-min-Hoover-green.png"
+					Pressed 		= "Image 8-Button-min-Pressed-green.png"
 					Button 			= "1" { Actions = "Set Iconified" }
 					}
 
@@ -227,56 +219,47 @@ PDecor {
 				
 			Border {
 				Focused {
-					#Top 			= "Image 1-Border-Focused-top-white.png"
-					Top 			= "Image 6-Border-horz1.png"
-					TopRight 		= "Image 6-Border-top-right1.png"
-					TopLeft 		= "Image 6-Border-top-left1.png"
-					Left 			= "Image 6-Border-vert.png"
-					Right 			= "Image 6-Border-vert.png"
-					BottomLeft 		= "Image 6-Border-bottom-left.png"
-					Bottom 			= "Image 6-Border-horz1.png"
-					BottomRight 	= "Image 6-Border-bottom-right.png"
+					TopLeft 		= "Image 0-Border-Focused-top-left.png.png"
+					Top 			= "Image 0-Border-Focused-top-yello.png"                                    
+					TopRight 		= "Image 0-Border-Focused-top-right.png"
+					Left 			= "Image 0-Border-Focused-left.png"
+					Right 			= "Image 0-Border-Focused-right.png"
+					BottomLeft 		= "Image 0-Border-Focused-bottom-left.png"
+					Bottom 			= "Image 0-Border-Focused-bottom.png"
+					BottomRight 	= "Image 0-Border-Focused-bottom-right.png"
 					}
-					
-				Unfocused {				
-					#Top 			= "Image 0-Border-Unfocused-top-bottom-leftu.png"
-					Top 			= "Image 6-Border-horz-unFocused2.png"
-					TopRight 		= "Image 6-Border-top-right-unFocused2.png"
-					TopLeft 		= "Image 6-Border-top-left-unFocused2.png"
-					Left 			= "Image 6-Border-vert-unFocused.png"
-					Right 			= "Image 6-Border-vert-unFocused.png"
-					BottomLeft 		= "Image 6-Border-bottom-left-unFocused2.png"
-					Bottom 			= "Image 6-Border-horz-unFocused2.png"
-					BottomRight 	= "Image 6-Border-bottom-right-unFocused2.png"
-					}					
-					
+								
+				Unfocused {
+					TopLeft 		= "Image 0-Border-Unfocused-top-left.png"
+					Top 			= "Image 0-Border-Unfocused-top-blu.png"
+					TopRight 		= "Image 0-Border-Unfocused-top-right.png"
+					Left 			= "Image 0-Border-Unfocused-left.png"
+					Right 			= "Image 0-Border-Unfocused-right.png"
+					BottomLeft 		= "Image 0-Border-Unfocused-bottom-left.png"
+					Bottom 			= "Image 0-Border-Unfocused-bottom-white.png"
+					BottomRight 	= "Image 0-Border-Unfocused-bottom-right.png"
+					}
 				}
 			}
 		}
 
-# Decor = "noKlose2" needs "noKlose2" specified in autoproperties to do anything, 
-# otherwise does nothing
-# Window set to have sticky, maximize and minimize buttons only (no close button)
-# (1 minimize button max and min reversed, max-min) 
-# prevent accidental application quit
-			
 	Decor = "noKlose2" {
 		Title {
-				Height 				= "27"
+				Height 				= "28"
 				Pad 				= "2 3 1 1"
 				Focused 			= "Image 0-Title-default.png"
 				Unfocused 			= "Image 0-Title-default.png"
 
 			Tab {
-				Focused 			= "Image 0-Title-default.png"
+				Focused 			= "Image 0-Title-Focused.png"
 				FocusedSelected 	= "Image 0-Title-default.png"
 				Unfocused 			= "Image 0-Title-default.png"
 				UnfocusedSelected 	= "Image 0-Title-default.png"
 				}
 
 			Separator {
-				Focused 			= "Image 0-tab-separator-FocusedALT.png"
-				Unfocused 			= "Image 0-tab-separator-UnocusedALT.png"
+				Focused 			= "Image 0-tab-separator-Focused.png"
+				Unfocused 			= "Image 0-tab-separator-Unocused.png"
 				}
 
 			Font {
@@ -298,8 +281,8 @@ PDecor {
 			Right {
 				Focused 			= "Image 0-Button-far-right-Focused.png"
 				Unfocused 			= "Image 0-Button-far-right-Unfocused.png"
-				Hoover 				= "Image 8-Button-min-Hoover-green-right.png"
-				Pressed 			= "Image 8-Button-min-Pressed-green-right.png"
+				Hoover 				= "Image 8-Button-min-Hoover-green.png"
+				Pressed 			= "Image 8-Button-min-Pressed-green.png"
 				Button 				= "1" { Actions = "Set Iconified" }
 				}
 
@@ -321,57 +304,50 @@ PDecor {
 				Button 				= "3" { Actions = "Toggle Sticky" }
 				}
 			}
-
-			Border {
-				Focused {
-					#Top 			= "Image 1-Border-Focused-top-white.png"
-					Top 			= "Image 6-Border-horz1.png"
-					TopRight 		= "Image 6-Border-top-right1.png"
-					TopLeft 		= "Image 6-Border-top-left1.png"
-					Left 			= "Image 6-Border-vert.png"
-					Right 			= "Image 6-Border-vert.png"
-					BottomLeft 		= "Image 6-Border-bottom-left.png"
-					Bottom 			= "Image 6-Border-horz1.png"
-					BottomRight 	= "Image 6-Border-bottom-right.png"
-					}
-					
-				Unfocused {				
-					#Top 			= "Image 0-Border-Unfocused-top-bottom-leftu.png"
-					Top 			= "Image 6-Border-horz-unFocused2.png"
-					TopRight 		= "Image 6-Border-top-right-unFocused2.png"
-					TopLeft 		= "Image 6-Border-top-left-unFocused2.png"
-					Left 			= "Image 6-Border-vert-unFocused.png"
-					Right 			= "Image 6-Border-vert-unFocused.png"
-					BottomLeft 		= "Image 6-Border-bottom-left-unFocused2.png"
-					Bottom 			= "Image 6-Border-horz-unFocused2.png"
-					BottomRight 	= "Image 6-Border-bottom-right-unFocused2.png"
-					}					
+				
+		Border {
+			Focused {
+				TopLeft 			= "Image 0-Border-Focused-top-left.png.png"
+				Top 				= "Image 0-Border-Focused-top-yello.png"                                    
+				TopRight 			= "Image 0-Border-Focused-top-right.png"
+				Left 				= "Image 0-Border-Focused-left.png"
+				Right 				= "Image 0-Border-Focused-right.png"
+				BottomLeft 			= "Image 0-Border-Focused-bottom-left.png"
+				Bottom 				= "Image 0-Border-Focused-bottom.png"
+				BottomRight 		= "Image 0-Border-Focused-bottom-right.png"
+				}
+								
+			Unfocused {
+				TopLeft 			= "Image 0-Border-Unfocused-top-left.png"
+				Top 				= "Image 0-Border-Unfocused-top-blu.png"
+				TopRight 			= "Image 0-Border-Unfocused-top-right.png"
+				Left 				= "Image 0-Border-Unfocused-left.png"
+				Right 				= "Image 0-Border-Unfocused-right.png"
+				BottomLeft 			= "Image 0-Border-Unfocused-bottom-left.png"
+				Bottom 				= "Image 0-Border-Unfocused-bottom-white.png"
+				BottomRight 		= "Image 0-Border-Unfocused-bottom-right.png"
 				}
 			}
 		}
+	}
 
-# Decor = "noKlose3" needs "noKlose3" specified in autoproperties to do anything, 
-# otherwise does nothing
-# Window set to have sticky and minimize buttons only
-# prevent accidental application quit
-	
 	Decor = "noKlose3" {
 		Title {
-				Height 				= "27"
+				Height 				= "28"
 				Pad 				= "2 3 1 1"
 				Focused 			= "Image 0-Title-default.png"
 				Unfocused 			= "Image 0-Title-default.png"
 
 			Tab {
-				Focused 			= "Image 0-Title-default.png"
+				Focused 			= "Image 0-Title-Focused.png"
 				FocusedSelected 	= "Image 0-Title-default.png"
 				Unfocused 			= "Image 0-Title-default.png"
 				UnfocusedSelected 	= "Image 0-Title-default.png"
 				}
 
 			Separator {
-				Focused 			= "Image 0-tab-separator-FocusedALT.png"
-				Unfocused 			= "Image 0-tab-separator-UnocusedALT.png"
+				Focused 			= "Image 0-tab-separator-Focused.png"
+				Unfocused 			= "Image 0-tab-separator-Unocused.png"
 				}
 
 			Font {
@@ -393,8 +369,8 @@ PDecor {
 			Right {
 				Focused 			= "Image 0-Button-far-right-Focused.png"
 				Unfocused 			= "Image 0-Button-far-right-Unfocused.png"
-				Hoover 				= "Image 8-Button-min-Hoover-green-right.png"
-				Pressed 			= "Image 8-Button-min-Pressed-green-right.png"
+				Hoover 				= "Image 8-Button-min-Hoover-green.png"
+				Pressed 			= "Image 8-Button-min-Pressed-green.png"
 				Button 				= "1" { Actions = "Set Iconified" }
 				}
 
@@ -407,57 +383,50 @@ PDecor {
 				Button 				= "3" { Actions = "Toggle Sticky" }
 				}
 			}
-
-			Border {
-				Focused {
-					#Top 			= "Image 1-Border-Focused-top-white.png"
-					Top 			= "Image 6-Border-horz1.png"
-					TopRight 		= "Image 6-Border-top-right1.png"
-					TopLeft 		= "Image 6-Border-top-left1.png"
-					Left 			= "Image 6-Border-vert.png"
-					Right 			= "Image 6-Border-vert.png"
-					BottomLeft 		= "Image 6-Border-bottom-left.png"
-					Bottom 			= "Image 6-Border-horz1.png"
-					BottomRight 	= "Image 6-Border-bottom-right.png"
-					}
-					
-				Unfocused {				
-					#Top 			= "Image 0-Border-Unfocused-top-bottom-leftu.png"
-					Top 			= "Image 6-Border-horz-unFocused2.png"
-					TopRight 		= "Image 6-Border-top-right-unFocused2.png"
-					TopLeft 		= "Image 6-Border-top-left-unFocused2.png"
-					Left 			= "Image 6-Border-vert-unFocused.png"
-					Right 			= "Image 6-Border-vert-unFocused.png"
-					BottomLeft 		= "Image 6-Border-bottom-left-unFocused2.png"
-					Bottom 			= "Image 6-Border-horz-unFocused2.png"
-					BottomRight 	= "Image 6-Border-bottom-right-unFocused2.png"
-					}					
-					
-				}		
+				
+		Border {
+		Focused {
+				TopLeft 			= "Image 0-Border-Focused-top-left.png.png"
+				Top 				= "Image 0-Border-Focused-top-yello.png"                                    
+				TopRight 			= "Image 0-Border-Focused-top-right.png"
+				Left 				= "Image 0-Border-Focused-left.png"
+				Right 				= "Image 0-Border-Focused-right.png"
+				BottomLeft 			= "Image 0-Border-Focused-bottom-left.png"
+				Bottom 				= "Image 0-Border-Focused-bottom.png"
+				BottomRight 		= "Image 0-Border-Focused-bottom-right.png"
+				}
+								
+		Unfocused {
+				TopLeft 			= "Image 0-Border-Unfocused-top-left.png"
+				Top 				= "Image 0-Border-Unfocused-top-blu.png"
+				TopRight 			= "Image 0-Border-Unfocused-top-right.png"
+				Left 				= "Image 0-Border-Unfocused-left.png"
+				Right 				= "Image 0-Border-Unfocused-right.png"
+				BottomLeft 			= "Image 0-Border-Unfocused-bottom-left.png"
+				Bottom 				= "Image 0-Border-Unfocused-bottom-white.png"
+				BottomRight 		= "Image 0-Border-Unfocused-bottom-right.png"
+				}
 			}
 		}
-
-# Decor = "KloseOnly" needs "KloseOnly" specified in autoproperties to do anything, 
-# otherwise does nothing
-# Window set to only have sticky and close buttons (no resize or minimize)
- 
+	}
+	
 	Decor = "KloseOnly" {
 		Title {
-				Height 				= "27"
+				Height 				= "28"
 				Pad 				= "2 3 1 1"
 				Focused 			= "Image 0-Title-default.png"
 				Unfocused 			= "Image 0-Title-default.png"
 
 			Tab {
-				Focused 			= "Image 0-Title-default.png"
+				Focused 			= "Image 0-Title-Focused.png"
 				FocusedSelected 	= "Image 0-Title-default.png"
 				Unfocused 			= "Image 0-Title-default.png"
 				UnfocusedSelected 	= "Image 0-Title-default.png"
 				}
 
 			Separator {
-				Focused 			= "Image 0-tab-separator-FocusedALT.png"
-				Unfocused 			= "Image 0-tab-separator-UnocusedALT.png"
+				Focused 			= "Image 0-tab-separator-Focused.png"
+				Unfocused 			= "Image 0-tab-separator-Unocused.png"
 				}
 
 			Font {
@@ -494,34 +463,32 @@ PDecor {
 				Button 				= "3" { Actions = "Toggle Sticky" }
 				}
 			}
-
-			Border {
-				Focused {
-					#Top 			= "Image 1-Border-Focused-top-white.png"
-					Top 			= "Image 6-Border-horz1.png"
-					TopRight 		= "Image 6-Border-top-right1.png"
-					TopLeft 		= "Image 6-Border-top-left1.png"
-					Left 			= "Image 6-Border-vert.png"
-					Right 			= "Image 6-Border-vert.png"
-					BottomLeft 		= "Image 6-Border-bottom-left.png"
-					Bottom 			= "Image 6-Border-horz1.png"
-					BottomRight 	= "Image 6-Border-bottom-right.png"
-					}
-					
-				Unfocused {				
-					#Top 			= "Image 0-Border-Unfocused-top-bottom-leftu.png"
-					Top 			= "Image 6-Border-horz-unFocused2.png"
-					TopRight 		= "Image 6-Border-top-right-unFocused2.png"
-					TopLeft 		= "Image 6-Border-top-left-unFocused2.png"
-					Left 			= "Image 6-Border-vert-unFocused.png"
-					Right 			= "Image 6-Border-vert-unFocused.png"
-					BottomLeft 		= "Image 6-Border-bottom-left-unFocused2.png"
-					Bottom 			= "Image 6-Border-horz-unFocused2.png"
-					BottomRight 	= "Image 6-Border-bottom-right-unFocused2.png"
-					}
+				
+		Border {
+			Focused {
+				TopLeft 			= "Image 0-Border-Focused-top-left.png.png"
+				Top 				= "Image 0-Border-Focused-top-yello.png"                                    
+				TopRight 			= "Image 0-Border-Focused-top-right.png"
+				Left 				= "Image 0-Border-Focused-left.png"
+				Right 				= "Image 0-Border-Focused-right.png"
+				BottomLeft 			= "Image 0-Border-Focused-bottom-left.png"
+				Bottom 				= "Image 0-Border-Focused-bottom.png"
+				BottomRight 		= "Image 0-Border-Focused-bottom-right.png"
+				}
+								
+			Unfocused {
+				TopLeft 			= "Image 0-Border-Unfocused-top-left.png"
+				Top 				= "Image 0-Border-Unfocused-top-blu.png"
+				TopRight 			= "Image 0-Border-Unfocused-top-right.png"
+				Left 				= "Image 0-Border-Unfocused-left.png"
+				Right 				= "Image 0-Border-Unfocused-right.png"
+				BottomLeft 			= "Image 0-Border-Unfocused-bottom-left.png"
+				Bottom 				= "Image 0-Border-Unfocused-bottom-white.png"
+				BottomRight 		= "Image 0-Border-Unfocused-bottom-right.png"
 				}
 			}
 		}
+	}
 
 	Decor = "Titlebarless" {
 		Title {
@@ -642,34 +609,32 @@ Harbour {
 }
 	
 Menu {
-		Pad 						= "3 3 6 3"
+		Pad 						= "3 3 7 7"
 			Focused {
 				Font 				= "$font_bigger"
-#				Background 			= "Solid #171717"
-				Background 			= "Solid #0d0d0d"
+				Background 			= "Solid #171717"
 				Item 				= "arrow-focus"
-				Text 				= "#63e770" 
-				Separator 			= "Image 0-Menu-separator-default.png"
-				Arrow 				= "Image 0-Menu-Focused-arrow.png"
+				Text 				= "#bbbbbb" 
+				Separator 			= "Image menuline.png"
+				Arrow 				= "Image menu-unfocus0.png"
 				}
 	
 			Unfocused {
 				Font 				= "$font_bigger"
-#				Background 			= "Solid #171717"
-				Background 			= "Solid #0d0d0d"
+				Background 			= "Solid #171717"
 				Item 				= "arrow-focus"
-				Text 				= "#55c762"
-				Separator 			= "Image 0-Menu-separator-default.png"
-				Arrow 				= "Image 0-Menu-Unfocused-arrow.png"
+				Text 				= "#888888"
+				Separator 			= "Image menuline.png"
+				Arrow 				= "Image menu-unfocus3.png"
 				}
 	
 			Selected {
-				Font 				= "$font_bigger"
-#				Background 			= "Solid #171717"
-				Background 			= "Solid #0d0d0d"
+				Font 				= "$font_bigger2"
+				Background 			= "Solid #171717"
 				Item 				= "arrow-sel"   
 				Text 				= "#FFFFFF"       
-				Arrow 				= "Image 0-Menu-Selected-arrow-white.png"
+#               Arrow 				= "Image menu-sel2.png"
+				Arrow 				= "Image menu-selWhite.png"
 				}
 }
 

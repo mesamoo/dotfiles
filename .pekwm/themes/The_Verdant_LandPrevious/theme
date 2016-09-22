@@ -86,26 +86,26 @@ PDecor {
 			Border {
 				Focused {
 					#Top 			= "Image 1-Border-Focused-top-white.png"
-					Top 			= "Image 6-Border-horz1.png"
-					TopRight 		= "Image 6-Border-top-right1.png"
-					TopLeft 		= "Image 6-Border-top-left1.png"
-					Left 			= "Image 6-Border-vert.png"
-					Right 			= "Image 6-Border-vert.png"
-					BottomLeft 		= "Image 6-Border-bottom-left.png"
-					Bottom 			= "Image 6-Border-horz1.png"
-					BottomRight 	= "Image 6-Border-bottom-right.png"
+					Top 			= "Image bd-horz1.png"
+					TopRight 		= "Image bd-tr1.png"
+					TopLeft 		= "Image bd-tl1.png"
+					Left 			= "Image bd-vert.png"
+					Right 			= "Image bd-vert.png"
+					BottomLeft 		= "Image bd-bl.png"
+					Bottom 			= "Image bd-horz1.png"
+					BottomRight 	= "Image bd-br.png"
 					}
 					
 				Unfocused {				
-					#Top 			= "Image 0-Border-Unfocused-top-bottom-leftu.png"
-					Top 			= "Image 6-Border-horz-unFocused2.png"
-					TopRight 		= "Image 6-Border-top-right-unFocused2.png"
-					TopLeft 		= "Image 6-Border-top-left-unFocused2.png"
-					Left 			= "Image 6-Border-vert-unFocused.png"
-					Right 			= "Image 6-Border-vert-unFocused.png"
-					BottomLeft 		= "Image 6-Border-bottom-left-unFocused2.png"
-					Bottom 			= "Image 6-Border-horz-unFocused2.png"
-					BottomRight 	= "Image 6-Border-bottom-right-unFocused2.png"
+					#Top 			= "Image 0-Border-Unfocused-top-blu.png"
+					Top 			= "Image bd-horz-un2.png"
+					TopRight 		= "Image bd-tr-un2.png"
+					TopLeft 		= "Image bd-tl-un2.png"
+					Left 			= "Image bd-vert-un.png"
+					Right 			= "Image bd-vert-un.png"
+					BottomLeft 		= "Image bd-bl-un2.png"
+					Bottom 			= "Image bd-horz-un2.png"
+					BottomRight 	= "Image bd-br-un2.png"
 					}					
 					
 				}
@@ -228,26 +228,26 @@ PDecor {
 			Border {
 				Focused {
 					#Top 			= "Image 1-Border-Focused-top-white.png"
-					Top 			= "Image 6-Border-horz1.png"
-					TopRight 		= "Image 6-Border-top-right1.png"
-					TopLeft 		= "Image 6-Border-top-left1.png"
-					Left 			= "Image 6-Border-vert.png"
-					Right 			= "Image 6-Border-vert.png"
-					BottomLeft 		= "Image 6-Border-bottom-left.png"
-					Bottom 			= "Image 6-Border-horz1.png"
-					BottomRight 	= "Image 6-Border-bottom-right.png"
+					Top 			= "Image bd-horz1.png"
+					TopRight 		= "Image bd-tr1.png"
+					TopLeft 		= "Image bd-tl1.png"
+					Left 			= "Image bd-vert.png"
+					Right 			= "Image bd-vert.png"
+					BottomLeft 		= "Image bd-bl.png"
+					Bottom 			= "Image bd-horz1.png"
+					BottomRight 	= "Image bd-br.png"
 					}
 					
 				Unfocused {				
-					#Top 			= "Image 0-Border-Unfocused-top-bottom-leftu.png"
-					Top 			= "Image 6-Border-horz-unFocused2.png"
-					TopRight 		= "Image 6-Border-top-right-unFocused2.png"
-					TopLeft 		= "Image 6-Border-top-left-unFocused2.png"
-					Left 			= "Image 6-Border-vert-unFocused.png"
-					Right 			= "Image 6-Border-vert-unFocused.png"
-					BottomLeft 		= "Image 6-Border-bottom-left-unFocused2.png"
-					Bottom 			= "Image 6-Border-horz-unFocused2.png"
-					BottomRight 	= "Image 6-Border-bottom-right-unFocused2.png"
+					#Top 			= "Image 0-Border-Unfocused-top-blu.png"
+					Top 			= "Image bd-horz-un2.png"
+					TopRight 		= "Image bd-tr-un2.png"
+					TopLeft 		= "Image bd-tl-un2.png"
+					Left 			= "Image bd-vert-un.png"
+					Right 			= "Image bd-vert-un.png"
+					BottomLeft 		= "Image bd-bl-un2.png"
+					Bottom 			= "Image bd-horz-un2.png"
+					BottomRight 	= "Image bd-br-un2.png"
 					}					
 					
 				}
@@ -325,26 +325,26 @@ PDecor {
 			Border {
 				Focused {
 					#Top 			= "Image 1-Border-Focused-top-white.png"
-					Top 			= "Image 6-Border-horz1.png"
-					TopRight 		= "Image 6-Border-top-right1.png"
-					TopLeft 		= "Image 6-Border-top-left1.png"
-					Left 			= "Image 6-Border-vert.png"
-					Right 			= "Image 6-Border-vert.png"
-					BottomLeft 		= "Image 6-Border-bottom-left.png"
-					Bottom 			= "Image 6-Border-horz1.png"
-					BottomRight 	= "Image 6-Border-bottom-right.png"
+					Top 			= "Image bd-horz1.png"
+					TopRight 		= "Image bd-tr1.png"
+					TopLeft 		= "Image bd-tl1.png"
+					Left 			= "Image bd-vert.png"
+					Right 			= "Image bd-vert.png"
+					BottomLeft 		= "Image bd-bl.png"
+					Bottom 			= "Image bd-horz1.png"
+					BottomRight 	= "Image bd-br.png"
 					}
 					
 				Unfocused {				
-					#Top 			= "Image 0-Border-Unfocused-top-bottom-leftu.png"
-					Top 			= "Image 6-Border-horz-unFocused2.png"
-					TopRight 		= "Image 6-Border-top-right-unFocused2.png"
-					TopLeft 		= "Image 6-Border-top-left-unFocused2.png"
-					Left 			= "Image 6-Border-vert-unFocused.png"
-					Right 			= "Image 6-Border-vert-unFocused.png"
-					BottomLeft 		= "Image 6-Border-bottom-left-unFocused2.png"
-					Bottom 			= "Image 6-Border-horz-unFocused2.png"
-					BottomRight 	= "Image 6-Border-bottom-right-unFocused2.png"
+					#Top 			= "Image 0-Border-Unfocused-top-blu.png"
+					Top 			= "Image bd-horz-un2.png"
+					TopRight 		= "Image bd-tr-un2.png"
+					TopLeft 		= "Image bd-tl-un2.png"
+					Left 			= "Image bd-vert-un.png"
+					Right 			= "Image bd-vert-un.png"
+					BottomLeft 		= "Image bd-bl-un2.png"
+					Bottom 			= "Image bd-horz-un2.png"
+					BottomRight 	= "Image bd-br-un2.png"
 					}					
 				}
 			}
@@ -411,26 +411,26 @@ PDecor {
 			Border {
 				Focused {
 					#Top 			= "Image 1-Border-Focused-top-white.png"
-					Top 			= "Image 6-Border-horz1.png"
-					TopRight 		= "Image 6-Border-top-right1.png"
-					TopLeft 		= "Image 6-Border-top-left1.png"
-					Left 			= "Image 6-Border-vert.png"
-					Right 			= "Image 6-Border-vert.png"
-					BottomLeft 		= "Image 6-Border-bottom-left.png"
-					Bottom 			= "Image 6-Border-horz1.png"
-					BottomRight 	= "Image 6-Border-bottom-right.png"
+					Top 			= "Image bd-horz1.png"
+					TopRight 		= "Image bd-tr1.png"
+					TopLeft 		= "Image bd-tl1.png"
+					Left 			= "Image bd-vert.png"
+					Right 			= "Image bd-vert.png"
+					BottomLeft 		= "Image bd-bl.png"
+					Bottom 			= "Image bd-horz1.png"
+					BottomRight 	= "Image bd-br.png"
 					}
 					
 				Unfocused {				
-					#Top 			= "Image 0-Border-Unfocused-top-bottom-leftu.png"
-					Top 			= "Image 6-Border-horz-unFocused2.png"
-					TopRight 		= "Image 6-Border-top-right-unFocused2.png"
-					TopLeft 		= "Image 6-Border-top-left-unFocused2.png"
-					Left 			= "Image 6-Border-vert-unFocused.png"
-					Right 			= "Image 6-Border-vert-unFocused.png"
-					BottomLeft 		= "Image 6-Border-bottom-left-unFocused2.png"
-					Bottom 			= "Image 6-Border-horz-unFocused2.png"
-					BottomRight 	= "Image 6-Border-bottom-right-unFocused2.png"
+					#Top 			= "Image 0-Border-Unfocused-top-blu.png"
+					Top 			= "Image bd-horz-un2.png"
+					TopRight 		= "Image bd-tr-un2.png"
+					TopLeft 		= "Image bd-tl-un2.png"
+					Left 			= "Image bd-vert-un.png"
+					Right 			= "Image bd-vert-un.png"
+					BottomLeft 		= "Image bd-bl-un2.png"
+					Bottom 			= "Image bd-horz-un2.png"
+					BottomRight 	= "Image bd-br-un2.png"
 					}					
 					
 				}		
@@ -498,26 +498,26 @@ PDecor {
 			Border {
 				Focused {
 					#Top 			= "Image 1-Border-Focused-top-white.png"
-					Top 			= "Image 6-Border-horz1.png"
-					TopRight 		= "Image 6-Border-top-right1.png"
-					TopLeft 		= "Image 6-Border-top-left1.png"
-					Left 			= "Image 6-Border-vert.png"
-					Right 			= "Image 6-Border-vert.png"
-					BottomLeft 		= "Image 6-Border-bottom-left.png"
-					Bottom 			= "Image 6-Border-horz1.png"
-					BottomRight 	= "Image 6-Border-bottom-right.png"
+					Top 			= "Image bd-horz1.png"
+					TopRight 		= "Image bd-tr1.png"
+					TopLeft 		= "Image bd-tl1.png"
+					Left 			= "Image bd-vert.png"
+					Right 			= "Image bd-vert.png"
+					BottomLeft 		= "Image bd-bl.png"
+					Bottom 			= "Image bd-horz1.png"
+					BottomRight 	= "Image bd-br.png"
 					}
 					
 				Unfocused {				
-					#Top 			= "Image 0-Border-Unfocused-top-bottom-leftu.png"
-					Top 			= "Image 6-Border-horz-unFocused2.png"
-					TopRight 		= "Image 6-Border-top-right-unFocused2.png"
-					TopLeft 		= "Image 6-Border-top-left-unFocused2.png"
-					Left 			= "Image 6-Border-vert-unFocused.png"
-					Right 			= "Image 6-Border-vert-unFocused.png"
-					BottomLeft 		= "Image 6-Border-bottom-left-unFocused2.png"
-					Bottom 			= "Image 6-Border-horz-unFocused2.png"
-					BottomRight 	= "Image 6-Border-bottom-right-unFocused2.png"
+					#Top 			= "Image 0-Border-Unfocused-top-blu.png"
+					Top 			= "Image bd-horz-un2.png"
+					TopRight 		= "Image bd-tr-un2.png"
+					TopLeft 		= "Image bd-tl-un2.png"
+					Left 			= "Image bd-vert-un.png"
+					Right 			= "Image bd-vert-un.png"
+					BottomLeft 		= "Image bd-bl-un2.png"
+					Bottom 			= "Image bd-horz-un2.png"
+					BottomRight 	= "Image bd-br-un2.png"
 					}
 				}
 			}
