@@ -1,0 +1,30 @@
+sensor sensor_config_version 1
+sensor sensor_sysdep_private 2
+sensor sensor_float_factor 10000
+sensor gkrellm_float_factor 1000
+sensor "GPU" "nVidia GPU Core" 10000 0 1 0
+sensor "Core 0" "coretemp@0/temp2" 0 0 1 0
+sensor "Core 1" "coretemp@0/temp3" 0 0 1 0
+sensor "Core 2" "coretemp@0/temp4" 0 0 1 0
+sensor "Core 3" "coretemp@0/temp5" 0 0 1 0
+sensor "t0" "coretemp@0/temp1" 0 0 1 0
+sensor "t1" "f71889a@290/temp1" 0 0 1 0
+sensor "t2" "f71889a@290/temp2" 0 0 1 0
+sensor "t3" "f71889a@290/temp3" 0 0 1 0
+sensor "temp" "thermal_zone0" 10000 0 0 0
+sensor "sda" "hddtemp/sda" 10000 0 0 0
+sensor "fan1" "f71889a@290/fan1" 0 0 1 0
+sensor "fan2" "f71889a@290/fan2" 0 0 0 0
+sensor "fan3" "f71889a@290/fan3" 0 0 1 0
+sensor "+3.3V" "f71889a@290/in0" 0 0 1 0
+sensor "in1" "f71889a@290/in1" 0 0 0 0
+sensor "in2" "f71889a@290/in2" 0 0 0 0
+sensor "in3" "f71889a@290/in3" 0 0 0 0
+sensor "in4" "f71889a@290/in4" 0 0 0 0
+sensor "in5" "f71889a@290/in5" 0 0 0 0
+sensor "in6" "f71889a@290/in6" 0 0 0 0
+sensor "3VSB" "f71889a@290/in7" 0 0 0 0
+sensor "Vbat" "f71889a@290/in8" 0 0 0 0
+sensor units_fahrenheit 0
+sensor show_units 1
+sensor volt_display_mode 0

@@ -30,7 +30,8 @@ Separator {}
 				Entry = "madedit" { Actions = "Exec madedit" }
 				Entry = "sublime2" { Actions = "Exec ~/bin/SublimeText2/sublime_text" }
 				Entry = "tea" { Actions = "Exec tea" }
-				Entry = "vsCode" { Actions = "Exec /opt/VSCode/code" }
+				#Entry = "vsCode" { Actions = "Exec /opt/VSCode/code" }
+				Entry = "vsCode" { Actions = "Exec code" }
 		Separator {}
 		Separator {}
 				Entry = "kdevelop" { Actions = "Exec kdevelop" }
