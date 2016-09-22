@@ -30,7 +30,7 @@ Separator {}
 				Entry = "madedit" { Actions = "Exec madedit" }
 				Entry = "sublime2" { Actions = "Exec ~/bin/SublimeText2/sublime_text" }
 				Entry = "tea" { Actions = "Exec tea" }
-				Entry = "vsCode" { Actions = "Exec code" }
+				Entry = "vsCode" { Actions = "Exec /opt/VSCode/code" }
 		Separator {}
 		Separator {}
 				Entry = "kdevelop" { Actions = "Exec kdevelop" }
@@ -68,19 +68,6 @@ Separator {}
 	}
 	Submenu = "Media" {
 		Separator {}
-		        Submenu = "Audio" {
-		              Separator {}
-				Entry = "Flacon" { Actions = "Exec flacon" }
-				Entry = "k3b" { Actions = "Exec k3b" }
-				Entry = "kid3" { Actions = "Exec kid3" }
-				Entry = "Audacity" { Actions = "Exec audacity" }
-				Entry = "OpenBroadcast" { Actions = "Exec ~/obs-studio-portable/runOBS" }
-		              Separator {}
-		              Separator {}
-				Entry = "alsamixer" { Actions = "Exec $TERM -title alsamixer -e alsamixer" }
-			       Separator {}
-			       Separator {}
-			}
 		        Submenu = "Player" {
 		              Separator {}
 				Entry = "cantata" { Actions = "Exec cantata" }
@@ -100,6 +87,31 @@ Separator {}
 			       Separator {}
 			       Separator {}
 			}
+		Separator {}
+		Separator {}
+		        Submenu = "AudioTools" {
+		              Separator {}
+				Entry = "Flacon" { Actions = "Exec flacon" }
+				Entry = "k3b" { Actions = "Exec k3b" }
+				Entry = "kid3" { Actions = "Exec kid3" }
+				Entry = "Audacity" { Actions = "Exec audacity" }
+				Entry = "OpenBroadcast" { Actions = "Exec ~/obs-studio-portable/runOBS" }
+		              Separator {}
+		              Separator {}
+				Entry = "alsamixer" { Actions = "Exec $TERM -title alsamixer -e alsamixer" }
+			       Separator {}
+			       Separator {}
+			}
+		        Submenu = "RecordDesktop" {
+		                Separator {}
+		                Entry = "eidete" { Actions = "Exec eidete" }
+		                Entry = "kazam" { Actions = "Exec kazam" }
+		                Entry = "recorditnow" { Actions = "Exec recorditnow" }
+		                Entry = "recordMyDesktop" { Actions = "Exec gtk-recordMyDesktop" }
+		                Entry = "simplerecord" { Actions = "Exec simplescreenrecorder" }
+		                Entry = "vokoscreen" { Actions = "Exec vokoscreen" }
+		                Separator {}
+		        }
 			Submenu = "Synth" {
 			       Separator {}
 				Entry = "qjackctl" { Actions = "Exec qjackctl" }
@@ -111,20 +123,8 @@ Separator {}
 			}
 		Separator {}
 		Separator {}
-		        Submenu = "RecDesk" {
-		                Separator {}
-		                Entry = "eidete" { Actions = "Exec eidete" }
-		                Entry = "kazam" { Actions = "Exec kazam" }
-		                Entry = "recorditnow" { Actions = "Exec recorditnow" }
-		                Entry = "recordMyDesktop" { Actions = "Exec gtk-recordMyDesktop" }
-		                Entry = "simplerecord" { Actions = "Exec simplescreenrecorder" }
-		                Entry = "vokoscreen" { Actions = "Exec vokoscreen" }
-		                Separator {}
-		        }
-		Separator {}
-		Separator {}
 				Entry = "kodi" { Actions = "Exec kodi" }
-				Entry = "miniTube" { Actions = "Exec minitube" }
+				Entry = "miniTube_player" { Actions = "Exec minitube" }
 				Entry = "smtube" { Actions = "Exec smtube" }
 		Separator {}
 		Separator {}
