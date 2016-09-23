@@ -29,8 +29,8 @@ PDecor {
 				}
 
 			Separator {
-				Focused 			= "Image 0-tab-separator-Focused.png"
-				Unfocused 			= "Image 0-tab-separator-Unocused.png"
+				Focused 			= "Image 0-Unk.Pleasures-tab-separator-Focused.png"
+				Unfocused 			= "Image 0-Unk.Pleasures-tab-separator-UnFocused.png"
 				}
 
 			Font {
@@ -123,7 +123,7 @@ PDecor {
 			Border {
 				Focused {
 					TopLeft 		= "Image 0-Menu-default-top-left.png"
-					Top 			= "Image 1-Menu-default-top-thinRainbow.png#scaled"
+					Top 			= "Image 1-Menu-default-top-thinRainbow2.png#scaled"
 #					Top 			= "Image 0-Menu-default-top.png"
 					TopRight 		= "Image 0-Menu-default-top-right.png"
 					Left 			= "Image 0-Menu-default-left.png"
@@ -169,8 +169,8 @@ PDecor {
 					}
 
 			Separator {
-					Focused 		= "Image 0-tab-separator-Focused.png"
-					Unfocused 		= "Image 0-tab-separator-Unocused.png"
+					Focused 		= "Image 0-Unk.Pleasures-tab-separator-Focused.png"
+					Unfocused 		= "Image 0-Unk.Pleasures-tab-separator-UnFocused.png"
 					}
 
 			Font {
@@ -271,8 +271,8 @@ PDecor {
 				}
 
 			Separator {
-				Focused 			= "Image 0-tab-separator-Focused.png"
-				Unfocused 			= "Image 0-tab-separator-Unocused.png"
+				Focused 			= "Image 0-Unk.Pleasures-tab-separator-Focused.png"
+				Unfocused 			= "Image 0-Unk.Pleasures-tab-separator-UnFocused.png"
 				}
 
 			Font {
@@ -364,8 +364,8 @@ PDecor {
 				}
 
 			Separator {
-				Focused 			= "Image 0-tab-separator-Focused.png"
-				Unfocused 			= "Image 0-tab-separator-Unocused.png"
+				Focused 			= "Image 0-Unk.Pleasures-tab-separator-Focused.png"
+				Unfocused 			= "Image 0-Unk.Pleasures-tab-separator-UnFocused.png"
 				}
 
 			Font {
@@ -447,8 +447,8 @@ PDecor {
 				}
 
 			Separator {
-				Focused 			= "Image 0-tab-separator-Focused.png"
-				Unfocused 			= "Image 0-tab-separator-Unocused.png"
+				Focused 			= "Image 0-Unk.Pleasures-tab-separator-Focused.png"
+				Unfocused 			= "Image 0-Unk.Pleasures-tab-separator-UnFocused.png"
 				}
 
 			Font {
@@ -637,7 +637,7 @@ Menu {
 				Background 			= "Solid #171717"
 				Item 				= "arrow-focus"
 				Text 				= "#dddddd" 
-				Separator 			= "Image 0-Menu-separator-default.png"
+				#Separator 			= "Image 0-Menu-separator-default.png"
 				Arrow 				= "Image 1-Menu-Focused-arrow.png"
 				}
 	
@@ -646,7 +646,7 @@ Menu {
 				Background 			= "Solid #171717"
 				Item 				= "arrow-focus"
 				Text 				= "#bbbbbb"
-				Separator 			= "Image 0-Menu-separator-default.png"
+				#Separator 			= "Image 0-Menu-separator-default.png"
 				Arrow 				= "Image 0-Menu-Unfocused-arrow.png"
 				}
 	
@@ -657,7 +657,6 @@ Menu {
 #				Text 				= "#F8FD77"
 				Text 				= "#FFFFFF"
 				Arrow 				= "Image 1-Menu-Selected-arrow.png"
-#				Arrow 				= "Image 2-Menu-Selected-arrow.png"
 				}
 }
 

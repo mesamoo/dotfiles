@@ -28,7 +28,7 @@ PDecor {
 
 			Separator {
 				Focused 			= "Image 0-tab-separator-Focused.png"
-				Unfocused 			= "Image 0-tab-separator-Unocused.png"
+				Unfocused 			= "Image 0-West.Land-tab-separator-UnFocused.png"
 				}
 
 			Font {
@@ -171,7 +171,7 @@ PDecor {
 
 			Separator {
 					Focused 		= "Image 0-tab-separator-Focused.png"
-					Unfocused 		= "Image 0-tab-separator-Unocused.png"
+					Unfocused 		= "Image 0-West.Land-tab-separator-UnFocused.png"
 					}
 
 			Font {
@@ -276,7 +276,7 @@ PDecor {
 
 			Separator {
 				Focused 			= "Image 0-tab-separator-Focused.png"
-				Unfocused 			= "Image 0-tab-separator-Unocused.png"
+				Unfocused 			= "Image 0-West.Land-tab-separator-UnFocused.png"
 				}
 
 			Font {
@@ -371,7 +371,7 @@ PDecor {
 
 			Separator {
 				Focused 			= "Image 0-tab-separator-Focused.png"
-				Unfocused 			= "Image 0-tab-separator-Unocused.png"
+				Unfocused 			= "Image 0-West.Land-tab-separator-UnFocused.png"
 				}
 
 			Font {
@@ -457,7 +457,7 @@ PDecor {
 
 			Separator {
 				Focused 			= "Image 0-tab-separator-Focused.png"
-				Unfocused 			= "Image 0-tab-separator-Unocused.png"
+				Unfocused 			= "Image 0-West.Land-tab-separator-UnFocused.png"
 				}
 
 			Font {

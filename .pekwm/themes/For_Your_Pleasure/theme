@@ -1,3 +1,4 @@
+#ForYourPleasure
 # Started w/ magic night, many modifications and changes to suit my own aesthetic
 # enjoy
 # dh
@@ -33,8 +34,8 @@ PDecor {
 			}
 
 			Separator {
-				Focused = "Image tab-separator.png"
-                                Unfocused = "Image tab-separator_unfocus.png"
+				Focused = "Image F.Y.Pleasure-tab-separator.png"
+				Unfocused = "Image F.Y.Pleasure-tab-separator_unfocus.png"
 			}
 
 			Font {
@@ -44,36 +45,36 @@ PDecor {
 			FontColor {
 #				Focused = "#95AF9E"
 				Focused = "#16D4EC"
-                                FocusedSelected = "#EBFA60"                             
-                                Unfocused = "#16D4EC"
-                                UnfocusedSelected = "#16D4EC"
+				FocusedSelected = "#EBFA60"                             
+				Unfocused = "#16D4EC"
+				UnfocusedSelected = "#16D4EC"
 			}
 
 	               Buttons {
                           Right {
-				Focused = "Image button-fr.png"
-				Unfocused = "Image button-fr2.png"
-				Hoover = "Image button-hover-red4.png"
-				Pressed = "Image button-press-red4.png"
-				Button = "1" { Actions = "Close" }
-				Button = "3" { Actions = "Kill" }
+								Focused = "Image button-fr.png"
+								Unfocused = "Image button-fr2.png"
+								Hoover = "Image button-hover-red4.png"
+								Pressed = "Image button-press-red4.png"
+								Button = "1" { Actions = "Close" }
+					Button = "3" { Actions = "Kill" }
                           }
 
                           Right {
-				Focused = "Image button.png"
-				Unfocused = "Image button.png"
-				Hoover = "Image button-hover-teal4.png"
-				Pressed = "Image button-press-teal4.png"
-				Button = "1" { Actions = "Toggle Maximized 1 1" }
-				Button = "3" { Actions = "Maxfill False True" }
+								Focused = "Image button.png"
+								Unfocused = "Image button.png"
+								Hoover = "Image button-hover-teal4.png"
+								Pressed = "Image button-press-teal4.png"
+								Button = "1" { Actions = "Toggle Maximized 1 1" }
+					Button = "3" { Actions = "Maxfill False True" }
                           }
 
                           Right {
-				Focused = "Image button.png"
-				Unfocused = "Image button.png"
-				Hoover = "Image button-hover-green4.png"
-				Pressed = "Image button-press-green4.png"
-				Button = "1" { Actions = "Set Iconified" }
+								Focused = "Image button.png"
+								Unfocused = "Image button.png"
+								Hoover = "Image button-hover-green4.png"
+								Pressed = "Image button-press-green4.png"
+					Button = "1" { Actions = "Set Iconified" }
                           }
 
                           Left {
@@ -94,7 +95,7 @@ PDecor {
 					Left =  "Image left-border.png"
 					Right = "Image right-border.png"
 					BottomLeft = "Image bottom-left.png"
-                                        Bottom = "Image bottom-border.png"
+					Bottom = "Image bottom-border.png"
 					BottomRight = "Image bottom-right.png"
 				}
 
@@ -164,8 +165,8 @@ PDecor {
                         }
 
                         Separator {
-                                Focused = "Image tab-separator.png"
-                                Unfocused = "Image tab-separator_unfocus.png"
+                                Focused = "Image F.Y.Pleasure-tab-separator.png"
+                                Unfocused = "Image F.Y.Pleasure-tab-separator_unfocus.png"
 
                         }
 
@@ -261,8 +262,8 @@ PDecor {
                         }
 
                         Separator {
-                                Focused = "Image tab-separator.png"
-                                Unfocused = "Image tab-separator_unfocus.png"
+                                Focused = "Image F.Y.Pleasure-tab-separator.png"
+                                Unfocused = "Image F.Y.Pleasure-tab-separator_unfocus.png"
 
                         }
 
@@ -349,8 +350,8 @@ PDecor {
                         }
 
                         Separator {
-                                Focused = "Image tab-separator.png"
-                                Unfocused = "Image tab-separator_unfocus.png"
+                                Focused = "Image F.Y.Pleasure-tab-separator.png"
+                                Unfocused = "Image F.Y.Pleasure-tab-separator_unfocus.png"
 
                         }
 
@@ -429,8 +430,8 @@ PDecor {
                         }
 
                         Separator {
-                                Focused = "Image tab-separator.png"
-                                Unfocused = "Image tab-separator_unfocus.png"
+                                Focused = "Image F.Y.Pleasure-tab-separator.png"
+                                Unfocused = "Image F.Y.Pleasure-tab-separator_unfocus.png"
 
                         }
 
@@ -583,8 +584,8 @@ PDecor {
 			Buttons {
 			}
 			
-	                Border {  
-	                      Focused {
+		Border {  
+			Focused {
 				TopLeft = "Empty"
 				Top = "Empty"
 				TopRight = "Empty"
@@ -612,34 +613,34 @@ PDecor {
 
 Harbour {
         Texture = "Solid #0a0a0a"
-	}
+		}
 	
 Menu {
         Pad = "3 3 7 7"
-	Focused {
-    		Font = "$font_bigger"
+		Focused {
+		Font = "$font_bigger"
 		Background = "Solid #171717"
-    		Item = "arrow-focus"
+		Item = "arrow-focus"
 		Text = "#16D4EC" 
 		Separator = "Image menuline.png"
-                Arrow = "Image rnd-unfocus.png"
+		Arrow = "Image rnd-unfocus.png"
   	}
   	
   	Unfocused {
-    		Font = "$font_bigger"
-                Background = "Solid #171717"
-    		Item = "arrow-focus"
+		Font = "$font_bigger"
+		Background = "Solid #171717"
+		Item = "arrow-focus"
 		Text = "#16D4EC"
 		Separator = "Image menuline.png"
-                Arrow = "Image rnd-unfocus.png"
+		Arrow = "Image rnd-unfocus.png"
   	}
   	
   	Selected {
-    		Font = "$font_bigger"
-    		Background = "Solid #171717"
+		Font = "$font_bigger"
+		Background = "Solid #171717"
 		Item = "arrow-sel"   
-                Text = "#F8FD77"       
-                Arrow = "Image rnd-sel.png"
+		Text = "#F8FD77"       
+		Arrow = "Image rnd-sel.png"
   	}
   	
 }
@@ -648,13 +649,13 @@ CmdDialog {
  	Font = "$font"
 	Texture = "Solid #171717"
 	Text = "#a0a0a0"
-        Pad = "8 0 1 10"
+	Pad = "8 0 1 10"
 }
 
 Status {
 	Font = "$font"
 	Texture = "Solid #171717"  
-        Text = "#a0a0a0"
+	Text = "#a0a0a0"
 	Pad = "2 2 10 10"
 }
 

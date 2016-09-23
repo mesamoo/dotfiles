@@ -1,4 +1,4 @@
-# WESTERNlANDS RE-WRITTEN / Cleaned up
+# FindingPleasure
 # use a monospace font for proper viewing
 
 # my teal font color 		#16D4EC
@@ -28,7 +28,7 @@ PDecor {
 
 			Separator {
 				Focused 			= "Image 0-tab-separator-Focused.png"
-				Unfocused 			= "Image 0-tab-separator-Unocused.png"
+				Unfocused 			= "Image 0-Find.Pleasure-tab-separator-UnFocused.png"
 				}
 
 			Font {
@@ -102,7 +102,7 @@ PDecor {
 					Left 			= "Image 0-Border-Unfocused-left.png"
 					Right 			= "Image 0-Border-Unfocused-right.png"
 					BottomLeft 		= "Image 0-Border-Unfocused-bottom-left.png"
-					Bottom 			= "Image 0-Border-Unfocused-bottom-white.png"
+					Bottom 			= "Image 0-Border-Unfocused-bottom.png"
 					BottomRight 	= "Image 0-Border-Unfocused-bottom-right.png"
 					}
 				}
@@ -168,7 +168,7 @@ PDecor {
 
 			Separator {
 					Focused 		= "Image 0-tab-separator-Focused.png"
-					Unfocused 		= "Image 0-tab-separator-Unocused.png"
+					Unfocused 		= "Image 0-Find.Pleasure-tab-separator-UnFocused.png"
 					}
 
 			Font {
@@ -244,7 +244,7 @@ PDecor {
 					Left 			= "Image 0-Border-Unfocused-left.png"
 					Right 			= "Image 0-Border-Unfocused-right.png"
 					BottomLeft 		= "Image 0-Border-Unfocused-bottom-left.png"
-					Bottom 			= "Image 0-Border-Unfocused-bottom-white.png"
+					Bottom 			= "Image 0-Border-Unfocused-bottom.png"
 					BottomRight 	= "Image 0-Border-Unfocused-bottom-right.png"
 					}
 				}
@@ -273,7 +273,7 @@ PDecor {
 
 			Separator {
 				Focused 			= "Image 0-tab-separator-Focused.png"
-				Unfocused 			= "Image 0-tab-separator-Unocused.png"
+				Unfocused 			= "Image 0-Find.Pleasure-tab-separator-UnFocused.png"
 				}
 
 			Font {
@@ -341,7 +341,7 @@ PDecor {
 				Left 				= "Image 0-Border-Unfocused-left.png"
 				Right 				= "Image 0-Border-Unfocused-right.png"
 				BottomLeft 			= "Image 0-Border-Unfocused-bottom-left.png"
-				Bottom 				= "Image 0-Border-Unfocused-bottom-white.png"
+				Bottom 				= "Image 0-Border-Unfocused-bottom.png"
 				BottomRight 		= "Image 0-Border-Unfocused-bottom-right.png"
 				}
 			}
@@ -369,7 +369,7 @@ PDecor {
 
 			Separator {
 				Focused 			= "Image 0-tab-separator-Focused.png"
-				Unfocused 			= "Image 0-tab-separator-Unocused.png"
+				Unfocused 			= "Image 0-Find.Pleasure-tab-separator-UnFocused.png"
 				}
 
 			Font {
@@ -428,7 +428,7 @@ PDecor {
 				Left 				= "Image 0-Border-Unfocused-left.png"
 				Right 				= "Image 0-Border-Unfocused-right.png"
 				BottomLeft 			= "Image 0-Border-Unfocused-bottom-left.png"
-				Bottom 				= "Image 0-Border-Unfocused-bottom-white.png"
+				Bottom 				= "Image 0-Border-Unfocused-bottom.png"
 				BottomRight 		= "Image 0-Border-Unfocused-bottom-right.png"
 				}
 			}
@@ -455,7 +455,7 @@ PDecor {
 
 			Separator {
 				Focused 			= "Image 0-tab-separator-Focused.png"
-				Unfocused 			= "Image 0-tab-separator-Unocused.png"
+				Unfocused 			= "Image 0-Find.Pleasure-tab-separator-UnFocused.png"
 				}
 
 			Font {
@@ -515,7 +515,7 @@ PDecor {
 				Left 				= "Image 0-Border-Unfocused-left.png"
 				Right 				= "Image 0-Border-Unfocused-right.png"
 				BottomLeft 			= "Image 0-Border-Unfocused-bottom-left.png"
-				Bottom 				= "Image 0-Border-Unfocused-bottom-white.png"
+				Bottom 				= "Image 0-Border-Unfocused-bottom.png"
 				BottomRight 		= "Image 0-Border-Unfocused-bottom-right.png"
 				}
 			}
