@@ -17,6 +17,17 @@ Additional Goal
     Clean configuration file so that others can easily modify and learn from
     (Use hack or other monospace font when editting for clean easily viewed layout)
     
+    to get most from my pekwm themes your autoproperties file should be modified
+    If you choose to use mine you should review the modified properties, specifically:
+        thunderbird mail, no close button, (minimize only)
+        email clients open on virt desktop 2
+        most web browsers open on own virt desktop
+        web browsers have no close button, (minimize only)
+        a few other misc tunings
+        
+    for me, autoproperties is a challenge, usually it works as expected
+    occasionally does not do what I expect, so autoproperties is included 
+    
 
 These themes have been designed using a monitor resolution of 1920x1280. Some editting may (will) be required for lower resolutions. (Reduce font sizes by about 6 points for 1024x768 resolution) Reduce title height by same amount. Reducing title height may require scaling some buttons as well for proper spacing
 
