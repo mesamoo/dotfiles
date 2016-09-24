@@ -20,3 +20,9 @@ Clean, well layed out (I hope) configuration files.
 hopefully others can easily modify and learn from these files.
 
 (Use a monospace font when editing for easily viewed layout)
+
+Pekwm Themes moved to:
+[https://github.com/mesamoo/PekWM_Themes](URL)
+
+gKrellM themes moved to:
+[https://github.com/mesamoo/gKrellM_Themes](URL)
