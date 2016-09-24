@@ -11,6 +11,7 @@ Clean, consistant look
  - window resizing without fighting to grab edge of window (just right border width)
  - reduce wasted space while retaining readability (designed for
    1920x1080 resolution)
+ - 1024x768 pixel resolution versions also available
  - reasonably nice appearance with light or dark gui
  - look nice with or without compositing
  - try to reduce number of fonts required in system
