@@ -1,0 +1,21 @@
+
+70%   (1080 = 756)
+
+
+14 = 10
+15 = 10.5
+16 = 11
+17 = 12
+18 = 12.6
+
+21 = 15
+
+
+27 = 19
+
+28 = 20
+
+
+
+command will overwrite png files in this dir with scaled version (ie WORK ON COPY!)
+mogrify -path /path/to/images/tmp/ -resize 70x70% *.png

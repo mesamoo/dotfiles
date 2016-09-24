@@ -41,6 +41,7 @@ Separator {}
 				Entry = "Okteta" { Actions = "Exec okteta" }
 		Separator {}
 				Entry = "cutemarked" { Actions = "Exec cutemarked" }
+				Entry = "Qute" { Actions = "Exec qute" }
 		Separator {}
 	}
 	Submenu = "Gfx" {
@@ -156,7 +157,8 @@ Separator {}
 				Entry = "vivaldi-beta" { Actions = "Exec /opt/vivaldi-beta/vivaldi" }
 			Separator {}
 		}
-		#Separator {}
+		Separator {}
+		Separator {}
 		Submenu = "chat-IM" {
 			Separator {}
 				Entry = "konversation" { Actions = "Exec konversation" }
