@@ -55,7 +55,9 @@ for me, autoproperties is a challenge, usually it works as expected occasionally
 **Important**
 -------------------
 
-These themes have been designed using a monitor resolution of 1920x1084. Some editting may (will) be required for lower resolutions. (Reduce font sizes by about 6 points for 1024x768 resolution) Reduce title height by same amount. Reducing title height may require scaling of some buttons as well for proper spacing
+These themes were originally designed using a monitor resolution of 1920x1084. Some editting may be required for the lower resolution versions of the themes. 
+
+(Adjust font sizes, modify title height, etc.
 
 Lower Resolution versions (not fully tested) are in directories ending with 768
 These "should" play nicely with 1027x768 screen resolutions
