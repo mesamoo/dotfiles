@@ -1,0 +1,7 @@
+#---------------------------------------------
+# TINT2CONF CONFIG FILE
+default_theme = /home/dh84/.config/tint2/BlackWhite.tint2rc
+cmd_property = python /usr/bin/tintwizard.py
+width = 1730
+height = 642
+

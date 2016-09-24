@@ -1,0 +1,59 @@
+! "Dark-Orange" color scheme by aaro (aaro2011.deviantart.com)
+! Included in the "Degrade-Orange" suite Release 1 (Feb 09 2013)
+
+!URxvt*font: -*-cure-*-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*boldFont: -*-cure-*-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*italicFont: -*-cure-*-*-*-*-*-*-*-*-*-*-*-*
+!URxvt*boldItalicFont: -*-cure-*-*-*-*-*-*-*-*-*-*-*-*
+
+URxvt*font: xft:cure:antialias=false
+URxvt*boldFont: xft:cure:antialias=false
+URxvt*italicFont: xft:cure:antialias=false
+URxvt*boldItalicFont: xft:cure:antialias=false
+
+URxvt*background: #1c1b18
+URxvt*foreground: #999582
+
+URxvt*scrollBar: false
+
+URxvt*pointerBlank: true
+
+URxvt*cursorColor:	#b24d7a
+
+URxvt.keysym.Shift-Up: command:\033]720;1\007
+URxvt.keysym.Shift-Down: command:\033]721;1\007
+
+URxvt*scrollTtyKeypress: true
+URxvt*termName: xterm
+
+URxvt*colorBD:           #b3643d
+URxvt*colorUL:           #998d67
+URxvt*colorIT:           #998d67
+URxvt*underlineColor:    #1c1b18
+
+!BLACK
+URxvt*color0:               #1c1b18
+URxvt*color8:               #36342e
+!RED
+URxvt*color1:               #995634
+URxvt*color9:               #b3643d
+!GREEN
+URxvt*color2:               #998d67
+URxvt*color10:              #b3a478
+!YELLOW
+URxvt*color3:               #99794d
+URxvt*color11:              #b38e5a
+!BLUE
+URxvt*color4:               #4f4235
+URxvt*color12:              #695746
+!MAGENTA
+URxvt*color5:               #99344e
+URxvt*color13:              #b33d5b
+!CYAN
+URxvt*color6:               #997867
+URxvt*color14:              #b38c78
+!WHITE
+URxvt*color7:               #999582
+URxvt*color15:              #b3ae98
+
+

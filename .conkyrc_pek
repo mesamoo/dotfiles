@@ -1,0 +1,114 @@
+double_buffer yes
+update_interval 2
+own_window yes
+#own_window_title conky #removed for pekwm / compton transparency
+## following needed for kde, but puts conky on top layer
+own_window_type override
+own_window_type normal
+own_window_class conky
+own_window_argb_visual yes
+##own_window_argb_value 210
+own_window_argb_value 0
+#own_window_transparent
+own_window_transparent yes
+#own_window_transparent no
+own_window_hints undecorated,below,skip_taskbar,sticky,skip_pager
+#own_window_hints below,sticky
+#background no
+#background yes
+use_xft yes
+override_utf8_locale no
+xftfont Bitstream Vera Sans:size=14 
+#xftfont Oxygen:size=12
+xftalpha 0.8
+draw_shades no
+# draw_shades yes
+draw_outline no
+# draw_outline yes 
+draw_borders no
+uppercase no
+use_spacer none
+border_width 0
+#default_color white
+default_color cyan
+default_shade_color white
+#default_outline_color white
+default_outline_color 
+alignment top_right
+# minimum_size 190
+gap_x 12
+# gap_y 120
+TEXT
+${if_running mpd}
+${font :bold}${alignc}$mpd_artist
+#${alignc}$mpd_album
+${alignc}${mpd_album 36}
+${alignc}${mpd_title 36}
+ ${mpd_elapsed} / ${mpd_length}${alignr}${mpd_bar 3,100}${color white}
+$endif
+#${color #ffffff}${font :normal}${font :bold}${alignc}${time %A %b %e, %I:%M %P}
+${font :size=18}${alignc}${color #ffffff}${time %A %b %e, %l:%M %P}
+#${color #ffffff}${font :size=14 :bold}${alignc}uptime: $uptime
+${color #ffffff}${font :size=14 :bold}${alignc}uptime: $uptime
+${font :size=4}
+${font :size=14 :bold}${color white}${alignc}$kernel
+#
+
+${font :bold}CPU Load: ${alignr}$cpu%
+#${font :bold}Temperature: ${alignr}${hwmon atk0110:00 temp}C
+${alignc}${cpugraph 15,281 000000 ffffff}
+#
+ ${font :normal}Load averages: ${alignr}$loadavg
+ Processes: ${alignr} $processes | $running_processes active
+
+${font :bold}${alignc}${color white} Cpu usage
+${font :normal}${font :size=14 :bold}${color white} ${top name 1}${alignr}${top cpu 1}
+${font :normal}${font :size=14}${font :normal}${color white} ${top name 2}${alignr}${top cpu 2}
+ ${top name 3}${alignr} ${top cpu 3}
+ ${top name 4}${alignr} ${top cpu 4}
+ 
+${font :bold}${alignc}${color #000000}${color white} Memory usage
+${font :normal}${font :size=14 :bold}${color white} ${top_mem name 1}${alignr} ${top_mem mem_res 1}
+#${font :normal}${font :bold}${color white} ${top_mem name 1}${alignr} ${top_mem mem 1}
+${font :size=14}${font :normal}${color white} ${top_mem name 2}${alignr} ${top_mem mem_res 2}
+#${font :normal}${color white} ${top_mem name 2}${alignr} ${top_mem mem 2}
+ ${top_mem name 3}${alignr} ${top_mem mem_res 3}
+#${top_mem name 3}${alignr} ${top_mem mem 3}
+ ${top_mem name 4}${alignr} ${top_mem mem_res 4}
+ 
+${font :bold}${color white}Memory: ${memperc}%  ${color #ffffff}${alignr}${membar 4,100}
+ ${color white}${memperc}% (${mem}/${memmax})
+${font :size=4}  
+${color white}${font :bold}Swap:      ${swapperc}%   ${color #ffffff}${alignr}${swapbar 4,100}
+#${color #blck} ${swapperc}% (${swap}/${swapmax})
+
+${color white}space on  / ${color #ffffff}${alignr}${fs_bar 4,100 /}
+ ${color white} ${fs_free /}/${fs_size /}
+#
+${font :size=4} 
+${font :bold}${color white}space on  /home ${color #ffffff}${alignr}${fs_bar 4,100 /home}
+ ${color white}${fs_free /home}/${fs_size /home}
+#
+
+#${color white}${color white}NET:${font :normal}
+# ${color #d5d5ce}eth0 up:     #${alignr}${upspeedgraph enp7s0 10,100}
+#   ${upspeed enp7s0}/s${alignr}${totalup enp7s0} total 
+# ${upspeedgraph enp7s0 15,281 000000 ffffff}
+#
+# eth0 Down: #${alignr}${downspeedgraph enp7s0 7,100}
+#  ${downspeed enp7s0}/s${alignr}${totaldown enp7s0} total 
+# ${downspeedgraph enp7s0 15,281 000000 ffffff}
+#
+ ${color #ffffff}${font :bold}wlan up:    ${upspeed wlp0s26u1u6}/s${alignr}${totalup wlp0s26u1u6} Tot 
+ ${upspeedgraph wlp0s26u1u6 15,281 000000 ffffff}
+${font :size=4} 
+ ${font :bold}wlan down:  ${downspeed wlp0s26u1u6}/s${alignr}${totaldown wlp0s26u1u6} Tot
+ ${downspeedgraph wlp0s26u1u6 15,281 000000 ffffff}
+#${font :small}
+${font :size=4} 
+${font :normal} ssid: ${alignr}${wireless_essid wlp0s26u1u6}  
+ quality: ${wireless_link_qual_perc wlp0s26u1u6}% ${alignr}Rate: ${wireless_bitrate wlp0s26u1u6}
+#
+# ${color white}Local IP:$alignr${addr wlp0s26u1u6}
+${font :size=4} 
+ ${font :bold}Wan IP:${color #ffff01}$alignr${execi 600 /home/dh84/000script/conky/wan-ip.sh}
