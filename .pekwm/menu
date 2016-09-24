@@ -28,6 +28,7 @@ Separator {}
 				Entry = "juffed" { Actions = "Exec juffed" }
 				Entry = "kate" { Actions = "Exec juffed" }
 				Entry = "madedit" { Actions = "Exec madedit" }
+				Entry = "Qedit" { Actions = "Exec qedit" }
 				Entry = "sublime2" { Actions = "Exec ~/bin/SublimeText2/sublime_text" }
 				Entry = "tea" { Actions = "Exec tea" }
 				#Entry = "vsCode" { Actions = "Exec /opt/VSCode/code" }
