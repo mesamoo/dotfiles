@@ -42,7 +42,6 @@ Separator {}
 		Separator {}
 				Entry = "cutemarked" { Actions = "Exec cutemarked" }
 				Entry = "Qute" { Actions = "Exec qute" }
-				Entry = "ReText" { Actions = "Exec retext" }
 		Separator {}
 	}
 	Submenu = "Gfx" {
@@ -164,14 +163,10 @@ Separator {}
 			Separator {}
 				Entry = "konversation" { Actions = "Exec konversation" }
 			Separator {}
-				Entry = "beeBeep(lanChat)" { Actions = "Exec beebeep" }
-				Entry = "lanMessenger" { Actions = "Exec lmc" }
-				Separator {}
 				Entry = "HipChat4" { Actions = "Exec /opt/HipChat4/bin/HipChat4" }
 				Entry = "YakYak" { Actions = "Exec ~/bin/yakyak/yakyak" }
 				Entry = "pidgin" { Actions = "Exec pidgin" }
 				Entry = "kopete" { Actions = "Exec kopete" }
-				Entry = "homechat" { Actions = "Exec homechat" }
 				Entry = "empathy" { Actions = "Exec empathy" }
 			Separator {}
 		}
@@ -240,10 +235,8 @@ Separator {}
 		Separator {}
 		Separator {}
 				#Entry = "kSnapShot" { Actions = "Exec ksnapshot" }
-				Entry = "screengrab" { Actions = "Exec screengrab" }
 				Entry = "hotshots" { Actions = "Exec hotshots" }
 				Entry = "spectacle" { Actions = "Exec spectacle" }
-				Entry = "trinity-kSnapShot" { Actions = "Exec /opt/trinity/bin/ksnapshot" }
 				Entry = "vector-screenshot" { Actions = "Exec take-vector-screenshot" }
 				Entry = "StopWatch" { Actions = "Exec kronometer" }
 #		Separator {}
@@ -301,15 +294,8 @@ Separator {}
 				Entry = "unetbootin" { Actions = "Exec kdesu unetbootin" }
 		Separator {}
 		Separator {}
-		Submenu = "git" {
-				Entry = "giggle" { Actions = "Exec giggle" }
 				Entry = "git-cola" { Actions = "Exec git-cola" }
-				Entry = "giteye" { Actions = "Exec giteye" }
-				Entry = "gitk" { Actions = "Exec gitk" }
-				Entry = "GitKraken" { Actions = "Exec gitkraken" }
 				Entry = "qgit" { Actions = "Exec qgit" }
-				Entry = "smartgit" { Actions = "Exec smartgit" }
-		}
 				# Entry = "pcmanfm" { Actions = "Exec pcmanfm" }
 				# Entry = "xTerm" { Actions = "Exec xterm" }
 		# Separator {}
