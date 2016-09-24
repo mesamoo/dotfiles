@@ -21,8 +21,10 @@ Clean, consistant look
 Additional Goals:
 -------------
 
-Clean configuration file so that others can easily modify and hopefully learn from
-    (Use a monospace font when editting for easily viewed layout)
+Clean, well layed out (I hope) configuration files.
+hopefully others can easily modify and learn from these files.
+
+(Use a monospace font when editting for easily viewed layout)
 
 AutoProperties:
 -------------
