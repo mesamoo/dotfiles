@@ -42,6 +42,7 @@ Separator {}
 		Separator {}
 				Entry = "cutemarked" { Actions = "Exec cutemarked" }
 				Entry = "Qute" { Actions = "Exec qute" }
+				Entry = "ReText" { Actions = "Exec retext" }
 		Separator {}
 	}
 	Submenu = "Gfx" {
@@ -163,6 +164,7 @@ Separator {}
 			Separator {}
 				Entry = "konversation" { Actions = "Exec konversation" }
 			Separator {}
+				Entry = "HipChat4" { Actions = "Exec /opt/HipChat4/bin/HipChat4" }
 				Entry = "YakYak" { Actions = "Exec ~/bin/yakyak/yakyak" }
 				Entry = "pidgin" { Actions = "Exec pidgin" }
 				Entry = "kopete" { Actions = "Exec kopete" }
@@ -293,8 +295,15 @@ Separator {}
 				Entry = "unetbootin" { Actions = "Exec kdesu unetbootin" }
 		Separator {}
 		Separator {}
+		Submenu = "git" {
+				Entry = "giggle" { Actions = "Exec giggle" }
 				Entry = "git-cola" { Actions = "Exec git-cola" }
+				Entry = "giteye" { Actions = "Exec giteye" }
+				Entry = "gitk" { Actions = "Exec gitk" }
+				Entry = "GitKraken" { Actions = "Exec gitkraken" }
 				Entry = "qgit" { Actions = "Exec qgit" }
+				Entry = "smartgit" { Actions = "Exec smartgit" }
+		}
 				# Entry = "pcmanfm" { Actions = "Exec pcmanfm" }
 				# Entry = "xTerm" { Actions = "Exec xterm" }
 		# Separator {}
