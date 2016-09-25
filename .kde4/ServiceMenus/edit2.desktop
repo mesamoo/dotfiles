@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Service
-Actions=_SEPARATOR_;Kwrite;Thunderpad;KolourPaint;Komparetwo;_SEPARATOR_;
+Actions=_SEPARATOR_;Kwrite;Juffed;MadEdit;Thunderpad;_SEPARATOR_;KolourPaint;_SEPARATOR_;Komparetwo;Okteta;_SEPARATOR_;
 X-KDE-Priority=TopLevel
 ServiceTypes=KonqPopupMenu/Plugin,all/allfiles
 Encoding=UTF-8
@@ -9,6 +9,21 @@ Encoding=UTF-8
 Name=Kwrite
 Icon=kate
 Exec=/usr/bin/kwrite %U
+
+[Desktop Action Juffed]
+Name=Juffed
+Icon=juffed
+Exec=/usr/bin/juffed %U
+
+[Desktop Action MadEdit]
+Name=MadEdit
+Icon=madedit.xpm
+Exec=/usr/bin/madedit %f
+
+[Desktop Action Qedit]
+Name=Qedit
+Icon=kate
+Exec=qedit %U
 
 [Desktop Action Thunderpad]
 Name=Thunderpad
@@ -24,3 +39,8 @@ Exec=/usr/bin/kolourpaint %U
 Name=Compare Two Files
 Icon=kompare
 Exec=kompare -c %U
+
+[Desktop Action Okteta]
+Name=Okteta
+Icon=okteta
+Exec=/usr/bin/okteta %U

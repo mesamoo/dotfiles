@@ -24,14 +24,12 @@ akonadictl start &
 conky &
 ~/.pekwm/scripts/YADstartBaloo.sh
 pnmixer &
-#albert &
 owncloud &
 knemo &
 ~/bin/rainlendar2/rainlendar2 &
 klipper &
 kmix &
 gnome-activity-journal &
-#cairo-clock &
 ##empathy &
 #kopete &
 #pidgin &
