@@ -240,6 +240,7 @@ Separator {}
 		Separator {}
 				Entry = "kcalc" { Actions = "Exec kcalc" }
 				Entry = "kmag" { Actions = "Exec kmag" }
+				Entry = "StopWatch" { Actions = "Exec kronometer" }
 		Separator {}
 		Separator {}
 				#Entry = "kSnapShot" { Actions = "Exec ksnapshot" }
@@ -248,7 +249,6 @@ Separator {}
 				Entry = "spectacle" { Actions = "Exec spectacle" }
 				Entry = "trinity-kSnapShot" { Actions = "Exec /opt/trinity/bin/ksnapshot" }
 				Entry = "vector-screenshot" { Actions = "Exec take-vector-screenshot" }
-				Entry = "StopWatch" { Actions = "Exec kronometer" }
 #		Separator {}
 #		Separator {}
 #				Entry = "gip" { Actions = "Exec gip" }

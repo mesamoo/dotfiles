@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Service
-Actions=_SEPARATOR_;codeLite;Geany;Juffed;Kate;kDevelop;Komodo;MadEdit;Sublime;Tea;vsCode;_SEPARATOR_;Kwrite;_SEPARATOR_;
+Actions=_SEPARATOR_;codeLite;Geany;Juffed;Kate;kDevelop;Komodo;MadEdit;Qedit;Sublime;Tea;vsCode;_SEPARATOR_;Kwrite;Thunderpad;_SEPARATOR_;
 X-KDE-Priority=TopLevel
 X-KDE-Submenu=Text_Edit
 ServiceTypes=KonqPopupMenu/Plugin,all/allfiles
@@ -14,7 +14,8 @@ Exec=/opt/brackets/Brackets %F
 
 [Desktop Action codeLite]
 Name=codeLite
-Icon=/usr/share/icons/hicolor/22x22/apps/im-irc.png
+#Icon=/usr/share/icons/hicolor/22x22/apps/im-irc.png
+Icon=/usr/share/codelite/images/cubes.png
 Exec=/usr/bin/codelite %U
 
 [Desktop Action Geany]
@@ -39,13 +40,18 @@ Exec=/usr/bin/kdevelop %U
 
 [Desktop Action Komodo]
 Name=Komodo
-Icon=/opt/komodo/share/icons/komodo16.png
+Icon=/opt/komodo/share/icons/komodo16.xpm
 Exec=/opt/komodo/bin/komodo %U
 
 [Desktop Action MadEdit]
 Name=MadEdit
 Icon=madedit.xpm
 Exec=/usr/bin/madedit %f
+
+[Desktop Action MadEdit]
+Name=Qedit
+Icon=kate
+Exec=/usr/bin/qedit %f
 
 [Desktop Action Sublime]
 Name=Sublime Text
@@ -54,7 +60,7 @@ Exec=/home/bin/bin/SublimeText2/sublime_text %U
 
 [Desktop Action Tea]
 Name=Tea
-Icon=/usr/share/pixmaps/tea-editor.png
+Icon=~/.._AAA_icons/2016/tea/tea-icon-v3-02.png
 Exec=/usr/bin/tea %U
 
 [Desktop Action Kwrite]
@@ -62,7 +68,12 @@ Name=Kwrite
 Icon=kate
 Exec=/usr/bin/kwrite %U
 
+[Desktop Action Thunderpad]
+Name=Thunderpad
+Icon=kate
+Exec=~/bin/thunderpad %U
+
 [Desktop Action vsCode]
 Name=vsCode
-Icon=/opt/VSCode/resources/app/vso.png
-Exec=/opt/VSCode/Code %U
+Icon=/opt/VSCode/resources/app/resources/linux/code.png
+Exec=/opt/VSCode/bin/code %U

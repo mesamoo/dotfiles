@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Service
-Actions=_SEPARATOR_;Kwrite;KolourPaint;Komparetwo;_SEPARATOR_;
+Actions=_SEPARATOR_;Kwrite;Thunderpad;KolourPaint;Komparetwo;_SEPARATOR_;
 X-KDE-Priority=TopLevel
 ServiceTypes=KonqPopupMenu/Plugin,all/allfiles
 Encoding=UTF-8
@@ -9,6 +9,11 @@ Encoding=UTF-8
 Name=Kwrite
 Icon=kate
 Exec=/usr/bin/kwrite %U
+
+[Desktop Action Thunderpad]
+Name=Thunderpad
+Icon=kate
+Exec=thunderpad %U
 
 [Desktop Action KolourPaint]
 Name=KolourPaint
