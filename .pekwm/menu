@@ -12,7 +12,8 @@ Separator {}
 				Entry = "Dolphin" { Actions = "Exec dolphin" }
 				Entry = "konsole" { Actions = "Exec konsole" }
 				Entry = "xTerm" { Actions = "Exec xterm" }
-				Entry = "kwrite" { Actions = "Exec kwrite" }
+				Entry = "juffed" { Actions = "Exec juffed" }
+				#Entry = "kwrite" { Actions = "Exec kwrite" }
 				#Entry = "tea" { Actions = "Exec tea" }
 				Entry = "konq" { Actions = "Exec konqueror" }
 				#Entry = "kpat" { Actions = "Exec kpat" }
@@ -98,11 +99,12 @@ Separator {}
 				Entry = "Flacon" { Actions = "Exec flacon" }
 				Entry = "k3b" { Actions = "Exec k3b" }
 				Entry = "kid3" { Actions = "Exec kid3" }
-				Entry = "Audacity" { Actions = "Exec audacity" }
-				Entry = "OpenBroadcast" { Actions = "Exec ~/obs-studio-portable/runOBS" }
 		              Separator {}
 		              Separator {}
 				Entry = "alsamixer" { Actions = "Exec $TERM -title alsamixer -e alsamixer" }
+				Entry = "Audacity" { Actions = "Exec audacity" }
+				Entry = "Ardour" { Actions = "Exec ardour5" }
+				Entry = "OpenBroadcast" { Actions = "Exec ~/obs-studio-portable/runOBS" }
 			       Separator {}
 			       Separator {}
 			}
@@ -124,6 +126,15 @@ Separator {}
 				Entry = "synthv1_jack" { Actions = "Exec synthv1_jack" }
 				Separator {}
 				Separator {}
+			}
+		Separator {}
+		Separator {}
+		        Submenu = "VideoTools" {
+		              Separator {}
+				Entry = "Kdenlive" { Actions = "Exec kdenlive" }
+				Entry = "Kino" { Actions = "Exec kino" }
+				Entry = "OpenShot" { Actions = "Exec openshot" }
+				Entry = "Pitivi" { Actions = "Exec pitivi" }
 			}
 		Separator {}
 		Separator {}
@@ -285,6 +296,17 @@ Separator {}
 				Entry = "ksysguard-su" { Actions = "Exec kdesu ksysguard" }
 		Separator {}
 		Separator {}
+		Submenu = "git" {
+				Entry = "giggle" { Actions = "Exec giggle" }
+				Entry = "git-cola" { Actions = "Exec git-cola" }
+				Entry = "giteye" { Actions = "Exec giteye" }
+				Entry = "gitk" { Actions = "Exec gitk" }
+				Entry = "GitKraken" { Actions = "Exec gitkraken" }
+				Entry = "qgit" { Actions = "Exec qgit" }
+				Entry = "smartgit" { Actions = "Exec smartgit" }
+		}
+		Separator {}
+		Separator {}
 				Entry = "ksysguard" { Actions = "Exec ksysguard" }
 				Entry = "hardinfo" { Actions = "Exec hardinfo" }
 				Entry = "kDiskFree" { Actions = "Exec kdf" }
@@ -304,15 +326,6 @@ Separator {}
 				Entry = "unetbootin" { Actions = "Exec kdesu unetbootin" }
 		Separator {}
 		Separator {}
-		Submenu = "git" {
-				Entry = "giggle" { Actions = "Exec giggle" }
-				Entry = "git-cola" { Actions = "Exec git-cola" }
-				Entry = "giteye" { Actions = "Exec giteye" }
-				Entry = "gitk" { Actions = "Exec gitk" }
-				Entry = "GitKraken" { Actions = "Exec gitkraken" }
-				Entry = "qgit" { Actions = "Exec qgit" }
-				Entry = "smartgit" { Actions = "Exec smartgit" }
-		}
 				# Entry = "pcmanfm" { Actions = "Exec pcmanfm" }
 				# Entry = "xTerm" { Actions = "Exec xterm" }
 		# Separator {}
@@ -331,6 +344,9 @@ Separator {}
 				Entry = "kontact    " { Actions = "Exec kontact" }
 				Entry = "thunderbird" { Actions = "Exec thunderbird" }
 				Entry = "CairoClock" { Actions = "Exec cairo-clock" }
+				Entry = "OkularSession" { Actions = "Exec ok" }
+				Entry = "kGPG" { Actions = "Exec kpgp" }
+				Entry = "Kleopatra" { Actions = "Exec kleopatra" }
 		Separator {}
 		Separator {}
 				Entry = "kopete" { Actions = "Exec kopete" }

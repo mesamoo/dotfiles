@@ -75,7 +75,7 @@ Property = "^(gecko|Gecko|firefox-bin),^Firefox-bin,,^Customize Toolbar\$" {
 
 
 /*
-	start tbird and kontact on workspace2 and lock them there. 
+	start tbird and kontact on workspace2 and lock them there.
 	This must be done as part of this section, has no effect if only included in decor section at bottom of this file
 	decor section lets you set frame / theme properties, sucks that these 2 cannot be combined but oh well
 	REMEMBER! a setting here, using new, will cause ALL NEW WINDOWS for an app to open on the selected desktop
@@ -88,37 +88,38 @@ Property = "^(gecko|Gecko|firefox-bin),^Firefox-bin,,^Customize Toolbar\$" {
 /*	google hangouts extension for chrome 	*/
   Property = "^crx_nckgahadagoaajjgafhacjanaoiihapd,^google-chrome" {
                ApplyOn = "Start New Reload"
-               ClientGeometry = "400x500"               
+               ClientGeometry = "400x500"
        }
-       
+
   Property = "^crx_nckgahadagoaajjgafhacjanaoiihapd,^Google-chrome-unstable" {
                ApplyOn = "Start New Reload"
-               ClientGeometry = "400x500"               
+               ClientGeometry = "400x500"
        }
 
 /*	following does not seem to work   		*/
-  Property = "^libreoffice,^libreoffice-writer" {
-               ApplyOn = "Start New Reload"
-               FrameGeometry = "1200x900+160-50"               
-       }           
+#  Property = "^libreoffice,^libreoffice-writer" {
+#               ApplyOn = "Start New Reload"
+#               FrameGeometry = "1200x900+160-50"
+#	       ClientGeometry = "1200x900"
+#       }
 
   Property = "^VirtualBox,^VirtualBox" {
                ApplyOn = "Start New Reload"
                Sticky = "True"
                ClientGeometry = "+200-50"
        }
-  
+
 #  Property = "^VirtualBox,^VirtualBox„^[Running] - Oracle VM VirtualBox" {
 #               ApplyOn = "Start New Workspace Reload"
 #               Sticky = "True"
 #               ClientGeometry = "+100+60"
-#       }  
-  
+#       }
+
   Property = "^kontact,^Kontact" {
                ApplyOn = "Start New Workspace Reload"
                Workspace = "2"
        }
-       
+
   Property = "^Notecase Pro,^Notecase" {
                ApplyOn = "Start New Workspace Reload"
                 Sticky = "True"
@@ -128,12 +129,13 @@ Property = "^(gecko|Gecko|firefox-bin),^Firefox-bin,,^Customize Toolbar\$" {
                ApplyOn = "Start New Reload"
                 Sticky = "True"
        }
-       
+
   Property = "^libreoffice,^libreoffice-writer" {
             ApplyOn = "Start New Reload"
             FrameGeometry = "1180x915+94+74"
+	    ClientGeometry = "1180x915"
        }
-       
+
   Property = "^libreoffice,^libreoffice-calc" {
             ApplyOn = "Start New Reload"
             FrameGeometry = "1180x915+94+74"
@@ -142,13 +144,13 @@ Property = "^(gecko|Gecko|firefox-bin),^Firefox-bin,,^Customize Toolbar\$" {
   Property = "^yakyak,^yakyak" {
                ApplyOn = "Start New Reload"
                 Sticky = "True"
-       }       
-       
+       }
+
   Property = "^chromium-browser,^chromium-browser" {
                ApplyOn = "Start New Workspace Reload"
                Workspace = "6"
        }
-       
+
          Property = "^google-chrome,^google-chrome" {
                ApplyOn = "Start New Reload"
                Workspace = "5"
@@ -158,8 +160,8 @@ Property = "^(gecko|Gecko|firefox-bin),^Firefox-bin,,^Customize Toolbar\$" {
                ApplyOn = "Start New Reload"
                Workspace = "5"
        }
-    
-    
+
+
 /*	tint2 always on top 			*/
         Property = "tint2,Tint2" {
                 Group = "panel" {
@@ -167,8 +169,8 @@ Property = "^(gecko|Gecko|firefox-bin),^Firefox-bin,,^Customize Toolbar\$" {
                 }
         ApplyOn = "New Start Reload Transient"
   }
-  
-  
+
+
 /*
  Group together an infinite number of windows that match the property.
  When new windows are opened to this group, never make them the active
@@ -207,7 +209,7 @@ Property = "^(gecko|Gecko|firefox-bin),^Firefox-bin,,^Customize Toolbar\$" {
 /*
  Remove Gimp windows from the menus, only show the main toolbox window.
  Use the WM_WINDOW_ROLE to tell the difference between gimp windows.
- 
+
  First make sure the toolbox window doesn't get confused with the rest
  of the windows. This just tells pekwm to ignore any matches for the
  toolbox later on. Without this, the toolbox would match with "the rest
@@ -240,7 +242,7 @@ Property = "^cairo-dock,^Cairo-dock" {
         ApplyOn = "Start New"
         Layer = "OnTop"
         Skip = "Menus"
- }    
+ }
 
 /*
  The rest of the gimp windows should not show in pekwm menus eather.
@@ -281,7 +283,7 @@ Property = "^cairo-dock,^Cairo-dock" {
 #       DisallowedActions = "Iconify"
 #       Skip = "Menus Snap"
 #       Layer = "Desktop"
-# } 
+# }
 
 
 /*
@@ -451,7 +453,7 @@ TypeRules {
  * 	I (dh) have set up 4 "special" decors in my themes, noKlose, noKlose2, noKlose3, KloseOnly
  * 	I use these remove or replace some of the buttons in windows
  * 	They also could be used to modify fonts, font colors or borders for specific applications
- 
+
 Use noKlose2 decor from theme for tbird if available
 I use this to make the far right button into an additional iconify button
 so tbird does not accidentally close (buttons only minimize, use menu or hotkeys to close)
@@ -461,7 +463,7 @@ so tbird does not accidentally close (buttons only minimize, use menu or hotkeys
                Decor = "noKlose2"
                ApplyOn = "Start New Reload"
        }
-       
+
        Property = "^okular,^Okular" {
                Decor = "noKlose2"
                ApplyOn = "Start New Reload"
@@ -485,7 +487,7 @@ so tbird does not accidentally close (buttons only minimize, use menu or hotkeys
        Property = "^min,^min" {
                Decor = "noKlose3"
                ApplyOn = "Start New Reload"
-       }       
+       }
 
        Property = "^dolphin,^Dolphin" {
                 Title = "Copying"
@@ -506,8 +508,8 @@ so tbird does not accidentally close (buttons only minimize, use menu or hotkeys
        Property = "^Navigator,^Firefox" {
                Decor = "noKlose"
                ApplyOn = "Start New Reload"
-       }       
-       
+       }
+
        Property = "^google-chrome,^google-chrome" {
                Decor = "noKlose"
                ApplyOn = "Start New Reload"
@@ -527,16 +529,16 @@ so tbird does not accidentally close (buttons only minimize, use menu or hotkeys
                Decor = "noKlose"
                ApplyOn = "Start New Reload"
        }
-       
+
        Property = "^Notecase Pro,^Notecase" {
                Decor = "KloseOnly"
                ApplyOn = "Start New Reload"
-       }  
+       }
 
        Property = "^yad,^Yad" {
                Decor = "KloseOnly"
                ApplyOn = "Start New Reload"
-       }       
+       }
 
  }
 
