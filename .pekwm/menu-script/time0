@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "Dynamic {"
+echo " Entry = \"`date +'%a, %B %e'`\" { Actions = \"Exec osmo & \" } "
+echo " }"

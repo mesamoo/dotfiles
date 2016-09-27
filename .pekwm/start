@@ -7,7 +7,18 @@
 #export DE="kde"          #removed AGAIN 2016-08 breaks menu and other functions
 seq 0 1 | xargs -l1 -I@ compton -b -d :0.@ --config ~/.compton.config &
 numlockx &
-setxkbmap -option ctrl:nocaps &
+#
+#following breaks qedit
+#setxkbmap -option ctrl:nocaps &
+#
+#switched to the following 2 lines
+#xmodmap -e "clear Lock"
+#xmodmap -e "keycode 66 = Shift_L NoSymbol Shift_L"
+#xmodmap -e "keycode 78 = Caps_Lock NoSymbol Caps_Lock"
+#previous 3 lines moved to ~/.Xmodmap
+#see https://wiki.archlinux.org/index.php/Xmodmap
+# useful commands: xev, xmodmap -pke,
+#
 ~/.pekwm/scripts/display-xset.sh &
 #nitrogen --restore &
 feh --bg-scale ~/.pekwm/scripts/walls/0.jpg &

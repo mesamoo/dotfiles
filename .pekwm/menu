@@ -27,7 +27,8 @@ Separator {}
 				Entry = "brackets" { Actions = "Exec brackets" }
 				Entry = "gedit" { Actions = "Exec gedit" }
 				Entry = "juffed" { Actions = "Exec juffed" }
-				Entry = "kate" { Actions = "Exec juffed" }
+				Entry = "kate" { Actions = "Exec kate" }
+				Entry = "kwrite" { Actions = "Exec kwrite" }
 				Entry = "madedit" { Actions = "Exec madedit" }
 				Entry = "Qedit" { Actions = "Exec qedit" }
 				Entry = "sublime2" { Actions = "Exec ~/bin/SublimeText2/sublime_text" }
@@ -216,6 +217,10 @@ Separator {}
 				Entry = "LoDraw" { Actions = "Exec lodraw" }
 				Entry = "LoImpress" { Actions = "Exec loimpress" }
 				Entry = "LoWrite" { Actions = "Exec lowriter" }
+				#Entry = "LoCalc" { Actions = "Exec localc2" }
+				#Entry = "LoDraw" { Actions = "Exec lodraw2" }
+				#Entry = "LoImpress" { Actions = "Exec loimpress2" }
+				#Entry = "LoWrite" { Actions = "Exec lowriter2" }
 		Separator {}
 		Separator {}
 			       Entry = "Artha" { Actions = "Exec artha" }
@@ -374,26 +379,41 @@ Separator {}
 	Submenu = "config" {
 		Separator {}
 		        Submenu = "pek" {
-				#Entry = "Edit Pek Menu" { Actions = "Exec tea ~/.pekwm/menu" }
-				#Entry = "Edit Pek Start" { Actions = "Exec tea ~/.pekwm/start" }
-				#Entry = "Edit Pek AutoProp" { Actions = "Exec tea ~/.pekwm/autoproperties"}
-				#Entry = "Edit Pek Config" { Actions = "Exec tea ~/.pekwm/config" }
-				#Entry = "Edit conkyrc" { Actions = "Exec tea ~/.conkyrc" }
-				#Entry = "Edit compton" { Actions = "Exec tea ~/.compton.config" }
+				#Entry = "Edit Pek Menu" { Actions = "Exec juffed ~/.pekwm/menu" }
+				#Entry = "Edit Pek Start" { Actions = "Exec juffed ~/.pekwm/start" }
+				#Entry = "Edit Pek AutoProp" { Actions = "Exec juffed ~/.pekwm/autoproperties"}
+				#Entry = "Edit Pek Config" { Actions = "Exec juffed ~/.pekwm/config" }
+				#Separator {}
+				#Entry = "Edit conkyrc" { Actions = "Exec juffed ~/.conkyrc" }
+				#Entry = "Edit compton" { Actions = "Exec juffed ~/.compton.config" }
+				#Separator {}
+				#Entry = "Edit .bashrc" { Actions = "Exec juffed ~/.bashrc" }
+				#Entry = "Edit .profile" { Actions = "Exec juffed ~/.profile" }
+				#Entry = "Edit .xprofile" { Actions = "Exec juffed ~/.xprofile" }
 				#
-				Entry = "Edit Pek Menu" { Actions = "Exec juffed ~/.pekwm/menu" }
-				Entry = "Edit Pek Start" { Actions = "Exec juffed ~/.pekwm/start" }
-				Entry = "Edit Pek AutoProp" { Actions = "Exec juffed ~/.pekwm/autoproperties"}
-				Entry = "Edit Pek Config" { Actions = "Exec juffed ~/.pekwm/config" }
-				Entry = "Edit conkyrc" { Actions = "Exec juffed ~/.conkyrc" }
-				Entry = "Edit compton" { Actions = "Exec juffed ~/.compton.config" }
+				Entry = "Edit Pek Menu" { Actions = "Exec qedit ~/.pekwm/menu" }
+				Entry = "Edit Pek Start" { Actions = "Exec qedit ~/.pekwm/start" }
+				Entry = "Edit Pek AutoProp" { Actions = "Exec qedit ~/.pekwm/autoproperties"}
+				Entry = "Edit Pek Config" { Actions = "Exec qedit ~/.pekwm/config" }
+				Separator {}
+				Entry = "Edit conkyrc" { Actions = "Exec qedit ~/.conkyrc" }
+				Entry = "Edit compton" { Actions = "Exec qedit ~/.compton.config" }
+				Separator {}
+				Entry = "Edit .bashrc" { Actions = "Exec qedit ~/.bashrc" }
+				Entry = "Edit .profile" { Actions = "Exec qedit ~/.profile" }
+				Entry = "Edit .xprofile" { Actions = "Exec qedit ~/.xprofile" }
 				#
 				#Entry = "Edit Pek Menu" { Actions = "Exec kwrite ~/.pekwm/menu" }
 				#Entry = "Edit Pek Start" { Actions = "Exec kwrite ~/.pekwm/start" }
 				#Entry = "Edit Pek AutoProp" { Actions = "Exec kwrite ~/.pekwm/autoproperties"}
 				#Entry = "Edit Pek Config" { Actions = "Exec kwrite ~/.pekwm/config" }
+				Separator {}
 				#Entry = "Edit conkyrc" { Actions = "Exec kwrite ~/.conkyrc" }
 				#Entry = "Edit compton" { Actions = "Exec kwrite ~/.compton.config" }
+				Separator {}
+				#Entry = "Edit .bashrc" { Actions = "Exec kwrite ~/.bashrc" }
+				#Entry = "Edit .profile" { Actions = "Exec kwrite ~/.profile" }
+				#Entry = "Edit .xprofile" { Actions = "Exec kwrite ~/.xprofile" }
 				#
 			}
 		Separator {}
