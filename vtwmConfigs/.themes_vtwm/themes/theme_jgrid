@@ -1,0 +1,367 @@
+#------------------------------------------------------------------------------
+# Path -- seems only one path statement is allowed
+#------------------------------------------------------------------------------
+IconDirectory "~/.themes_vtwm/images"
+
+#------------------------------------------------------------------------------
+# General options
+#------------------------------------------------------------------------------
+
+AutoPan 10
+AutoPanBorderWidth 5
+NaturalAutopanBehavior
+###StrictIconManager  # Only show icionified clients in Manager
+PanResistance 200
+DecorateTransients
+RandomPlacement
+NoCaseSensitive
+NoGrabServer
+AutoRelativeResize
+MoveDelta 3
+DeiconifyToScreen
+ForceIcons
+RestartPreviousState
+WarpCursor
+NotVirtualGeometries
+FixTransientVirtualGeometries
+StayUpOptionalMenus
+OldFashionedTwmWindowsMenu
+FixManagedVirtualGeometries
+
+ShowIconManager
+
+BorderWidth             1
+### Start 3d
+ShallowReliefWindowButton
+SunkFocusWindowTitle
+BorderBevelWidth        1
+ButtonBevelWidth        1
+IconBevelWidth          1
+IconManagerBevelWidth   1
+InfoBevelWidth          1
+MenuBevelWidth          1
+TitleBevelWidth         1
+ButtonIndent		-1    # Fixes Buttons for 4.7
+TitleButtonBorderWidth  0     # Fixes Buttons for 4.7
+### End 3d
+
+ClearBevelContrast      40
+DarkBevelContrast       40
+
+##JMCRESOTHERS##VirtualDesktop "4x1-1-1" 15
+##JMCRESOTHERS##ResizeFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+##JMCRESOTHERS##TitleFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+##JMCRESOTHERS##MenuFont "-adobe-helvetica-bold-r-normal--*-140-*-*-*-*-*-*"
+##JMCRESOTHERS##MenuTitleFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+##JMCRESOTHERS##IconFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*-*-*-*"
+##JMCRESOTHERS##IconManagerFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*"
+##JMCRESOTHERS##VirtualDesktopFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*"
+##JMCRESOTHERS##IconManagerGeometry "1020x10+0+0" 7
+##JMCRESOTHERS##IconManagers
+##JMCRESOTHERS##{
+##JMCRESOTHERS##	"Audacious"   "485x5+0+689" 1
+##JMCRESOTHERS##	"xmms"        "485x5+0+689" 1
+##JMCRESOTHERS##	"gxine"       "485x5+0+689" 1
+##JMCRESOTHERS##	"[Ff]irefox*" "273x5-0+689" 1
+##JMCRESOTHERS##	"[Mm]ozilla*" "273x5-0+689" 1
+##JMCRESOTHERS##	"[Aa]marok*"  "485x5+0+689" 1
+##JMCRESOTHERS##}
+
+##JMCRES1024x768##VirtualDesktop "4x1-1-1" 15
+##JMCRES1024x768##ResizeFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+##JMCRES1024x768##TitleFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+##JMCRES1024x768##MenuFont "-adobe-helvetica-bold-r-normal--*-140-*-*-*-*-*-*"
+##JMCRES1024x768##MenuTitleFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+##JMCRES1024x768##IconFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*-*-*-*"
+##JMCRES1024x768##IconManagerFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*"
+##JMCRES1024x768##VirtualDesktopFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*"
+##JMCRES1024x768##IconManagerGeometry "1020x10+0+0" 7
+##JMCRES1024x768##IconManagers
+##JMCRES1024x768##{
+##JMCRES1024x768##	"Audacious"   "485x5+0+689" 1
+##JMCRES1024x768##	"xmms"        "485x5+0+689" 1
+##JMCRES1024x768##	"gxine"       "485x5+0+689" 1
+##JMCRES1024x768##	"[Ff]irefox*" "273x5-0+689" 1
+##JMCRES1024x768##	"[Mm]ozilla*" "273x5-0+689" 1
+##JMCRES1024x768##	"[Aa]marok*"  "485x5+0+689" 1
+##JMCRES1024x768##}
+
+##JMCRES1280x960##VirtualDesktop "4x1-1-1" 16
+##JMCRES1280x960##ResizeFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+##JMCRES1280x960##TitleFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+##JMCRES1280x960##MenuFont "-adobe-helvetica-bold-r-normal--*-140-*-*-*-*-*-*"
+##JMCRES1280x960##MenuTitleFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+##JMCRES1280x960##IconFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*-*-*-*"
+##JMCRES1280x960##IconManagerFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*"
+##JMCRES1280x960##VirtualDesktopFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*"
+##JMCRES1280x960##IconManagerGeometry "1020x10+0+0" 7
+##JMCRES1280x960##IconManagers
+##JMCRES1280x960##{
+##JMCRES1280x960##	"Audacious"   "536x5+0+872" 1
+##JMCRES1280x960##	"xmms"        "536x5+0+872" 1
+##JMCRES1280x960##	"gxine"       "536x5+0+872" 1
+##JMCRES1280x960##	"[Aa]marok*"  "536x5+0+872" 1
+##JMCRES1280x960##	"[Ff]irefox*" "319x5-0+872" 1
+##JMCRES1280x960##	"[Mm]ozilla*" "319x5-0+872" 1
+##JMCRES1280x960##}
+
+##JMCRES1680x1050##VirtualDesktop "4x1-1-1" 15
+##JMCRES1680x1050##ResizeFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+##JMCRES1680x1050##TitleFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+##JMCRES1680x1050##MenuFont "-adobe-helvetica-bold-r-normal--*-140-*-*-*-*-*-*"
+##JMCRES1680x1050##MenuTitleFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+##JMCRES1680x1050##IconFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*-*-*-*"
+##JMCRES1680x1050##IconManagerFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*"
+##JMCRES1680x1050##VirtualDesktopFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*"
+##JMCRES1680x1050##IconManagerGeometry "1675x10+0+0" 10
+##JMCRES1680x1050##IconManagers
+##JMCRES1680x1050##{
+##JMCRES1680x1050##	"xmms"        "531x5+0+951" 1
+##JMCRES1680x1050##	"Audacious"   "531x5+0+951" 1
+##JMCRES1680x1050##	"gxine"       "531x5+0+951" 1
+##JMCRES1680x1050##	"[Aa]marok*"  "531x5+0+951" 1
+##JMCRES1680x1050##	"[Ff]irefox*" "447x5-0+951" 1
+##JMCRES1680x1050##	"[Mm]ozilla*" "447x5-0+951" 1
+##JMCRES1680x1050##}
+
+
+#
+# Lists
+#
+Function "VTWM Profile"
+{
+	f.exec  "~/.themes_vtwm/bin/get_vtwm_theme.sh KILL"
+	f.exec	"xsetroot -bg black -fg DarkSlateGrey -bitmap /usr/X11R6/include/X11/bitmaps/grid16 &"
+##JMCRESOTHERS##	f.exec "rclock -fg lightblue -bg black -geometry '57x50+0-0' &"
+##JMCRESOTHERS##	f.exec "xload -bg black -fg lightblue -geometry 140x50+62-0 &"
+##JMCRESOTHERS##	f.exec "xnetload -interface eth0 -nc -fg lightblue -bg black -geometry 280x50+206-0 &"
+##JMCRES1024x768##	f.exec "rclock -fg lightblue -bg black -geometry '57x50+0-0' &"
+##JMCRES1024x768##	f.exec "xload -bg black -fg lightblue -geometry 140x50+62-0 &"
+##JMCRES1024x768##	f.exec "xnetload -interface eth0 -nc -fg lightblue -bg black -geometry 280x50+206-0 &"
+##JMCRES1280x960##	f.exec "rclock -fg lightblue -bg black -geometry '57x60+0-0' &"
+##JMCRES1280x960##	f.exec "xload -bg black -fg lightblue -geometry 140x60+62-0 &"
+##JMCRES1280x960##	f.exec "xnetload -interface eth0 -nc -fg lightblue -bg black -geometry 330x60+206-0 &"
+##JMCRES1680x1050##	f.exec "rclock -fg lightblue -bg black -geometry '72x71+0-0'&"
+##JMCRES1680x1050##	f.exec "xload -bg black -fg lightblue -geometry 150x71+76-0 &"
+##JMCRES1680x1050##	f.exec "xnetload -nc -interface eth0 -fg lightblue -bg black -geometry 300x71+231-0 -font '7x14' &"
+}
+
+Pixmaps
+{
+	TitleHighlight    ":xpm:sunkenbox"   # Fix Buttons for 4.7
+	MenuIconPixmap    ":xpm:rarrow"      # Fix Menu button for 4.7
+	IconManagerPixmap ":xpm:zoom"
+}
+
+NoTitle
+{
+	"VTWM Icon Manager"
+	"VTWM Desktop"
+	"XMMS*"
+	"X11Amp"
+	"xeyes"
+	"xlogo"
+	"wmbiff"
+	"rclock"
+	"asapm"
+	"xclock"
+	"xsysinfo"
+	"xload"
+	"xnetload"
+	"xapm"
+	"torsmo"
+}
+NoBorder
+{
+	"TWM Icon Manager"
+}
+
+IconifyByUnmapping
+NoHighlight
+{
+	"xlogo"
+	"wmbiff"
+	"rclock"
+	"asapm"
+	"xclock"
+	"xsysinfo"
+	"xload"
+	"xnetload"
+	"torsmo"
+}
+
+NailedDown
+{
+	"VTWM Icon Manager"
+	"VTWM Desktop"
+	"xclock"
+	"xsysinfo"
+	"xload"
+	"xnetload"
+	"xeyes"
+	"xlogo"
+	"wmbiff"
+	"rclock"
+	"asapm"
+	"xclock"
+	"torsmo"
+}
+
+IconManagerDontShow
+{
+	"VTWM Icon Manager"
+	"VTWM Desktop"
+	"xclock"
+	"xsysinfo"
+	"xload"
+	"xnetload"
+	"xeyes"
+	"xlogo"
+	"wmbiff"
+	"rclock"
+	"asapm"
+	"xclock"
+	"torsmo"
+}
+
+DontShowInDisplay
+{
+	"VTWM Icon Manager"
+	"VTWM Desktop"
+	"xclock"
+	"xsysinfo"
+	"xload"
+	"xnetload"
+	"xeyes"
+	"xlogo"
+	"wmbiff"
+	"rclock"
+	"asapm"
+	"xclock"
+	"torsmo"
+}
+
+DontShowInVtwmWindows
+{
+	"VTWM Icon Manager"
+	"VTWM Desktop"
+	"xclock"
+	"xsysinfo"
+	"xload"
+	"xnetload"
+	"xeyes"
+	"torsmo"
+}
+
+Color
+{
+	DefaultBackground "steelblue"
+	DefaultForeground "black"
+	BorderColor "PowderBlue"
+	BorderTileBackground "steelblue"
+	BorderTileForeground "gray85"
+	TitleBackground "black"
+	TitleForeground "lightblue"
+	MenuBackground "black"
+	MenuForeground "lightblue"            # JMC WAS "darkblue"
+	MenuTitleBackground "steelblue"
+	MenuTitleForeground "black"
+	IconBackground "darkgrey"
+	IconForeground "darkblue"
+	IconBorderColor "gray85"
+	IconManagerBackground "black"
+	IconManagerForeground "lightblue"
+	IconManagerHighlight "grey"
+	VirtualBackground "black"
+	VirtualForeground "grey"
+	DesktopDisplayBackground "grey60"
+	RealScreenBackground	"gray15"	# Active Panner
+}
+
+#
+# Titlebar buttons
+#
+
+NoDefaultTitleButtons
+
+
+#
+# Functions and Bindings
+#
+
+Function "move-or-lower" { f.move f.deltastop f.lower }
+Function "move-or-raise" { f.move f.deltastop f.raise }
+Function "move-or-iconify" { f.move f.deltastop f.iconify }
+
+Function "jmc_w1"
+{
+	f.panleft "100"
+	f.panleft "100"
+	f.panleft "100"
+}
+Function "jmc_w2"
+{
+	f.function "jmc_w1"
+	f.panright "100"
+}
+Function "jmc_w3"
+{
+	f.function "jmc_w2"
+	f.panright "100"
+}
+Function "jmc_w4"
+{
+	f.function "jmc_w2"
+	f.panright "100"
+	f.panright "100"
+}
+
+#------------------------------------------------------------------------------
+# buttons
+#------------------------------------------------------------------------------
+SqueezeTitle
+LeftTitleButton ":xpm:darrow" = f.iconify
+#RightTitleButton ":xpm:resize" = f.resize
+
+Button1 = : root : f.menu "TwmWindows"
+Button2 = : root : f.menu "Mroot_middle_button"
+Button3 = : root : f.menu "Mroot_right_button"
+
+Button1 = : title : f.function "move-or-raise"
+Button2 = : title : f.lower
+Button3 = : title : f.menu "Mtitle_menu"
+
+Button1 = : frame : f.function "move-or-raise"
+Button2 = : frame : f.resize
+Button3 = : frame : f.iconify
+
+Button1 = : icon : f.function "move-or-iconify"
+Button3 = : icon : f.menu "Mtitle_menu"
+
+Button1 = : iconmgr : f.iconify
+Button3 = : iconmgr : f.warp
+Button1 = : virtual | desktop : f.movescreen
+
+### JMC KEYS
+"1"	= m : all	: f.iconify
+"2"	= m : all	: f.zoom
+"3"	= m : all	: f.horizoom
+"4"	= m : all	: f.fullzoom
+"q"	= m : all	: f.delete
+"Tab"   = m : all	: f.lower
+"r"	= m : all	: f.restart
+"F1"	= m : all : f.function "jmc_w1"
+"F2"	= m : all : f.function "jmc_w2"
+"F3"	= m : all : f.function "jmc_w3"
+"F4"	= m : all : f.function "jmc_w4"
+
+"Left"	= m : all		  : f.backiconmgr
+"Right"	= m : all		  : f.forwiconmgr
+"Up"	= m : all		  : f.backiconmgr
+"Down"	= m : all		  : f.forwiconmgr
+
+###############################################################################
+# Add Menu
+###############################################################################
+###ADD_AUTO_RAISE###
+###ADD_MENU###

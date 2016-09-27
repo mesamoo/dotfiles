@@ -1,0 +1,484 @@
+#
+# vtwm -- Theme Black
+#
+
+#------------------------------------------------------------------------------
+# Path -- seems only one path statement is allowed
+#------------------------------------------------------------------------------
+IconDirectory "~/.themes_vtwm/images"
+
+#------------------------------------------------------------------------------
+# switches
+#------------------------------------------------------------------------------
+NoGrabServer
+RestartPreviousState
+DecorateTransients
+FixManagedVirtualGeometries # corrects window placement in panner
+
+##JMCRES1680x1050##TitleFont "-adobe-helvetica-bold-r-normal--*-140-*-*-*-*-*-*"
+##JMCRES1680x1050##ResizeFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+##JMCRES1680x1050##MenuFont "-adobe-helvetica-bold-r-normal--*-140-*-*-*-*-*-*"
+##JMCRES1680x1050##MenuTitleFont "-adobe-helvetica-bold-r-normal--*-140-*-*-*-*-*-*"
+##JMCRES1680x1050##IconFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*-*-*-*"
+##JMCRES1680x1050##InfoFont	"-adobe-helvetica-bold-r-normal--*-100-*-*-*-*-*-*"
+##JMCRES1680x1050##IconManagerFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*"
+##JMCRES1680x1050##VirtualDesktopFont	"-adobe-helvetica-medium-o-normal--*-80-*-*-*-*-*-*"
+##JMCRES1680x1050##IconManagerGeometry  "102x20-0+0" 1  # on Top
+##JMCRES1680x1050##IconManagers
+##JMCRES1680x1050##{
+##JMCRES1680x1050##	"Audacious"	"Audacious"	"450x5-0+0" 1
+##JMCRES1680x1050##	"xmms"		"xmms"		"450x5-0+0" 1
+##JMCRES1680x1050##	"gxine"		"gxine"		"450x5-0+0" 1
+##JMCRES1680x1050##	"[Ff]irefox*"	"Firefox"	"450x5-0-17" 1
+##JMCRES1680x1050##}
+##JMCRES1680x1050##AppletRegion "191x172-0-0" South east 100 100
+##JMCRES1680x1050##{
+##JMCRES1680x1050##	"wmbiff"
+##JMCRES1680x1050##	"wmweather"
+##JMCRES1680x1050##	"wmWeather"
+##JMCRES1680x1050##}
+
+##JMCRES1280x960##TitleFont "-adobe-helvetica-bold-r-normal--*-140-*-*-*-*-*-*"
+##JMCRES1280x960##ResizeFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+##JMCRES1280x960##MenuFont "-adobe-helvetica-bold-r-normal--*-140-*-*-*-*-*-*"
+##JMCRES1280x960##MenuTitleFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+##JMCRES1280x960##IconFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*-*-*-*"
+##JMCRES1280x960##InfoFont	"-adobe-helvetica-bold-r-normal--*-100-*-*-*-*-*-*"
+##JMCRES1280x960##IconManagerFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*"
+##JMCRES1280x960##VirtualDesktopFont	"-adobe-helvetica-medium-o-normal--*-80-*-*-*-*-*-*"
+##JMCRES1280x960##IconManagerGeometry  "102x20-0+0" 1  # on Top
+##JMCRES1280x960##IconManagers
+##JMCRES1280x960##{
+##JMCRES1280x960##	"Audacious"	"Audacious"	"450x5-0+0" 1
+##JMCRES1280x960##	"xmms"		"xmms"		"450x5-0+0" 1
+##JMCRES1280x960##	"gxine"		"gxine"		"450x5-0+0" 1
+##JMCRES1280x960##	"[Ff]irefox*"	"Firefox"	"450x5-0-17" 1
+##JMCRES1280x960##}
+##JMCRES1280x960##AppletRegion "80x80-0-0" South east 100 100
+##JMCRES1280x960##{
+##JMCRES1280x960##	"wmbiff"
+##JMCRES1280x960##}
+
+##JMCRES1024x768##TitleFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+##JMCRES1024x768##ResizeFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+##JMCRES1024x768##MenuFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+##JMCRES1024x768##MenuTitleFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+##JMCRES1024x768##IconFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*-*-*-*"
+##JMCRES1024x768##InfoFont	"-adobe-helvetica-bold-r-normal--*-100-*-*-*-*-*-*"
+##JMCRES1024x768##IconManagerFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*"
+##JMCRES1024x768##VirtualDesktopFont	"-adobe-helvetica-medium-o-normal--*-80-*-*-*-*-*-*"
+##JMCRES1024x768##IconManagerGeometry  "102x20-0+0" 1  # on Top
+##JMCRES1024x768##IconManagers
+##JMCRES1024x768##{
+##JMCRES1024x768##	"Audacious"	"Audacious"	"450x5-0+0" 1
+##JMCRES1024x768##	"xmms"		"xmms"		"450x5-0+0" 1
+##JMCRES1024x768##	"gxine"		"gxine"		"450x5-0+0" 1
+##JMCRES1024x768##	"[Ff]irefox*"	"Firefox"	"450x5-0-17" 1
+##JMCRES1024x768##}
+##JMCRES1024x768##AppletRegion "80x80-0-0" South east 100 100
+##JMCRES1024x768##{
+##JMCRES1024x768##	"wmbiff"
+##JMCRES1024x768##}
+
+##JMCRESOTHERS##TitleFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+##JMCRESOTHERS##ResizeFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+##JMCRESOTHERS##MenuFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+##JMCRESOTHERS##MenuTitleFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+##JMCRESOTHERS##IconFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*-*-*-*"
+##JMCRESOTHERS##InfoFont	"-adobe-helvetica-bold-r-normal--*-100-*-*-*-*-*-*"
+##JMCRESOTHERS##IconManagerFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*"
+##JMCRESOTHERS##VirtualDesktopFont	"-adobe-helvetica-medium-o-normal--*-80-*-*-*-*-*-*"
+##JMCRESOTHERS##IconManagerGeometry  "102x20-0+0" 1  # on Top
+##JMCRESOTHERS##IconManagers
+##JMCRESOTHERS##{
+##JMCRESOTHERS##	"Audacious"	"Audacious"	"450x5-0+0" 1
+##JMCRESOTHERS##	"xmms"		"xmms"		"450x5-0+0" 1
+##JMCRESOTHERS##	"gxine"		"gxine"		"450x5-0+0" 1
+##JMCRESOTHERS##	"[Ff]irefox*"	"Firefox"	"450x5-0-17" 1
+##JMCRESOTHERS##}
+##JMCRESOTHERS##AppletRegion "80x80-0-0" South east 100 100
+##JMCRESOTHERS##{
+##JMCRESOTHERS##	"wmbiff"
+##JMCRESOTHERS##}
+
+BorderWidth 3
+ButtonIndent 2
+NoHighlight
+AutoRelativeResize
+FramePadding 0
+NoRaiseOnMove
+OpaqueMove
+ForceIcons  # Override Client Icons
+NoDefaults
+#ClientBorderWidth 2
+#DefaultBackground
+
+### VTWM Specific BEGIN
+RandomPlacement
+OldFashionedTwmWindowsMenu
+AutoPan 10
+PanResistance 100
+StayUpOptionalMenus
+RightHandSidePulldownMenus
+
+##Zoom 1200
+#ZoomZoom
+#PrettyZoom
+#LessRandomZoomZoom
+
+StrictIconManager  # Only show icionified clients in Manager
+NotVirtualGeometries
+FixTransientVirtualGeometries
+StaticIconPositions
+VirtualDesktop	"2x2+0-0" 20
+BorderBevelWidth	1  # 3d Borders, needed for bug
+### VTWM Specific END
+
+Function "VTWM Profile"
+{
+	f.exec  "~/.themes_vtwm/bin/get_vtwm_theme.sh KILL"
+	f.exec "xsetroot -solid black &"
+##JMCRES1680x1050##	f.exec "rclock -fg gray85 -bg black -geometry '90x90+0+0' &"
+##JMCRES1280x960##	f.exec "rclock -fg gray85 -bg black -geometry '70x70+0+0' &"
+##JMCRES1024x768##	f.exec "rclock -fg gray85 -bg black -geometry '57x49+0+0' &"
+##JMCRESOTHERS##	f.exec "rclock -fg gray85 -bg black -geometry '57x49+0+0' &"
+}
+IconifyByUnmapping
+{
+	"xmms"
+	"gxine"
+	"Firefox"
+	"firefox"
+}
+DontShowInTwmWindows
+{
+	"VTWM Icon Manager"
+	"VTWM Desktop"
+	"asclock"
+	"astime"
+	"emiclock"
+	"gkrellm"
+	"oclock"
+	"swisswatch"
+	"xdaliclock"
+	"Dali Clock"
+	"xbiff"
+	"[Xx]message*"
+	"xclock"
+	"xvclock"
+	"daliclock"
+	"xdaliclock"
+	"xeyes"
+	"xload"
+	"bubblefishymon"
+	"lavaps"
+	"wmmemmon"
+	"wmitime"
+	"wmcpuload"
+	"wmWeather"
+}
+DontShowInVtwmWindows
+{
+	"VTWM Icon Manager"
+	"VTWM Desktop"
+	"asclock"
+	"astime"
+	"emiclock"
+	"gkrellm"
+	"oclock"
+	"swisswatch"
+	"xdaliclock"
+	"Dali Clock"
+	"xbiff"
+	"[Xx]message*"
+	"xclock"
+	"xvclock"
+	"daliclock"
+	"xdaliclock"
+	"xeyes"
+	"xload"
+	"bubblefishymon"
+	"lavaps"
+	"wmmemmon"
+	"wmitime"
+	"wmcpuload"
+	"wmWeather"
+}
+NailedDown
+{
+	"VTWM*"
+	"VTWM Icon Manager"
+	"VTWM Desktop"
+	"Appointment"
+	"asclock"
+	"astime"
+	"emiclock"
+	"gkrellm"
+	"mailtool"
+	"oclock"
+	"wmbiff"
+	"rclock"
+	"asapm"
+	"swisswatch"
+	"xbiff"
+	"[Xx]message*"
+	"xeyes"
+	"xclock"
+	"xvclock"
+	"xdaliclock"
+	"xconsole"
+	"xload"
+	"bubblefishymon"
+	"lavaps"
+	"xmailbox"
+	"xneko"
+	"gnomecal"   # Calendar
+	"Calendar"   # Calendar
+	"Information" # gnomecal
+	"wmmemmon"
+	"wmitime"
+	"wmcpuload"
+	"wmWeather"
+}
+DontShowInDisplay
+{
+	"VTWM*"
+	"VTWM Icon Manager"
+	"VTWM Desktop"
+	"asclock"
+	"astime"
+	"emiclock"
+	"gkrellm"
+	"oclock"
+	"wmbiff"
+	"rclock"
+	"asapm"
+	"swisswatch"
+	"xbiff"
+	"xconsole"
+	"xeyes"
+	"xclock"
+	"xvclock"
+	"xdaliclock"
+	"xload"
+	"bubblefishymon"
+	"lavaps"
+	"xneko"
+	"xmailbox"
+	"wmmemmon"
+	"wmitime"
+	"wmcpuload"
+	"wmWeather"
+}
+IconManagerDontShow
+{
+	"VTWM*"
+	"VTWM Icon Manager"
+	"VTWM Desktop"
+	"asclock"
+	"astime"
+	"gnomecal"
+	"Calendar"
+	"emiclock"
+	"gkrellm"
+	"oclock"
+	"swisswatch"
+	"xclock"
+	"xvclock"
+	"xdaliclock"
+	"xeyes"
+	"xload"
+	"bubblefishymon"
+	"lavaps"
+	"xmailbox"
+	"xneko"
+	"xbiff"
+	"user_popup"  # xbmbrowser
+	"wmmemmon"
+	"wmitime"
+	"wmcpuload"
+	"wmWeather"
+}
+NoBorder
+{
+	"wmbiff"
+	"rclock"
+	"asapm"
+#	"VTWM Desktop"
+}
+
+NoTitle
+{
+	"TWM Icon Manager"
+	"VTWM Desktop"
+	"VTWM Icon Manager"
+	"VTWM*"
+	"asclock"
+	"astime"
+	"bubblefishymon"
+	"emiclock"
+	"gkrellm"
+	"lavaps"
+	"oclock"
+	"wmbiff"
+	"rclock"
+	"asapm"
+	"swisswatch"
+	"user_popup"  # xbmbrowser
+	"wmWeather"
+	"wmcpuload"
+	"wmitime"
+	"wmmemmon"
+	"xbiff"
+	"xclock"
+	"xdaliclock"
+	"xeyes"
+	"xload"
+	"xmailbox"
+	"xmms Icon Manager"
+	"gxine Icon Manager"
+	"xneko"
+	"xvclock"
+	"xmms"
+}
+
+Color
+{
+    BorderColor			"gray85"
+    DefaultBackground		"black"
+    DefaultForeground		"gray85"
+    TitleBackground		"black"
+    TitleForeground		"gray85"
+    MenuBackground		"black"
+    MenuForeground		"gray85"
+    MenuTitleBackground		"gray65"
+    MenuTitleForeground		"black"
+    IconBackground		"black"
+    IconForeground		"white"
+    IconBorderColor		"black"
+    IconManagerBackground	"black"
+    IconManagerForeground	"gray85"
+
+    VirtualBackground		"black"
+    VirtualForeground		"grey30"
+    DesktopDisplayBorder	"grey70"
+    DesktopDisplayForeground	"black"
+    DesktopDisplayBackground	"gray30"	#"grey60"
+
+#   RealScreenForeground	"red"
+    RealScreenBackground	"gray15"	#"gray20"   # Active Panner
+}
+
+
+###############################################################################
+# Define some useful functions for motion-based actions.
+###############################################################################
+MoveDelta 1
+Function "move-or-lower" { f.move f.deltastop f.lower }
+Function "move-or-raise" { f.move f.deltastop f.raise }
+Function "move-or-iconify" { f.move f.deltastop f.iconify}
+Function "icon-refresh" { f.iconify f.refresh}  # f.refresh needed for Zoom
+
+#
+# Set some useful bindings.  Sort of uwm-ish, sort of
+# simple-button-ish
+#
+Button1 = : root : f.menu "TwmWindows"
+Button2 = : root : f.menu "Mroot_middle_button"
+Button3 = : root : f.menu "Mroot_right_button"
+
+Button1 = m : window|icon : f.function "move-or-lower"
+Button2 = m : window|icon : f.iconify
+Button3 = m : window|icon : f.function "move-or-raise"
+
+Button1 = : title : f.function "move-or-raise"
+Button2 = : title : f.fullzoom
+Button3 = : title : f.menu "Mtitle_menu"
+
+Button1 = : icon : f.function "move-or-iconify"
+#Button2 = : icon : f.destroy
+Button3 = : icon : f.iconify
+
+Button1 = : iconmgr : f.iconify
+Button2 = : iconmgr : f.destroy
+Button3 = : iconmgr : f.iconify
+
+# This is for the window bar
+LeftTitleButton  ":dot" = f.iconify  #f.function "icon-refresh"
+LeftTitleButton  ":xlogo"  = f.delete
+RightTitleButton ":resize"  = f.resize
+#LeftTitleButton  "/usr/X11R6/include/X11/bitmaps/checkmark.xbm"  = f.delete
+#LeftTitleButton	 "/usr/X11R6/include/X11/bitmaps/xm_noenter16" = f.delete
+#RightTitleButton "/usr/X11/include/bitmaps/menu12"  = f.resize
+
+# a hack but works
+Function "jmc_w1"
+{
+	f.panup "100"
+	f.panup "100"
+	f.panleft "100"
+	f.panleft "100"
+}
+Function "jmc_w2"
+{
+	f.panup "100"
+	f.panup "100"
+	f.panright "100"
+	f.panright "100"
+}
+Function "jmc_w3"
+{
+	f.pandown "100"
+	f.pandown "100"
+	f.panleft "100"
+	f.panleft "100"
+}
+Function "jmc_w4"
+{
+	f.panright "100"
+	f.panright "100"
+	f.pandown "100"
+	f.pandown "100"
+}
+
+Cursors
+{
+	Frame     "left_ptr"
+	Title     "left_ptr"
+	Icon      "left_ptr"
+	IconMgr   "left_ptr"
+	Move      "fleur"
+	Resize    "fleur"
+	Menu      "right_ptr"   # hand1
+	Button    "hand2"
+	Wait      "clock"
+	Select    "dot"
+	Destroy   "pirate"
+}
+
+###############################################################################
+# now some keyboard functions
+###############################################################################
+"Tab"   = m : all	: f.lower
+"r"     = m : all	: f.restart
+"1"     = m : all	: f.iconify  #f.function "icon-refresh"
+"2"     = m : all	: f.zoom
+"3"	= m : all	: f.horizoom
+"4"	= m : all	: f.fullzoom
+"q"	= m : all	: f.delete
+
+"F1"	= m : all : f.function "jmc_w1"
+"F2"	= m : all : f.function "jmc_w2"
+"F3"	= m : all : f.function "jmc_w3"
+"F4"	= m : all : f.function "jmc_w4"
+
+###############################################################################
+# END .vtwmrc-black
+###############################################################################
+
+###############################################################################
+# Add Menu
+###############################################################################
+###ADD_AUTO_RAISE###
+###ADD_ICONS###
+###ADD_MENU###

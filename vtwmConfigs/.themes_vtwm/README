@@ -1,0 +1,70 @@
+vtwm Theme setup and information:
+
+==============================================================================
+Define your X resolution:
+    The themes tarball supports resolutions "1024x768",
+    "1280x960" and "1680x1050" The resolution you use
+    should be set in export variable $JMC_XRESOLUTION.
+    For example, put
+
+       export JMC_XRESOLUTION="1280x790"
+
+    in your .profile if you use 1280x790.  Or in .login
+
+       setenv JMC_XRESOLUTION "1280x790"
+
+    if not set, will assume 1024x768
+
+==============================================================================
+Initial run:
+
+    When you un-tar it, it will create subdirectory '.themes_vtwm'.
+    To start out, save your copy of .vtwmrc somehwere and execute
+
+      ~/.themes_vtwm/bin/get_vtwm.sh theme
+
+    where 'theme' is the theme you want to use.  After this
+    there will be a menu for the themes inside the new
+    ~/.vtwmrc.
+
+==============================================================================
+Changes you may want to do:
+
+    1. you may need to change theme_matrix "VTWM Profile"
+       for root window set.  nexpm is needed for theme_matrix
+
+    2. if you want to use a different directory than
+           ~/.themes_vtwm/
+       you should do a search for "themes_vtwm" in all
+       files and change it to what you want it to be.
+
+==============================================================================
+FILES and Descriptions:
+    File                   Description
+    ---------------------- ------------------------------------------
+   ./README                this readme
+
+   ./themes                Theme Directory, all files here are
+                           a protion of a .vtwmrc file.  Menu,
+                           icon and autoraise portions in the data
+                           sub-directory.
+
+   ./images                bitmaps and images used by the themes
+
+   ./data                  These files are used to build a new .vtwmrc
+   ./data/icons.txt        Icons and bitmaps
+   ./data/menu.txt         menus, you may want to customize this.
+                           The only constraint is the menus names
+                           should not be changed
+   ./data/autoraise.txt    Want autoraise ? comment lines out if
+                           you do not like autoraise
+   ./data/theme.in.use     created when a new .vtwmrc, just holds
+                           the theme name.
+
+   ./bin                   scripts used to change themes
+   ./bin/get_vtwm_theme.sh execute this to generate a new theme .vtwmrc
+   ./bin/theme_defaults.sh defines defaults
+   ./bin/mk_theme_menu.sh  generate functions and theme menu for .vtwmrc
+
+==============================================================================
+***END

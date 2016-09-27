@@ -1,0 +1,369 @@
+#
+# $XConsortium: system.twmrc,v 1.8 91/04/23 21:10:58 gildea Exp $
+# 
+# Default twm configuration file; needs to be kept small to conserve string
+# space in systems whose compilers don't handle medium-sized strings.
+#
+# Sites should tailor this file, providing any extra title buttons, menus, etc.
+# that may be appropriate for their environment.  For example, if most of the
+# users were accustomed to uwm, the defaults could be set up not to decorate
+# any windows and to use meta-keys.
+#
+
+#------------------------------------------------------------------------------
+# Path -- seems only one path statement is allowed
+#------------------------------------------------------------------------------
+IconDirectory "~/.themes_vtwm/images"
+
+#------------------------------------------------------------------------------
+# Variables
+#------------------------------------------------------------------------------
+RightHandSidePulldownMenus
+RandomPlacement
+#OpaqueMove
+#OpaqueResize
+#AutoPan 10
+StayUpOptionalMenus
+OldFashionedTwmWindowsMenu
+##StrictIconManager           # Only show icionified clients in Manager
+FixManagedVirtualGeometries # corrects window placement in panner
+
+NoGrabServer
+NoDefaults
+RestartPreviousState
+IconifyByUnmapping
+ShowIconManager
+SqueezeTitle
+{
+	"*"	left	0	0
+}
+# DecorateTransients
+ButtonColorIsFrame
+BorderWidth	3
+MoveDelta	3
+ResizeRegion	"NorthEast"
+NotVirtualGeometries
+FixTransientVirtualGeometries
+
+VirtualDesktop	"1x4-0-0" 15
+
+##JMCRESOTHERS##IconManagerGeometry  "110x100+0+0" 1  # on Top
+##JMCRESOTHERS##IconManagers
+##JMCRESOTHERS##{
+##JMCRESOTHERS##	"xmms"		"450x5+0-15" 1
+##JMCRESOTHERS##	"Audacious"	"450x5+0-15" 1
+##JMCRESOTHERS##	"gxine"		"450x5+0-15" 1
+##JMCRESOTHERS##}
+
+##JMCRES1024x768##IconManagerGeometry  "110x100+0+0" 1  # on Top
+##JMCRES1024x768##IconManagers
+##JMCRES1024x768##{
+##JMCRES1024x768##	"xmms"		"450x5+0-15" 1
+##JMCRES1024x768##	"Audacious"	"450x5+0-15" 1
+##JMCRES1024x768##	"gxine"		"450x5+0-15" 1
+##JMCRES1024x768##}
+
+##JMCRES1280x960##IconManagerGeometry  "110x100+0+0" 1  # on Top
+##JMCRES1280x960##IconManagers
+##JMCRES1280x960##{
+##JMCRES1280x960##	"xmms"		"450x5+0-15" 1
+##JMCRES1280x960##	"Audacious"	"450x5+0-15" 1
+##JMCRES1280x960##	"gxine"		"450x5+0-15" 1
+##JMCRES1280x960##	"[Ff]irefox*"	"400x5-0+0" 1
+##JMCRES1280x960##	"[Mm]ozilla*"	"400x5-0+0" 1
+##JMCRES1280x960##}
+
+##JMCRES1680x1050##IconManagerGeometry  "110x100+0+0" 1  # on Top
+##JMCRES1680x1050##IconManagers
+##JMCRES1680x1050##{
+##JMCRES1680x1050##	"xmms"		"450x5+0-15" 1
+##JMCRES1680x1050##	"Audacious"	"450x5+0-15" 1
+##JMCRES1680x1050##	"gxine"		"450x5+0-15" 1
+##JMCRES1680x1050##	"[Ff]irefox*"	"400x5-0+0" 1
+##JMCRES1680x1050##	"[Mm]ozilla*"	"400x5-0+0" 1
+##JMCRES1680x1050##}
+
+# the following is for a 3d look
+BorderBevelWidth	2
+ButtonBevelWidth	1
+ClearBevelContrast	40
+DarkBevelContrast	40
+#IconBevelWidth		2
+#IconManagerBevelWidth	1
+InfoBevelWidth		2
+#MenuBevelWidth		2
+ShallowReliefWindowButton
+TitleBevelWidth		1
+ButtonIndent		-1    # Fixes Buttons for 4.7
+TitleButtonBorderWidth  0     # Fixes Buttons for 4.7
+# BeNiceToColormap  # conserve color map
+
+TitleFont	"-*-lucidatypewriter-bold-*-*-*-14-*-*-*-*-*-*-*"
+ResizeFont	"-*-lucidatypewriter-bold-*-*-*-14-*-*-*-*-*-*-*"
+MenuFont	"-*-lucidatypewriter-medium-*-*-*-14-*-*-*-*-*-*-*"
+MenuTitleFont	"-*-lucidatypewriter-bold-*-*-*-12-*-*-*-*-*-*-*"
+IconFont	"-*-lucidatypewriter-bold-*-*-*-10-*-*-*-*-*-*-*"
+InfoFont	"-*-lucidatypewriter-bold-*-*-*-12-*-*-*-*-*-*-*"
+IconManagerFont	"-*-lucidatypewriter-bold-*-*-*-10-*-*-*-*-*-*-*"
+VirtualDesktopFont	"-*-lucidatypewriter-bold-*-*-*-8-*-*-*-*-*-*-*"
+
+Function "VTWM Profile"
+{
+	f.exec  "~/.themes_vtwm/bin/get_vtwm_theme.sh KILL"
+	f.exec	"Esetroot -s ~/.themes_vtwm/images/matrix2.jpg &"
+##JMCRESOTHERS##	f.exec "rclock -bg 'black' -fg 'green' -geometry 65x65-0+485 &"
+##JMCRES1024x768##	f.exec "rclock -bg 'black' -fg 'green' -geometry 65x65-0+485 &"
+##JMCRES1280x960##	f.exec "rclock -bg 'black' -fg 'green' -geometry '85x85+1189+605' &"
+##JMCRES1680x1050##	f.exec "rclock -bg 'black' -fg 'green' -geometry '110x110-0+647' &"
+}
+
+#
+# Lists
+#
+
+WarpCursor
+
+NoHighlight
+{
+    "VTWM Icon Manager"
+    "VTWM Desktop"
+    "xclock"
+    "oclock"
+    "rclock"
+    "asapm"
+    "astime"
+    "asclock"
+    "astime"
+    "xeyes"
+	"xload"
+}
+
+NailedDown
+{
+	"VTWM*"
+	"VTWM Icon Manager"
+	"VTWM Desktop"
+	"xclock"
+	"oclock"
+	"rclock"
+	"asapm"
+	"astime"
+	"asclock"
+	"astime"
+	"xeyes"
+	"xconsole"
+	"xmailbox"
+	"xbiff"
+	"xneko"
+	"xload"
+}
+
+NoTitle
+{
+	"xconsole"
+	"xmailbox"
+	"xbiff"
+	"xneko"
+	"xload"
+	"xclock"
+	"oclock"
+	"rclock"
+	"asapm"
+	"astime"
+	"asclock"
+	"astime"
+	"xeyes"
+	"VTWM Desktop"
+	"VTWM Icon Manager"
+	"VTWM*"
+}
+
+DontSqueezeTitle
+{
+	"VTWM Desktop"
+}
+
+StartIconified
+{
+	"xconsole"
+}
+
+DontShowInDisplay
+{
+	"xmailbox"
+	"xbiff"
+	"VTWM*"
+	"VTWM Icon Manager"
+	"VTWM Desktop"
+	"xneko"
+	"xclock"
+	"oclock"
+	"rclock"
+	"asapm"
+	"astime"
+	"asclock"
+	"xeyes"
+	"xconsole"
+	"xload"
+}
+
+IconManagerDontShow
+{
+	"VTWM*"
+	"VTWM Icon Manager"
+	"VTWM Desktop"
+	"xeyes"
+	"xclock"
+	"oclock"
+	"rclock"
+	"asapm"
+	"asclock"
+	"astime"
+	"xneko"
+	"xmailbox"
+	"xbiff"
+	"xload"
+	"Calendar"
+}
+
+Color
+{
+	BorderColor		"gray15"
+	BorderTileBackground	"black"
+	BorderTileForeground	"gray15"
+	DefaultBackground	"black"
+	DefaultForeground	"green"
+	TitleBackground		"gray15"
+	TitleForeground		"green"
+	MenuBackground		"gray10"
+	MenuForeground		"green"
+	MenuTitleBackground	"gray50"
+	MenuTitleForeground	"green"
+	IconBorderColor		"gray85"
+	IconManagerBackground	"black"
+		{
+		"rxvt"		"gray20"
+		"aterm"		"gray20"
+		"xterm"		"gray20"
+		"elvis"		"gray15"
+		"emacs"		"gray15"
+		"VIM"		"gray15"
+		"Vim"		"gray15"
+		"GVim"		"gray15"
+		"gvim"		"gray15"
+		}
+	IconManagerForeground	"green"
+	VirtualBackground		"gray15"
+	VirtualForeground		"black"
+	DesktopDisplayBackground	"grey60"
+	IconBackground		"black"
+	IconForeground	"green"
+}
+
+Pixmaps
+{
+##JMCRESOTHERS##	VirtualBackgroundPixmap "~/.themes_vtwm/images/mat-1024x768.xpm"
+##JMCRES1024x768##	VirtualBackgroundPixmap "~/.themes_vtwm/images/mat-1024x768.xpm"
+##JMCRES1280x960##	VirtualBackgroundPixmap "~/.themes_vtwm/images/mat-1280x960.xpm"
+##JMCRES1680x1050##	VirtualBackgroundPixmap "~/.themes_vtwm/images/mat-1680x1050.xpm"
+	TitleHighlight		":xpm:sunkenlines"
+}
+#
+# Functions and Bindings
+#
+
+Function "move-or-lower" { f.move f.deltastop f.lower }
+Function "move-or-raise" { f.move f.deltastop f.raise }
+Function "move-or-iconify" { f.move f.deltastop f.iconify }
+# a MAJOR hack
+Function "jmc_w1"
+{
+	f.panup "100"
+	f.panup "100"
+	f.panup "100"
+	f.panup "100"
+	f.panup "100"
+}
+Function "jmc_w2"
+{
+	f.function "jmc_w1"
+	f.pandown "100"
+}
+Function "jmc_w3"
+{
+	f.function "jmc_w1"
+	f.pandown "100"
+	f.pandown "100"
+}
+Function "jmc_w4"
+{
+	f.pandown "100"
+	f.pandown "100"
+	f.pandown "100"
+	f.pandown "100"
+	f.pandown "100"
+}
+
+###############################################################################
+# Title Button Section Begin
+# valid:   :xpm:bar   :xpm:resize
+#          :xpm:dot   :xpm:zoom
+#          :xpm:menu  :xlogo
+###############################################################################
+LeftTitleButton "lower.xpm" = f.iconify
+
+###############################################################################
+# Title Button Section END
+###############################################################################
+
+Button1 = : root : f.menu "TwmWindows"
+Button2 = : root : f.menu "Mroot_middle_button"
+Button3 = : root : f.menu "Mroot_right_button"
+
+Button1 = : title : f.function "move-or-raise"
+Button3 = : title : f.menu "Mtitle_menu"
+
+Button1 = : frame : f.function "move-or-raise"
+Button2 = : frame : f.resize
+Button3 = : frame : f.iconify
+
+Button1 = : icon : f.function "move-or-iconify"
+Button3 = : icon : f.menu "Mtitle_menu"
+
+Button1 = : iconmgr : f.iconify
+Button3 = : iconmgr : f.warp
+
+Button1 = : virtual | desktop : f.movescreen
+
+###############################################################################
+# now some keyboard functions
+###############################################################################
+"Return" = : iconmgr : f.iconify
+"1"	= m : all    : f.iconify
+"2"	= m : all	: f.zoom
+"3"	= m : all	: f.horizoom
+"4"	= m : all	: f.fullzoom
+"r"	= m : all	: f.restart
+"q"	= m : all    : f.delete
+"Tab"   = m : all    : f.raiselower
+
+
+"Left"	= m : all		  : f.backiconmgr
+"Right"	= m : all		  : f.forwiconmgr
+"Up"	= m : all		  : f.upiconmgr
+"Down"	= m : all		  : f.downiconmgr
+
+"F1"	= m : all : f.function "jmc_w1"
+"F2"	= m : all : f.function "jmc_w2"
+"F3"	= m : all : f.function "jmc_w3"
+"F4"	= m : all : f.function "jmc_w4"
+"Up"	= c : all : f.panup "100"
+"Down"	= c : all : f.pandown "100"
+"Left"	= c : all : f.panup "100"
+"Right"	= c : all : f.pandown "100"
+
+###############################################################################
+# Add Menu
+###############################################################################
+###ADD_AUTO_RAISE###
+###ADD_MENU###

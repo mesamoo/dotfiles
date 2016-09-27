@@ -1,0 +1,5 @@
+# some people do not like this, so can be commented
+# or changed
+
+AutoRaiseDelay	100
+AutoRaise

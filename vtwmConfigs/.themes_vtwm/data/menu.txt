@@ -1,0 +1,157 @@
+###############################################################################
+# Menus
+###############################################################################
+menu "menu_office"
+{
+	" Office "	f.title
+	"OO Spreadsheet"	f.exec "scalc &"
+	"OO Word Processor"	f.exec "swriter &"
+	"OO Presentation"	f.exec "simpress &"
+	"OO Database"		f.exec "sbase &"
+	"OO Math Editor"	f.exec "smath &"
+	"OO Draw"		f.exec "sdraw &"
+	"OO Printer Admin"	f.exec "spadmin &"
+	"Open Office Main"	f.exec "soffice &"
+	""			f.separator
+	"Kspread"		f.exec "kspread &"
+	"Kword"			f.exec "kword &"
+	"Kwrite"		f.exec "kwrite &"
+	"Kstars"		f.exec "kstars &"
+}
+
+menu "menu_apps"
+{
+	" Applications "	f.title
+	"emacs"		f.exec "emacs &"
+	"Office"	f.menu "menu_office"
+	""		f.separator
+	"Thunderbird" 	f.exec "thunderbird &"
+	"Firefox"	f.exec "firefox &"
+	""		f.separator
+	"xmms"		f.exec "xmms &"
+	"amarok"	f.exec "amarok &"
+	"gxine"		f.exec "gxine &"
+	""		f.separator
+	"gimp"		f.exec "gimp &"
+	"xpaint"	f.exec "xpaint &"
+	"xfig"		f.exec "xfig -geometry 897x707 &"
+}
+menu "menu_wm"
+{
+	"  Others  "	f.title
+	"Restart vtwm"	f.restart
+	"twm"		f.startwm "twm"
+	"fvwm2"		f.startwm "fvwm2"
+	"KDE"		f.startwm "startkde"
+}
+menu "menu_utils"
+{
+	" Utilities "		f.title
+	"Edit appointments" 	f.exec "gvim ~/.rclock &"
+	"File Manager"		f.exec "thunar &"                       
+	"VTWM config"		f.exec "gvim ~/.vtwmrc &"
+	"xcalc"			f.exec "xcalc &"
+	""			f.separator
+	"wmagnify"		f.exec "wmagnify &"
+	"xmag"			f.exec "xmag &"
+	"xclipboard"		f.exec "xclipboard &"
+	"xbmbrowser"		f.exec "xbmbrowser -geometry 550x550 &"
+	""			f.separator
+	"VTWM Themes"		f.menu "menu_vtwm_themes"
+	"Other wm"		f.menu "menu_wm"
+	"Restart"		f.restart
+	"About"			f.version
+}
+menu "menu_shells"
+{
+	" Shells "		f.title
+ 	"rxvt"		f.exec "rxvt &"
+	"Eterm"		f.exec "Eterm -F 10x20 -c lightblue -f cyan --menu-text-color black -S gray --trans --shade 75 --menubar off &" 
+	"Xterm"		f.exec "xterm &"
+ 	"rxvt Small"	f.exec "rxvt -fn 6x12 -ls -bg snow -fg black &"
+ 	"xterm Small"	f.exec "xterm -fn 6x12 -ls -bg snow -fg black &"
+}
+menu "ShowHide"
+{
+	"Show Iconmamager"	f.showiconmgr
+	"Hide Iconmamager"	f.hideiconmgr
+	"Show DeskTop"		f.showdesktopdisplay
+	"Hide DeskTop"		f.hidedesktopdisplay
+}
+
+menu "Zoom"
+{
+	"Toggle Fullzoom"	f.fullzoom
+	"Toggle Horizoom"	f.horizoom
+	"Toggle Vertzoom"	f.zoom
+}
+
+menu "mod_win"
+{
+	"move"          f.move
+	"togglenail"	f.nail
+	"above"		f.nailedabove
+	""		f.separator
+	"autoraise"	f.autoraise
+	"ring"		f.ring
+	"snuggle"	f.snugwindow
+	""              f.separator
+	"raise"         f.raise
+	"lower"         f.lower
+	""              f.separator
+	"^--"		f.squeezeleft
+	"-^-"		f.squeezecenter
+	"--^"		f.squeezeright
+}
+
+menu "Mtitle_menu"
+{
+	" Window "	f.title
+	""		f.separator
+	"Resize"	f.resize
+	"togglenail"	f.nail
+	"Move"		f.move
+	"Iconify"	f.iconify
+	"Refresh"	f.winrefresh
+	""		f.separator
+	"Identify"	f.identify
+	"Modify Win"	f.menu "mod_win"
+	"Zoom"		f.menu "Zoom"
+	""		f.separator
+	"Delete"	f.delete
+	"Destroy"	f.destroy
+}
+
+menu "Mroot_middle_button"
+{
+	" Arrange "	f.title
+	""		f.separator
+	"Resize"	f.resize
+	"Iconify"	f.iconify
+	"Move"		f.move
+	""		f.separator
+	"Refresh"	f.winrefresh
+	"Identify"	f.identify
+	""		f.separator
+	"Modify Window"	f.menu "mod_win"
+	"Zoom"		f.menu "Zoom"
+	"Show/Hide"	f.menu "ShowHide"
+	""		f.separator
+	"Send Delete"	f.delete
+	"Kill Window"	f.destroy
+}
+
+menu "Mroot_right_button"
+{
+	" XXJMCTITLE  "	f.title
+	"Shells"	f.menu "menu_shells"
+	"Applications"	f.menu "menu_apps"
+	"Utilities"	f.menu "menu_utils"
+	""		f.separator
+	"Window Ops"	f.menu "Mroot_middle_button"
+	"lock screen"	f.exec "xscreensaver-command -lock &"
+	""		f.separator
+	"Exit"		f.quit
+}
+
+##### END : menus

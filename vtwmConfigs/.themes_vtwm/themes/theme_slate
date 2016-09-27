@@ -1,0 +1,441 @@
+#**********************************************************************
+#
+#    vtwm Slate
+#
+#**********************************************************************
+#------------------------------------------------------------------------------
+# Path -- seems only one path statement is allowed
+#------------------------------------------------------------------------------
+IconDirectory "~/.themes_vtwm/images"
+
+############################################################################
+# Font Section
+############################################################################
+TitleFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+ResizeFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+MenuFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+MenuTitleFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+IconFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*-*-*-*"
+InfoFont	"-adobe-helvetica-bold-r-normal--*-100-*-*-*-*-*-*"
+IconManagerFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*"
+VirtualDesktopFont	"-adobe-helvetica-medium-o-normal--*-80-*-*-*-*-*-*"
+
+############################################################################
+# Variables Section
+############################################################################
+#
+# Boolean Variables
+#
+NoGrabServer
+RestartPreviousState
+DecorateTransients
+AutoRelativeResize
+OpaqueMove
+ForceIcons  # Override Client Icons
+NoHighlight
+NoRaiseOnMove
+RandomPlacement
+OldFashionedTwmWindowsMenu
+StayUpOptionalMenus
+RightHandSidePulldownMenus
+StrictIconManager
+NotVirtualGeometries
+FixTransientVirtualGeometries
+StaticIconPositions
+NoDefaultTitleButtons
+BorderBevelWidth	1  # 3d Borders, needed for bug
+#NoDefaults
+#DefaultBackground
+#ShowIconManager		# Show icon manager on startup
+#PrettyZoom
+#ZoomZoom
+#Zoom 1100
+FixManagedVirtualGeometries # corrects window placement in panner
+
+ButtonIndent		-1    # Fixes Buttons for 4.7
+TitleButtonBorderWidth  0     # Fixes Buttons for 4.7
+
+##JMCRESOTHERS##IconRegion "826x600+0-0" West South 75 25
+##JMCRES1024x768##IconRegion "168x644+0+70" north west 300 60
+##JMCRES1280x960##IconRegion "168x644+0+70" north west 300 60
+##JMCRES1680x1050##IconRegion "168x644+0+70" north west 300 60
+
+#
+# Numeric Variables
+#
+BorderWidth 3
+ButtonIndent 2
+FramePadding 0
+AutoPan 10
+PanResistance 100
+VirtualDesktop	"2x2-0-0" 20
+#ClientBorderWidth 2
+
+
+#
+# Complex Variables
+#
+SqueezeTitle	{ }
+
+IconManagerGeometry  "102x20-0+0" 1  # on Top
+IconManagers
+{
+	"xmms"  "xmms" "450x5+0+0" 1
+	"Audacious"  "Audacious" "450x5+0+0" 1
+	"gxine"      "gxine"     "450x5+0+0" 1
+}
+
+
+Function "VTWM Profile"
+{
+	f.exec  "~/.themes_vtwm/bin/get_vtwm_theme.sh KILL"
+	f.exec "xsetroot -solid slategrey &"
+	f.exec "rclock -fg black -bg slategrey -geometry '57x49-0+0' &"
+}
+
+IconifyByUnmapping
+{
+	"xmms"
+	"gxine"
+}
+DontShowInTwmWindows
+{
+	"VTWM Icon Manager"
+	"VTWM Desktop"
+	"asclock"
+	"astime"
+	"emiclock"
+	"gkrellm"
+	"oclock"
+	"swisswatch"
+	"xdaliclock"
+	"Dali Clock"
+	"xbiff"
+	"[Xx]message*"
+	"xclock"
+	"xvclock"
+	"daliclock"
+	"xdaliclock"
+	"xeyes"
+	"xload"
+	"bubblefishymon"
+	"lavaps"
+	"wmmemmon"
+	"wmitime"
+	"wmcpuload"
+	"wmWeather"
+}
+DontShowInVtwmWindows
+{
+	"VTWM Icon Manager"
+	"VTWM Desktop"
+	"asclock"
+	"astime"
+	"emiclock"
+	"gkrellm"
+	"oclock"
+	"swisswatch"
+	"xdaliclock"
+	"Dali Clock"
+	"xbiff"
+	"[Xx]message*"
+	"xclock"
+	"xvclock"
+	"daliclock"
+	"xdaliclock"
+	"xeyes"
+	"xload"
+	"bubblefishymon"
+	"lavaps"
+	"wmmemmon"
+	"wmitime"
+	"wmcpuload"
+	"wmWeather"
+}
+NailedDown
+{
+	"VTWM*"
+	"VTWM Icon Manager"
+	"VTWM Desktop"
+	"Appointment"
+	"asclock"
+	"astime"
+	"emiclock"
+	"gkrellm"
+	"mailtool"
+	"oclock"
+	"rclock"
+	"asapm"
+	"swisswatch"
+	"xbiff"
+	"[Xx]message*"
+	"xeyes"
+	"xclock"
+	"xvclock"
+	"xdaliclock"
+	"xconsole"
+	"xload"
+	"bubblefishymon"
+	"lavaps"
+	"xmailbox"
+	"xneko"
+	"gnomecal"   # Calendar
+	"Calendar"   # Calendar
+	"Information" # gnomecal
+	"wmmemmon"
+	"wmitime"
+	"wmcpuload"
+	"wmWeather"
+}
+DontShowInDisplay
+{
+	"VTWM*"
+	"VTWM Icon Manager"
+	"VTWM Desktop"
+	"asclock"
+	"astime"
+	"emiclock"
+	"gkrellm"
+	"oclock"
+	"rclock"
+	"asapm"
+	"swisswatch"
+	"xbiff"
+	"xconsole"
+	"xeyes"
+	"xclock"
+	"xvclock"
+	"xdaliclock"
+	"xload"
+	"bubblefishymon"
+	"lavaps"
+	"xneko"
+	"xmailbox"
+	"wmmemmon"
+	"wmitime"
+	"wmcpuload"
+	"wmWeather"
+}
+IconManagerDontShow
+{
+	"Calendar"
+	"VTWM Desktop"
+	"VTWM Icon Manager"
+	"VTWM*"
+	"asclock"
+	"astime"
+	"bubblefishymon"
+	"emiclock"
+	"gkrellm"
+	"gnomecal"
+	"lavaps"
+	"oclock"
+	"swisswatch"
+	"user_popup"  # xbmbrowser
+	"wmWeather"
+	"wmcpuload"
+	"wmitime"
+	"wmmemmon"
+	"xbiff"
+	"xclock"
+	"xdaliclock"
+	"xeyes"
+	"xload"
+	"xmailbox"
+	"xneko"
+	"xvclock"
+}
+NoBorder
+{
+	"rclock"
+	"asapm"
+}
+
+NoTitle
+{
+	"TWM Icon Manager"
+	"VTWM Desktop"
+	"VTWM Icon Manager"
+	"VTWM*"
+	"asclock"
+	"astime"
+	"bubblefishymon"
+	"emiclock"
+	"gkrellm"
+	"lavaps"
+	"oclock"
+	"rclock"
+	"asapm"
+	"swisswatch"
+	"user_popup"  # xbmbrowser
+	"wmWeather"
+	"wmcpuload"
+	"wmitime"
+	"wmmemmon"
+	"xbiff"
+	"xclock"
+	"xdaliclock"
+	"xeyes"
+	"xload"
+	"xmailbox"
+	"xmms Icon Manager"
+	"gxine Icon Manager"
+	"xneko"
+	"xvclock"
+	"xmms"
+	"gxine"
+}
+
+Color
+{
+	DefaultBackground	"white"	
+	DefaultForeground	"black"	
+
+	MenuBackground		"LightSteelBlue"
+	MenuForeground		"Black"
+	MenuShadowColor		"black"
+	MenuTitleForeground	"Black"
+	MenuTitleBackground	"white"
+
+        BorderColor		"lightslategray"
+        BorderTileForeground	"black"
+        BorderTileBackground	"white"
+
+        IconBackground		"slategrey"
+        IconBorderColor		"slategrey"
+        IconForeground		"black"
+
+        IconManagerBackground	"LightSteelBlue"
+        IconManagerForeGround	"Black"
+        IconManagerHighlight	"Black"
+
+        TitleBackground		"LightSteelBlue"
+        TitleForeground		"Black"
+
+	# VTWM Simple Color
+	RealScreenBackground	"ivory2"	# "orange"
+	RealScreenForeground	"ivory1"	# "yellow"
+	VirtualBackground	"slategrey"
+	VirtualForeground	"red"
+
+	# VTWM Complex Color
+	DesktopDisplayBackground "White"
+	{	# color of windows in virtual desktop windows and in iconmanager
+		"emacs"	"LightSteelBlue"
+		"gvim"	"LightSteelBlue"
+		"XTerm"	"LightSteelBlue"
+		"rxvt"	"LightSteelBlue"
+	}
+	DesktopDisplayBorder		"black"
+	DesktopDisplayForeground	"black"
+
+	DoorBackGround			"ivory2"	# "orange"
+	DoorForeGround			"black"
+}
+
+
+###############################################################################
+# Define some useful functions for motion-based actions.
+###############################################################################
+MoveDelta 1
+Function "move-or-lower" { f.move f.deltastop f.lower }
+Function "move-or-raise" { f.move f.deltastop f.raise }
+Function "move-or-iconify" { f.move f.deltastop f.iconify }
+Function "icon-refresh" { f.iconify f.refresh}  # f.refresh needed for Zoom
+
+#
+# Set some useful bindings.  Sort of uwm-ish, sort of
+# simple-button-ish
+#
+Button1 = : root : f.menu "TwmWindows"
+Button2 = : root : f.menu "Mroot_middle_button"
+Button3 = : root : f.menu "Mroot_right_button"
+
+Button1 = m : window|icon : f.function "move-or-lower"
+Button2 = m : window|icon : f.iconify  # f.function "icon-refresh"
+Button3 = m : window|icon : f.function "move-or-raise"
+
+Button1 = : title : f.function "move-or-raise"
+Button2 = : title : f.fullzoom
+Button3 = : title : f.menu "Mtitle_menu"
+
+Button1 = : icon : f.function "move-or-iconify"
+#Button2 = : icon : f.destroy
+Button3 = : icon : f.iconify  # f.function "icon-refresh"
+
+Button1 = : iconmgr : f.iconify  # f.function "icon-refresh"
+Button2 = : iconmgr : f.destroy
+Button3 = : iconmgr : f.iconify  # f.function "icon-refresh"
+
+# This is for the window bar
+LeftTitleButton  ":iconify" = f.iconify  # f.function "icon-refresh"
+RightTitleButton ":xlogo"   = f.delete
+RightTitleButton ":resize"  = f.resize
+
+# a hack but works
+Function "jmc_w1"
+{
+	f.panup "100"
+	f.panup "100"
+	f.panleft "100"
+	f.panleft "100"
+}
+Function "jmc_w2"
+{
+	f.panup "100"
+	f.panup "100"
+	f.panright "100"
+	f.panright "100"
+}
+Function "jmc_w3"
+{
+	f.pandown "100"
+	f.pandown "100"
+	f.panleft "100"
+	f.panleft "100"
+}
+Function "jmc_w4"
+{
+	f.panright "100"
+	f.panright "100"
+	f.pandown "100"
+	f.pandown "100"
+}
+###############################################################################
+# Cursors
+###############################################################################
+Cursors
+{
+	Frame     "left_ptr"
+	Title     "left_ptr"
+	Icon      "left_ptr"
+	IconMgr   "left_ptr"
+	Move      "fleur"
+	Resize    "fleur"
+	Menu      "right_ptr"   # hand1
+	Button    "hand2"
+	Wait      "clock"
+	Select    "dot"
+	Destroy   "pirate"
+}
+
+###############################################################################
+# now some keyboard functions
+###############################################################################
+"Tab"   = m : all	: f.lower
+"r"     = m : all	: f.restart
+"1"     = m : all	: f.iconify  # f.function "icon-refresh"
+"2"     = m : all	: f.zoom
+"q"	= m : all	: f.delete
+
+"F1"	= m : all : f.function "jmc_w1"
+"F2"	= m : all : f.function "jmc_w2"
+"F3"	= m : all : f.function "jmc_w3"
+"F4"	= m : all : f.function "jmc_w4"
+
+###############################################################################
+# Add Menu
+###############################################################################
+###ADD_AUTO_RAISE###
+###ADD_ICONS###
+###ADD_MENU###

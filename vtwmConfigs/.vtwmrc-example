@@ -1,0 +1,897 @@
+###############################################################################
+# vtwm theme Rubik, copy to ~/.vtwmrc
+#------------------------------------------------------------------------------
+# Fonts -- best to be first
+###############################################################################
+# TrueType
+EnableXftFontRenderer
+DefaultFont	"Bitstream Vera Sans:bold:roman:size=16:antialias=true"
+DoorFont	"Bitstream Vera Sans:normal:roman:size=14:antialias=true"
+IconFont	"Bitstream Vera Sans:normal:roman:size=14:antialias=true"
+IconManagerFont	"Bitstream Vera Sans:normal:roman:size=14:antialias=true"
+InfoFont	"Bitstream Vera Sans:normal:roman:size=16:antialias=true"
+MenuFont	"Bitstream Vera Sans:normal:roman:size=16:antialias=true"
+MenuTitleFont	"Bitstream Vera Sans:normal:roman:size=16:antialias=true"
+ResizeFont	"Bitstream Vera Sans:normal:roman:size=14:antialias=true"
+TitleFont	"Bitstream Vera Sans:normal:roman:size=16:antialias=true"
+VirtualDesktopFont	"Bitstream Vera Sans:normal:roman:size=6:antialias=true"
+
+###############################################################################
+# Custom settings for theme Rubik
+###############################################################################
+
+#--- some people do not like these
+AutoRaiseDelay	100
+AutoRaise
+
+#------------------------------------------------------------------------------
+# Path -- seems only one path statement is allowed
+#------------------------------------------------------------------------------
+IconDirectory "~/.vtwm_themes/images"
+
+#------------------------------------------------------------------------------
+# Variables
+#------------------------------------------------------------------------------
+
+SqueezeTitle
+OldFashionedTwmWindowsMenu
+RandomPlacement          
+NoGrabServer
+RestartPreviousState
+NoDefaults
+ShowIconManager
+IconifyByUnmapping
+RightHandSidePulldownMenus
+NaturalAutoPanBehavior
+NotVirtualGeometries
+FixManagedVirtualGeometries
+FixTransientVirtualGeometries
+ButtonColorIsFrame
+
+
+ResizeRegion			"NorthEast"
+MoveDelta			3
+FramePadding			2
+TitlePadding			0
+BorderWidth			3
+DoorBevelWidth			1
+
+PanDistanceX			100
+PanDistanceY			100
+PanResistance			3000
+AutoPan				10
+StayUpOptionalMenus
+
+# the following is for a 3d look
+BorderBevelWidth		2
+ButtonBevelWidth		1
+ClearBevelContrast		40
+DarkBevelContrast		40
+IconBevelWidth			2
+IconManagerBevelWidth		1
+InfoBevelWidth			2
+MenuBevelWidth			2
+ShallowReliefWindowButton
+TitleBevelWidth			1
+ButtonIndent			-1
+TitleButtonBorderWidth		0
+VirtualDesktopBevelWidth	0
+
+#--- expects 1680x1050, but others should work fine
+##JMCRES1024x768##VirtualDesktop	"3x2+0+0" 30
+##JMCRES1280x960##VirtualDesktop	"3x2+0+0" 30
+##JMCRES1440x900##VirtualDesktop	"3x2-0-0" 35
+VirtualDesktop	"3x3-0-0" 40
+##JMCRES1920x1200##VirtualDesktop	"3x2-0-0" 30
+
+##JMCRES1024x768##IconManagerGeometry  "850x20+111+0" 7
+##JMCRES1280x960##IconManagerGeometry  "850x20+136+0" 7
+##JMCRES1440x900##IconManagerGeometry  "1000x5+0+0" 7
+IconManagerGeometry  "1300x10+0+2" 10
+##JMCRES1920x1200##IconManagerGeometry  "1400x10+0+0" 10
+
+###############################################################################
+# Startup
+###############################################################################
+# sometimes conky needs -9 to kill it
+Function "VTWM Profile"
+{
+	f.exec "killall conky ; killall -9 conky"
+	f.exec "killall rclock"
+	f.exec "Esetroot -f ~/.vtwm_themes/images/RubikSapphire1920.jpg &"
+	f.exec "rclock -bg rgb:1E/1F/28 -fg azure3 -geometry 78x78+1462+966 &"
+	f.exec "conky &"
+}
+##JMCRES1440x900##f.exec "rclock -bg rgb:1E/1F/28 -fg azure3 -geometry 51x51+1253+843 &"
+
+###############################################################################
+# Pixmaps
+###############################################################################
+
+Pixmaps
+{
+	TitleHighlight		":xpm:sunkenbox"
+	MenuIconPixmap		":xpm:rarrow"
+	IconManagerPixmap	":xpm:box"
+}
+
+###############################################################################
+# Miniapps
+###############################################################################
+AppletRegion "80x500-0-100" South East 100 100
+{
+	"bubblefishymon"
+	"wmbiff"
+	"wmWeather"
+	"minidock"
+	"asbutton"
+	"asapm"
+}
+AppletRegion "100x100+0-0" South West 70 70
+{
+	"pclock"
+	"wmtime"
+}
+
+###############################################################################
+# do not show these in the IconManager
+###############################################################################
+IconManagerDontShow
+{
+	"audacious"
+	"audacious2"
+	"xmms"
+	"amarok"
+}
+
+###############################################################################
+# Colors
+###############################################################################
+Color
+{
+    BorderColor			"SteelBlue4"
+    BorderTileBackground	"#1E1F28"
+    TitleBackground		"SteelBlue4"
+    TitleForeground		"azure2"
+    IconManagerForeground	"azure3"
+    IconManagerBackground	"SteelBlue4"
+    DesktopDisplayForeground	"black"
+    DesktopDisplayBackground	"LightSteelBlue"
+    BorderTileForeground	"gray60"
+    DefaultBackground		"Azure3"
+    DefaultForeground		"black"
+    DesktopDisplayBorder	"black"
+    IconBackground		"#1C1C26"
+    IconBorderColor		"#22222C"
+    IconForeground		"snow"
+    MenuBackground		"gray70"
+    MenuForeground		"black"
+    MenuTitleBackground		"SteelBlue4"
+    MenuTitleForeground		"black"
+    RealScreenBackground	"gray30"
+    VirtualBackground		"#1E1F28"
+    VirtualForeground		"black"
+}
+
+Monochrome
+{
+	DefaultBackground		"gray50"
+	DefaultForeground		"gray85"
+	BorderColor			"grey70"
+	BorderTileBackground		"gray60"
+	BorderTileForeground		"gray60"
+	DoorBackground			"gray50"
+	DoorForeground			"gray85"
+	TitleBackground			"gray50"
+	TitleForeground			"gray85"
+	MenuBackground			"gray50"
+	MenuForeground			"gray85"
+	MenuTitleBackground		"gray70"
+	MenuTitleForeground		"gray50"
+	IconBackground			"gray50"
+	IconForeground			"gray85"
+	IconBorderColor			"gray85"
+	IconManagerBackground		"gray50"
+	IconManagerForeground		"gray85"
+	VirtualBackground		"gray70"
+	VirtualForeground		"black"
+	DesktopDisplayBackground	"grey85"
+	DesktopDisplayForeground	"black"
+        RealScreenBackground            "gray60" 
+}
+
+###############################################################################
+# Functions and Bindings
+###############################################################################
+
+Function "move-or-iconify" { f.move f.deltastop f.iconify }
+Function "move-or-raiselower" { f.move f.deltastop f.raiselower }
+Function "warpwindow"         { f.warpsnug f.warp f.warpsnug }
+
+LeftTitleButton ":xpm:darrow" = f.iconify
+
+Button1 = : root : f.menu "TwmWindows"
+Button2 = : root : f.menu "Mroot_middle_button"
+Button3 = : root : f.menu "Mroot_right_button"
+
+Button1 = : title : f.function "move-or-raiselower"
+Button2 = : title : f.resize
+Button3 = : title : f.menu "Mtitle_menu"
+
+Button1 = : frame : f.resize
+Button2 = : frame : f.move
+Button3 = : frame : f.iconify
+
+Button1 = : door : f.enterdoor
+Button2 = : door : f.namedoor
+Button3 = : door : f.deletedoor
+
+Button1 = : icon : f.function "move-or-iconify"
+Button3 = : icon : f.menu "Mtitle_menu"
+
+Button1 = : iconmgr : f.iconify
+Button3 = : iconmgr : f.warp
+
+Button1 = : virtual : f.movescreen
+Button2 = : virtual : f.movescreen
+Button3 = : virtual : f.movescreen
+
+Button1 = : desktop : f.movescreen
+Button2 = : desktop : f.warp                  # morph desktop to window
+Button3 = : desktop : f.function "warpwindow" # morph window to desktop
+
+###############################################################################
+# Custom Keyboard
+###############################################################################
+
+Function "jmc_w1"
+{
+	f.panup "100"
+	f.panup "100"
+	f.panleft "100"
+	f.panleft "100"
+}
+Function "jmc_w2"
+{
+	f.function "jmc_w1"
+	f.panright "100"
+}
+Function "jmc_w3"
+{
+	f.panup "100"
+	f.panup "100"
+	f.panright "100"
+	f.panright "100"
+}
+Function "jmc_w4"
+{
+	f.panup "100"
+	f.panup "100"
+	f.pandown "100"
+	f.panleft "100"
+	f.panleft "100"
+}
+Function "jmc_w5"
+{
+	f.function "jmc_w4"
+	f.panright "100"
+}
+Function "jmc_w6"
+{
+	f.panup "100"
+	f.panup "100"
+	f.pandown "100"
+	f.panright "100"
+	f.panright "100"
+}
+Function "jmc_w7"
+{
+	f.pandown "100"
+	f.pandown "100"
+	f.panleft "100"
+	f.panleft "100"
+}
+Function "jmc_w8"
+{
+	f.function "jmc_w7"
+	f.panright "100"
+}
+Function "jmc_w9"
+{
+	f.pandown "100"
+	f.pandown "100"
+	f.panright "100"
+	f.panright "100"
+}
+
+"Return" = : iconmgr : f.iconify
+"Up"    = m&c: all : f.panup    "100"
+"Down"  = m&c: all : f.pandown  "100"
+"Left"  = m&c: all : f.panleft  "100"
+"Right" = m&c: all : f.panright "100"
+
+#--- Select or use both sets, 'm' = alt, 'm4' = windows key
+#    my keyboard does not have a windows key
+"F1"	= m : all : f.function "jmc_w1"
+"F2"	= m : all : f.function "jmc_w2"
+"F3"	= m : all : f.function "jmc_w3"
+"F4"	= m : all : f.function "jmc_w4"
+"F5"	= m : all : f.function "jmc_w5"
+"F6"	= m : all : f.function "jmc_w6"
+"F7"	= m : all : f.function "jmc_w7"
+"F8"	= m : all : f.function "jmc_w8"
+"F9"	= m : all : f.function "jmc_w9"
+
+"F1"	= m4: all : f.function "jmc_w1"
+"F2"	= m4: all : f.function "jmc_w2"
+"F3"	= m4: all : f.function "jmc_w3"
+"F4"	= m4: all : f.function "jmc_w4"
+"F5"	= m4: all : f.function "jmc_w5"
+"F6"	= m4: all : f.function "jmc_w6"
+"F7"	= m4: all : f.function "jmc_w7"
+"F8"	= m4: all : f.function "jmc_w8"
+"F9"	= m4: all : f.function "jmc_w9"
+
+# Print screen -- a script to execute : 
+#         xwd -frame -out $HOME/x.xwd && convert $HOME/x.xwd $HOME/print-`date '+%Y%m%d-%H%M%S'`.jpg
+# needs imagemagick
+"Print" = m : all : f.exec "~/bin/Util/print_window.sh &"
+"Print" = m4: all : f.exec "~/bin/Util/print_window.sh &"
+
+"Left"	= m : all : f.backiconmgr
+"Right"	= m : all : f.forwiconmgr
+"Up"	= m : all : f.backiconmgr
+"Down"	= m : all : f.forwiconmgr
+"1"	= m : all : f.iconify
+"2"	= m : all : f.zoom
+"3"	= m : all : f.horizoom
+"4"	= m : all : f.fullzoom
+"q"	= m : all : f.delete
+"r"	= m : all : f.restart
+"Left"	= m4: all : f.backiconmgr
+"Right"	= m4: all : f.forwiconmgr
+"Up"	= m4: all : f.backiconmgr
+"Down"	= m4: all : f.forwiconmgr
+"1"	= m4: all	: f.iconify
+"2"	= m4: all	: f.zoom
+"3"	= m4: all	: f.horizoom
+"4"	= m4: all	: f.fullzoom
+"q"	= m4: all	: f.delete
+"r"	= m4: all	: f.restart
+
+###############################################################################
+# Application Format Lists
+#    Order seems important, otherwise windows will refresh
+###############################################################################
+NailedDown
+{
+	"Calendar"   # Calendar
+	"Information" # gnomecal
+	"VTWM Desktop"
+	"VTWM Icon Manager"
+	"VTWM Door"
+	"[Xx]message*"
+	"asapm"
+	"asclock"
+	"astime"
+	"bubblefishymon"
+	"dclock"
+	"emiclock"
+	"fishmon"
+	"gkrellm"
+	"gnomecal"   # Calendar
+	"lavaps"
+	"mailtool"
+	"minidock"
+	"asbutton"
+	"conky-semi"
+	"oclock"
+	"notifier"
+	"pclock"
+	"rclock"
+	"xosview"
+	"swisswatch"
+	"trayer"
+	"stalonetray"
+	"wmMoonClock"
+	"wmSun"
+	"wmWeather"
+	"wmbiff"
+	"wmclock"
+	"wmclockmon"
+	"wmcpuload"
+	"wmfishtime"
+	"wmitime"
+	"wmmemmon"
+	"wmtime"
+	"wmzcalock"
+	"xbiff"
+	"xclock"
+	"xconsole"
+	"xdaliclock"
+	"xeyes"
+	"xload"
+	"xlogo"
+	"xmailbox"
+	"xmessage"
+	"xneko"
+	"xnetload"
+	"xvclock"
+}
+
+NoTitle
+{
+	"VTWM Desktop"
+	"VTWM Icon Manager"
+	"VTWM Door"
+	"asapm"
+	"asclock"
+	"astime"
+	"bubblefishymon"
+	"dclock"
+	"emiclock"
+	"fishmon"
+	"gkrellm"
+	"lavaps"
+	"minidock"
+	"asbutton"
+	"conky-semi"
+	"oclock"
+	"pclock"
+	"rclock"
+	"xosview"
+	"swisswatch"
+	"trayer"
+	"stalonetray"
+	"user_popup"  # xbmbrowser
+	"wmMoonClock"
+	"wmSun"
+	"wmWeather"
+	"wmbiff"
+	"wmclock"
+	"wmclockmon"
+	"wmcpuload"
+	"wmfishtime"
+	"wmitime"
+	"wmmemmon"
+	"wmtime"
+	"wmzcalock"
+	"xbiff"
+	"xclock"
+	"xdaliclock"
+	"xeyes"
+	"xload"
+	"xlogo"
+	"xmailbox"
+	"xmessage"
+	"xneko"
+	"xnetload"
+	"xvclock"
+}
+
+DontShowInDisplay
+{
+	"VTWM Desktop"
+	"VTWM Icon Manager"
+	"VTWM Door"
+	"asapm"
+	"asclock"
+	"astime"
+	"bubblefishymon"
+	"dclock"
+	"emiclock"
+	"fishmon"
+	"gkrellm"
+	"minidock"
+	"asbutton"
+	"conky-semi"
+	"lavaps"
+	"oclock"
+	"pclock"
+	"rclock"
+	"xosview"
+	"swisswatch"
+	"wmCalClock"
+	"wmHexaClock"
+	"wmMoonClock"
+	"wmSun"
+	"wmWeather"
+	"wmbiff"
+	"wmclock"
+	"wmclockmon"
+	"wmcpuload"
+	"wmfishtime"
+	"wmitime"
+	"wmmemmon"
+	"wmtime"
+	"wmzcalock"
+	"xbiff"
+	"xclock"
+	"xconsole"
+	"xdaliclock"
+	"xeyes"
+	"xload"
+	"xlogo"
+	"xmailbox"
+	"xneko"
+	"xnetload"
+	"xvclock"
+}
+
+IconManagerDontShow
+{
+	"Calendar"
+	"VTWM Desktop"
+	"VTWM Icon Manager"
+	"VTWM Door"
+	"asapm"
+	"asclock"
+	"astime"
+	"bubblefishymon"
+	"dclock"
+	"emiclock"
+	"fishmon"
+	"gkrellm"
+	"gnomecal"
+	"lavaps"
+	"minidock"
+	"asbutton"
+	"conky-semi"
+	"oclock"
+	"pclock"
+	"rclock"
+	"xosview"
+	"swisswatch"
+	"trayer"
+	"stalonetray"
+	"user_popup"  # xbmbrowser
+	"wmMoonClock"
+	"wmSun"
+	"wmWeather"
+	"wmbiff"
+	"wmclock"
+	"wmclockmon"
+	"wmcpuload"
+	"wmfishtime"
+	"wmitime"
+	"wmmemmon"
+	"wmtime"
+	"wmzcalock"
+	"xbiff"
+	"xclock"
+	"xdaliclock"
+	"xeyes"
+	"xload"
+	"xlogo"
+	"xmailbox"
+	"xneko"
+	"xnetload"
+	"xvclock"
+}
+
+DontShowInTwmWindows
+{
+	"Dali Clock"
+	"VTWM Desktop"
+	"VTWM Icon Manager"
+	"VTWM Door"
+	"[Xx]message*"
+	"asclock"
+	"astime"
+	"bubblefishymon"
+	"daliclock"
+	"emiclock"
+	"gkrellm"
+	"lavaps"
+	"oclock"
+	"swisswatch"
+	"wmMoonClock"
+	"wmSun"
+	"wmWeather"
+	"wmbiff"
+	"wmcpuload"
+	"wmitime"
+	"wmmemmon"
+	"xbiff"
+	"xclock"
+	"xdaliclock"
+	"xeyes"
+	"xload"
+	"xlogo"
+	"xnetload"
+	"xvclock"
+}
+
+DontShowInVtwmWindows
+{
+	"Dali Clock"
+	"VTWM Desktop"
+	"VTWM Icon Manager"
+	"VTWM Door"
+	"[Xx]message*"
+	"asclock"
+	"astime"
+	"bubblefishymon"
+	"daliclock"
+	"emiclock"
+	"gkrellm"
+	"lavaps"
+	"oclock"
+	"swisswatch"
+	"wmMoonClock"
+	"wmSun"
+	"wmWeather"
+	"wmbiff"
+	"wmcpuload"
+	"wmitime"
+	"wmmemmon"
+	"xbiff"
+	"xclock"
+	"xdaliclock"
+	"xeyes"
+	"xload"
+	"xlogo"
+	"xnetload"
+	"xvclock"
+}
+
+NoHighlight
+{
+	"asapm"
+	"asclock"
+	"astime"
+	"bubblefishymon"
+	"dclock"
+	"fishmon"
+	"lavaps"
+	"minidock"
+	"asbutton"
+	"conky-semi"
+	"oclock"
+	"pclock"
+	"rclock"
+	"xosview"
+	"swisswatch"
+	"trayer"
+	"stalonetray"
+	"wmMoonClock"
+	"wmSun"
+	"wmWeather"
+	"wmbiff"
+	"wmclock"
+	"wmclockmon"
+	"wmcpuload"
+	"wmfishtime"
+	"wmitime"
+	"wmmemmon"
+	"wmtime"
+	"wmzcalock"
+	"xbiff"
+	"xclock"
+	"xdaliclock"
+	"xeyes"
+	"xload"
+	"xlogo"
+	"xnetload"
+	"xvclock"
+}
+
+DontIconifyByUnmapping
+{
+	"mailtool"
+	"xmailbox"
+}
+
+
+DontSqueezeTitle
+{
+	"VTWM Desktop"
+}
+
+###############################################################################
+# For window warping
+###############################################################################
+#WarpToTransients   # move pointer to Transients when created
+WarpCursor
+WarpVisible
+WindowRing
+"Tab"   = m     : all : f.warpring "next"
+"Tab"   = mod4  : all : f.warpring "prev"
+NoWindowRing
+{
+	"VTWM*"
+	"Dali Clock"
+	"[Xx]message*"
+	"xfce4-notifyd"
+	"asclock"
+	"astime"
+	"bubblefishymon"
+	"daliclock"
+	"emiclock"
+	"gkrellm"
+	"lavaps"
+	"minidock"
+	"asbutton"
+	"conky-semi"
+	"oclock"
+	"rclock"
+	"xosview"
+	"swisswatch"
+	"trayer"
+	"stalonetray"
+	"wmMoonClock"
+	"wmSun"
+	"wmWeather"
+	"wmbiff"
+	"wmcpuload"
+	"wmitime"
+	"wmmemmon"
+	"xbiff"
+	"xclock"
+	"xdaliclock"
+	"xdaliclock"
+	"xeyes"
+	"xload"
+	"xnetload"
+	"xvclock"
+}
+
+###############################################################################
+# Menus
+###############################################################################
+menu "menu_office"
+{
+	" Office "	f.title
+	"Libre Spreadsheet"	f.exec "scalc &"
+	"Libre Word Processor"	f.exec "swriter &"
+	"Libre Presentation"	f.exec "simpress &"
+	"Libre Database"	f.exec "sbase &"
+	"Libre Math Editor"	f.exec "smath &"
+	"Libre Draw"		f.exec "sdraw &"
+	"Libre Printer Admin"	f.exec "spadmin &"
+	"Open Office Main"	f.exec "soffice &"
+	""			f.separator
+	"Kspread"		f.exec "kspread &"
+	"Kword"			f.exec "kword &"
+	"Kwrite"		f.exec "kwrite &"
+	"Kstars"		f.exec "kstars &"
+}
+
+menu "menu_apps"
+{
+	" Applications "	f.title
+	"emacs"		f.exec "emacs &"
+	"Office"	f.menu "menu_office"
+	""		f.separator
+	"Thunderbird" 	f.exec "thunderbird &"
+	"Firefox"	f.exec "firefox &"
+	""		f.separator
+	"audacious"	f.exec "audacious &"
+	"xmms"		f.exec "xmms &"
+	"amarok"	f.exec "amarok &"
+	"gxine"		f.exec "gxine &"
+	""		f.separator
+	"gimp"		f.exec "gimp &"
+	"xpaint"	f.exec "xpaint &"
+	"xfig"		f.exec "xfig -geometry 897x707 &"
+}
+menu "menu_wm"
+{
+	"  Others  "	f.title
+	"Restart vtwm"	f.restart
+	"twm"		f.startwm "twm"
+	"fvwm2"		f.startwm "fvwm2"
+	"KDE"		f.startwm "startkde"
+}
+menu "menu_utils"
+{
+	" Utilities "		f.title
+	"Edit appointments" 	f.exec "gvim ~/.rclock &"
+	"File Manager"		f.exec "thunar &"                       
+	"VTWM config"		f.exec "gvim ~/.vtwmrc &"
+	"xcalc"			f.exec "xcalc &"
+	""			f.separator
+	"wmagnify"		f.exec "wmagnify &"
+	"xmag"			f.exec "xmag &"
+	"xclipboard"		f.exec "xclipboard &"
+	"xbmbrowser"		f.exec "xbmbrowser -geometry 550x550 &"
+	""			f.separator
+	"VTWM Themes"		f.menu "menu_vtwm_themes"
+	"Other wm"		f.menu "menu_wm"
+	"Restart"		f.restart
+	"About"			f.version
+}
+menu "menu_shells"
+{
+	" Shells "		f.title
+ 	"rxvt"		f.exec "rxvt &"
+	"Eterm"		f.exec "Eterm -F 10x20 -c lightblue -f cyan --menu-text-color black -S gray --trans --shade 75 &" 
+	"Xterm"		f.exec "xterm &"
+ 	"rxvt Small"	f.exec "rxvt -fn 6x12 -ls -bg snow -fg black &"
+ 	"xterm Small"	f.exec "xterm -fn 6x12 -ls -bg snow -fg black &"
+}
+menu "ShowHide"
+{
+	"Show Iconmamager"	f.showiconmgr
+	"Hide Iconmamager"	f.hideiconmgr
+	"Show DeskTop"		f.showdesktopdisplay
+	"Hide DeskTop"		f.hidedesktopdisplay
+}
+
+menu "Zoom"
+{
+	"Toggle Fullzoom"	f.fullzoom
+	"Toggle Horizoom"	f.horizoom
+	"Toggle Vertzoom"	f.zoom
+}
+
+menu "mod_win"
+{
+	"move"          f.move
+	"togglenail"	f.nail
+	"above"		f.nailedabove
+	""		f.separator
+	"autoraise"	f.autoraise
+	"ring"		f.ring
+	"snuggle"	f.snugwindow
+	""              f.separator
+	"raise"         f.raise
+	"lower"         f.lower
+	""              f.separator
+	"^--"		f.squeezeleft
+	"-^-"		f.squeezecenter
+	"--^"		f.squeezeright
+}
+
+menu "Mtitle_menu"
+{
+	" Window "	f.title
+	""		f.separator
+	"Resize"	f.resize
+	"togglenail"	f.nail
+	"Move"		f.move
+	"Iconify"	f.iconify
+	"Refresh"	f.winrefresh
+	""		f.separator
+	"Identify"	f.identify
+	"Modify Win"	f.menu "mod_win"
+	"Zoom"		f.menu "Zoom"
+	""		f.separator
+	"Delete"	f.delete
+	"Destroy"	f.destroy
+}
+
+menu "Mroot_middle_button"
+{
+	" Arrange "	f.title
+	""		f.separator
+	"Resize"	f.resize
+	"Iconify"	f.iconify
+	"Move"		f.move
+	""		f.separator
+	"Refresh"	f.winrefresh
+	"Identify"	f.identify
+	""		f.separator
+	"Modify Window"	f.menu "mod_win"
+	"Zoom"		f.menu "Zoom"
+	"Show/Hide"	f.menu "ShowHide"
+	""		f.separator
+	"Send Delete"	f.delete
+	"Kill Window"	f.destroy
+}
+
+menu "Mroot_right_button"
+{
+	" Rubik  "	f.title
+	"Shells"	f.menu "menu_shells"
+	"Applications"	f.menu "menu_apps"
+	"Utilities"	f.menu "menu_utils"
+	""		f.separator
+	"Window Ops"	f.menu "Mroot_middle_button"
+	"lock screen"	f.exec "xscreensaver-command -lock &"
+	""		f.separator
+	"Exit"		f.quit
+}
+
+
+##################################### END #####################################
