@@ -115,6 +115,11 @@ Property = "^(gecko|Gecko|firefox-bin),^Firefox-bin,,^Customize Toolbar\$" {
 #               ClientGeometry = "+100+60"
 #       }
 
+       Property = "^min,^min" {
+               ApplyOn = "Start New Reload"
+               Sticky = "True"
+       }
+
   Property = "^kontact,^Kontact" {
                ApplyOn = "Start New Workspace Reload"
                Workspace = "2"
