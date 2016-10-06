@@ -19,7 +19,6 @@
  own autoproperties. :)
 */
 
-
 Require {
 	Templates = "True"
 }
@@ -56,13 +55,6 @@ Property = "^(gecko|Gecko|firefox-bin),^Firefox-bin,,^Customize Toolbar\$" {
  your workspace and place them under other windows. Do this when new
  windows show up, also to so called transient windows.
 */
-# Property = "^mozilla-bin,^Mozilla-bin,,^Saving" {
-# 	ApplyOn = "New Transient"
-# 	Group = "moz-dl" { Size = "10" }
-# 	FrameGeometry = "+0+0"
-# 	Layer = "Below"
-# }
-
 
 /*
  Group together up to two windows that have a WM_CLASS that matches the
@@ -73,35 +65,9 @@ Property = "^(gecko|Gecko|firefox-bin),^Firefox-bin,,^Customize Toolbar\$" {
 # 	Workspace = "2"
 # }
 
-
 /*
-	start tbird and kontact on workspace2 and lock them there.
-	This must be done as part of this section, has no effect if only included in decor section at bottom of this file
-	decor section lets you set frame / theme properties, sucks that these 2 cannot be combined but oh well
-	REMEMBER! a setting here, using new, will cause ALL NEW WINDOWS for an app to open on the selected desktop
+	REMEMBER! a setting here, using new, should cause ALL NEW WINDOWS for an app to open on the selected desktop
 */
-  Property = "^Mail,^Thunderbird" {
-               ApplyOn = "Start New Workspace Reload"
-               Workspace = "2"
-       }
-
-/*	google hangouts extension for chrome 	*/
-  Property = "^crx_nckgahadagoaajjgafhacjanaoiihapd,^google-chrome" {
-               ApplyOn = "Start New Reload"
-               ClientGeometry = "400x500"
-       }
-
-  Property = "^crx_nckgahadagoaajjgafhacjanaoiihapd,^Google-chrome-unstable" {
-               ApplyOn = "Start New Reload"
-               ClientGeometry = "400x500"
-       }
-
-/*	following does not seem to work   		*/
-#  Property = "^libreoffice,^libreoffice-writer" {
-#               ApplyOn = "Start New Reload"
-#               FrameGeometry = "1200x900+160-50"
-#	       ClientGeometry = "1200x900"
-#       }
 
   Property = "^VirtualBox,^VirtualBox" {
                ApplyOn = "Start New Reload"
@@ -109,20 +75,9 @@ Property = "^(gecko|Gecko|firefox-bin),^Firefox-bin,,^Customize Toolbar\$" {
                ClientGeometry = "+200-50"
        }
 
-#  Property = "^VirtualBox,^VirtualBox„^[Running] - Oracle VM VirtualBox" {
-#               ApplyOn = "Start New Workspace Reload"
-#               Sticky = "True"
-#               ClientGeometry = "+100+60"
-#       }
-
        Property = "^min,^min" {
                ApplyOn = "Start New Reload"
                Sticky = "True"
-       }
-
-  Property = "^kontact,^Kontact" {
-               ApplyOn = "Start New Workspace Reload"
-               Workspace = "2"
        }
 
   Property = "^Notecase Pro,^Notecase" {
@@ -134,38 +89,6 @@ Property = "^(gecko|Gecko|firefox-bin),^Firefox-bin,,^Customize Toolbar\$" {
                ApplyOn = "Start New Reload"
                 Sticky = "True"
        }
-
-  Property = "^libreoffice,^libreoffice-writer" {
-            ApplyOn = "Start New Reload"
-            FrameGeometry = "1180x915+94+74"
-	    ClientGeometry = "1180x915"
-       }
-
-  Property = "^libreoffice,^libreoffice-calc" {
-            ApplyOn = "Start New Reload"
-            FrameGeometry = "1180x915+94+74"
-       }
-
-  Property = "^yakyak,^yakyak" {
-               ApplyOn = "Start New Reload"
-                Sticky = "True"
-       }
-
-  Property = "^chromium-browser,^chromium-browser" {
-               ApplyOn = "Start New Workspace Reload"
-               Workspace = "6"
-       }
-
-         Property = "^google-chrome,^google-chrome" {
-               ApplyOn = "Start New Reload"
-               Workspace = "5"
-       }
-
-         Property = "^google-chrome-unstable,^Google-chrome-unstable" {
-               ApplyOn = "Start New Reload"
-               Workspace = "5"
-       }
-
 
 /*	tint2 always on top 			*/
         Property = "tint2,Tint2" {
@@ -469,10 +392,10 @@ so tbird does not accidentally close (buttons only minimize, use menu or hotkeys
                ApplyOn = "Start New Reload"
        }
 
-       Property = "^okular,^Okular" {
-               Decor = "noKlose"
-               ApplyOn = "Start New Reload"
-       }
+#       Property = "^okular,^Okular" {
+#               Decor = "noKlose"
+#               ApplyOn = "Start New Reload"
+#       }
 
        Property = "^gmpc,^Gmpc" {
                Decor = "noKlose2"
