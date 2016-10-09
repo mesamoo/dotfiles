@@ -9,7 +9,7 @@ Separator {}
 Separator {}
 				#Entry = "virtualbox" { Actions = "Exec VirtualBox" }
 				#Entry = "virtualbox" { Actions = "Exec VirtualBox --platformtheme kde" }
-				Entry = "Dolphin" { Actions = "Exec dolphin" }
+				Entry = "Dolphin          " { Actions = "Exec dolphin" }
 				Entry = "konsole" { Actions = "Exec konsole" }
 				Entry = "xTerm" { Actions = "Exec xterm" }
 				Entry = "juffed" { Actions = "Exec juffed" }

@@ -35,7 +35,8 @@ akonadictl start &
 conky &
 ~/.pekwm/scripts/YADstartBaloo.sh
 pnmixer &
-owncloud &
+#owncloud &
+nextcloud &
 knemo &
 ~/bin/rainlendar2/rainlendar2 &
 klipper &
