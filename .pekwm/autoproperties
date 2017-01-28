@@ -88,12 +88,12 @@ Property = "^(gecko|Gecko|firefox-bin),^Firefox-bin,,^Customize Toolbar\$" {
 /*	google hangouts extension for chrome 	*/
   Property = "^crx_nckgahadagoaajjgafhacjanaoiihapd,^google-chrome" {
                ApplyOn = "Start New Reload"
-               ClientGeometry = "400x500"
+               ClientGeometry = "600x600"
        }
 
   Property = "^crx_nckgahadagoaajjgafhacjanaoiihapd,^Google-chrome-unstable" {
                ApplyOn = "Start New Reload"
-               ClientGeometry = "400x500"
+               ClientGeometry = "600x600"
        }
 
 /*	following does not seem to work   		*/

@@ -8,52 +8,47 @@
 seq 0 1 | xargs -l1 -I@ compton -b -d :0.@ --config ~/.compton.config &
 numlockx &
 #
-#following breaks qedit
-#setxkbmap -option ctrl:nocaps &
+###following breaks qedit
+##setxkbmap -option ctrl:nocaps &
 #
-#switched to the following 2 lines
-#xmodmap -e "clear Lock"
-#xmodmap -e "keycode 66 = Shift_L NoSymbol Shift_L"
-#xmodmap -e "keycode 78 = Caps_Lock NoSymbol Caps_Lock"
-#previous 3 lines moved to ~/.Xmodmap
-#see https://wiki.archlinux.org/index.php/Xmodmap
-# useful commands: xev, xmodmap -pke,
+###switched to the following 2 lines
+##xmodmap -e "clear Lock"
+##xmodmap -e "keycode 66 = Shift_L NoSymbol Shift_L"
+##xmodmap -e "keycode 78 = Caps_Lock NoSymbol Caps_Lock"
+###previous 3 lines moved to ~/.Xmodmap
+###see https://wiki.archlinux.org/index.php/Xmodmap
+###useful commands: xev, xmodmap -pke,
+#
 #
 ~/.pekwm/scripts/display-xset.sh &
-#nitrogen --restore &
 feh --bg-scale ~/.pekwm/scripts/walls/0.jpg &
 yakuake &
 nvidia-settings
 xfce4-panel &
-# wallpaper changer section START
-# wallpaper folder MUST only contain jpg images or only 7 images will work on 8 screens
-# specifically, delete the .desktop file or script will have small (but acceptable) inconsistant behaviour
-python ~/.pekwm/scripts/switchbg.py ~/.pekwm/scripts/walls/ -s 0.10 &
-# wallpaper changer section END
+#python ~/.pekwm/scripts/switchbg.py ~/.pekwm/scripts/walls/ -s 0.10 &
+# hoping for faster response
+python ~/.pekwm/scripts/switchbg.py ~/.pekwm/scripts/walls/ -s 0.05 &
 kwalletmanager &
 akonadictl start &
 conky &
 ~/.pekwm/scripts/YADstartBaloo.sh
 pnmixer &
-#owncloud &
 nextcloud &
 knemo &
 ~/bin/rainlendar2/rainlendar2 &
 klipper &
 kmix &
 gnome-activity-journal &
-##empathy &
-#kopete &
-#pidgin &
 conky --config=/home/dh84/.conkyrc.leftclockW &
 akonaditray &
 artha &
 ~/.pekwm/scripts/flipWacom.sh &
 gdbus call -e -d org.freedesktop.DBus -o /org/freedesktop/DBus -m org.freedesktop.DBus.StartServiceByName org.freedesktop.Tracker1 0 &
-/usr/lib/tracker-miner-fs &
-/usr/lib/tracker-extract &
-/usr/lib/tracker-miner-user-guides &
-/usr/lib/tracker-miner-apps &
-
+#/usr/lib/tracker-miner-fs &
+#/usr/lib/tracker-extract &
+#/usr/lib/tracker-miner-user-guides &
+#/usr/lib/tracker-miner-apps &
+tracker daemon -s &
+indicator-kdeconnect &
 
 

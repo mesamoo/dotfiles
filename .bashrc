@@ -25,7 +25,7 @@ export EDITOR="$(if [[ -n $DISPLAY ]]; then echo 'kwrite'; else echo 'mcedit'; f
 export GOPATH="$HOME/go"
 export PATH="$HOME/go/bin:$PATH"
 
-###Add the following line to your ~/.bashrc 
+###Add the following line to your ~/.bashrc
 #export PYTHONDOCS=/usr/share/doc/python2/html/
 ## previous lines removed at suse13.1 install
 export LADSPA_PATH=/usr/lib64/ladspa:/usr/lib/ladspa:/usr/local/lib/ladspa:~/.ladspa
@@ -42,7 +42,7 @@ alias free='free -m'                      # show sizes in MB
 alias np='nano PKGBUILD'
 
 #DH aliades
-# deletes all but the current and previous 2 versions of 
+# deletes all but the current and previous 2 versions of
 # installed packages in the pacman cache:
 # http://wiki.manjaro.org/index.php?title=Maintaining_/var/cache/pacman/pkg_for_System_Safety
 # alias pcc="sudo pkgcacheclean 2"
@@ -57,22 +57,22 @@ alias sorc='source ~/.bashrc'
 ex ()
 {
   if [ -f $1 ] ; then
-    case $1 in
-      *.tar.bz2)   tar xjf $1   ;;
-      *.tar.gz)    tar xzf $1   ;;
-      *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1     ;;
-      *.gz)        gunzip $1    ;;
-      *.tar)       tar xf $1    ;;
-      *.tbz2)      tar xjf $1   ;;
-      *.tgz)       tar xzf $1   ;;
-      *.zip)       unzip $1     ;;
-      *.Z)         uncompress $1;;
-      *.7z)        7z x $1      ;;
-      *)           echo "'$1' cannot be extracted via ex()" ;;
-    esac
+case $1 in
+  *.tar.bz2)   tar xjf $1   ;;
+  *.tar.gz)    tar xzf $1   ;;
+  *.bz2)       bunzip2 $1   ;;
+  *.rar)       unrar x $1     ;;
+  *.gz)        gunzip $1    ;;
+  *.tar)       tar xf $1    ;;
+  *.tbz2)      tar xjf $1   ;;
+  *.tgz)       tar xzf $1   ;;
+  *.zip)       unzip $1     ;;
+  *.Z)         uncompress $1;;
+  *.7z)        7z x $1      ;;
+  *)           echo "'$1' cannot be extracted via ex()" ;;
+esac
   else
-    echo "'$1' is not a valid file"
+echo "'$1' is not a valid file"
   fi
 }
 
@@ -96,7 +96,17 @@ if [ "$PROMPT_COMMAND" == "" ]; then
 else
   PROMPT_COMMAND="$PROMPT_COMMAND; timer_stop"
 fi
-PS1='\033[0;36m\n\nprev cmd returned after: ${timer_show} seconds\n\[\033[1;37;44m\]\@ \[\033[1;32m\][\u@\h] \[\033[1;37;44m\]\w \033[0;36m\n---->\[\033[1;37m\] '
+
+#PS1='\033[0;36m\n\nprev cmd returned after: ${timer_show} seconds\n\[\033[1;37;44m\]\@ \[\033[1;32m\][\u@\h] \[\033[1;37;44m\]\w \033[0;36m\n----- > \[\033[1;37m\] '
+#PS1='\033[0;36m\n\nprev cmd returned after: ${timer_show} seconds\n\[\033[1;37;44m\]\@ \[\033[1;32m\][\u@\h] \[\033[1;37;44m\]\w \033[0;36m\n---- \357\204\270 \[\033[1;37m\] '
+PS1='\033[0;36m\n\nprev cmd returned after: ${timer_show} seconds\n\[\033[1;37;44m\]\@ \[\033[1;32m\][\u@\h] \[\033[1;37;44m\]\w \033[1;0;37m\n----- \357\204\270 \[\033[1;37m\] '
+RESET="\[$(tput sgr0)\]"
+WHI="\[$(tput setf 7)\]"
+#PS1='\033[0;36m\n\nprev cmd returned after: ${timer_show} seconds\n\[\033[1;37;44m\]\@ \[\033[1;32m\][\u@\h] \[\033[1;37;44m\]\w \033[1;40;37m\n---- \357\204\270 ${RESET}${WHI} '
+
+#PS1='\033[0;36m\n\nprev cmd returned after: ${timer_show} seconds\n\[\033[1;37;44m\]\@ \[\033[1;32m\][\u@\h] \[\033[1;37;44m\]\w \033[0;37m\n---- \357\204\270 \[\033[1;37m\] '
+#
+#PS1='\033[0;36m\n\nprev cmd returned after: ${timer_show} seconds\n\[\033[1;37;44m\]\@ \[\033[1;32m\][\u@\h] \[\033[1;37;44m\]\w \033[0;36m\n---->\[\033[1;37m\] '
 #PS1='[last: ${timer_show}s][\w]$ '
 
 #start

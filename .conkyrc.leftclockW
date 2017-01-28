@@ -28,7 +28,9 @@ minimum_size 180 0
 draw_shades no
 
 # Draw outlines?
-draw_outline no
+#draw_outline yes
+
+default_outline_color gray60
 
 # Draw borders around text
 draw_borders no
@@ -44,6 +46,7 @@ border_width 1
 
 # Default colors and also border colors
 # default_color white
+#default_color black
 # own_window_colour white
 
 # Subtract file system buffers from used memory?
@@ -69,7 +72,7 @@ use_spacer none
 alignment bl
 gap_x 30
 #gap_y -100
-gap_y -80
+gap_y -130
 minimum_size 250 250
 maximum_width 280
 
@@ -82,6 +85,9 @@ TEXT
 #${voffset 8}${font PT Sans:size=20}${time %A}${font}${voffset -4}
 #${voffset 8}${font PT Sans:size=20}${time %B} ${time %e}${font}${voffset -2}
 #${voffset 8}${font GeosansLight:size=40}${time %l:%M %P}${font}${voffset -8}
-${voffset 8}${font Arimo:size=20}${time %A}${font}${voffset -4}
-${voffset 8}${font Arimo:size=20}${time %B} ${time %e}${font}${voffset -2}
-${voffset 8}${font GeosansLight:size=40}${time %l:%M %P}${font}${voffset -8}
+#${voffset 8}${font Arimo:size=20}${time %A}${font}${voffset -4}
+#${voffset 8}${font Arimo:size=20}${time %B} ${time %e}${font}${voffset -2}
+#${voffset 8}${font GeosansLight:size=40}${time %l:%M %P}${font}${voffset -8}
+#${voffset 8}${font fira sans ExtraLight:size=20}${time %A}${font}${voffset -4}
+#${voffset 8}${font fira sans ExtraLight:size=20}${time %B} ${time %e}${font}${voffset -2}
+${voffset 8}${font fira sans ExtraLight:size=40}${time %l:%M %P}${font}${voffset -8}

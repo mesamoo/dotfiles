@@ -1,0 +1,9 @@
+#$TERM="xterm -fn fixed +sb -bg black -fg white"
+# the following all break pekwm
+##export QT_STYLE_OVERRIDE=gtk
+##export DE=kde
+##export QT_STYLE_OVERRIDE=gtk3
+##export QT_QPA_PLATFORMTHEME=gtk3
+##QT_QPA_PLATFORMTHEME=kde
+##XDG_CURRENT_DESKTOP=KDE
+##QT_QPA_PLATFORMTHEME=qt5ct

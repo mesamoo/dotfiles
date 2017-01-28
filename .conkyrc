@@ -2,7 +2,7 @@ double_buffer yes
 update_interval 2
 own_window yes
 own_window_title conky
-## following needed for kde, but puts conky on top layer
+### following needed for kde, but puts conky on top layer
 #own_window_type override
 #xfce panel likes next (hide conky from window list)
 own_window_type desktop

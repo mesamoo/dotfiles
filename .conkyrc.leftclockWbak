@@ -1,0 +1,93 @@
+#Use Xft?
+use_xft yes
+xftfont Bitstream Vera Sans:size=8
+xftalpha 0.8
+text_buffer_size 2048
+background yes
+# Update interval in seconds
+update_interval 1
+xftalpha 0.8
+own_window_argb_visual yes
+# This is the number of times Conky will update before quitting.
+# Set to zero to run forever.
+total_run_times 0
+
+# Create own window instead of using desktop (required in nautilus)
+own_window yes
+own_window_transparent yes
+own_window_type desktop
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+# Use double buffering (reduces flicker, may not work for everyone)
+double_buffer yes
+
+# Minimum size of text area
+minimum_size 180 0
+
+# Draw shades?
+draw_shades no
+
+# Draw outlines?
+#draw_outline yes
+
+default_outline_color gray60
+
+# Draw borders around text
+draw_borders no
+
+# Stippled borders?
+stippled_borders 0
+
+# border margins
+#border_margin 5
+
+# border width
+border_width 1
+
+# Default colors and also border colors
+# default_color white
+#default_color black
+# own_window_colour white
+
+# Subtract file system buffers from used memory?
+no_buffers yes
+
+# set to yes if you want all text to be in uppercase
+uppercase no
+
+# number of cpu samples to average
+# set to 1 to disable averaging
+cpu_avg_samples 2
+
+# number of net samples to average
+# set to 1 to disable averaging
+net_avg_samples 2
+
+# Force UTF8? note that UTF8 support required XFT
+override_utf8_locale yes
+
+# Add spaces to keep things from moving about?  This only affects certain objects.
+use_spacer none
+
+alignment bl
+gap_x 30
+#gap_y -100
+gap_y -80
+minimum_size 250 250
+maximum_width 280
+
+default_color ffffff
+
+TEXT
+#${voffset 8}${font Ubuntu Light:size=25}${time %A}${font}${voffset -8}
+#${voffset 8}${font Ubuntu Light:size=25}${time %B} ${time %e}${font}${voffset -8}
+#${voffset 8}${font Ubuntu Light:size=80}${time %I:%M %p}${font}${voffset -8}
+#${voffset 8}${font PT Sans:size=20}${time %A}${font}${voffset -4}
+#${voffset 8}${font PT Sans:size=20}${time %B} ${time %e}${font}${voffset -2}
+#${voffset 8}${font GeosansLight:size=40}${time %l:%M %P}${font}${voffset -8}
+#${voffset 8}${font Arimo:size=20}${time %A}${font}${voffset -4}
+#${voffset 8}${font Arimo:size=20}${time %B} ${time %e}${font}${voffset -2}
+${voffset 8}${font fira sans ExtraLight:size=20}${time %A}${font}${voffset -4}
+${voffset 8}${font fira sans ExtraLight:size=20}${time %B} ${time %e}${font}${voffset -2}
+#${voffset 8}${font GeosansLight:size=40}${time %l:%M %P}${font}${voffset -8}
+${voffset 8}${font fira sans ExtraLight:size=40}${time %l:%M %P}${font}${voffset -8}
