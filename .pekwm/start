@@ -49,5 +49,4 @@ kmix &
 #/home/dh84/.pekwm/scripts/rclmon.sh start
 #indicator-kdeconnect &
 #/home/dh84/0000_GIT/000_dotfiles_dh/.pekwm/scripts/kdeconnect.sh &
-#docker run --name db -d mongo:3.2 mongod --smallfiles
-#docker run -t -d -p 127.0.0.1:9980:9980 -e 'domain=bongofury\\.dyndns\\.org' --restart no --cap-add MKNOD collabora/code
+
