@@ -18,19 +18,17 @@ shopt -s nocaseglob
 export HISTSIZE=10000
 export HISTFILESIZE=${HISTSIZE}
 export HISTCONTROL=ignoreboth
-#export EDITOR=kwrite
-export EDITOR="$(if [[ -n $DISPLAY ]]; then echo 'kwrite'; else echo 'mcedit'; fi)"
-#export LADSPA_PATH=/usr/lib64/ladspa/
 
+PAGER=less
+#export EDITOR=kwrite
+#EDITOR=nano
+export EDITOR="$(if [[ -n $DISPLAY ]]; then echo 'kwrite'; else echo 'mcedit'; fi)"
+export NNN_FALLBACK_OPENER=xdg-open
+export NNN_DE_FILE_MANAGER=dolphin
+BROWSER=/usr/bin/xdg-open
 export GOPATH="$HOME/go"
 export PATH="$HOME/go/bin:$PATH"
-
-###Add the following line to your ~/.bashrc
-#export PYTHONDOCS=/usr/share/doc/python2/html/
-## previous lines removed at suse13.1 install
 export LADSPA_PATH=/usr/lib64/ladspa:/usr/lib/ladspa:/usr/local/lib/ladspa:~/.ladspa
-## previous lines added back 2015-12
-
 
 alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
@@ -41,7 +39,7 @@ alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias np='nano PKGBUILD'
 
-#DH aliades
+#DH aliases
 # deletes all but the current and previous 2 versions of
 # installed packages in the pacman cache:
 # http://wiki.manjaro.org/index.php?title=Maintaining_/var/cache/pacman/pkg_for_System_Safety
@@ -76,50 +74,32 @@ echo "'$1' is not a valid file"
   fi
 }
 
-# original manjaro prompt
-#PS1='[\u@\h \W]\$ '
-
 #following code creates a command timer http://jakemccrary.com/blog/2015/05/03/put-the-last-commands-run-time-in-your-bash-prompt/
 function timer_start {
   timer=${timer:-$SECONDS}
 }
-
 function timer_stop {
   timer_show=$(($SECONDS - $timer))
   unset timer
 }
-
 trap 'timer_start' DEBUG
-
 if [ "$PROMPT_COMMAND" == "" ]; then
   PROMPT_COMMAND="timer_stop"
 else
   PROMPT_COMMAND="$PROMPT_COMMAND; timer_stop"
 fi
+# end command timer
 
-#PS1='\033[0;36m\n\nprev cmd returned after: ${timer_show} seconds\n\[\033[1;37;44m\]\@ \[\033[1;32m\][\u@\h] \[\033[1;37;44m\]\w \033[0;36m\n----- > \[\033[1;37m\] '
-#PS1='\033[0;36m\n\nprev cmd returned after: ${timer_show} seconds\n\[\033[1;37;44m\]\@ \[\033[1;32m\][\u@\h] \[\033[1;37;44m\]\w \033[0;36m\n---- \357\204\270 \[\033[1;37m\] '
-PS1='\033[0;36m\n\nprev cmd returned after: ${timer_show} seconds\n\[\033[1;37;44m\]\@ \[\033[1;32m\][\u@\h] \[\033[1;37;44m\]\w \033[1;0;37m\n----- \357\204\270 \[\033[1;37m\] '
+PS1='\033[0;36m\n\nprev cmd returned after: ${timer_show} seconds\n\[\033[1;37;44m\]\@ \[\033[1;32m\][\u@\h] \[\033[1;37;44m\]\w \033[1;0;37m\n-----> \[\033[1;37m\] '
 RESET="\[$(tput sgr0)\]"
 WHI="\[$(tput setf 7)\]"
-#PS1='\033[0;36m\n\nprev cmd returned after: ${timer_show} seconds\n\[\033[1;37;44m\]\@ \[\033[1;32m\][\u@\h] \[\033[1;37;44m\]\w \033[1;40;37m\n---- \357\204\270 ${RESET}${WHI} '
-
-#PS1='\033[0;36m\n\nprev cmd returned after: ${timer_show} seconds\n\[\033[1;37;44m\]\@ \[\033[1;32m\][\u@\h] \[\033[1;37;44m\]\w \033[0;37m\n---- \357\204\270 \[\033[1;37m\] '
-#
-#PS1='\033[0;36m\n\nprev cmd returned after: ${timer_show} seconds\n\[\033[1;37;44m\]\@ \[\033[1;32m\][\u@\h] \[\033[1;37;44m\]\w \033[0;36m\n---->\[\033[1;37m\] '
 #PS1='[last: ${timer_show}s][\w]$ '
-
-#start
-# Check for an interactive session
-#PS1='\[\033[1;33m\]\u\]\[\033[1;37m\]@\[\033[1;32m\]\h \[\e[1\n;'
+# original manjaro prompt
+#PS1='[\u@\h \W]\$ '
 
 #following added by https://github.com/trapd00r/LS_COLORS
 ##eval $(dircolors -b $HOME/.dircolors-zsh)
-#following added for AUR version of https://github.com/trapd00r/LS_COLORS
-#eval `dircolors -b /usr/share/LS_COLORS`
 
 #next line also added to .profile
 VAGRANT_DEFAULT_PROVIDER=virtualbox
-
-BROWSER=/usr/bin/xdg-open
 export VAGRANT_DEFAULT_PROVIDER=virtualbox

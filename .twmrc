@@ -1,4 +1,6 @@
 #
+# $XConsortium: system.twmrc,v 1.8 91/04/23 21:10:58 gildea Exp $
+# 
 # Default twm configuration file; needs to be kept small to conserve string
 # space in systems whose compilers don't handle medium-sized strings.
 #
@@ -8,34 +10,34 @@
 # any windows and to use meta-keys.
 #
 
+DontMoveOff
 NoGrabServer
 RestartPreviousState
 DecorateTransients
-TitleFont       "-gnu-unifont-medium-r-normal--16-*-*-*-*-*-iso10646-1,-*-helvetica-medium-r-*--17-*-*-*-*-*-*-*,-*-*-medium-r-normal-*-16-*-*-*-*-*-*-*,-*--16-*,*" 
-ResizeFont      "-gnu-unifont-medium-r-normal--16-*-*-*-*-*-iso10646-1,-*-helvetica-medium-r-*--17-*-*-*-*-*-*-*,-*-*-medium-r-normal-*-16-*-*-*-*-*-*-*,-*--16-*,*"
-MenuFont        "-gnu-unifont-medium-r-normal--16-*-*-*-*-*-iso10646-1,-*-helvetica-medium-r-*--17-*-*-*-*-*-*-*,-*-*-medium-r-normal-*-16-*-*-*-*-*-*-*,-*--16-*,*"
-IconFont        "-gnu-unifont-medium-r-normal--16-*-*-*-*-*-iso10646-1,-*-helvetica-medium-r-*--17-*-*-*-*-*-*-*,-*-*-medium-r-normal-*-16-*-*-*-*-*-*-*,-*--16-*,*"
-IconManagerFont "-gnu-unifont-medium-r-normal--16-*-*-*-*-*-iso10646-1,-*-helvetica-medium-r-*--17-*-*-*-*-*-*-*,-*-*-medium-r-normal-*-16-*-*-*-*-*-*-*,-*--16-*,*"
+RandomPlacement
+TitleFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+ResizeFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+MenuFont "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*"
+IconFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*-*-*-*"
+IconManagerFont "-adobe-helvetica-bold-r-normal--*-100-*-*-*"
 #ClientBorderWidth
-##################RandomPlacement
 
 Color
 {
     BorderColor "slategrey"
-    DefaultBackground "rgb:2/5/a"
-    DefaultForeground "rgb:e/e/e"
-    TitleBackground "rgb:2/5/a"
-    TitleForeground "rgb:e/e/e"
-    MenuBackground "rgb:2/5/a"
-    MenuForeground "rgb:e/e/e"
-    MenuBorderColor "slategrey"
+    DefaultBackground "maroon"
+    DefaultForeground "gray85"
+    TitleBackground "maroon"
+    TitleForeground "gray85"
+    MenuBackground "maroon"
+    MenuForeground "gray85"
     MenuTitleBackground "gray70"
-    MenuTitleForeground "rgb:1/1/1"
-    IconBackground "rgb:2/5/a"
-    IconForeground "rgb:1/1/1"
-    IconBorderColor "rgb:1/1/1"
-    IconManagerBackground "rgb:2/5/a"
-    IconManagerForeground "rgb:1/1/1"
+    MenuTitleForeground "maroon"
+    IconBackground "maroon"
+    IconForeground "gray85"
+    IconBorderColor "gray85"
+    IconManagerBackground "maroon"
+    IconManagerForeground "gray85"
 }
 
 #
@@ -49,9 +51,8 @@ Function "move-or-iconify" { f.move f.deltastop f.iconify }
 #
 # Set some useful bindings.  Sort of uwm-ish, sort of simple-button-ish
 #
-#Button1 = : root : f.menu "defops"
-Button3 = : root : f.menu "defops"
-
+Button1 = : root : f.menu "defops"
+Button3 = : root : f.menu "localops"
 
 Button1 = m : window|icon : f.function "move-or-lower"
 Button2 = m : window|icon : f.iconify
@@ -66,37 +67,64 @@ Button2 = : icon : f.iconify
 Button1 = : iconmgr : f.iconify
 Button2 = : iconmgr : f.iconify
 
-
 #
 # And a menus with the usual things
 #
 menu "defops"
 {
-"Twm"			f.title
-"Iconify"		f.iconify
-"Resize"		f.resize
-"Move"			f.move
-"Raise"			f.raise
-"Lower"			f.lower
-""				f.nop
-"Focus"			f.focus
-"Unfocus"		f.unfocus
+"TWM"	f.title
+"Iconify"	f.iconify
+"Resize"	f.resize
+"Move"		f.move
+"Force Move"	f.forcemove
+"Raise"		f.raise
+"Lower"		f.lower
+"Zoom"		f.zoom
+"Full Zoom"	f.fullzoom
+"Identify"	f.identify
+""		f.nop
+"Kill"		f.destroy
+"Delete"	f.delete
+""		f.nop
+"Swap Screen"	f.warptoscreen "next"
+"Focus"		f.focus
+"Unfocus"	f.unfocus
 "Show Iconmgr"	f.showiconmgr
 "Hide Iconmgr"	f.hideiconmgr
-""				f.nop
-"mc"			f.exec "exec xterm -title MidnightCommander -e mc &" 
-"Xterm"			f.exec "exec xterm &"
-"nano"			f.exec "exec xterm -title NanoEdit -e nano &"
-"tea"			f.exec "exec tea &"
-"Dolphin"       f.exec "exec dolphin &"
-"Konq"          f.exec "exec konqueror &"
-"vBox"			f.exec "exec VirtualBox &"
-""				f.nop
-"hig-all"		f.exec "exec hig-all &"
-""				f.nop
-"Kill"			f.destroy
-#"Delete"		f.delete
-""				f.nop
-"Restart"		f.restart
-"Exit"			f.quit
+""		f.nop
+"Refresh"	f.refresh
+"Restart"	f.restart
+"Read twmrc"	f.twmrc
+"Version"	f.version
+""		f.nop
+"Exit"		f.quit
 }
+
+#
+# And a menu for local stuff
+#
+menu "localops"
+{
+"Logins"	f.title
+"localhost"	!"xrsh -auth environment `uname -n` &"
+"crocus"	!"xrsh -auth environment crocus &"
+"lily"		!"xrsh -auth environment lily &"
+"holly"		!"xrsh -auth environment holly &"
+"lupin"		!"xrsh -auth environment lupin &"
+""		f.nop
+"Apps"		f.title
+"mosaic"	!"mosaic &"
+"xwinfo"	!"xwinfo &"
+}
+
+# Map Sun "Front" key to raise or lower windows
+"L5"	=	: window : f.raiselower
+"L5"	=	: title  : f.raiselower
+"L5"	=	: frame  : f.raiselower
+"L5"	=	: icon   : f.raiselower
+
+# Map Sun "Open" key to open or close windows
+"L7"	=	: window : f.iconify
+"L7"	=	: title  : f.iconify
+"L7"	=	: frame  : f.iconify
+"L7"	=	: icon   : f.iconify

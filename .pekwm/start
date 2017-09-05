@@ -10,45 +10,44 @@ numlockx &
 #
 ###following breaks qedit
 ##setxkbmap -option ctrl:nocaps &
-#
-###switched to the following 2 lines
-##xmodmap -e "clear Lock"
-##xmodmap -e "keycode 66 = Shift_L NoSymbol Shift_L"
-##xmodmap -e "keycode 78 = Caps_Lock NoSymbol Caps_Lock"
-###previous 3 lines moved to ~/.Xmodmap
+### seems to work if moved to ~/.Xmodmap
 ###see https://wiki.archlinux.org/index.php/Xmodmap
 ###useful commands: xev, xmodmap -pke,
 #
-#
+#dunst&
+####akonadictl start &
 ~/.pekwm/scripts/display-xset.sh &
 feh --bg-scale ~/.pekwm/scripts/walls/0.jpg &
 yakuake &
 nvidia-settings
+/opt/trinity/bin/kicker &
 xfce4-panel &
-#python ~/.pekwm/scripts/switchbg.py ~/.pekwm/scripts/walls/ -s 0.10 &
-# hoping for faster response
-python ~/.pekwm/scripts/switchbg.py ~/.pekwm/scripts/walls/ -s 0.05 &
+lxpanel &
+python ~/.pekwm/scripts/switchbg.py ~/.pekwm/scripts/walls/ -s 0.08 &
 kwalletmanager &
-akonadictl start &
-conky &
-~/.pekwm/scripts/YADstartBaloo.sh
-pnmixer &
-nextcloud &
+conky  --config=/home/dh84/.conkyrc.locker &
+conky --config=/home/dh84/.conkyrc.leftclockW.locker &
 knemo &
-~/bin/rainlendar2/rainlendar2 &
-klipper &
-kmix &
-gnome-activity-journal &
-conky --config=/home/dh84/.conkyrc.leftclockW &
-akonaditray &
-artha &
-~/.pekwm/scripts/flipWacom.sh &
+nextcloud &
+qstardict &
 gdbus call -e -d org.freedesktop.DBus -o /org/freedesktop/DBus -m org.freedesktop.DBus.StartServiceByName org.freedesktop.Tracker1 0 &
 #/usr/lib/tracker-miner-fs &
 #/usr/lib/tracker-extract &
 #/usr/lib/tracker-miner-user-guides &
 #/usr/lib/tracker-miner-apps &
 tracker daemon -s &
-indicator-kdeconnect &
-
-
+~/.pekwm/scripts/flipWacom.sh &
+~/bin/rainlendar2/rainlendar2 &
+gnome-activity-journal &
+artha &
+/opt/trinity/bin/klipper &
+kmix &
+#klipper &
+#pnmixer &
+#pulseaudio-dlna &
+###~/.pekwm/scripts/YADstartBaloo.sh
+#/home/dh84/.pekwm/scripts/rclmon.sh start
+#indicator-kdeconnect &
+#/home/dh84/0000_GIT/000_dotfiles_dh/.pekwm/scripts/kdeconnect.sh &
+#docker run --name db -d mongo:3.2 mongod --smallfiles
+#docker run -t -d -p 127.0.0.1:9980:9980 -e 'domain=bongofury\\.dyndns\\.org' --restart no --cap-add MKNOD collabora/code

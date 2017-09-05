@@ -13,6 +13,7 @@ PATH=$PATH:~/bin/
 export PATH
 ##################################
 # added export 2016-01-22 and changed to lxqt
-export QT_STYLE_OVERRIDE=gtk
+# removed export QT_STYLE_OVERRIDE=gtk 2017-03 testing
+#export QT_STYLE_OVERRIDE=gtk
 export QT_QPA_PLATFORMTHEME=lxqt
 export VAGRANT_DEFAULT_PROVIDER = "virtualbox"

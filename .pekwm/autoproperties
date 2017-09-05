@@ -91,9 +91,29 @@ Property = "^(gecko|Gecko|firefox-bin),^Firefox-bin,,^Customize Toolbar\$" {
                ClientGeometry = "600x600"
        }
 
+/*      onkyo extension for chrome    */
+  Property = "^crx_jhcfeodahaajnfoifcmejindamjlbadp,^google-chrome" {
+               ApplyOn = "Start New Reload"
+               Sticky = "True"
+       }
+       
+/*      google hangouts extension for chrome-unstable    */       
   Property = "^crx_nckgahadagoaajjgafhacjanaoiihapd,^Google-chrome-unstable" {
                ApplyOn = "Start New Reload"
                ClientGeometry = "600x600"
+       }
+       
+/*      onkyo extension for chrome-unstable    */
+  Property = "^crx_jhcfeodahaajnfoifcmejindamjlbadp,^google-chrome-unstable" {
+               ApplyOn = "Start New Reload"
+               Sticky = "True"
+       }
+             
+
+/*       geometry test   */
+  Property = "^konqueror,^Konqueror" {
+               ApplyOn = "Start New Reload"
+               ClientGeometry = "1200x950"
        }
 
 /*	following does not seem to work   		*/
@@ -108,7 +128,13 @@ Property = "^(gecko|Gecko|firefox-bin),^Firefox-bin,,^Customize Toolbar\$" {
                Sticky = "True"
                ClientGeometry = "+200-50"
        }
-
+       
+/*      following does not seem to work                 */
+  Property = "^kcalc,^kcalc" {
+               ApplyOn = "Start New Reload"
+               ClientGeometry = "572x390+200+50"
+       }      
+       
 #  Property = "^VirtualBox,^VirtualBox„^[Running] - Oracle VM VirtualBox" {
 #               ApplyOn = "Start New Workspace Reload"
 #               Sticky = "True"
@@ -154,18 +180,36 @@ Property = "^(gecko|Gecko|firefox-bin),^Firefox-bin,,^Customize Toolbar\$" {
   Property = "^chromium-browser,^chromium-browser" {
                ApplyOn = "Start New Workspace Reload"
                Workspace = "6"
+			   ClientGeometry = "1200x950"
        }
 
          Property = "^google-chrome,^google-chrome" {
                ApplyOn = "Start New Reload"
                Workspace = "5"
+			   ClientGeometry = "1200x950"
        }
 
          Property = "^google-chrome-unstable,^Google-chrome-unstable" {
                ApplyOn = "Start New Reload"
                Workspace = "5"
+			   ClientGeometry = "1200x950"
        }
 
+       Property = "^Navigator,^Pale moon" {
+               ApplyOn = "Start New Reload"
+			   ClientGeometry = "1200x950"
+       }
+
+       Property = "^Navigator,^Icecat" {
+               ApplyOn = "Start New Reload"
+			   Workspace = "6"
+			   ClientGeometry = "1200x950"
+       }
+
+       Property = "^Navigator,^Firefox" {
+               ApplyOn = "Start New Reload"
+			   ClientGeometry = "1200x950"
+       }
 
 /*	tint2 always on top 			*/
         Property = "tint2,Tint2" {
@@ -249,6 +293,14 @@ Property = "^cairo-dock,^Cairo-dock" {
         Skip = "Menus"
  }
 
+  }
+
+Property = "^plank,^Plank" {
+        ApplyOn = "Start Reload New"
+        #Layer = "OnTop"
+                Layer = "Menu"
+        Skip = "Menus"
+ }
 /*
  The rest of the gimp windows should not show in pekwm menus eather.
 */
@@ -300,7 +352,7 @@ Property = "^cairo-dock,^Cairo-dock" {
 */
 Property = "^xclock,^XClock" {
 	ApplyOn = "Start New"
-	ClientGeometry = "137x137+0-137"
+	ClientGeometry = "137x137+20-137"
 	Border = "False"; Titlebar = "False"
 	Sticky = "True"
 	Layer = "Desktop"
@@ -465,7 +517,7 @@ so tbird does not accidentally close (buttons only minimize, use menu or hotkeys
 */
  DecorRules {
        Property = "^Mail,^Thunderbird" {
-               Decor = "noKlose2"
+               Decor = "noKlose3"
                ApplyOn = "Start New Reload"
        }
 
@@ -475,7 +527,7 @@ so tbird does not accidentally close (buttons only minimize, use menu or hotkeys
        }
 
        Property = "^gmpc,^Gmpc" {
-               Decor = "noKlose2"
+               Decor = "noKlose3"
                ApplyOn = "Start New Reload"
        }
 
@@ -496,7 +548,7 @@ so tbird does not accidentally close (buttons only minimize, use menu or hotkeys
 
        Property = "^dolphin,^Dolphin" {
                 Title = "Copying"
-                Decor = "noKlose2"
+                Decor = "noKlose3"
                 ApplyOn = "Start New Reload"
        }
 
@@ -524,7 +576,17 @@ so tbird does not accidentally close (buttons only minimize, use menu or hotkeys
                Decor = "noKlose"
                ApplyOn = "Start New Reload"
        }
-
+       
+       Property = "^crx_jhcfeodahaajnfoifcmejindamjlbadp,^google-chrome-unstable" {
+               Decor = "noKlose"
+               ApplyOn = "Start New Reload"
+       }
+       
+       Property = "^crx_jhcfeodahaajnfoifcmejindamjlbadp,^google-chrome" {
+               Decor = "noKlose"
+               ApplyOn = "Start New Reload"
+       }       
+       
        Property = "^chromium-browser,^chromium-browser" {
                Decor = "noKlose"
                ApplyOn = "Start New Reload"
@@ -544,6 +606,11 @@ so tbird does not accidentally close (buttons only minimize, use menu or hotkeys
                Decor = "KloseOnly"
                ApplyOn = "Start New Reload"
        }
+       
+       Property = "^kcalc,^kcalc" {
+               Decor = "KloseOnly"
+               ApplyOn = "Start New Reload"
+       }       
 
  }
 

@@ -154,6 +154,9 @@ TitleButtonShadowDepth 0
 
 ### -- Other aspects of "Look and Feel" --
 
+# Keep menus up w/o pushing buttons.
+StayUpMenus
+
 ## Turns off the feature  toggling  the  workspace  manager  state
 ## to/from  map/button state when you press ctrl and the workspace
 ## manager window is in focus.
@@ -188,7 +191,8 @@ DecorateTransients
 # NoHighlight
 
 ## Useful on LCD monitors
-####NoTitleHighlight
+####NoTitleHighlight  added next line 2017-08-29
+NoTitleHighlight
 ## from glow: put window name in the centre (default left)
 #TitleJustification  "center"
 
@@ -255,11 +259,13 @@ UseThreeDBorders
 UseThreeDMenus
 
 # Give title-bars a 3-d appearance
-####UseThreeDTitles
+####UseThreeDTitles     added next line 2017-08-29
+# UseThreeDTitles       did not like them
 
 # Useful on LCD display
 # Change depth in title bar to show which window is in focus
-####SunkFocusWindowTitle
+####SunkFocusWindowTitle  added next line 2017-08-29
+# SunkFocusWindowTitle          did not see difference
 
 ##Use  resizing  cursors  when  the  pointer  is  on  the window border
 
@@ -274,10 +280,16 @@ BorderResizeCursors
 ## Select some nice clear fonts (you may want smaller ones for a low
 # resolution screen)
 
+TitleFont "-adobe-times-medium-r-normal--*-140-*-*-*-*-*-*"
+ResizeFont "-adobe-times-medium-r-normal--*-140-*-*-*-*-*-*"
+MenuFont "-adobe-times-medium-r-normal--*-140-*-*-*-*-*-*"
+#MenuFont "-adobe-office code pro-medium-r-normal-*-*-120-100-100-*-*-*-*"
+IconFont "-adobe-times-medium-r-normal--*-140-*-*-*-*-*-*"
+
 # For window label on title bar
 # (A proportional font, like helvetica, can save space)
 #TitleFont "-*-helvetica-bold-r-normal-*-17-*"
-TitleFont "-*-helvetica-bold-r-normal-*-20-*"
+###TitleFont "-*-helvetica-medium-r-normal-*-17-*"
 #TitleFont "-*-helvetica-*-14-*"
 #TitleFont "10x20"
 # TitleFont "12x24"
@@ -291,19 +303,19 @@ TitleFont "-*-helvetica-bold-r-normal-*-20-*"
 
 # Fonts in menus
 #MenuFont "-*-helvetica-bold-r-*-14-*"
-MenuFont "-*-helvetica-bold-r-normal-*-20-*"
+###MenuFont "-*-helvetica-medium-r-normal-*-17-*"
 #MenuFont "-*-helvetica-bold-r-*-17-*"
 #MenuFont  "9x15bold"
 #MenuFont  "10x20"
 #MenuFont "-*-helvetic-bold-r-*-20-*"
 
 # Fonts labelling icons (minimised windows)
-IconFont "-*-helvetica-bold-r-*-14-*"
+###IconFont "-*-helvetica-bold-r-*-14-*"
 #IconFont  "8x13bold"
 
 # Font for the iconmanager
-IconManagerFont "-*-helvetica-bold-r-*-12-*"
-IconManagerFont "-*-helvetica-bold-r-normal-*-17-*"
+###IconManagerFont "-*-helvetica-bold-r-*-12-*"
+###IconManagerFont "-*-helvetica-bold-r-normal-*-17-*"
 #IconManagerFont "-*-times-bold-r-*-12-*"
 #IconManagerFont "8x13bold"
 
@@ -324,7 +336,7 @@ WorkSpaceFont "-*-helvetica-bold-r-*-12-*"
 
 # Fonts for the numbers showing sizes of windows as you resize them
 #ResizeFont "9x15bold"
-ResizeFont "-*-helvetica-bold-r-*-14-*"
+###ResizeFont "-*-helvetica-bold-r-*-14-*"
 
 
 # -- Autoraising --
@@ -345,14 +357,14 @@ InterpolateMenuColors
 #
 Color
 {
-  # Foreground and background colours for text on title bars
+# Foreground and background colours for text on title bars
   TitleForeground "white"
-  TitleBackground "midnight blue"
-  #  TitleBackground "gray40"
+  #TitleBackground "midnight blue"
+    TitleBackground "gray40"
   # A more conventional option
   # TitleForeground "black"
   # TitleBackground "gray"
-
+  
   # Colour of the border of active window
   # You can use different colours for different sorts of windows.
   # See the man file
@@ -384,15 +396,18 @@ Color
 #       MenuTitleForeground     "black"
 #       MenuTitleBackground     "gray"
 #
-    MenuForeground              "gray90"
-    MenuBackground              "gray20"
+    MenuForeground              "black"
+    MenuBackground              "gray90"
 
 # from glow
 ##      MenuBackground          "#686B9F"
 ##      MenuForeground          "white"
-      MenuTitleBackground       "gray90"
-      MenuTitleForeground       "blue"
+      MenuTitleBackground       "Firebrick"
+      MenuTitleForeground       "white"
 #
+### 
+
+
       MapWindowBackground       "DeepSkyBlue1" {
           "rxvt" "#369"
           "gvim"  "#afa"
@@ -452,7 +467,11 @@ Color
 ## for use with lape monitor
 #IconManagerGeometry "100x30-5+115"
 ## for use with narrower monitor
-IconManagerGeometry "150x30-0+115"
+#IconManagerGeometry "150x30-0+115"
+#IconManager along left edge, start at top of screen
+#IconManagerGeometry "150x30+2+2"
+#IconManager along top edge
+IconManagerGeometry "1920x25+0+0" 10
 
 # Alterantively, put the icon manager at the top right if you prefer
 # IconManagerGeometry "100x30-0+0"
@@ -510,16 +529,17 @@ StartInMapState
 WorkSpaces
 {
  #Name        bg     fg      bg-root
-  "Page 1"  {"gray" "black" "cyan4"}
+  #"Page 1"  {"gray" "black" "cyan4"}
+  "Page 1"  {"gray" "black" "gray50"}  
   "Page 2"  {"gray" "black" "gray50"}
   "Page 3"  {"gray" "black" "gray50"}
   "Page 4"  {"gray" "black" "gray50"}
-  "Page 5"  {"gray" "black" "gray50"}
-  "Page 6"  {"gray" "black" "gray50"}
-  "Page 7"  {"gray" "black" "gray50"}
-  "Page 8"  {"gray" "black" "gray50"}
-  "Page 9"  {"gray" "black" "gray50"}
-  "Page 10"  {"gray" "black" "gray50"}
+#  "Page 5"  {"gray" "black" "gray50"}
+#  "Page 6"  {"gray" "black" "gray50"}
+#  "Page 7"  {"gray" "black" "gray50"}
+#  "Page 8"  {"gray" "black" "gray50"}
+#  "Page 9"  {"gray" "black" "gray50"}
+#  "Page 10"  {"gray" "black" "gray50"}
 }
 
 # Add more of those if you wish. You may then need to adjust the "columns"
@@ -546,7 +566,7 @@ MapWindowCurrentWorkSpace { "gray40" "white" "gray15" }
 # Or in two columns five rows
 #WorkSpaceManagerGeometry    "150x270-0-20" 2
 ####WorkSpaceManagerGeometry    "100x250+1340+650" 2
-WorkSpaceManagerGeometry    "100x250+0+115" 2
+WorkSpaceManagerGeometry    "100x100+2+970" 2
 # The last number is the number of columns.
 
 ## Another possibility for workspacemanager: bottom right, 4 columns
@@ -614,10 +634,10 @@ OccupyAll
 #IconRegion "1024x55+-0-0" South East 20 5
 # IconRegion "1152x55+-0-0" South East 20 5
 ## Suitable for lower resolution (reduce first number to shift icons to left)
-IconRegion "1024x55+-0-0" South East 20 5
 ## or
 #IconRegion "=820x55+300-0" South East 20 5
-
+#IconRegion "1024x55+-0-0" South East 20 5
+IconRegion "1920x1080+2+2" North West 25 25
 
 ### -- Define some useful functions --
 
@@ -848,37 +868,50 @@ Button3 =  m|s  : all   : f.menu "ToolMenu"
 # Main Right Button Tools
 menu "ToolMenu"
 {
-####  "PIN/UnPIN"               f.pin
+####  "PIN/UnPIN"       f.pin
 ####  "XV"                      ! "cd xv;xterm -cm -fn 10x20 -geometry 20x3-5+5 +sb -e xv -geometry -5+5 &"
-  ""                            f.separator
-  "main"                    f.title
-#	"Seamonkey"                  ! "/usr/local/bin/seamonkey -geometry 980x780+0+0  &"
-	"dolphin"					! "dolphin &"   
-	"Konsole"					! "konsole &"
-	"Xterm"						! "xterm &"
-	"MidnightCommander"			! "xterm -title MidnightCommander -e mc &"
-	"Konq"						! "konqueror &"
-	"VirtualBox"				! "VirtualBox &"	
-	"icecat"					! "icecat &"	
-  "SOUND"                       f.title
+  ""                    f.separator
+  "main"                f.title
+        "numlockx"              ! "numlockx on"
+        "flipWacom"             ! "/home/dh84/.pekwm/scripts/flipWacom.sh &"      
+        "nitrogen"              ! "nitrogen &" 
+#        "tint2"                 ! "tint2 &"  #current config is not nice
+
+        ""              f.separator  
+        "gimp"                  ! "gimp &"
+        "krita"                 ! "krita &"
+        ""              f.separator
+#       "Seamonkey"             ! "/usr/local/bin/seamonkey -geometry 980x780+0+0  &"
+        "dolphin"               ! "dolphin &"   
+        "Konsole"               ! "konsole &"
+        "dolphin-SU"            ! "kdesu dolphin &"
+        "vBox"            ! "VirtualBox &"
+        ""              f.separator
+	"Konq"                  ! "konqueror &"
+	"icecat"                ! "icecat &"
+        "Seamonkey"             ! "seamonkey &"
+	"Xterm"			! "xterm &"
+	"MidnightCommander"	! "xterm -title MidnightCommander -e mc &"
+
+  "SOUND"                f.title
     "PA Vol"                    ! "/usr/bin/pavucontrol &"
     "Alsa Vol"                  ! "xterm -geometry 15x30-1+1 -fn 6x9 -e alsamixer &"
-    "Gnome-vol"                 ! " /usr/bin/gnome-control-center sound &"
-	"Alsamixer-G"               ! "alsamixergui -c 0  &"
-	"Gnome Recorder"             ! "/usr/bin/gnome-sound-recorder &"
-	"Nitrogen"                   ! "nitrogen &"   
-  "SCREEN"                      f.title
-  ""                            f.separator
+    "Gnome-vol"                 ! "/usr/bin/gnome-control-center sound &"
+	"Alsamixer-G"           ! "alsamixergui -c 0  &"
+	"Gnome Recorder"        ! "/usr/bin/gnome-sound-recorder &"
+	"Nitrogen"              ! "nitrogen &"   
+  "SCREEN"               f.title
+  ""                     f.separator
   "LXRANDR"                     ! "/usr/bin/lxrandr &"
-  ""                            f.separator
+  ""                     f.separator
   
-#  "KEYS"                        f.title
-#  "Swap keys"                   !"keys/capslock &"
-#  "Swap Caps Lock"              !"keys/capslock &"
+#  "KEYS"                f.title
+#  "Swap keys"                  !"keys/capslock &"
+#  "Swap Caps Lock"             !"keys/capslock &"
 #  "Swap Caps Lock"             !"xmodmap .xmodmap-swaps-lap6 &"
 
-  ""                            f.separator
-  ""                            f.separator
+  ""                     f.separator
+  ""                     f.separator
 	"RE-READ .ctwmrc"             f.twmrc
 }
 
@@ -886,35 +919,40 @@ menu "ToolMenu"
 # Basic ctwm functions
 menu "MainMenu"
 {
-####  "PIN/UnPIN"               f.pin
-  "CTwm Menu"                   f.title
-#    "Gnome-vol"                 ! "gnome-volume-control &"
-#    "Alsamixer-G"               ! "alsamixergui -c 0  &"
-	"dolphin"					! "dolphin &"
+####  "PIN/UnPIN"        f.pin
+  "CTwm Menu"            f.title
+#    "Gnome-vol"                ! "gnome-volume-control &"
+#    "Alsamixer-G"              ! "alsamixergui -c 0  &"
+        "flipWacom"             ! "/home/dh84/.pekwm/scripts/flipWacom.sh &"      
+        ""              f.separator  
+        "gimp"                  ! "gimp &"
+        "krita"                 ! "krita &"
+        ""              f.separator
+	"dolphin"		! "dolphin &"
     "konsole"                   ! "konsole  &"
-    "Xterm"                     ! "xterm &"
-  ""                            f.separator
+#    "Xterm"                     ! "xterm &"
+  ""                     f.separator
     "Grey25"                    !"xsetroot -solid 'gray25' &"
     "Grey85"                    !"xsetroot -solid 'gray85' &"
-  ""                            f.separator
-	"Show Icon Manager"           f.showiconmgr
-	"Hide Icon Manager"           f.hideiconmgr
-    "tint2"                     ! "tint2 &"  
-#  "Occupy Workspace"            f.occupy
-  "Refresh Screen"              f.refresh
-#  "Xclipboard"                  !"xclipboard -geometry 700x100 &"
-  ""                            f.separator
-  "Restart CTwm"                f.restart
-  ""                            f.separator
-  "RE-READ .ctwmrc"             f.twmrc
-  ""                            f.separator
-  "Exit CTWM"                   f.quit  ## Kill ctwm. May abort whole session
+#  ""                     f.separator
+"Show Icon Manager"      f.showiconmgr
+"Hide Icon Manager"      f.hideiconmgr
+#    "tint2"                     ! "tint2 &"  
+#  "Occupy Workspace"    f.occupy
+  "Refresh Screen"       f.refresh
+#  "Xclipboard"                 !"xclipboard -geometry 700x100 &"
+  ""                     f.separator
+  "Restart CTwm"         f.restart
+  ""                     f.separator
+  "RE-READ .ctwmrc"      f.twmrc
+  ""                     f.separator
+  "Exit CTWM"            f.quit  ## Kill ctwm. May abort whole session
 }
 
 # Basic window operations
 menu "WinOpsMenu"
 {
-#    "PIN/UnPIN"                 f.pin
+#    "PIN/UnPIN"                f.pin
     "Window Ops"                f.title
     "Lower"                     f.lower
     "Iconify"                   f.iconify

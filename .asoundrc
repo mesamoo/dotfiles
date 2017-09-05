@@ -1,0 +1,10 @@
+# create by vokoscreen 2.4.11 Beta
+
+pcm.pulse {
+  type pulse
+}
+
+ctl.pulse {
+  type pulse
+}
+

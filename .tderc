@@ -1,0 +1,13 @@
+[General]
+StandardFont=Droid Sans,13,-1,5,50,0,0,0,0,0
+activeFont=Droid Sans,13,-1,5,75,0,0,0,0,0
+background=46,46,46
+fixed=Monospace,13,-1,5,50,0,0,0,0,0
+font=Droid Sans,13,-1,5,50,0,0,0,0,0
+menuFont=Droid Sans,13,-1,5,50,0,0,0,0,0
+selectBackground=43,148,204
+selectForeground=255,255,255
+taskbarFont=Droid Sans,13,-1,5,50,0,0,0,0,0
+toolBarFont=Droid Sans,13,-1,5,50,0,0,0,0,0
+windowBackground=255,255,255
+windowForeground=98,98,98

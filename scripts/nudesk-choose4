@@ -1,0 +1,29 @@
+#!/bin/bash
+#
+WM_CHOSEN=twm
+#
+################ TTY to use     
+VTERMINAL=`fgconsole --next-available`
+VTERM0="startx -- :$VTERMINAL"
+#
+################# WM CHOICE
+#WM_CHOSEN=$(zenity --list --width=300 --height=450 --title="New Session" --text "Choose the Windowmanager" --column "Windowmanager" twm ctwm vtwm fvwm jwm icewm fluxbox windowmaker) 
+#WM_CHOSEN=$(yad --list --separator="" --no-buttons --width=300 --height=450 --title="New Session" --text "Choose the Windowmanager" --column "Windowmanager" ctwm twm vtwm fvwm jwm icewm fluxbox windowmaker) 
+#WM_CHOSEN=$(yad --list --separator="" --no-buttons --width=300 --height=450 --posx=800 --posy=100 --title="New Session" --text "Choose the Windowmanager" --column "Windowmanager" ctwm ctwm4 jwm twm fvwm icewm fluxbox windowmaker) 
+WM_CHOSEN=$(yad --list --separator="" --no-buttons --width=300 --height=450 --posx=800 --posy=100 --title="New Session" --text "Choose the Windowmanager" --column "Windowmanager" jwm ctwm ctwm4 fluxbox fvwm icewm windowmaker)
+#echo "windowmanager chosen was $WM_CHOSEN"
+#  
+  rc=$?
+    if [ "${rc}" == "1" ]; then
+      exit 1
+    fi
+    if [[ "$WM_CHOSEN" == "" ]]; then
+      exit 1
+    else
+  #echo "the command that will run is WINDOWMANAGER=$WM_CHOSEN $VTERM0"
+  WINDOWMANAGER=$WM_CHOSEN $VTERM0 &
+
+  fi
+  
+    
+exit

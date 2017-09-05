@@ -1,0 +1,21 @@
+[Appearance]
+active_colors=#ffffff, #161618, #fdfdfd, #e2dfdd, #6a6663, #b3aba7, #1f1c1b, #ffffff, #ffffff, #ffffff, #2b2b2c, #6b6b6c, #27ae60, #ffffff, #0057ae, #644a9b, #f8f7f6, #000000, #181513, #e7fdff
+custom_palette=true
+disabled_colors=#f1f1f1, #161618, #fdfdfd, #e2dfdd, #6a6663, #b3aba7, #efefef, #ffffff, #efefef, #ffffff, #2b2b2c, #6b6b6c, #27ae60, #ffffff, #0057ae, #644a9b, #f8f7f6, #000000, #181513, #e7fdff
+icon_theme=breeze-dark
+inactive_colors=#ffffff, #161618, #fdfdfd, #e2dfdd, #6a6663, #b3aba7, #1f1c1b, #ffffff, #ffe9e1, #ffffff, #2b2b2c, #6b6b6c, #27ae60, #ffffff, #0057ae, #644a9b, #f8f7f6, #000000, #181513, #e7fdff
+style=Breeze
+
+[Fonts]
+fixed=@Variant(\0\0\0@\0\0\0\xe\0\x43\0\x61\0r\0l\0i\0t\0o@0\0\0\0\0\0\0\xff\xff\xff\xff\x5\x1\0\x32\x10)
+general=@Variant(\0\0\0@\0\0\0\xe\0\x43\0\x61\0r\0l\0i\0t\0o@0\0\0\0\0\0\0\xff\xff\xff\xff\x5\x1\0\x32\x10)
+
+[Interface]
+buttonbox_layout=2
+cursor_flash_time=1000
+double_click_interval=400
+gui_effects=General
+stylesheets=/home/dh84/.config/qt5ct/qss/menu.qss, /home/dh84/.config/qt5ct/qss/menubar.qss
+
+[SettingsWindow]
+geometry=@ByteArray(\x1\xd9\xd0\xcb\0\x2\0\0\0\0\a\x80\0\0\x1g\0\0\vQ\0\0\x3\x83\0\0\a\x84\0\0\x1\x8a\0\0\vM\0\0\x3\x7f\0\0\0\x1\0\0\0\0\x5\0)

@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Service
-Actions=_SEPARATOR_;Kwrite;Juffed;MadEdit;Qedit;Thunderpad;_SEPARATOR_;KolourPaint;_SEPARATOR_;Komparetwo;Okteta;_SEPARATOR_;
+Actions=_SEPARATOR_;Kwrite;MadEdit;Qedit;Thunderpad;_SEPARATOR_;KolourPaint;_SEPARATOR_;Komparetwo;Okteta;_SEPARATOR_;
 X-KDE-Priority=TopLevel
 ServiceTypes=KonqPopupMenu/Plugin,all/allfiles
 Encoding=UTF-8
