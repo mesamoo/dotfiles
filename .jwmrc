@@ -18,6 +18,7 @@
         <Program label="konsole">konsole</Program>
         <Program label="kpat">kpat</Program>
         <Program label="kwrite">kwrite</Program>
+        <Program label="gcolor2">gcolor2</Program>
         <Separator/>
         <Program label="konqueror">konqueror</Program>
         <Program label="icecat">icecat</Program>
@@ -77,19 +78,22 @@
     <!-- Visual Styles -->
     <WindowStyle>
         <!--  <Font>Arimo-18:bold</Font> -->
-        <Font>Arimo-18:bold</Font>
+        <!--  <Font>Arimo-16</Font> -->
+        <Font>Maven Pro-14:medium</Font>
         <Width>4</Width>
        <!--  <Height>21</Height> -->
-        <Height>24</Height>
-        <Corner>3</Corner>
-        <Foreground>#FFFFFF</Foreground>
-        <Background>#555555</Background>
-        <Outline>#000000</Outline>
+        <Height>26</Height>
+        <Corner>5</Corner>
+        <Foreground>#cccccc</Foreground>
+        <Background>#555555:#333333</Background>
+        <Outline>#171717</Outline>
         <Opacity>0.5</Opacity>
         <Active>
+          <!--  <Font>Arimo-18:bold</Font> -->
+          <Font>Maven Pro-16:bold</Font>
             <Foreground>#FFFFFF</Foreground>
-            <Background>#0077CC</Background>
-            <Outline>#000000</Outline>
+            <Background>#0F6BAF:#052F4F</Background>
+            <Outline>#052F4F</Outline>
             <Opacity>1.0</Opacity>
         </Active>
     </WindowStyle>
@@ -111,13 +115,15 @@
         </Active>
     </PagerStyle>
     <MenuStyle>
-        <Font>Arimo-18</Font>
-        <Foreground>#FFFFFF</Foreground>
-        <Background>#333333</Background>
-        <Outline>#000000</Outline>
+        <Font>Maven Pro-14:medium</Font>
+        <!--  <Foreground>#FFFFFF</Foreground> -->
+        <!--  <Background>#333333</Background> -->
+        <Foreground>#dddddd</Foreground>
+        <Background>#171717</Background>              
+        <Outline>#cccccc</Outline>
         <Active>
             <Foreground>#FFFFFF</Foreground>
-            <Background>#0077CC</Background>
+            <Background>#014374</Background>
         </Active>
         <Opacity>0.85</Opacity>
     </MenuStyle>
