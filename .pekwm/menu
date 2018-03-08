@@ -12,23 +12,33 @@ Separator {}
 			Entry = " " { Actions = "Dynamic  ~/.pekwm/menu-script/time0"}
 Separator {}
 Separator {}
-Entry = "Open new session" { Actions = "Exec nudesk-choose4" }
+            Entry = "Open new session" { Actions = "Exec nudesk-choose4" }
+            # switch tty depends on chvt being suid (set UID), if this menu fails, check there first
+            Submenu = "switch TTY" {
+                Entry = "tty 2" { Actions = "Exec chvt 2" }
+                Entry = "tty 7" { Actions = "Exec chvt 7" }
+                Separator {}
+                Entry = "tty  1" { Actions = "Exec chvt 1" }
+                Entry = "tty  3" { Actions = "Exec chvt 3" }
+                Entry = "tty  8" { Actions = "Exec chvt 8" }
+                Entry = "tty 10" { Actions = "Exec chvt 10" }
+}
 Separator {}
                         Submenu = "Onkyo" {
-                              Separator {}
-                                Entry = "Power Off" { Actions = "Exec onkyo - host 192.168.1.50 power=off" }
-                                Entry = "Power On" { Actions = "Exec onkyo - host 192.168.1.50 power=on" }
-                                Separator {}
-                                Entry = "volume 15" { Actions = "Exec onkyo - host 192.168.1.50 volume=15" }
-                                Entry = "volume 20" { Actions = "Exec onkyo - host 192.168.1.50 volume=20" }
-                                Entry = "volume 25" { Actions = "Exec onkyo - host 192.168.1.50 volume=25" }
-                                Entry = "volume 30" { Actions = "Exec onkyo - host 192.168.1.50 volume=30" }
-                                Entry = "volume 35" { Actions = "Exec onkyo - host 192.168.1.50 volume=35" }
-                                Entry = "volume 40" { Actions = "Exec onkyo - host 192.168.1.50 volume=40" }
-                                Entry = "volume 45" { Actions = "Exec onkyo - host 192.168.1.50 volume=45" }
-                                Entry = "volume 50" { Actions = "Exec onkyo - host 192.168.1.50 volume=50" }
-                                Entry = "volume 55" { Actions = "Exec onkyo - host 192.168.1.50 volume=55" }
-                                Entry = "volume 60" { Actions = "Exec onkyo - host 192.168.1.50 volume=60" }                     
+                            Separator {}
+                                Entry = "Power Off" { Actions = "Exec onkyo --host 192.168.1.50 power=off" }
+                                Entry = "Power On" { Actions = "Exec onkyo --host 192.168.1.50 power=on" }
+                            Separator {}
+                                Entry = "volume 15" { Actions = "Exec onkyo --host 192.168.1.50 volume=15" }
+                                Entry = "volume 20" { Actions = "Exec onkyo --host 192.168.1.50 volume=20" }
+                                Entry = "volume 25" { Actions = "Exec onkyo --host 192.168.1.50 volume=25" }
+                                Entry = "volume 30" { Actions = "Exec onkyo --host 192.168.1.50 volume=30" }
+                                Entry = "volume 35" { Actions = "Exec onkyo --host 192.168.1.50 volume=35" }
+                                Entry = "volume 40" { Actions = "Exec onkyo --host 192.168.1.50 volume=40" }
+                                Entry = "volume 45" { Actions = "Exec onkyo --host 192.168.1.50 volume=45" }
+                                Entry = "volume 50" { Actions = "Exec onkyo --host 192.168.1.50 volume=50" }
+                                Entry = "volume 55" { Actions = "Exec onkyo --host 192.168.1.50 volume=55" }
+                                Entry = "volume 60" { Actions = "Exec onkyo --host 192.168.1.50 volume=60" }                                                 
                             Separator {}
                             Separator {}
                                 Entry = "volume down" { Actions = "Exec onkyo-iscp 192.168.1.50 MVL DOWN" }
@@ -39,6 +49,7 @@ Separator {}
 				#Entry = "virtualbox" { Actions = "Exec VirtualBox" }
 				#Entry = "virtualbox" { Actions = "Exec VirtualBox - platformtheme kde" }
 				Entry = "Dolphin          " { Actions = "Exec dolphin" }
+				Entry = "krusader" { Actions = "Exec krusader" }
 				Entry = "kwrite" { Actions = "Exec kwrite" }
 				Entry = "konq" { Actions = "Exec konqueror" }
 				Entry = "xTerm" { Actions = "Exec xterm" }
@@ -85,6 +96,8 @@ Separator {}
 				Entry = "Okteta" { Actions = "Exec okteta - platformtheme kde" }
 		Separator {}
 				Entry = "cutemarked  " { Actions = "Exec cutemarked" }
+				Entry = "marknoto  " { Actions = "Exec marknoto" }
+				Entry = "markpado  " { Actions = "Exec markpado" }
 				Entry = "Qute" { Actions = "Exec qute" }
 				Entry = "ReText" { Actions = "Exec retext" }
 		Separator {}
@@ -104,7 +117,8 @@ Separator {}
 		Separator {}
 				#Entry = "         gfx           " { Actions = "Exec kolourpaint" }
 				Entry = "gimp" { Actions = "Exec gimp" }
-				Entry = "krita" { Actions = "Exec krita - platformtheme kde" }
+				#Entry = "krita" { Actions = "Exec krita - platformtheme kde" }
+				Entry = "krita" { Actions = "Exec krita" }
 				Entry = "myPaint" { Actions = "Exec mypaint" }
 				Entry = "gnuStep_PRICE" { Actions = "Exec PRICE" }
 				Entry = "Pixelitor4" { Actions = "Exec java -jar /home/dh84/bin/pixelitor/pixelitor_4.0.2.jar" }
@@ -112,9 +126,11 @@ Separator {}
 		Separator {}
 				Entry = "dia" { Actions = "Exec dia" }
 				Entry = "inkscape" { Actions = "Exec inkscape" }
-				Entry = "karbon" { Actions = "Exec karbon - platformtheme kde" }
+				#Entry = "karbon" { Actions = "Exec karbon - platformtheme kde" }
+				Entry = "karbon" { Actions = "Exec karbon" }
 				Entry = "LoDraw" { Actions = "Exec lodraw" }
 				#Entry = "yEd" { Actions = "Exec /opt/yEd/yEd" }
+				Entry = "xaraLX" { Actions = "Exec runXara.sh" }
 		Separator {}
 		Separator {}
 				Entry = "digikam" { Actions = "Exec digikam - platformtheme kde" }
@@ -140,19 +156,19 @@ Separator {}
 		Separator {}   
                         Submenu = "• Onkyo" {
                               Separator {}
-                                Entry = "Power Off" { Actions = "Exec onkyo - host 192.168.1.50 power=off" }
-                                Entry = "Power On" { Actions = "Exec onkyo - host 192.168.1.50 power=on" }
+                                Entry = "Power Off" { Actions = "Exec onkyo --host 192.168.1.50 power=off" }
+                                Entry = "Power On" { Actions = "Exec onkyo --host 192.168.1.50 power=on" }
                                 Separator {}
-                                Entry = "volume 15" { Actions = "Exec onkyo - host 192.168.1.50 volume=15" }
-                                Entry = "volume 20" { Actions = "Exec onkyo - host 192.168.1.50 volume=20" }
-                                Entry = "volume 25" { Actions = "Exec onkyo - host 192.168.1.50 volume=25" }
-                                Entry = "volume 30" { Actions = "Exec onkyo - host 192.168.1.50 volume=30" }
-                                Entry = "volume 35" { Actions = "Exec onkyo - host 192.168.1.50 volume=35" }
-                                Entry = "volume 40" { Actions = "Exec onkyo - host 192.168.1.50 volume=40" }
-                                Entry = "volume 45" { Actions = "Exec onkyo - host 192.168.1.50 volume=45" }
-                                Entry = "volume 50" { Actions = "Exec onkyo - host 192.168.1.50 volume=50" }
-                                Entry = "volume 55" { Actions = "Exec onkyo - host 192.168.1.50 volume=55" }
-                                Entry = "volume 60" { Actions = "Exec onkyo - host 192.168.1.50 volume=60" }                     
+                                Entry = "volume 15" { Actions = "Exec onkyo --host 192.168.1.50 volume=15" }
+                                Entry = "volume 20" { Actions = "Exec onkyo --host 192.168.1.50 volume=20" }
+                                Entry = "volume 25" { Actions = "Exec onkyo --host 192.168.1.50 volume=25" }
+                                Entry = "volume 30" { Actions = "Exec onkyo --host 192.168.1.50 volume=30" }
+                                Entry = "volume 35" { Actions = "Exec onkyo --host 192.168.1.50 volume=35" }
+                                Entry = "volume 40" { Actions = "Exec onkyo --host 192.168.1.50 volume=40" }
+                                Entry = "volume 45" { Actions = "Exec onkyo --host 192.168.1.50 volume=45" }
+                                Entry = "volume 50" { Actions = "Exec onkyo --host 192.168.1.50 volume=50" }
+                                Entry = "volume 55" { Actions = "Exec onkyo --host 192.168.1.50 volume=55" }
+                                Entry = "volume 60" { Actions = "Exec onkyo --host 192.168.1.50 volume=60" }                     
                             Separator {}
                             Separator {}
                         }
@@ -255,7 +271,7 @@ Separator {}
 				Entry = "firefox-dev" { Actions = "Exec firefox-dev" }
 			Separator {}
 				Entry = "icecat 45.1" { Actions = "Exec /home/dh84/bin/icecat/run-icecatDH.sh"}
-				Entry = "icecat" { Actions = "Exec icecat" }
+				#Entry = "icecat" { Actions = "Exec icecat" }
 			Separator {}
 			Separator {}
 				Entry = "newmoon" { Actions = "Exec newmoon" }
@@ -271,17 +287,18 @@ Separator {}
                                 Entry = "slimjet" { Actions = "Exec /opt/slimjet/flashpeak-slimjet" }
 			Separator {}
 			Separator {}
+                                Entry = "falkon" { Actions = "Exec falkon" }
 				Entry = "opera" { Actions = "Exec opera" }
 				Entry = "otter" { Actions = "Exec otter-browser" }
-				Entry = "qupzilla" { Actions = "Exec qupzilla" }
+#				Entry = "qupzilla" { Actions = "Exec qupzilla" }
 				Entry = "rekonq" { Actions = "Exec rekonq" }
 			Separator {}
 			Separator {}
 				Entry = "vivaldi" { Actions = "Exec vivaldi" }
 				#Entry = "vivaldi-beta" { Actions = "Exec /opt/vivaldi-beta/vivaldi" }
-			Separator {}
-			Separator {}
-				Entry = "icecat" { Actions = "Exec icecat" }
+			#Separator {}
+			#Separator {}
+				#Entry = "icecat" { Actions = "Exec icecat" }
 			Separator {}
 		}
 		#Separator {}
@@ -301,6 +318,7 @@ Separator {}
 				Entry = "kopete" { Actions = "Exec kopete" }
 				Entry = "homechat" { Actions = "Exec homechat" }
 				Entry = "empathy" { Actions = "Exec empathy" }
+				Entry = "Telegram" { Actions = "Exec Telegram" }
 			Separator {}
 		}
 		#Separator {}
@@ -356,14 +374,18 @@ Separator {}
 		Separator {}
 				Entry = "AbiWord" { Actions = "Exec abiword" }
 				Entry = "CalligraWord  " { Actions = "Exec calligrawords - platformtheme kde" }
-				Entry = "wpsOffice" { Actions = "Exec /usr/bin/wps" }
+				Entry = "wpsWord" { Actions = "Exec /usr/bin/wps -style gtk+" }
+				Entry = "wpsSpread" { Actions = "Exec /usr/bin/et -style gtk+" }
+				Entry = "wpsPresent" { Actions = "Exec /usr/bin/wpp -style gtk+" }
+				
 		Separator {}
 		Separator {}
                                 Entry = "master-pdf-editor" { Actions = "Exec /opt/master-pdf-editor-4/masterpdfeditor4" }
 				Entry = "Pagestream" { Actions = "Exec /opt/pgs/50/Run-PageStream5" }
 				Entry = "Scribus" { Actions = "Exec scribus" }
-		#Separator {}
+		Separator {}
 				#Entry = "gnome-activity-journal" { Actions = "Exec gnome-activity-journal"}
+				Entry = "calibre" { Actions = "Exec calibre" }
 				#Entry = "Okular" { Actions = "Exec okular" }
 		Separator {}
 		Separator {}
@@ -414,6 +436,10 @@ Separator {}
 				Entry = "virt-manager" { Actions = "Exec virt-manager" }
 		Separator {}
 		Separator {}
+                                Entry = "remmina" { Actions = "Exec remmina" }
+                                Entry = "spice-gtk (spicy)" { Actions = "Exec spicy" }
+                Separator {}
+                Separator {}
 				#Entry = "start test" { Actions = "Exec vboxmanage startvm test" }
 				#Entry = "start Manjaro" { Actions = "Exec vboxmanage startvm mjaroCURRENT" }
 				#Entry = "start Maui" { Actions = "Exec vboxmanage startvm maui" }
@@ -451,6 +477,13 @@ Separator {}
 		Separator {}
 				Entry = "yast" { Actions = "Exec kdesu yast2" }
 				Entry = "Dolphin-su" { Actions = "Exec kdesu dolphin" }
+				Entry = "krusader-su" { Actions = "Exec kdesu krusader" }
+				Entry = "D3lphin-su" { Actions = "Exec kdesu /opt/trinity/bin/d3lphin" }
+		Separator {}
+                Separator {}
+				Entry = "D3lphin" { Actions = "Exec /opt/trinity/bin/d3lphin" }
+				Entry = "dfm" { Actions = "Exec dfm" }
+				
 		Separator {}
 		Separator {}
                                 Entry = "ksysguard" { Actions = "Exec ksysguard - platformtheme kde" }
@@ -518,8 +551,12 @@ Separator {}
 				Entry = "pnmixer" { Actions = "Exec pnmixer" }
 				Entry = "pulseaudio-dlna" { Actions = "Exec pulseaudio-dlna" }
                                 Entry = "switchbg" { Actions = "Exec switchbg" }
+                                Entry = "dunst" { Actions = "Exec dunst" }
+                Separator {}
                                 Entry = "flipWacom" { Actions = "Exec /home/dh84/.pekwm/scripts/flipWacom.sh" }
-		Separator {}
+                                Entry = "Wacom OFF" { Actions = "Exec xinput disable 11" }
+                                Entry = "Wacom ON" { Actions = "Exec xinput enable 11" }
+                Separator {}
 		Separator {}
 				Entry = "NoteCase" { Actions = "Exec notecase" }
 				Entry = "akregator" { Actions = "Exec akregator"}
@@ -633,6 +670,8 @@ Separator {}
 				Entry = "Edit .profile" { Actions = "Exec kwrite ~/.profile" }
 				Entry = "Edit .xprofile" { Actions = "Exec kwrite ~/.xprofile" }
 				#
+				Separator {}
+				Entry = "Edit .jwmrc" { Actions = "Exec kwrite ~/.jwmrc" }
 			}
 		Separator {}
 		Separator {}
@@ -653,12 +692,12 @@ Separator {}
 Separator {}
 Separator {}
 				#   Entry = "Run..." { Actions = "exec fbrun" }
-                                        #Entry = "gmRun..." { Actions = "exec gmrun" }
+                                        Entry = "fbRun..." { Actions = "exec fbrun" }
                                         Entry = "krunner..." { Actions = "exec krunner" }
 					Entry = "pekRun..." { Actions = "ShowCmdDialog" }
 				#	Entry = "su Dolphin" { Actions = "Exec kdesu dolphin" }
-		#Separator {}
-		#Separator {}
+		Separator {}
+		Separator {}
 				#Entry = "playr-ng2" { Actions = "exec playr-ng2" }
 				# Entry = "playr" { Actions = "exec playr-ng2-lite" }
 				# Entry = "hig" { Actions = "exec hig" }
@@ -666,10 +705,13 @@ Separator {}
 				# Entry = "hig-play" { Actions = "exec hig-play" }
 				Entry = "hig-all" { Actions = "exec hig-all" }
 #Separator {}
-				#Entry = "r-play" { Actions = "exec /home/dh84/bin/playr-ng2-lite" }
+				##Entry = "r-play" { Actions = "exec /home/dh84/bin/playr-ng2-lite" }
+				#Entry = "r-play" { Actions = "exec /home/dh84/bin/rplay2017" }
+				Entry = "r-playOne" { Actions = "exec /home/dh84/bin/rplayOne" }
 				Entry = "r-play" { Actions = "exec /home/dh84/bin/rplay2017" }
+				Entry = "r-play-FullScreen" { Actions = "exec /home/dh84/bin/rplay2017a" }
 Separator {}
-Separator {}
+
 #Separator {}
 	#Submenu = "Go to" {
 		#SubMenu = "Workspace     " {
@@ -710,6 +752,8 @@ WindowMenu = "Window Menu" {
 #     Separator {}
 #     Separator {}
 				Entry = "(Un)Stick" { Actions = "Toggle Sticky" }
+		Separator {}
+				Entry = "dock" { Actions = "exec kdocker" }
 		Separator {}
 				Entry = "(Un)Shade" { Actions = "Toggle Shaded" }
 				Entry = "Iconify" { Actions = "Set Iconified" }

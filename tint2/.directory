@@ -1,8 +1,11 @@
 [Dolphin]
-Timestamp=2013,2,28,13,58,39
+HeaderColumnWidths=349,160,109,122,92,92,128,139,533,112,92
+SortOrder=1
+SortRole=date
+Timestamp=2017,10,15,18,49,54
 Version=3
 ViewMode=1
-VisibleRoles=Details_text,Details_size,Details_date,Details_type,Details_comment,Details_destination,Details_permissions,Details_owner,Details_group,CustomizedDetails
+VisibleRoles=CustomizedDetails,Details_text,Details_date,Details_size,Details_rating,Details_type,Details_owner,Details_group,Details_permissions,Details_destination,Details_comment,Details_tags
 
 [Settings]
 HiddenFilesShown=true

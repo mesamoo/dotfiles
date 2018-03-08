@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Service
-Actions=_SEPARATOR_;Kwrite;MadEdit;Qedit;Thunderpad;_SEPARATOR_;KolourPaint;_SEPARATOR_;Komparetwo;Okteta;_SEPARATOR_;
+Actions=_SEPARATOR_;Kwrite;MadEdit;Medit;Qedit;Thunderpad;_SEPARATOR_;KolourPaint;_SEPARATOR_;Komparetwo;Okteta;_SEPARATOR_;
 X-KDE-Priority=TopLevel
 ServiceTypes=KonqPopupMenu/Plugin,all/allfiles
 Encoding=UTF-8
@@ -19,6 +19,11 @@ Exec=/usr/bin/juffed %U
 Name=MadEdit
 Icon=madedit.xpm
 Exec=/usr/bin/madedit %f
+
+[Desktop Action Medit]
+Name=Medit
+Icon=medit
+Exec=/usr/bin/medit %f
 
 [Desktop Action Qedit]
 Name=Qedit

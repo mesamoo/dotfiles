@@ -3,41 +3,202 @@
 
     <!-- The root menu. -->
     <!-- <RootMenu onroot="12"> -->
-        <RootMenu onroot="123">
-        <Program icon="terminal.png" label="Terminal">konsole</Program>
-        <Separator/>
-        <Program label="gimp">gimp</Program>
-        <Program label="krita">krita</Program>
-        <Separator/>
+<RootMenu onroot="123">
+          <Program icon="terminal.png" label="Terminal">konsole</Program>
+          <Program icon="terminal.png" label="fbRun">fbrun</Program>
+<Separator/>
+          <Program label="new session">nudesk-choose4</Program>
+          
+<Menu label="Switch TTY">
+          <Program label="tty 7">chvt 7</Program>
+          <Program label="tty 2">chvt 2</Program>
+          <Program label=" "> </Program>
+          <Program label="tty 1">chvt 1</Program>
+          <Program label="tty 3">chvt 3</Program>
+          <Program label="tty 8">chvt 8</Program>
+          <Program label="tty 10">chvt 10</Program>
+</Menu>  
+    
+<Separator/>
+
+<Menu label="onkyo">
+          <Program label="Power On">onkyo --host 192.168.1.50 power=on</Program>
+          <Program label="Power Off">onkyo --host 192.168.1.50 power=off</Program>
+          <Separator/>
+          <Program label="Volume 15">onkyo --host 192.168.1.50 volume=15</Program>
+          <Program label="Volume 20">onkyo --host 192.168.1.50 volume=20</Program>
+          <Program label="Volume 25">onkyo --host 192.168.1.50 volume=25</Program>
+          <Program label="Volume 30">onkyo --host 192.168.1.50 volume=30</Program>
+          <Program label="Volume 35">onkyo --host 192.168.1.50 volume=35</Program>
+          <Program label="Volume 40">onkyo --host 192.168.1.50 volume=40</Program>
+          <Program label="Volume 45">onkyo --host 192.168.1.50 volume=45</Program>
+          <Program label="Volume 50">onkyo --host 192.168.1.50 volume=50</Program>
+</Menu> 
+    
+<Separator/>
+          <Program label="d3lphin">/opt/trinity/bin/d3lphin</Program>
+          <Program label="dolphin">dolphin</Program>
+          <Program label="konqueror">konqueror</Program>
+          <Program label="kate">kate</Program>
+          <Program label="kwrite">kwrite</Program>
+          <Program label="libreoffice">lowriter</Program>  
+<Separator/>
+      
+<Menu label="edit">
+          <Program label="atom">atom</Program>
+          <Program label="brackets">brackets</Program>
+          <Program label="juffed">juffed</Program>
+          <Program label="madedit">madedit</Program>
+          <Program label="tea">tea</Program>
+          <Program label="textadept">textadept</Program>
+          <Program label="vsCode">code</Program>
+
+<Separator/>
+          <Program label="Okteta">okteta</Program>
+          <Program label="retext">retext</Program>
+</Menu>
+           
+<Menu label="gfx">
+          <Program label="gimp">gimp</Program>
+          <Program label="krita">krita</Program>
+          <Program label="mypaint">mypaint</Program>
+<Separator/>
+          <Program label="digikam">digikam</Program>
+          <Program label="gwenview">gwenview</Program>
+<Separator/>
+          <Program label="dia">dia</Program>
+          <Program label="inkscape">inkscape</Program>
+          <Program label="karbon">karbon</Program>
+          <Program label="scribus">scibus</Program>
+          <Program label="xaraLX">runXara.sh</Program>
+<Separator/>
+          <Program label="gcolor2">gcolor2</Program>
+          <Program label="skanlite">skanlite</Program>
+</Menu>
+     
+<Menu label="media">
+          <Program label="gmpc">gmpc</Program>
+          <Program label="cantata">cantata</Program>
+          <Program label="clementine">clementine</Program>
+<Separator/>
+          <Program label="audacity">audacity</Program>
+          <Program label="flacon">flacon</Program>
+          <Program label="HandBrakeGUI">HandBrakeGUI</Program>
+          <Program label="kdenlive">kdenlive</Program>
+          <Program label="vlc">vlc</Program>
+<Separator/>
+          <Program label="grip">grip</Program>
+          <Program label="k3b">k3b</Program>
+          <Separator/>
+          <Program label="qjackctl">qjackctl</Program>
+          <Program label="vmpk">vmpk</Program>
+          <Program label="Bristol-arp">startBristol -jack -arp2600 -scale 2.0</Program>
+          <Program label="synthv1_jack">synthv1_jack</Program>
+</Menu>
+
+<Menu label="net">
+          <Program label="chrome-unstable">google-chrome-unstable</Program>
+          <Program label="firefox">firefox</Program>
+          <Program label="palemoon">palemoon</Program>
+<Separator/>
+          <Program label="icecat45.1">/home/dh84/bin/icecat/run-icecatDH.sh</Program>
+          <Program label="min">min</Program>
+          <Program label="qupzilla">qupzilla</Program>
+          <Program label="vivaldi">vivaldi</Program>
+<Separator/>
+          <Program label="gip">gip</Program>
+          <Program label="ipQalc">ipQalc</Program>
+          <Program label="iwscanner">gksu iwscanner</Program>
+          <Program label="linssid">gksu linssid</Program>
+          <Program label="nettool">gnome-nettool</Program>
+          <Program label="wireshark">gksu wireshark</Program>
+          <Program label="zenmap">gksu zenmap</Program>
+</Menu>
+
+<Menu label="util">
+          <Program label="kcalc">kcalc</Program>
+          <Program label="spectacle">spectacle</Program>
+<Separator/>
+          <Program label="kpat">kpat</Program>               
+</Menu>
+
+<Menu label="virt">
+          <Program label="VirtualBox">VirtualBox</Program>
+          <Program label=" "> </Program>
+          <Program label="BasiliskII">BasiliskII</Program>
+          <Program label="SheepShaver">SheepShaver</Program>
+          <Program label="SheepShaver-dh">/home/bin/0_sheepShaver/SheepShaver</Program>
+          <Program label=" "> </Program>
+          <Program label="AmiKit">/home/dh84/Amiga-AmiKit/1.5.0/run-amikit</Program>
+</Menu>        
+
+          <Separator/>
+<Separator/>
+        
+<Menu label="startup">
+       <Program label="yast2">kdesu yast2</Program>
+<Separator/>
+       <Program label="artha">artha</Program>
+       <Program label="klipper">klipper</Program>
+       <Program label="qstardict">qstardict</Program>
+       <Separator/>
+       <Program label="kMix">kmix</Program>
+       <Program label="pnmixer">pnmixer</Program>
+       <Program label="pulseaudio-dlna">pulseaudio-dlna</Program>      
+<Separator/>
+        <Program label="akregator">akregator</Program>
+        <Program label="kgpg">kgpg</Program>
+        <Program label="kleopatra">kleopatra</Program>
+        <Program label="nextcloud">nextcloud</Program>
+        <Program label="notecase">notecase</Program>
+        <Program label="thunderbird">thunderbird</Program>
+<Separator/>
         <Program label="flipWacom">/home/dh84/.pekwm/scripts/flipWacom.sh</Program>
-        <Program label="nitrogen">nitrogen</Program>
         <Program label="numlockx">numlockx</Program>
+        <Program label="tint2">tint2</Program>
+        <Program label="tint2conf">tint2conf</Program>
+        <Program label="stalonetray">stalonetray</Program>
+        <Program label="trayer">trayer --widthtype request</Program>trayer --widthtype request
+<Separator/>
+        <Program label="nitrogen">nitrogen</Program>
         <Program label="nvidia-settings">nvidia-settings</Program>
-        <Separator/>
-        <Program label="dolphin">dolphin</Program>
-        <Program label="konsole">konsole</Program>
-        <Program label="kpat">kpat</Program>
-        <Program label="kwrite">kwrite</Program>
-        <Program label="gcolor2">gcolor2</Program>
-        <Separator/>
-        <Program label="konqueror">konqueror</Program>
-        <Program label="icecat">icecat</Program>
-        <Program label="icecat45.1">/home/dh84/bin/icecat/run-icecatDH.sh</Program>
-        <Program label="vivaldi">vivaldi</Program>
-        <Separator/>
-        <Separator/>
-        <Menu icon="folder.png" label="Applications">
-            <Include>exec: xdgmenumaker -n -i -f jwm</Include>
-        </Menu>
-        <Separator/>
-        <Separator/>
+        <Program label="xscreensaver">xscreensaver-demo</Program>
+</Menu>
+
+<Menu label="QuickFix">
+        <Program label="flipWacom">/home/dh84/.pekwm/scripts/flipWacom.sh</Program>
+        <Program label=" "> </Program>
+        <Program label="Wacom OFF">xinput disable 11</Program>
+        <Program label="Wacom ON">xinput enable 11</Program>        
+</Menu>
+
+<Menu label="system">
+        <Program label="yast2">kdesu yast2</Program>
+        <Program label="dolphin-SU">kdesu dolphin</Program>
+        <Program label="ksysguard">ksysguard</Program>
+<Program label=" "> </Program>
+        <Program label="hardinfo">hardinfo</Program>
+        <Program label="kDiskFree">kdf</Program>
+        <Program label="filelight">filelight</Program>
+<Program label=" "> </Program>
+        <Program label="gparted">kdesu gparted</Program>
+        <Program label="imagewriter">imagewriter</Program>
+</Menu>
+
+<Program label=" "> </Program>
         <Program icon="lock.png" label="Lock">
             xlock -mode blank
         </Program>
-        <Separator/>
+<Separator/>
+
+<Menu label="Applications">
+        <Include>exec: xdgmenumaker -n -i -f jwm</Include>
+</Menu>
+
+<Separator/>
         <Restart label="Restart" icon="restart.png"/>
         <Exit label="Exit" confirm="true" icon="quit.png"/>
-    </RootMenu>
+</RootMenu>
 
     <!-- Options for program groups. -->
     <Group>
@@ -60,19 +221,26 @@
 
     <!-- Tray at the bottom. -->
     <!-- <Tray x="0" y="-1" autohide="off"> -->
-        <Tray x="0" y="-1" autohide="bottom">
+        <Tray x="0" y="-1" height="36" autohide="bottom">
         <TrayButton icon="jwm-blue">root:1</TrayButton>
         <Spacer width="2"/>
         <!-- <TrayButton label="_">showdesktop</TrayButton> -->
         <!-- <Spacer width="2"/> -->
-
         <Pager labeled="true"/>
-
-        <TaskList maxwidth="256"/>
-
-        <Dock/>
+        <TaskList maxwidth="256"/>   
+        <Spacer width="1"/>
+       
+        <TrayButton icon="go-previous.svg">exec: mpc -h 192.168.1.58 prev</TrayButton >
+        <TrayButton icon="media-playback-start.svg">exec: mpc -h 192.168.1.58 toggle</TrayButton >
+        <TrayButton icon="go-next.svg">exec: mpc -h 192.168.1.58 next</TrayButton >
+        <Spacer width="1"/>
+        <TrayButton icon="go-down.svg">exec: /home/dh84/bin/onkyo-iscp 192.168.1.50 MVL DOWN</TrayButton >
+        <TrayButton icon="go-up.svg">exec: /home/dh84/bin/onkyo-iscp 192.168.1.50 MVL UP</TrayButton >
+        <Spacer width="8"/>
         <Clock format="%H:%M"><Button mask="123">exec:xclock</Button></Clock>
-
+        <Spacer width="8"/>
+        <!-- <Dock width="320" spacing="4"/> -->
+        <Spacer width="8"/> 
     </Tray>
 
     <!-- Visual Styles -->
@@ -80,11 +248,12 @@
         <!--  <Font>Arimo-18:bold</Font> -->
         <!--  <Font>Arimo-16</Font> -->
         <Font>Maven Pro-14:medium</Font>
-        <Width>4</Width>
+        <!--  <Width>4</Width> -->
+        <Width>5</Width>
        <!--  <Height>21</Height> -->
         <Height>26</Height>
         <Corner>5</Corner>
-        <Foreground>#cccccc</Foreground>
+        <Foreground>#dddddd</Foreground>
         <Background>#555555:#333333</Background>
         <Outline>#171717</Outline>
         <Opacity>0.5</Opacity>
@@ -138,8 +307,14 @@
          for icons in multiple paths.
       -->
     <IconPath>
-        /usr/share/icons/wm-icons/32x32-aquafusion
+        /usr/share/icons/hicolor
     </IconPath>
+    <IconPath>
+    /home/dh84/.._AAA_icons/000_jwm
+    </IconPath>    
+        <IconPath>
+    /usr/share/icons/hicolor/16x16/actions
+    </IconPath>    
     <IconPath>
         /usr/share/jwm
     </IconPath>
@@ -166,7 +341,8 @@
          -->
       <!--<Background type="solid">#111111</Background>-->  <!-- original setting -->
       <Desktop><Background type="solid">#111111</Background></Desktop>
-      <Desktop><Background type="image">/home/SHARED/walls/2016-wide/t3_4rx7if.jpeg</Background></Desktop>
+      <!-- <Desktop><Background type="image">/usr/share/WindowMaker/Themes/Lichen.themed/Lichen1.jpg</Background></Desktop> -->
+      <Desktop><Background type="image">/home/SHARED/walls/nature/water/lake_gunn_new_zealand.jpg</Background></Desktop>
       <Desktop><Background type="image">/home/SHARED/walls/2016-wide/U7xkY1M.jpg</Background></Desktop>
       <!--<Desktop><Background type="gradient">#86f442:#42adf4</Background></Desktop> -->
       <Desktop><Background type="image">/home/SHARED/walls/nature/water/badacsony.jpg</Background></Desktop>  
@@ -213,4 +389,20 @@
     <Key mask="A" key="Up">udesktop</Key>
     <Key mask="A" key="Down">ddesktop</Key>
 
+    <StartupCommand>
+      <!-- testing -->
+      <!-- seq 0 1 | xargs -l1 -I@ compton -b -d :0.@ --config ~/.compton.config & -->
+      <!-- end testing -->
+    numlockx &
+    setxkbmap -option ctrl:nocaps &
+    flipWacom.sh &
+    tint2 &
+      <!-- testing -->
+      /opt/trinity/bin/klipper &
+      <!-- end testing -->
+    <!-- krita & -->
+    <!-- yakuake & -->
+    </StartupCommand>  
+ 
+    
 </JWM>

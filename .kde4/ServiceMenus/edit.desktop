@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Service
-Actions=_SEPARATOR_;codeLite;Geany;Juffed;Kate;kDevelop;Komodo;MadEdit;Qedit;Sublime;Tea;vsCode;_SEPARATOR_;Kwrite;Thunderpad;_SEPARATOR_;
+Actions=_SEPARATOR_;codeLite;Geany;Juffed;Kate;kDevelop;Komodo;MadEdit;Medit;Qedit;Sublime;Tea;vsCode;_SEPARATOR_;Kwrite;Thunderpad;_SEPARATOR_;
 X-KDE-Priority=TopLevel
 X-KDE-Submenu=Text_Edit
 ServiceTypes=KonqPopupMenu/Plugin,all/allfiles
@@ -48,6 +48,11 @@ Name=MadEdit
 Icon=madedit.xpm
 Exec=/usr/bin/madedit %f
 
+[Desktop Action Medit]
+Name=Medit
+Icon=medit
+Exec=/usr/bin/medit %f
+
 [Desktop Action MadEdit]
 Name=Qedit
 Icon=kate
@@ -61,7 +66,7 @@ Exec=/home/bin/bin/SublimeText2/sublime_text %U
 [Desktop Action Tea]
 Name=Tea
 Icon=~/.._AAA_icons/2016/tea/tea-icon-v3-02.png
-Exec=/usr/bin/tea %U
+Exec=/usr/local/bin/tea %U
 
 [Desktop Action Kwrite]
 Name=Kwrite
@@ -75,5 +80,5 @@ Exec=~/bin/thunderpad %U
 
 [Desktop Action vsCode]
 Name=vsCode
-Icon=/opt/VSCode/resources/app/resources/linux/code.png
-Exec=/opt/VSCode/bin/code %U
+Icon=code
+Exec=/usr/bin/code %U

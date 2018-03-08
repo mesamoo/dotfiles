@@ -280,11 +280,39 @@ BorderResizeCursors
 ## Select some nice clear fonts (you may want smaller ones for a low
 # resolution screen)
 
-TitleFont "-adobe-times-medium-r-normal--*-140-*-*-*-*-*-*"
-ResizeFont "-adobe-times-medium-r-normal--*-140-*-*-*-*-*-*"
-MenuFont "-adobe-times-medium-r-normal--*-140-*-*-*-*-*-*"
-#MenuFont "-adobe-office code pro-medium-r-normal-*-*-120-100-100-*-*-*-*"
-IconFont "-adobe-times-medium-r-normal--*-140-*-*-*-*-*-*"
+#previous
+#TitleFont "-adobe-times-medium-r-normal--*-140-*-*-*-*-*-*"
+TitleFont "-adobe-times-medium-r-normal-*-18-180-75-75-*-*-*-*"
+#
+#TitleFont "-adobe-office code pro-medium-r-normal-*-*-140-120-120-*-*-*-*"
+#TitleFont "-adobe-office code pro-medium-r-normal-*-*-*-200-200-*-*-*-*"
+#
+#ResizeFont "-adobe-times-medium-r-normal--*-140-*-*-*-*-*-*"
+ResizeFont "-adobe-times-medium-r-normal-*-18-180-75-75-*-*-*-*"
+#
+#ResizeFont "-adobe-office code pro-medium-r-normal-*-*-140-120-120-*-*-*-*"
+#ResizeFont "-adobe-office code pro-medium-r-normal-*-*-*-200-200-*-*-*-*"
+#
+#MenuFont "-adobe-times-medium-r-normal--*-140-*-*-*-*-*-*"
+MenuFont "-adobe-times-medium-r-normal-*-24-240-75-75-*-*-*-*"
+#
+#MenuFont "-adobe-office code pro-medium-r-normal-*-*-140-120-120-*-*-*-*"
+#MenuFont "-adobe-office code pro-medium-r-normal-*-*-*-200-200-*-*-*-*"
+#
+##MenuFont "-adobe-office code pro-medium-r-normal-*-*-120-100-100-*-*-*-*"
+#IconFont "-adobe-times-medium-r-normal--*-140-*-*-*-*-*-*"
+IconFont "-adobe-times-medium-r-normal-*-18-180-75-75-*-*-*-*"
+#
+#IconFont "-adobe-office code pro-medium-r-normal-*-*-140-120-120-*-*-*-*"
+#IconFont "-adobe-office code pro-medium-r-normal-*-*-*-200-200-*-*-*-*"
+#
+#new 2017-09-24
+#MenuFont         "-*-terminus-medium-r-normal-*-*-*-*-*-*-*-*-*"
+#TitleFont        "-*-terminus-medium-r-normal-*-*-*-*-*-*-*-*-*"
+#IconManagerFont  "-*-terminus-medium-r-normal-*-*-*-*-*-*-*-*-**"
+#IconFont         "-*-terminus-medium-r-normal-*-*-*-*-*-*-*-*-*"
+#ResizeFont       "-*-terminus-medium-r-normal-*-*-*-*-*-*-*-*-*"
+#WorkSpaceFont    "-*-terminus-medium-r-normal-*-*-*-*-*-*-*-*-*"
 
 # For window label on title bar
 # (A proportional font, like helvetica, can save space)

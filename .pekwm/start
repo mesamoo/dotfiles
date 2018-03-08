@@ -1,23 +1,18 @@
 #!/bin/sh
-# PekWM start file
-# This file is a simple shell script; It gets run on pekwm startup, after
-# the theme and all config has loaded if it is set executable  (chmod +x start).
-# It gets re-run every time pekwm is restarted.
-#
 #export DE="kde"          #removed AGAIN 2016-08 breaks menu and other functions
 seq 0 1 | xargs -l1 -I@ compton -b -d :0.@ --config ~/.compton.config &
 numlockx &
 #
 ###following breaks qedit
 ##setxkbmap -option ctrl:nocaps &
-### seems to work if moved to ~/.Xmodmap
+### seems to work for pekwm (but not jwm) if moved to ~/.Xmodmap
 ###see https://wiki.archlinux.org/index.php/Xmodmap
 ###useful commands: xev, xmodmap -pke,
 #
-#dunst&
-####akonadictl start &
+
 ~/.pekwm/scripts/display-xset.sh &
 feh --bg-scale ~/.pekwm/scripts/walls/0.jpg &
+dunst &
 yakuake &
 nvidia-settings
 /opt/trinity/bin/kicker &
@@ -28,25 +23,19 @@ kwalletmanager &
 conky  --config=/home/dh84/.conkyrc.locker &
 conky --config=/home/dh84/.conkyrc.leftclockW.locker &
 knemo &
-nextcloud &
+#nextcloud &
 qstardict &
 gdbus call -e -d org.freedesktop.DBus -o /org/freedesktop/DBus -m org.freedesktop.DBus.StartServiceByName org.freedesktop.Tracker1 0 &
-#/usr/lib/tracker-miner-fs &
-#/usr/lib/tracker-extract &
-#/usr/lib/tracker-miner-user-guides &
-#/usr/lib/tracker-miner-apps &
 tracker daemon -s &
 ~/.pekwm/scripts/flipWacom.sh &
 ~/bin/rainlendar2/rainlendar2 &
 gnome-activity-journal &
 artha &
 /opt/trinity/bin/klipper &
-kmix &
-#klipper &
-#pnmixer &
-#pulseaudio-dlna &
+#kmix &
+Telegram &
 ###~/.pekwm/scripts/YADstartBaloo.sh
-#/home/dh84/.pekwm/scripts/rclmon.sh start
-#indicator-kdeconnect &
-#/home/dh84/0000_GIT/000_dotfiles_dh/.pekwm/scripts/kdeconnect.sh &
+##/home/dh84/.pekwm/scripts/rclmon.sh start
+##indicator-kdeconnect &
+##/home/dh84/0000_GIT/000_dotfiles_dh/.pekwm/scripts/kdeconnect.sh &
 

@@ -132,7 +132,8 @@ Property = "^(gecko|Gecko|firefox-bin),^Firefox-bin,,^Customize Toolbar\$" {
 /*      following does not seem to work                 */
   Property = "^kcalc,^kcalc" {
                ApplyOn = "Start New Reload"
-               ClientGeometry = "572x390+200+50"
+#               ClientGeometry = "572x390+200+50"
+               ClientGeometry = "+200-50"
        }      
        
 #  Property = "^VirtualBox,^VirtualBox„^[Running] - Oracle VM VirtualBox" {
@@ -254,7 +255,7 @@ Property = "^(gecko|Gecko|firefox-bin),^Firefox-bin,,^Customize Toolbar\$" {
 #       Skip = "Menus FocusToggle Snap"
 # }
 
-
+ 
 /*
  Remove Gimp windows from the menus, only show the main toolbox window.
  Use the WM_WINDOW_ROLE to tell the difference between gimp windows.
@@ -369,17 +370,30 @@ Property = "^geeqie,^Geeqie" {
 }
 
 /*	next property recognizes YAD requester with title of Again Again"	*/
-Property = "^yad,^Yad" {
-        Title = "Again Again"
-        ApplyOn = "Start New Reload"
-        ClientGeometry = "+840+175"
-}
+/*      Autoprperties seem to only recognize 1 instance of any defined program
+        that is, defining multiple titles seems to have no efect*/
+#Property = "^yad,^Yad" {
+#        Title = "Again Again"
+#        ApplyOn = "Start New Reload"
+#        ClientGeometry = "+1940+104"
+#}
 
+#Property = "^yad,^Yad" {
+#        Title = "Again?"
+#        ApplyOn = "Start New Reload"
+#        ClientGeometry = "271x112+1940+104"
+#}
+
+#hig all and children, all yad requestors
 Property = "^yad,^Yad" {
-        Title = "Again?"
-        ApplyOn = "Start New Reload"
-        ClientGeometry = "271x112+1920+39"
-}
+        ApplyOn = "Start New Reload Transient"
+#        ClientGeometry = "+1935+69"
+        Layer = "OnTop"
+        Skip = "Menus"
+ }
+
+####################################################
+
 
 /*	next property recognizes kdialog hig requester with title of Again Again"	*/
 Property = "^kdialog,^Kdialog" {
@@ -608,6 +622,11 @@ so tbird does not accidentally close (buttons only minimize, use menu or hotkeys
        }
        
        Property = "^kcalc,^kcalc" {
+               Decor = "KloseOnly"
+               ApplyOn = "Start New Reload"
+       }       
+
+       Property = "^Nextcloud,^Nextcloud" {
                Decor = "KloseOnly"
                ApplyOn = "Start New Reload"
        }       
