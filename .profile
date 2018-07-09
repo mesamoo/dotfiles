@@ -13,3 +13,4 @@
 export VAGRANT_DEFAULT_PROVIDER="virtualbox"
 #back to useless
 export QT_QPA_PLATFORMTHEME="qt5ct"
+mount | grep "/home/0_gdrive" >/dev/null || /usr/bin/google-drive-ocamlfuse "/home/0_gdrive"

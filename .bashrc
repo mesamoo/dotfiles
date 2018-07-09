@@ -28,6 +28,7 @@ export NNN_DE_FILE_MANAGER=dolphin
 BROWSER=/usr/bin/xdg-open
 export GOPATH="$HOME/go"
 export PATH="$HOME/go/bin:$PATH"
+#export PATH="$HOME/bin:$PATH"
 export LADSPA_PATH=/usr/lib64/ladspa:/usr/lib/ladspa:/usr/local/lib/ladspa:~/.ladspa
 
 alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
@@ -38,6 +39,7 @@ alias cp='cp -i'                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias np='nano PKGBUILD'
+alias h='history|grep'
 
 #DH aliases
 # deletes all but the current and previous 2 versions of

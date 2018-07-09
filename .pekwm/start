@@ -1,6 +1,7 @@
 #!/bin/sh
 #export DE="kde"          #removed AGAIN 2016-08 breaks menu and other functions
-seq 0 1 | xargs -l1 -I@ compton -b -d :0.@ --config ~/.compton.config &
+###seq 0 1 | xargs -l1 -I@ compton -b -d :0.@ --config ~/.compton.config &
+xcompmgr &
 numlockx &
 #
 ###following breaks qedit
@@ -15,6 +16,7 @@ feh --bg-scale ~/.pekwm/scripts/walls/0.jpg &
 dunst &
 yakuake &
 nvidia-settings
+####kcmshell4 kcm_baloofileadv
 /opt/trinity/bin/kicker &
 xfce4-panel &
 lxpanel &
@@ -33,7 +35,7 @@ gnome-activity-journal &
 artha &
 /opt/trinity/bin/klipper &
 #kmix &
-Telegram &
+telegram &
 ###~/.pekwm/scripts/YADstartBaloo.sh
 ##/home/dh84/.pekwm/scripts/rclmon.sh start
 ##indicator-kdeconnect &

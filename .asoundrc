@@ -1,10 +1,13 @@
-# create by vokoscreen 2.4.11 Beta
+pcm.!default {
+    type plug
+    slave { pcm "pulse" }
+}
 
 pcm.pulse {
-  type pulse
+    type pulse
 }
 
-ctl.pulse {
-  type pulse
+ctl.mixer0 {
+    type hw
+    card 0
 }
-

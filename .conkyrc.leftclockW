@@ -70,7 +70,7 @@ override_utf8_locale yes
 use_spacer none
 
 alignment bl
-gap_x 30
+gap_x 60
 #gap_y -100
 gap_y -130
 minimum_size 250 250

@@ -136,6 +136,13 @@ Property = "^(gecko|Gecko|firefox-bin),^Firefox-bin,,^Customize Toolbar\$" {
                ClientGeometry = "+200-50"
        }      
        
+#      Property = "^gmic,^Gimp-2.10" {
+#               ApplyOn = "Start New Reload"
+#               ClientGeometry = "572x390+200+50"
+#               ClientGeometry = "+1300-50"
+#       }      
+       
+       
 #  Property = "^VirtualBox,^VirtualBox„^[Running] - Oracle VM VirtualBox" {
 #               ApplyOn = "Start New Workspace Reload"
 #               Sticky = "True"
@@ -183,6 +190,12 @@ Property = "^(gecko|Gecko|firefox-bin),^Firefox-bin,,^Customize Toolbar\$" {
                Workspace = "6"
 			   ClientGeometry = "1200x950"
        }
+# previous stopped working, following should work      
+  Property = "^chromium-browser,^Chromium-browser" {
+               ApplyOn = "Start New Workspace Reload"
+               Workspace = "6"
+                           ClientGeometry = "1200x950"
+       }       
 
          Property = "^google-chrome,^google-chrome" {
                ApplyOn = "Start New Reload"
@@ -602,6 +615,11 @@ so tbird does not accidentally close (buttons only minimize, use menu or hotkeys
        }       
        
        Property = "^chromium-browser,^chromium-browser" {
+               Decor = "noKlose"
+               ApplyOn = "Start New Reload"
+       }
+# previous stopped working, following should work    
+       Property = "^chromium-browser,^Chromium-browser" {
                Decor = "noKlose"
                ApplyOn = "Start New Reload"
        }
