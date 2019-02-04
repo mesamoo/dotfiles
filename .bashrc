@@ -105,3 +105,5 @@ WHI="\[$(tput setf 7)\]"
 #next line also added to .profile
 VAGRANT_DEFAULT_PROVIDER=virtualbox
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
+# fix ugly fonts in java applications
+export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"

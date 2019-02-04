@@ -10,3 +10,6 @@ zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+#fix the java ugly font issue
+export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"

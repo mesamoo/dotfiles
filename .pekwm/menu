@@ -28,7 +28,24 @@ Separator {}
                             Separator {}
                                 Entry = "Power Off" { Actions = "Exec onkyo --host 192.168.1.50 power=off" }
                                 Entry = "Power On" { Actions = "Exec onkyo --host 192.168.1.50 power=on" }
-                            Separator {}
+                                Separator {}
+                                Entry = "volume 2" { Actions = "Exec onkyo --host 192.168.1.50 volume=2" }
+                                Entry = "volume 10" { Actions = "Exec onkyo --host 192.168.1.50 volume=10" }
+                                Entry = "volume 15" { Actions = "Exec onkyo --host 192.168.1.50 volume=15" }
+                                Entry = "volume 25" { Actions = "Exec onkyo --host 192.168.1.50 volume=30" }
+                                Separator {}
+                                Entry = "Mute" { Actions = "Exec onkyo --host 192.168.1.50 audio-muting=on" }                                
+                                Entry = "Un-Mute" { Actions = "Exec onkyo --host 192.168.1.50 audio-muting=off" }                                
+                                Separator {}
+                           Submenu = "• input" {
+                                Entry =  "rune" { Actions = "Exec onkyo --host 192.168.1.50 source=pc" }
+                                Entry =  "Phono-low" { Actions = "Exec onkyo --host 192.168.1.50 source=phono" }
+                                Entry =  "Phono-high" { Actions = "Exec onkyo --host 192.168.1.50 source=bd" }
+                                Entry =  "aux-phone" { Actions = "Exec onkyo --host 192.168.1.50 source=cbl" }
+                           }
+                                Separator {}
+                           Submenu = "• volume" {
+                                Entry = "volume 2" { Actions = "Exec onkyo --host 192.168.1.50 volume=2" }
                                 Entry = "volume 15" { Actions = "Exec onkyo --host 192.168.1.50 volume=15" }
                                 Entry = "volume 20" { Actions = "Exec onkyo --host 192.168.1.50 volume=20" }
                                 Entry = "volume 25" { Actions = "Exec onkyo --host 192.168.1.50 volume=25" }
@@ -43,6 +60,7 @@ Separator {}
                             Separator {}
                                 Entry = "volume down" { Actions = "Exec onkyo-iscp 192.168.1.50 MVL DOWN" }
                                 Entry = "volume up" { Actions = "Exec onkyo-iscp 192.168.1.50 MVL UP" }
+                            }
                         }
 Separator {}
 Separator {}
@@ -135,13 +153,19 @@ Separator {}
 				Entry = "xaraLX" { Actions = "Exec runXara.sh" }
 		Separator {}
 		Separator {}
-				Entry = "digikam" { Actions = "Exec digikam -platformtheme kde" }
+				Entry = "Digikam" { Actions = "Exec digikam -platformtheme kde" }
+				Entry = "DarkTable" { Actions = "Exec darktable" }
 				Entry = "gThumb" { Actions = "Exec gthumb" }
-				Entry = "gwenview" { Actions = "Exec gwenview -platformtheme kde" }
-				Entry = "kphotoalbum" { Actions = "Exec kphotoalbum" }
-#				Entry = "pixeluvo" { Actions = "Exec pixeluvo" }
-                                Entry = "showfoto" { Actions = "Exec showfoto" }
-				Entry = "viewnior" { Actions = "Exec viewnior" }
+				Entry = "Gwenview" { Actions = "Exec gwenview -platformtheme kde" }
+				Entry = "kPhotoAlbum" { Actions = "Exec kphotoalbum" }
+#				Entry = "Pixeluvo" { Actions = "Exec pixeluvo" }
+                                Entry = "RawStudio" { Actions = "Exec rawstudio" }
+                                Entry = "Rawtherapee" { Actions = "Exec rawtherapee" }
+                                Entry = "Showfoto" { Actions = "Exec showfoto" }
+				Entry = "Viewnior" { Actions = "Exec viewnior" }
+		Separator {}
+		Separator {}
+				Entry = "rapid-photo-downloader" { Actions = "Exec rapid-photo-downloader" }
 		Separator {}
 		Separator {}
 				Entry = "gcolor2" { Actions = "Exec gcolor2" }
@@ -151,10 +175,32 @@ Separator {}
 				Entry = "SimpleScan" { Actions = "Exec simple-scan" }
 		Separator {}	
 				Entry = "iscan" { Actions = "Exec iscan" }
+				Entry = "paperwork" { Actions = "Exec paperwork" }
 				Entry = "skanlite" { Actions = "Exec skanlite" }
+				
 		Separator {}
 	}
 	Submenu = "• Media" {
+                        Submenu = "• cast" {
+                                Entry = "gnomeCast" { Actions = "Exec gnomecast" }
+                        Separator {}
+                                ##Entry = "catt play" { Actions = "Exec catt with modded hig" }
+                                #Entry = "catt pause" { Actions = "Exec catt pause" }
+                                #Entry = "catt continue" { Actions = "Exec catt play" }
+                                #Entry = "catt ffwd 30s" { Actions = "Exec catt ffwd 30" }
+                                #Entry = "catt ffwd 1m" { Actions = "Exec catt ffwd 60" }
+                                #Entry = "catt ffwd 2m" { Actions = "Exec catt ffwd 120" }
+                                #Entry = "catt stop" { Actions = "Exec catt stop" }
+                             Separator {}
+                                Entry = "castnow pause/play" { Actions = "Exec castnow --command space" }
+                                Entry = "castnow stop" { Actions = "Exec castnow --command s" }
+                                Entry = "castnow back" { Actions = "Exec castnow --command left" }
+                                Entry = "castnow forward" { Actions = "Exec castnow --command right" }
+                                #Entry = "castnow quit" { Actions = "Exec castnow --command q" }
+                                Entry = "castnow KILL nodejs" { Actions = "Exec killall -9 node-default" }
+                             Separator {}
+                                Entry = "kill mkchromecast" { Actions = "Exec killall -9 mkchromecast" }
+                        }
 		Separator {}   
                         Submenu = "• Onkyo" {
                               Separator {}
@@ -202,6 +248,7 @@ Separator {}
 		                Entry = "Audacity" { Actions = "Exec audacity" }
 		                Entry = "ConvertAudio" { Actions = "Exec /usr/local/share/applications/ffmpeg_multifile-extract-audio.sh" }
 		                Entry = "Flacon" { Actions = "Exec flacon" }
+		                Entry = "gnac" { Actions = "Exec gnac" }
                                 Entry = "soundkonverter" { Actions = "Exec soundkonverter" }
 				Separator {}
 				Separator {}
@@ -209,18 +256,71 @@ Separator {}
 #				Entry = "ConvertAudio" { Actions = "Exec /usr/local/share/applications/ffmpeg_multifile-extract-audio.sh" }
 				Entry = "grip" { Actions = "Exec grip" }
 				Entry = "kid3" { Actions = "Exec kid3" }
-				
+				Entry = "picard" { Actions = "Exec picard" }
+				Entry = "easytag" { Actions = "Exec easytag" }
 			       Separator {}
 			       Separator {}
 			}
+                Separator {}
+                         Submenu = "• Jack" {
+                                Entry = "Start jackd" { Actions = "Exec jackd -R -d alsa" }
+                                Entry = "kill jack " { Actions = "Exec killall -9 jack" }
+                                Entry = "kill jackd " { Actions = "Exec killall -9 jackd" }
+                              Separator {}
+                                Entry = "cadence" { Actions = "Exec cadence" }
+                                Entry = "patchage" { Actions = "Exec patchage" }
+                                Entry = "qjackctl" { Actions = "Exec qjackctl" }
+                                Entry = "vmpk" { Actions = "Exec vmpk" }          
+                        }
+                         Submenu = "• Bristol Alsa" {
+                                Entry = "Bristol-aks" { Actions = "Exec startBristol -alsa -aks -scale 2.0 -quality 8" }
+                                Entry = "Bristol-arp2600" { Actions = "Exec startBristol -alsa -arp2600 -scale 2.0 -quality 8" }
+                                Entry = "Bristol-roland juno" { Actions = "Exec startBristol -alsa -juno -scale 2.0 -quality 8" }
+                                Entry = "Bristol-moog mini" { Actions = "Exec startBristol -alsa -mini -scale 2.0 -quality 8" }
+                                Entry = "Bristol-obxa" { Actions = "Exec startBristol -alsa -obxa -scale 2.0 -quality 8" }
+                                Entry = "Bristol-rhodes" { Actions = "Exec startBristol -alsa -rhodes -scale 2.0 -quality 8" }            
+                        }
+                         Submenu = "• Bristol Jack" {
+                                Entry = "Bristol-aks" { Actions = "Exec startBristol -jack -aks -scale 2.0 -quality 8" }
+                              Separator {}
+                                Entry = "Bristol-arp2600" { Actions = "Exec startBristol -jack -arp2600 -scale 2.0 -quality 8" }
+                                Entry = "Bristol-arp axxe" { Actions = "Exec startBristol -jack -axxe -scale 2.0 -quality 8" }
+                                Entry = "Bristol-arp odyssey" { Actions = "Exec startBristol -jack -odyssey -scale 2.0 -quality 8" }
+                                Entry = "Bristol-arp solina" { Actions = "Exec startBristol -jack -solina -scale 2.0 -quality 8" }
+                              Separator {}
+                                Entry = "Bristol-baumann bme-700" { Actions = "Exec startBristol -jack -bme700 -scale 2.0 -quality 8" }
+                              Separator {}
+                                Entry = "Bristol-crumar bit 01" { Actions = "Exec startBristol -jack -bitone -scale 2.0 -quality 8" }
+                                Entry = "Bristol-crumar bit 99" { Actions = "Exec startBristol -jack -bit99 -scale 2.0 -quality 8" }
+                                Entry = "Bristol-crumar bit + mods" { Actions = "Exec startBristol -jack -bit100 -scale 2.0 -quality 8" }
+                              Separator {}
+                                Entry = "Bristol-fender bass piano" { Actions = "Exec startBristol -jack -rhodesbass -scale 2.0 -quality 8" }
+                                Entry = "Bristol-fender rhodes" { Actions = "Exec startBristol -jack -rhodes -scale 2.0 -quality 8" }
+                                Entry = "Bristol-hammond B3" { Actions = "Exec startBristol -jack -b3 -scale 2.0 -quality 8" }
+                              Separator {}
+                                Entry = "Bristol-korg polysix" { Actions = "Exec startBristol -jack -polysix -scale 2.0 -quality 8" }
+                                Entry = "Bristol-korg poly-800" { Actions = "Exec startBristol -jack -poly800 -scale 2.0 -quality 8" }
+                                Entry = "Bristol-moog explorer" { Actions = "Exec startBristol -jack -explorer -scale 2.0 -quality 8" }
+                                Entry = "Bristol-moog memory" { Actions = "Exec startBristol -jack -memory -scale 2.0 -quality 8" }
+                                Entry = "Bristol-moog mg1" { Actions = "Exec startBristol -jack -mg1 -scale 2.0 -quality 8" }
+                                Entry = "Bristol-moog mini" { Actions = "Exec startBristol -jack -mini -scale 2.0 -quality 8" }
+                                Entry = "Bristol-moog sonic6" { Actions = "Exec startBristol -jack -sonic6 -scale 2.0 -quality 8" }
+                                Entry = "Bristol-moog voyager" { Actions = "Exec startBristol -jack -voyager -scale 2.0 -quality 8" }
+                              Separator {}
+                                Entry = "Bristol-oberheim obx" { Actions = "Exec startBristol -jack -obx -scale 2.0 -quality 8" }
+                                Entry = "Bristol-oberheim obxa" { Actions = "Exec startBristol -jack -obxa -scale 2.0 -quality 8" }
+                              Separator {}
+                                Entry = "Bristol-roland juno" { Actions = "Exec startBristol -jack -juno -scale 2.0 -quality 8" }
+                                Entry = "Bristol-roland jupiter-8" { Actions = "Exec startBristol -jack -jupiter -scale 2.0 -quality 8" }
+                                Entry = "Bristol-SC prophet5" { Actions = "Exec startBristol -jack -prophet -scale 2.0 -quality 8" }
+                              Separator {}
+                                Entry = "Bristol-yamaha dx-7" { Actions = "Exec startBristol -jack -dx -scale 2.0 -quality 8" }      
+                        }
 			Submenu = "• Synth" {
 			      Separator {}
-				Entry = "qjackctl" { Actions = "Exec qjackctl" }
-				Entry = "vmpk" { Actions = "Exec vmpk" }
 				Entry = "amsynth" { Actions = "Exec amsynth" }
-                                
-				Entry = "Bristol-arp" { Actions = "Exec startBristol -jack -arp2600 -scale 2.0" }
-				Entry = "synthv1_jack " { Actions = "Exec synthv1_jack" }
+                                Entry = "synthv1_jack " { Actions = "Exec synthv1_jack" }
+                                Entry = "Qsynth " { Actions = "Exec qsynth" }
 				Separator {}
 				Separator {}
 				Entry = "lmms" { Actions = "Exec lmms" }
@@ -379,8 +479,12 @@ Separator {}
                                 Entry = "wpsSpread" { Actions = "Exec /usr/bin/et -style gtk+" }
                                 Entry = "wpsPresent" { Actions = "Exec /usr/bin/wpp -style gtk+" }
                         }
-               Separator {}
-               Separator {}
+                Separator {}
+                Separator {}
+                              Entry = "PDF Studio" { Actions = "Exec /opt/pdfstudioviewer2018/pdfstudioviewer2018" }
+                              Entry = "MasterPDF Editor4" { Actions = "Exec /opt/master-pdf-editor-4/masterpdfeditor4" }
+                Separator {}
+                Separator {}
                   Submenu = "• Calligra Office" {             
                                 Entry = "Calligra Words" { Actions = "Exec calligrawords -platformtheme kde" }
                                 Entry = "Calligra Sheet" { Actions = "Exec calligrasheets -platformtheme kde " }
@@ -400,7 +504,7 @@ Separator {}
               Separator {}
                  Submenu = "• Tex " {
                                 Entry = "gummi" { Actions = "Exec gummi" }
-                                Entry = "kile" { Actions = "Exec kilr" }
+                                Entry = "kile" { Actions = "Exec kile" }
                                 Entry = "lyx" { Actions = "Exec lyx" }
                                 Entry = "texmaker" { Actions = "Exec texmaker" }
                         }
@@ -470,8 +574,18 @@ Separator {}
                               Separator {}
                               Separator {}
                                 Entry = "gnome-power-statistics" { Actions = "Exec gnome-power-statistics" }
+                Separator {}
+                Submenu = "• Remote" {
+                              Separator {}
+                                Entry = "NX" { Actions = "Exec /usr/NX/bin/nxplayer" }
+                                Entry = "remmina" { Actions = "Exec remmina" }
+                                Entry = "spice-gtk (spicy)" { Actions = "Exec spicy" }
+                                Entry = "TeamView" { Actions = "Exec teamviewer" }
+                              Separator {}      
+                } 
+                                
 	}
-	Submenu = "• Virt" {
+                Submenu = "• Virt" {
                               Separator {}
 				Entry = "virtualbox" { Actions = "Exec VirtualBox" }
 				#Entry = "virtualbox" { Actions = "Exec VirtualBox -platformtheme kde" }
@@ -479,6 +593,7 @@ Separator {}
 				Entry = "virt-manager" { Actions = "Exec virt-manager" }
                               Separator {}
                               Separator {}
+                                Entry = "NX" { Actions = "Exec /usr/NX/bin/nxplayer" }
                                 Entry = "remmina" { Actions = "Exec remmina" }
                                 Entry = "spice-gtk (spicy)" { Actions = "Exec spicy" }
                               Separator {}
@@ -492,17 +607,20 @@ Separator {}
                               Separator {}
                                 Entry = "BasiliskII" { Actions = "Exec BasiliskII" }
 				Entry = "SheepShaver" { Actions = "Exec SheepShaver" }
-				Entry = "SheepShaver-dh" { Actions = "Exec /home/bin/0_sheepShaver/SheepShaver" }
-                              Separator {}
+#				Entry = "SheepShaver-dh" { Actions = "Exec /home/bin/0_sheepShaver/SheepShaver" }
+                                Entry = "SheepShaver-NoSdl" { Actions = "Exec /home/bin/0_sheepShaver/SheepShaver_03-09_2010_NOSDL" }
+				Separator {}
 				Entry = "AmiKit" { Actions = "Exec /home/dh84/Amiga-AmiKit/1.5.0/run-amikit" }
                               Separator {}
                                 Entry = "aQemu" { Actions = "Exec aqemu" }
                               Separator {}
-        }
+                                Entry = "PlaynLinux" { Actions = "Exec playonlinux" }
+                              Separator {}
+                  }
 Separator {}
 Separator {}
 	Submenu = "• System" {
-	Separator {}
+                Separator {}
 	                        Entry = "yast" { Actions = "Exec kdesu yast2" }
                                 Entry = "Dolphin-su" { Actions = "Exec kdesu dolphin" }
                                 Entry = "krusader-su" { Actions = "Exec kdesu krusader" }
@@ -512,6 +630,7 @@ Separator {}
                                 Entry = "ksysguard-su" { Actions = "Exec kdesu ksysguard" }
                                 Entry = "xosview" { Actions = "Exec xosview" }
                                 Entry = "hardinfo" { Actions = "Exec hardinfo" }
+                                Entry = "lshw" { Actions = "Exec kdesu /home/dh84/bin/lshw-dh" }
                 Separator {}
                 Separator {}
                                 Entry = "kDiskFree" { Actions = "Exec kdf" }
@@ -522,7 +641,7 @@ Separator {}
                                 Entry = "krename" { Actions = "Exec krename" }
                 Separator {}
                 Separator {}
-                Submenu = "• FileManagers" {
+        Submenu = "• FileManagers" {
                                 Entry = "pcManFM-qt" { Actions = "Exec pcmanfm-qt" }
                                 Entry = "pcManFM" { Actions = "Exec pcmanfm" }
 #                               Entry = "D3lphin-su" { Actions = "Exec kdesu /opt/trinity/bin/d3lphin" }
@@ -533,9 +652,17 @@ Separator {}
                                 Entry = "D3lphin" { Actions = "Exec /opt/trinity/bin/d3lphin" }
                                 Entry = "dfm" { Actions = "Exec dfm" }
                              Separator {}
-                          }
+        }
         Separator {}
-	        Submenu = "• Terminals" {
+        Submenu = "• Remote" {
+                Separator {}
+                                Entry = "remmina" { Actions = "Exec remmina" }
+                                Entry = "spice-gtk (spicy)" { Actions = "Exec spicy" }
+                                Entry = "TeamView" { Actions = "Exec teamviewer" }
+                              Separator {}      
+        }        
+        Separator {}        
+	Submenu = "• Terminals" {
                                 #Entry = "GnomeTerm" { Actions = "Exec gnome-terminal" }
                                 Entry = "Alacritty" { Actions = "Exec alacritty" }
                                 #Entry = "xTerm" { Actions = "Exec xterm" }
@@ -543,21 +670,22 @@ Separator {}
                                 Entry = "Terminator" { Actions = "Exec terminator" }
                                 Entry = "tilix Quake" { Actions = "Exec tilix --quake" }
                                 Entry = "tilda" { Actions = "Exec tilda" }
-                        }
+        }
         Separator {}
-                Submenu = "• disks and partition" {
+        Submenu = "• disks and partition" {
                                 Entry = "gnome-disks" { Actions = "Exec kdesu gnome-disks" }
                                 Entry = "gPartEd" { Actions = "Exec kdesu gparted" }
                                 Entry = "gSmartControl" { Actions = "Exec kdesu gsmartcontrol" }
                               Separator {}
-                                Entry = "Etcher" { Actions = "Exec kdesu /v3/ISOs/0ther/00000_tools/etcher-electron-1.4.4-linux-x64/etcher-electron-1.4.4-x86_64.AppImage" }
+                                Entry = "Etcher-su" { Actions = "Exec kdesu /v3/ISOs/0ther/00000_tools/etcher-electron-1.4.9-linux-x64/etcher-electron-1.4.9-x86_64.AppImage" }
+                                Entry = "Etcher" { Actions = "Exec /v3/ISOs/0ther/00000_tools/etcher-electron-1.4.9-linux-x64/etcher-electron-1.4.9-x86_64.AppImage" }
                                 #Entry = "Etcher" { Actions = "Exec /home/bin/0000_AppImages/Etcher-x64.AppImage" }
                                 Entry = "imagewriter" { Actions = "Exec kdesu imagewriter" }
                                 Entry = "live-grub-stick" { Actions = "Exec kdesu live-grub-stick" }
                                 Entry = "live-usb-gui" { Actions = "Exec kdesu live-usb-gui" }
                                 Entry = "unetbootin" { Actions = "Exec kdesu unetbootin" }
                               Separator {}
-                        }
+         }
                 Separator {}
                 Separator {}
                               Separator {}
@@ -585,9 +713,12 @@ Separator {}
 #                             #Entry = "akonadi start" { Actions = "Exec akonadictl start"}
 #                             #Entry = "akonaditray" { Actions = "Exec akonaditray"}
 #                           #Separator {}
+                              Entry = "klipper" { Actions = "Exec /usr/bin/klipper" }
                               Entry = "Kmix" { Actions = "Exec kmix" }
                               Entry = "pnmixer" { Actions = "Exec pnmixer" }
                               Entry = "pulseaudio-dlna" { Actions = "Exec pulseaudio-dlna" }
+                              Entry = "cantata" { Actions = "Exec cantata" }
+                              Entry = "gmpc" { Actions = "Exec gmpc" }
                             Separator {}
                             Separator {}
                               Entry = "guake" { Actions = "Exec guake" }
@@ -599,6 +730,7 @@ Separator {}
                               Entry = "kdeconnect" { Actions = "Exec kdeconnect-indicator" }
                               Entry = "nextcloud client" { Actions = "Exec nextcloud"}
                               Entry = "NoteCase" { Actions = "Exec notecase" } 
+                              Entry = "NX" { Actions = "Exec /usr/NX/bin/nxplayer" }
                               Entry = "thunderbird" { Actions = "Exec thunderbird" }
                            Separator {}
                            Separator {}

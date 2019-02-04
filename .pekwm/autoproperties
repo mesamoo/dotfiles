@@ -128,6 +128,13 @@ Property = "^(gecko|Gecko|firefox-bin),^Firefox-bin,,^Customize Toolbar\$" {
                Sticky = "True"
                ClientGeometry = "+200-50"
        }
+
+  Property = "^nxplayer.bin,^Nxplayer.bin" {
+               ApplyOn = "Start New Reload"
+               Sticky = "True"
+               ClientGeometry = "1400x1024+250+30"
+#               ClientGeometry = "+200-50"
+       }       
        
 /*      following does not seem to work                 */
   Property = "^kcalc,^kcalc" {
@@ -150,6 +157,11 @@ Property = "^(gecko|Gecko|firefox-bin),^Firefox-bin,,^Customize Toolbar\$" {
 #       }
 
        Property = "^min,^min" {
+               ApplyOn = "Start New Reload"
+               Sticky = "True"
+       }
+
+       Property = "^dolphin,^Dolphin" {
                ApplyOn = "Start New Reload"
                Sticky = "True"
        }
@@ -185,15 +197,16 @@ Property = "^(gecko|Gecko|firefox-bin),^Firefox-bin,,^Customize Toolbar\$" {
                 Sticky = "True"
        }
 
-  Property = "^chromium-browser,^chromium-browser" {
-               ApplyOn = "Start New Workspace Reload"
-               Workspace = "6"
-			   ClientGeometry = "1200x950"
-       }
+#  Property = "^chromium-browser,^chromium-browser" {
+#               ApplyOn = "Start New Workspace Reload"
+#               Workspace = "6"
+#			   ClientGeometry = "1200x950"
+#       }
 # previous stopped working, following should work      
   Property = "^chromium-browser,^Chromium-browser" {
-               ApplyOn = "Start New Workspace Reload"
-               Workspace = "6"
+#               ApplyOn = "Start New Workspace Reload"
+               ApplyOn = "Start New Reload"
+#               Workspace = "6"
                            ClientGeometry = "1200x950"
        }       
 
@@ -364,21 +377,32 @@ Property = "^plank,^Plank" {
  using the geometry in all its glory, defining the windows size in
  addition to its position.
 */
-Property = "^xclock,^XClock" {
+Property = "^nxplayer.bin,^Nxplayer.bin" {
 	ApplyOn = "Start New"
-	ClientGeometry = "137x137+20-137"
-	Border = "False"; Titlebar = "False"
-	Sticky = "True"
-	Layer = "Desktop"
-	Skip = "Menus FocusToggle Snap"
+	ClientGeometry = "1400x1024+250+30"
+#	Border = "False"; Titlebar = "False"
+#	Sticky = "True"
+#	Layer = "Desktop"
+#	Skip = "Menus FocusToggle Snap"
 }
 
-Property = "^geeqie,^Geeqie" {
+Property = "^xclock,^XClock" {
         ApplyOn = "Start New"
-        ClientGeometry = "+200+60"
+        ClientGeometry = "137x137+20-137"
+        Border = "False"; Titlebar = "False"
+        Sticky = "True"
+        Layer = "Desktop"
+        Skip = "Menus FocusToggle Snap"
+}
+
+
+Property = "^geeqie,^Geeqie" {
+        ApplyOn = "Start New Reload"
+#        ClientGeometry = "+200+60"
 #        Border = "False"; Titlebar = "False"
 #        Sticky = "True"
 #        Layer = "Desktop"
+        Layer = "OnTop"
 #        Skip = "Menus FocusToggle Snap"
 }
 
@@ -430,9 +454,16 @@ Property = "^gnome-activity-journal,^Gnome-activity-journal" {
 #        Skip = "Menus FocusToggle Snap"
 }
 
-Property = "^YaST2,^YaST2" {
-        ApplyOn = "Start New"
-        ClientGeometry = "+100+150"
+Property = "^gpartedbin,^GParted" {
+        ApplyOn = "Start New Workspace Reload"
+#        ClientGeometry = "+1150+50"
+        Sticky = "True"
+}
+
+Property = "^YaST2,^YaST Control Center @ tddy-bear" {
+        ApplyOn = "Start New Workspace Reload"
+        ClientGeometry = "+1150+50"
+        Sticky = "True"
 }
 
 # Property = "^xload,^XLoad" {
@@ -543,6 +574,11 @@ I use this to make the far right button into an additional iconify button
 so tbird does not accidentally close (buttons only minimize, use menu or hotkeys to close)
 */
  DecorRules {
+       Property = "^nxplayer.bin,^Nxplayer.bin" {
+               Decor = "noKlose4"
+               ApplyOn = "Start New Reload"
+       }
+
        Property = "^Mail,^Thunderbird" {
                Decor = "noKlose3"
                ApplyOn = "Start New Reload"
@@ -554,14 +590,25 @@ so tbird does not accidentally close (buttons only minimize, use menu or hotkeys
        }
 
        Property = "^gmpc,^Gmpc" {
-               Decor = "noKlose3"
+#               Decor = "noKlose3"
+               Decor = "noKlose4"
                ApplyOn = "Start New Reload"
        }
 
-       Property = "^VirtualBox,^VirtualBox" {
-               Decor = "noKlose3"
+       Property = "^YaST2,^YaST Control Center @ tddy-bear" {
+               Decor = "noKlose4"
                ApplyOn = "Start New Reload"
-       }
+       }       
+       
+       Property = "^gpartedbin,^GParted" {
+               Decor = "noKlose4"
+               ApplyOn = "Start New Reload"
+       }        
+       
+       Property = "^VirtualBox,^VirtualBox" {
+               Decor = "noKlose4"
+               ApplyOn = "Start New Reload"
+       }   
 
        Property = "^yakyak,^yakyak" {
                Decor = "noKlose3"
@@ -575,7 +622,7 @@ so tbird does not accidentally close (buttons only minimize, use menu or hotkeys
 
        Property = "^dolphin,^Dolphin" {
                 Title = "Copying"
-                Decor = "noKlose3"
+                Decor = "noKlose4"
                 ApplyOn = "Start New Reload"
        }
 
@@ -614,10 +661,10 @@ so tbird does not accidentally close (buttons only minimize, use menu or hotkeys
                ApplyOn = "Start New Reload"
        }       
        
-       Property = "^chromium-browser,^chromium-browser" {
-               Decor = "noKlose"
-               ApplyOn = "Start New Reload"
-       }
+#       Property = "^chromium-browser,^chromium-browser" {
+#               Decor = "noKlose"
+#               ApplyOn = "Start New Reload"
+#       }
 # previous stopped working, following should work    
        Property = "^chromium-browser,^Chromium-browser" {
                Decor = "noKlose"

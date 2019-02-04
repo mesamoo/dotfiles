@@ -10,7 +10,11 @@
 #export QT_QPA_PLATFORMTHEME=lxqt
 #
 #[ "$XDG_CURRENT_DESKTOP" = "KDE" ] || [ "$XDG_CURRENT_DESKTOP" = "GNOME" ] || export QT_QPA_PLATFORMTHEME="qt5ct"
-export VAGRANT_DEFAULT_PROVIDER="virtualbox"
 #back to useless
 export QT_QPA_PLATFORMTHEME="qt5ct"
+
+export VAGRANT_DEFAULT_PROVIDER="virtualbox"
+
 mount | grep "/home/0_gdrive" >/dev/null || /usr/bin/google-drive-ocamlfuse "/home/0_gdrive"
+# fix ugly fonts in java applications
+export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"

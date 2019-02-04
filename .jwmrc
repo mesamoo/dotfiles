@@ -3,7 +3,8 @@
 
     <!-- The root menu. -->
     <!-- <RootMenu onroot="12"> -->
-<RootMenu onroot="123">
+<!--<RootMenu onroot="123">-->
+<RootMenu onroot="3">
           <Program icon="terminal.png" label="Terminal">konsole</Program>
           <Program icon="terminal.png" label="fbRun">fbrun</Program>
 <Separator/>
@@ -39,7 +40,6 @@
           <Program label="d3lphin">/opt/trinity/bin/d3lphin</Program>
           <Program label="dolphin">dolphin</Program>
           <Program label="konqueror">konqueror</Program>
-          <Program label="kate">kate</Program>
           <Program label="kwrite">kwrite</Program>
           <Program label="libreoffice">lowriter</Program>  
 <Separator/>
@@ -49,12 +49,15 @@
           <Program label="brackets">brackets</Program>
           <Program label="juffed">juffed</Program>
           <Program label="madedit">madedit</Program>
+          <Program label="medit">medit</Program>
           <Program label="tea">tea</Program>
           <Program label="textadept">textadept</Program>
           <Program label="vsCode">code</Program>
 
-<Separator/>
+      <Separator/>
           <Program label="Okteta">okteta</Program>
+          <Program label="Okular">okular</Program>
+          <Program label="cutemarked">cutemarked</Program>
           <Program label="retext">retext</Program>
 </Menu>
            
@@ -62,50 +65,62 @@
           <Program label="gimp">gimp</Program>
           <Program label="krita">krita</Program>
           <Program label="mypaint">mypaint</Program>
-<Separator/>
+      <Separator/>
           <Program label="digikam">digikam</Program>
+          <Program label="darktable">darktable</Program>
           <Program label="gwenview">gwenview</Program>
-<Separator/>
+          <Program label="pixeluvo">pixeluvo</Program>
+          <Program label="rawstudio">rawstudio</Program>
+          <Program label="rawtherapee">rawtherapee</Program>
+      <Separator/>
           <Program label="dia">dia</Program>
           <Program label="inkscape">inkscape</Program>
           <Program label="karbon">karbon</Program>
+          <Program label="libre Draw">lodraw</Program>
           <Program label="scribus">scibus</Program>
           <Program label="xaraLX">runXara.sh</Program>
-<Separator/>
+      <Separator/>
           <Program label="gcolor2">gcolor2</Program>
           <Program label="skanlite">skanlite</Program>
+          <Program label="simple-scan">simple-scan</Program>
 </Menu>
      
 <Menu label="media">
           <Program label="gmpc">gmpc</Program>
           <Program label="cantata">cantata</Program>
           <Program label="clementine">clementine</Program>
-<Separator/>
+      <Separator/>
           <Program label="audacity">audacity</Program>
+          <Program label="ConvertAudio">/usr/local/share/applications/ffmpeg_multifile-extract-audio.sh</Program>
           <Program label="flacon">flacon</Program>
+          <Program label="gnac">gnac</Program>
           <Program label="HandBrakeGUI">HandBrakeGUI</Program>
           <Program label="kdenlive">kdenlive</Program>
+          <Program label="soundkonverter">soundkonverter</Program>
           <Program label="vlc">vlc</Program>
-<Separator/>
+      <Separator/>
           <Program label="grip">grip</Program>
           <Program label="k3b">k3b</Program>
-          <Separator/>
-          <Program label="qjackctl">qjackctl</Program>
-          <Program label="vmpk">vmpk</Program>
-          <Program label="Bristol-arp">startBristol -jack -arp2600 -scale 2.0</Program>
-          <Program label="synthv1_jack">synthv1_jack</Program>
+          <Program label="easytag">easytag</Program>
+          <Program label="picard">picard</Program>
+
 </Menu>
 
 <Menu label="net">
+   <Menu label="Browsers">
           <Program label="chrome-unstable">google-chrome-unstable</Program>
+          <Program label="chromium">chromium</Program>
+      <Separator/>
           <Program label="firefox">firefox</Program>
+          <Program label="falkon">falkon</Program>
           <Program label="palemoon">palemoon</Program>
-<Separator/>
+      <Separator/>
           <Program label="icecat45.1">/home/dh84/bin/icecat/run-icecatDH.sh</Program>
           <Program label="min">min</Program>
-          <Program label="qupzilla">qupzilla</Program>
           <Program label="vivaldi">vivaldi</Program>
-<Separator/>
+   </Menu>
+   <Menu label="Tools">   
+      <Separator/>
           <Program label="gip">gip</Program>
           <Program label="ipQalc">ipQalc</Program>
           <Program label="iwscanner">gksu iwscanner</Program>
@@ -113,12 +128,133 @@
           <Program label="nettool">gnome-nettool</Program>
           <Program label="wireshark">gksu wireshark</Program>
           <Program label="zenmap">gksu zenmap</Program>
+   </Menu>
+</Menu>
+
+<Menu label="Office">
+          <Program label="MasterPDF Editor4">/opt/master-pdf-editor-4/masterpdfeditor4</Program>  
+          <Program label="LoWrite">lowriter</Program>
+   <Separator/>
+     <Menu label="LibreOffice">
+          <Program label="LoCalc">localc</Program>
+          <Program label="LoDraw">lodraw</Program>
+          <Program label="LoImpress">loimpress</Program>
+          <Program label="LoWrite">lowriter</Program>
+     </Menu>  
+    
+     <Menu label="WPSOffice">
+          <Program label="wpsWord">/usr/bin/wps -style gtk+</Program>
+          <Program label="wpsSpread">/usr/bin/et -style gtk+</Program>
+          <Program label="wpsPresent">/usr/bin/wpp -style gtk+</Program>
+         
+     </Menu>  
+
+     <Menu label="CalligraOffice">
+          <Program label="Calligra Words">calligrawords -platformtheme kde</Program>
+          <Program label="Calligra Sheet">calligrasheets -platformtheme kde</Program>
+          <Program label="Calligra Plan">calligraplan -platformtheme kde</Program>
+          <Program label="Calligra Stage">calligrastage -platformtheme kde</Program>
+          <Program label="Kexi DB">kexi</Program>
+          <Program label="Tellico DB">tellico</Program>
+     </Menu>  
+
+     <Menu label="SoftmakerOffice">
+          <Program label="planmaker">planmaker</Program>
+          <Program label="presentations">presentations</Program>
+          <Program label="textmaker">textmaker</Program>
+     </Menu>  
+ 
+     <Menu label="tex">
+          <Program label="gummi">gummi</Program>
+          <Program label="kile">kile</Program>
+          <Program label="lyx">lyx</Program>
+          <Program label="texmaker">texmaker</Program>
+     </Menu>
+   <Separator/> 
+          <Program label="AbiWord">abiword</Program>
+          <Program label="Recoll">recoll</Program>
+   <Separator/>          
+          <Program label="master-pdf-editor">/opt/master-pdf-editor-4/masterpdfeditor4</Program>
+          <Program label="Pagestream">/opt/pgs/50/Run-PageStream5</Program>
+          <Program label="PDF Studio">/opt/pdfstudioviewer2018/pdfstudioviewer2018</Program>
+          <Program label="Scribus">scribus</Program>
+   <Separator/>          
+          <Program label="catfish">catfish</Program>
+          <Program label="tracker-needle">tracker-needle</Program>
+          <Program label="tracker-prefs">tracker-preferences</Program>
+   <Separator/>               
+          <Program label="Artha">artha</Program>
+          <Program label="qStarDict">qstardict</Program>
+          <Program label="Papyrus">Papyrus</Program>
+          <Program label="zim">zim</Program>
+          
+>
+</Menu>
+
+<Menu label="Synth">
+    <Menu label="Alsa">
+          <Program label="Bristol-aks">startBristol -alsa -aks -scale 2.0 -quality 8</Program>
+          <Program label="Bristol-arp2600">startBristol -alsa -arp2600 -scale 2.0 -quality 8</Program>
+          <Program label="Bristol-roland juno">startBristol -alsa -juno -scale 2.0 -quality 8</Program>
+          <Program label="Bristol-moog mini">startBristol -alsa -mini -scale 2.0 -quality 8</Program>
+          <Program label="Bristol-obxa">startBristol -alsa -obxa -scale 2.0 -quality 8</Program>
+          <Program label="Bristol-rhodes">startBristol -alsa -rhodes -scale 2.0 -quality 8</Program>
+       <Separator/>
+          <Program label="amsynth">amsynth</Program>
+          <Program label="qsynth">qsynth</Program>
+          <Program label="lmms">lmms</Program>
+    </Menu>
+    <Menu label="Jack">
+          <Program label="Start jackd">jackd -R -d alsa</Program>
+          <Program label="kill jack">killall -9 jack</Program>
+          <Program label="kill jackd">killall -9 jackd</Program>
+       <Separator/>
+          <Program label="cadence">cadence</Program>
+          <Program label="patchage">patchage</Program>
+          <Program label="qjackctl">qjackctl</Program>
+          <Program label="vmpk">vmpk</Program>
+       <Separator/>
+          <Program label="Bristol-aks">startBristol -jack -aks -scale 2.0 -quality 8</Program>
+          <Program label="Bristol-arp2600">startBristol -jack -arp2600 -scale 2.0 -quality 8</Program>
+          <Program label="Bristol-arp axxe">startBristol -jack -axxe -scale 2.0 -quality 8</Program>
+          <Program label="Bristol-arp odyssey">startBristol -jack -odyssey -scale 2.0 -quality 8</Program>
+          <Program label="Bristol-arp solina">startBristol -jack -solina -scale 2.0 -quality 8</Program>
+       <Separator/>          
+          <Program label="Bristol-baumann bme-700">startBristol -jack -bme700 -scale 2.0 -quality 8</Program>
+          <Program label="Bristol-crumar bit 01">startBristol -jack -bitone -scale 2.0 -quality 8</Program>
+          <Program label="Bristol-crumar bit 99">startBristol -jack -bit99 -scale 2.0 -quality 8</Program>
+          <Program label="Bristol-crumar bit + mods">startBristol -jack -bit100 -scale 2.0 -quality 8</Program>
+       <Separator/>          
+          <Program label="Bristol-fender bass piano">startBristol -jack -rhodesbass -scale 2.0 -quality 8</Program>
+          <Program label="Bristol-fender rhodes">startBristol -jack -rhodes -scale 2.0 -quality 8</Program>
+          <Program label="Bristol-hammond B3">startBristol -jack -b3 -scale 2.0 -quality 8</Program>
+       <Separator/>          
+          <Program label="Bristol-korg polysix">startBristol -jack -polysix -scale 2.0 -quality 8</Program>
+          <Program label="Bristol-korg poly-800">startBristol -jack -poly800 -scale 2.0 -quality 8</Program>
+       <Separator/>          
+          <Program label="Bristol-moog explorer">startBristol -jack -explorer -scale 2.0 -quality 8</Program>
+          <Program label="Bristol-moog memory">startBristol -jack -memory -scale 2.0 -quality 8</Program>
+          <Program label="Bristol-moog mg1">startBristol -jack -mg1 -scale 2.0 -quality 8</Program>
+          <Program label="Bristol-moog mini">startBristol -jack -mini -scale 2.0 -quality 8</Program>
+          <Program label="Bristol-moog sonic6">startBristol -jack -sonic6 -scale 2.0 -quality 8</Program>
+          <Program label="Bristol-moog voyager">startBristol -jack -voyager -scale 2.0 -quality 8</Program>
+       <Separator/>          
+          <Program label="Bristol-oberheim obx">startBristol -jack -obx -scale 2.0 -quality 8</Program>
+          <Program label="Bristol-oberheim obxa">startBristol -jack -obxa -scale 2.0 -quality 8</Program>
+       <Separator/>          
+          <Program label="Bristol-roland juno">startBristol -jack -juno -scale 2.0 -quality 8</Program>
+          <Program label="Bristol-roland jupiter-8">startBristol -jack -jupiter -scale 2.0 -quality 8</Program>
+          <Program label="Bristol-SC prophet5">startBristol -jack -prophet -scale 2.0 -quality 8</Program>
+          <Program label="Bristol-yamaha dx-7">startBristol -jack -dx -scale 2.0 -quality 8</Program>
+       <Separator/>          
+          <Program label="synthv1_jack">synthv1_jack</Program> 
+    </Menu>          
 </Menu>
 
 <Menu label="util">
           <Program label="kcalc">kcalc</Program>
           <Program label="spectacle">spectacle</Program>
-<Separator/>
+      <Separator/>
           <Program label="kpat">kpat</Program>               
 </Menu>
 
@@ -131,58 +267,62 @@
           <Program label=" "> </Program>
           <Program label="AmiKit">/home/dh84/Amiga-AmiKit/1.5.0/run-amikit</Program>
 </Menu>        
+<Separator/>
+<Program label=""></Program>   
 
-          <Separator/>
-<Separator/>
-        
+<Menu label="system">
+          <Program label="yast2">kdesu yast2</Program>
+          <Program label="dolphin-SU">kdesu dolphin</Program>
+          <Program label="ksysguard">ksysguard</Program>
+<Program label=" "> </Program>
+          <Program label="hardinfo">hardinfo</Program>
+          <Program label="kDiskFree">kdf</Program>
+          <Program label="filelight">filelight</Program>
+<Program label=" "> </Program>
+          <Program label="gparted">kdesu gparted</Program>
+          <Program label="imagewriter">imagewriter</Program>
+</Menu>
+
 <Menu label="startup">
-       <Program label="yast2">kdesu yast2</Program>
-<Separator/>
-       <Program label="artha">artha</Program>
-       <Program label="klipper">klipper</Program>
-       <Program label="qstardict">qstardict</Program>
-       <Separator/>
-       <Program label="kMix">kmix</Program>
-       <Program label="pnmixer">pnmixer</Program>
-       <Program label="pulseaudio-dlna">pulseaudio-dlna</Program>      
-<Separator/>
-        <Program label="akregator">akregator</Program>
-        <Program label="kgpg">kgpg</Program>
-        <Program label="kleopatra">kleopatra</Program>
-        <Program label="nextcloud">nextcloud</Program>
-        <Program label="notecase">notecase</Program>
-        <Program label="thunderbird">thunderbird</Program>
-<Separator/>
-        <Program label="flipWacom">/home/dh84/.pekwm/scripts/flipWacom.sh</Program>
-        <Program label="numlockx">numlockx</Program>
-        <Program label="tint2">tint2</Program>
-        <Program label="tint2conf">tint2conf</Program>
-        <Program label="stalonetray">stalonetray</Program>
-        <Program label="trayer">trayer --widthtype request</Program>trayer --widthtype request
-<Separator/>
-        <Program label="nitrogen">nitrogen</Program>
-        <Program label="nvidia-settings">nvidia-settings</Program>
-        <Program label="xscreensaver">xscreensaver-demo</Program>
+          <Program label="yast2">kdesu yast2</Program>
+     <Separator/>
+          <Program label="artha">artha</Program>
+          <Program label="klipper">klipper</Program>
+          <Program label="qstardict">qstardict</Program>
+     <Separator/>
+          <Program label="kMix">kmix</Program>
+          <Program label="pnmixer">pnmixer</Program>
+          <Program label="pulseaudio-dlna">pulseaudio-dlna</Program>      
+     <Separator/>
+          <Program label="akregator">akregator</Program>
+          <Program label="kgpg">kgpg</Program>
+          <Program label="kleopatra">kleopatra</Program>
+          <Program label="nextcloud">nextcloud</Program>
+          <Program label="notecase">notecase</Program>
+          <Program label="thunderbird">thunderbird</Program>
+     <Separator/>
+          <Program label="flipWacom">/home/dh84/.pekwm/scripts/flipWacom.sh</Program>
+          <Program label="numlockx">numlockx</Program>
+          <Program label="tint2">tint2</Program>
+          <Program label="tint2conf">tint2conf</Program>
+          <Program label="stalonetray">stalonetray</Program>
+          <Program label="trayer">trayer --widthtype request</Program>trayer --widthtype request
+     <Separator/>
+          <Program label="xfce4-panel">xfce4-panel</Program>
+          <Program label="lxpanel">lxpanel</Program>
+          <Program label="trinity-kicker">/opt/trinity/bin/kicker</Program>
+          
+     <Separator/>
+          <Program label="nitrogen">nitrogen</Program>
+          <Program label="nvidia-settings">nvidia-settings</Program>
+          <Program label="xscreensaver">xscreensaver-demo</Program>
 </Menu>
 
 <Menu label="QuickFix">
-        <Program label="flipWacom">/home/dh84/.pekwm/scripts/flipWacom.sh</Program>
-        <Program label=" "> </Program>
-        <Program label="Wacom OFF">xinput disable 11</Program>
-        <Program label="Wacom ON">xinput enable 11</Program>        
-</Menu>
-
-<Menu label="system">
-        <Program label="yast2">kdesu yast2</Program>
-        <Program label="dolphin-SU">kdesu dolphin</Program>
-        <Program label="ksysguard">ksysguard</Program>
-<Program label=" "> </Program>
-        <Program label="hardinfo">hardinfo</Program>
-        <Program label="kDiskFree">kdf</Program>
-        <Program label="filelight">filelight</Program>
-<Program label=" "> </Program>
-        <Program label="gparted">kdesu gparted</Program>
-        <Program label="imagewriter">imagewriter</Program>
+          <Program label="flipWacom">/home/dh84/.pekwm/scripts/flipWacom.sh</Program>
+          <Program label=" "> </Program>
+          <Program label="Wacom OFF">xinput disable 11</Program>
+          <Program label="Wacom ON">xinput enable 11</Program>        
 </Menu>
 
 <Program label=" "> </Program>
@@ -195,6 +335,10 @@
         <Include>exec: xdgmenumaker -n -i -f jwm</Include>
 </Menu>
 
+<Separator/>
+<Program label="hig-play">hig-all-play</Program>
+<Program label="hig-search">hig-all</Program>
+<Program label="hig-info">hig-all-info</Program>
 <Separator/>
         <Restart label="Restart" icon="restart.png"/>
         <Exit label="Exit" confirm="true" icon="quit.png"/>
@@ -220,13 +364,11 @@
     </Group>
 
     <!-- Tray at the bottom. -->
-    <!-- <Tray x="0" y="-1" autohide="off"> -->
-        <Tray x="0" y="-1" height="36" autohide="bottom">
-        <TrayButton icon="jwm-blue">root:1</TrayButton>
-        <Spacer width="2"/>
-        <!-- <TrayButton label="_">showdesktop</TrayButton> -->
-        <!-- <Spacer width="2"/> -->
-        <Pager labeled="true"/>
+
+    <Tray x="0" y="-1" height="36" autohide="bottom">
+        <!-- <TrayButton icon="jwm-blue">root:1</TrayButton> -->
+        <Spacer width="30"/>
+        <!-- <Pager labeled="true"/> -->
         <TaskList maxwidth="256"/>   
         <Spacer width="1"/>
        
@@ -237,9 +379,9 @@
         <TrayButton icon="go-down.svg">exec: /home/dh84/bin/onkyo-iscp 192.168.1.50 MVL DOWN</TrayButton >
         <TrayButton icon="go-up.svg">exec: /home/dh84/bin/onkyo-iscp 192.168.1.50 MVL UP</TrayButton >
         <Spacer width="8"/>
+        <Pager labeled="true"/>
         <Clock format="%H:%M"><Button mask="123">exec:xclock</Button></Clock>
         <Spacer width="8"/>
-        <!-- <Dock width="320" spacing="4"/> -->
         <Spacer width="8"/> 
     </Tray>
 
@@ -247,22 +389,26 @@
     <WindowStyle>
         <!--  <Font>Arimo-18:bold</Font> -->
         <!--  <Font>Arimo-16</Font> -->
-        <Font>Maven Pro-14:medium</Font>
+        <Font>Maven Pro-15:medium</Font>
         <!--  <Width>4</Width> -->
         <Width>5</Width>
        <!--  <Height>21</Height> -->
-        <Height>26</Height>
+        <Height>24</Height>
         <Corner>5</Corner>
-        <Foreground>#dddddd</Foreground>
-        <Background>#555555:#333333</Background>
-        <Outline>#171717</Outline>
+        <Foreground>#bbbbbb</Foreground>
+        <Background>#171717:#171717</Background>
+        <!--  <Outline>#171717</Outline> -->
+        <Outline>#575757</Outline>
         <Opacity>0.5</Opacity>
         <Active>
           <!--  <Font>Arimo-18:bold</Font> -->
-          <Font>Maven Pro-16:bold</Font>
+          <Font>Maven Pro-18:bold</Font>
             <Foreground>#FFFFFF</Foreground>
-            <Background>#0F6BAF:#052F4F</Background>
-            <Outline>#052F4F</Outline>
+            <!--  <Background>#0F6BAF:#052F4F</Background> -->
+            <!--  <Background>#383838:#343434</Background> -->
+            <Background>#787878:#646464</Background>
+            <!--  <Outline>#171717</Outline> -->
+            <Outline>#575757</Outline>
             <Opacity>1.0</Opacity>
         </Active>
     </WindowStyle>
@@ -292,7 +438,7 @@
         <Outline>#cccccc</Outline>
         <Active>
             <Foreground>#FFFFFF</Foreground>
-            <Background>#014374</Background>
+            <Background>#343434</Background>
         </Active>
         <Opacity>0.85</Opacity>
     </MenuStyle>
@@ -319,32 +465,25 @@
         /usr/share/jwm
     </IconPath>
 
-    <!-- Virtual Desktops -->
-    <!-- Desktop tags can be contained within Desktops for desktop names. -->
-        <!-- Default background. Note that a Background tag can be
+  <!-- Virtual Desktops -->
+  <!-- Desktop tags can be contained within Desktops for desktop names. -->
+  <!-- Default background. Note that a Background tag can be
               contained within a Desktop tag to give a specific background
-              for that desktop.
-         -->
+              for that desktop. -->
   <!-- sets default image for all desktops -->
-        <!-- <Background type="command">/home/userx/setbackground</Background> -->
+  <!-- <Background type="command">/home/userx/setbackground</Background> -->
   <!-- sets each desktop individually : needs to have same amount as desktops set --> 
-      <!--<Desktop><Background type="solid">#fff469</Background></Desktop>
-      <Desktop></Desktop>
-      <Desktop></Desktop>
-      <Desktop><Background type="gradient">#86f442:#42adf4</Background></Desktop> 
+  <!-- <Desktop><Background type="solid">#fff469</Background></Desktop>
+       <Desktop></Desktop>
+       <Desktop></Desktop>
+       <Desktop><Background type="gradient">#86f442:#42adf4</Background></Desktop> 
        -->
 
+    <!-- <Desktops width="1" height="4">-->
     <Desktops width="4" height="1">
-        <!-- Default background. Note that a Background tag can be
-              contained within a Desktop tag to give a specific background
-              for that desktop.
-         -->
-      <!--<Background type="solid">#111111</Background>-->  <!-- original setting -->
       <Desktop><Background type="solid">#111111</Background></Desktop>
-      <!-- <Desktop><Background type="image">/usr/share/WindowMaker/Themes/Lichen.themed/Lichen1.jpg</Background></Desktop> -->
       <Desktop><Background type="image">/home/SHARED/walls/nature/water/lake_gunn_new_zealand.jpg</Background></Desktop>
       <Desktop><Background type="image">/home/SHARED/walls/2016-wide/U7xkY1M.jpg</Background></Desktop>
-      <!--<Desktop><Background type="gradient">#86f442:#42adf4</Background></Desktop> -->
       <Desktop><Background type="image">/home/SHARED/walls/nature/water/badacsony.jpg</Background></Desktop>  
     </Desktops>
 
@@ -377,28 +516,31 @@
     <Key key="l">right</Key>
     <Key key="Return">select</Key>
     <Key key="Escape">escape</Key>
-
+<!-- mask="A" = alt key, mask="C" = ctrl key -->
     <Key mask="A" key="Tab">nextstacked</Key>
     <Key mask="A" key="F4">close</Key>
-    <Key mask="A" key="#">desktop#</Key>
+    <Key mask="C" key="#">desktop#</Key>
     <Key mask="A" key="F1">root:1</Key>
     <Key mask="A" key="F2">window</Key>
     <Key mask="A" key="F10">maximize</Key>
-    <Key mask="A" key="Right">rdesktop</Key>
-    <Key mask="A" key="Left">ldesktop</Key>
-    <Key mask="A" key="Up">udesktop</Key>
-    <Key mask="A" key="Down">ddesktop</Key>
+    <Key mask="C" key="Right">rdesktop</Key>
+    <Key mask="C" key="Left">ldesktop</Key>
+    <Key mask="C" key="Up">udesktop</Key>
+    <Key mask="C" key="Down">ddesktop</Key>
 
     <StartupCommand>
       <!-- testing -->
-      <!-- seq 0 1 | xargs -l1 -I@ compton -b -d :0.@ --config ~/.compton.config & -->
-      <!-- end testing -->
+    <!--  seq 0 1 | xargs -l1 -I@ compton -b -d :0.@ --config ~/.compton.config & -->
+    <!--compton   -->
+    <!--xcompmgr &-->
+    <!-- end testing -->
     numlockx &
     setxkbmap -option ctrl:nocaps &
     flipWacom.sh &
     tint2 &
       <!-- testing -->
-      /opt/trinity/bin/klipper &
+      <!-- /opt/trinity/bin/klipper & -->
+      klipper &
       <!-- end testing -->
     <!-- krita & -->
     <!-- yakuake & -->
