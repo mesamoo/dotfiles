@@ -181,6 +181,11 @@ Property = "^(gecko|Gecko|firefox-bin),^Firefox-bin,,^Customize Toolbar\$" {
                 Sticky = "True"
        }
 
+  Property = "^spotify,^Spotify" {
+               ApplyOn = "Start New Reload"
+                Sticky = "True"
+       }       
+       
   Property = "^libreoffice,^libreoffice-writer" {
             ApplyOn = "Start New Reload"
             FrameGeometry = "1180x915+94+74"
@@ -590,6 +595,12 @@ so tbird does not accidentally close (buttons only minimize, use menu or hotkeys
        }
 
        Property = "^gmpc,^Gmpc" {
+#               Decor = "noKlose3"
+               Decor = "noKlose4"
+               ApplyOn = "Start New Reload"
+       }
+       
+       Property = "^spotify,^Spotify" {
 #               Decor = "noKlose3"
                Decor = "noKlose4"
                ApplyOn = "Start New Reload"

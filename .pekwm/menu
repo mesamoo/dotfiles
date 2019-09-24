@@ -25,26 +25,87 @@ Separator {}
 }
 #Separator {}
                         Submenu = "Onkyo" {
-                            Separator {}
-                                Entry = "Power Off" { Actions = "Exec onkyo --host 192.168.1.50 power=off" }
-                                Entry = "Power On" { Actions = "Exec onkyo --host 192.168.1.50 power=on" }
-                                Separator {}
-                                Entry = "volume 2" { Actions = "Exec onkyo --host 192.168.1.50 volume=2" }
-                                Entry = "volume 10" { Actions = "Exec onkyo --host 192.168.1.50 volume=10" }
-                                Entry = "volume 15" { Actions = "Exec onkyo --host 192.168.1.50 volume=15" }
-                                Entry = "volume 25" { Actions = "Exec onkyo --host 192.168.1.50 volume=30" }
-                                Separator {}
-                                Entry = "Mute" { Actions = "Exec onkyo --host 192.168.1.50 audio-muting=on" }                                
-                                Entry = "Un-Mute" { Actions = "Exec onkyo --host 192.168.1.50 audio-muting=off" }                                
-                                Separator {}
-                           Submenu = "• input" {
-                                Entry =  "rune" { Actions = "Exec onkyo --host 192.168.1.50 source=pc" }
-                                Entry =  "Phono-low" { Actions = "Exec onkyo --host 192.168.1.50 source=phono" }
-                                Entry =  "Phono-high" { Actions = "Exec onkyo --host 192.168.1.50 source=bd" }
-                                Entry =  "aux-phone" { Actions = "Exec onkyo --host 192.168.1.50 source=cbl" }
-                           }
-                                Separator {}
-                           Submenu = "• volume" {
+                        Separator {}
+                        Entry = "Toggle Mute State (all)" { Actions = "Exec onkyo-toggle-dh2.sh" }
+                        Separator {}
+                          Submenu = "• Zone2" { 
+#                                Entry = "Toggle Mute" { Actions = "Exec onkyo-iscp 192.168.1.50 ZMT TG" }
+#                        Separator {}                           
+#                                Entry = "volume up" { Actions = "Exec onkyo-iscp 192.168.1.50 ZVL UP" }
+#                                Entry = "volume down" { Actions = "Exec onkyo-iscp 192.168.1.50 ZVL DOWN" }
+                        Separator {}                             
+                          Submenu = "• volume" {
+                                Entry = "volume 2" { Actions = "Exec onkyo --host 192.168.1.50 zone2.volume=2" }
+                                Entry = "volume 15" { Actions = "Exec onkyo --host 192.168.1.50 zone2.volume=15" }
+                                Entry = "volume 20" { Actions = "Exec onkyo --host 192.168.1.50 zone2.volume=20" }
+                                Entry = "volume 25" { Actions = "Exec onkyo --host 192.168.1.50 zone2.volume=25" }
+                                Entry = "volume 30" { Actions = "Exec onkyo --host 192.168.1.50 zone2.volume=30" }
+                                Entry = "volume 35" { Actions = "Exec onkyo --host 192.168.1.50 zone2.volume=35" }
+                                Entry = "volume 40" { Actions = "Exec onkyo --host 192.168.1.50 zone2.volume=40" }
+                                Entry = "volume 45" { Actions = "Exec onkyo --host 192.168.1.50 zone2.volume=45" }
+                                Entry = "volume 50" { Actions = "Exec onkyo --host 192.168.1.50 zone2.volume=50" }
+                                Entry = "volume 55" { Actions = "Exec onkyo --host 192.168.1.50 zone2.volume=55" }
+                                Entry = "volume 60" { Actions = "Exec onkyo --host 192.168.1.50 zone2.volume=60" }                                                 
+                        Separator {}
+                                               }                            
+                          Submenu = "• input" {
+                                Entry =  "red" { Actions = "Exec onkyo-iscp 192.168.1.50 SLZ 01" }
+                                Entry =  "Boss" { Actions = "Exec onkyo-iscp 192.168.1.50 SLZ 05" }
+                                Entry =  "HiFiBerry-DAC+" { Actions = "Exec onkyo-iscp 192.168.1.50 SLZ 20" }
+                                Entry =  "Carver-c9" { Actions = "Exec onkyo-iscp 192.168.1.50 SLZ 23" }
+                                Entry =  "Phono-low" { Actions = "Exec onkyo-iscp 192.168.1.50 SLZ 22" }
+                                Entry =  "Phono-high" { Actions = "Exec onkyo-iscp 192.168.1.50 SLZ 02" }
+#                                Entry =  "bd" { Actions = "Exec onkyo-iscp 192.168.1.50 SLZ 10 " }
+                                Entry =  "Bluetooth-PIXI" { Actions = "Exec onkyo-iscp 192.168.1.50 SLZ 2E" }
+                                Entry =  "dlna" { Actions = "Exec onkyo-iscp 192.168.1.50 SLZ 27" }               
+                                               }
+#                        Separator {}
+#                                Entry = "Zone2 On" { Actions = "Exec onkyo-iscp 192.168.1.50 ZPW 01" }
+#                                Entry = "Zone2 Off" { Actions = "Exec onkyo-iscp 192.168.1.50 ZPW 00" } 
+                        Separator {}
+#                         Submenu = "• volumeAlt" {
+#                                Entry = "volume 2" { Actions = "Exec onkyo-iscp 192.168.1.50 ZVL 2" }
+#                                Entry = "volume 10" { Actions = "Exec onkyo-iscp 192.168.1.50 ZVL 10" }
+#                                Entry = "volume 15" { Actions = "Exec onkyo-iscp 192.168.1.50 ZVL 15" }  
+#                                Entry = "volume 20" { Actions = "Exec onkyo-iscp 192.168.1.50 ZVL 20" }
+#                                Entry = "volume 25" { Actions = "Exec onkyo-iscp 192.168.1.50 ZVL 25" }
+#                                Entry = "volume 30" { Actions = "Exec onkyo-iscp 192.168.1.50 ZVL 30" }
+#                                Entry = "volume 35" { Actions = "Exec onkyo-iscp 192.168.1.50 ZVL 35" }  
+#                                Entry = "volume 40" { Actions = "Exec onkyo-iscp 192.168.1.50 ZVL 40" }
+#                                Entry = "volume 45" { Actions = "Exec onkyo-iscp 192.168.1.50 ZVL 45" }
+#                                Entry = "volume 50" { Actions = "Exec onkyo-iscp 192.168.1.50 ZVL 50" }
+#                                Entry = "volume 55" { Actions = "Exec onkyo-iscp 192.168.1.50 ZVL 55" }  
+#                                Entry = "volume 60" { Actions = "Exec onkyo-iscp 192.168.1.50 ZVL 60" }
+#                                Entry = "volume 65" { Actions = "Exec onkyo-iscp 192.168.1.50 ZVL 65" }
+#                       Separator {}
+#                                                 }                            
+#                                Entry = "Mute" { Actions = "Exec onkyo --host 192.168.1.50 audio-muting=on" }                                
+#                                Entry = "Un-Mute" { Actions = "Exec onkyo --host 192.168.1.50 audio-muting=off" } 
+#                       Separator {}
+#                         Submenu = "• OnkyoAlt" {
+#                                Entry = "Power Off" { Actions = "Exec onkyo-iscp 192.168.1.50 PWR 00" }
+#                                Entry = "Power On" { Actions = "Exec onkyo-iscp 192.168.1.50 PWR 01" }
+#                                Entry = "Zone2 Off" { Actions = "Exec onkyo-iscp 192.168.1.50 ZPW 00" }
+#                                Entry = "Zone2 On" { Actions = "Exec onkyo-iscp 192.168.1.50 ZPW 01" }                           
+#                       Separator {}
+#                                                }
+                                             }     
+                                          
+                                Entry = "     Toggle Mute" { Actions = "Exec onkyo-iscp 192.168.1.50 ZMT TG" }                          
+                                Entry = "     volume up" { Actions = "Exec onkyo-iscp 192.168.1.50 ZVL UP" }
+                                Entry = "     volume down" { Actions = "Exec onkyo-iscp 192.168.1.50 ZVL DOWN" }
+                        Separator {}
+                                Entry = "     Zone2 On" { Actions = "Exec onkyo-iscp 192.168.1.50 ZPW 01" }
+                                Entry = "     Zone2 Off" { Actions = "Exec onkyo-iscp 192.168.1.50 ZPW 00" }
+Separator {}                            
+Separator {}                            
+                          Submenu = "• Zone1" {
+#                            Entry = "Toggle Mute" { Actions = "Exec onkyo --host 192.168.1.50 audio-muting=toggle" }
+#                            Separator {} 
+#                                Entry = "volume up" { Actions = "Exec onkyo-iscp 192.168.1.50 MVL UP" }
+#                                Entry = "volume down" { Actions = "Exec onkyo-iscp 192.168.1.50 MVL DOWN" }
+                         Separator {}  
+                          Submenu = "• volume" {
                                 Entry = "volume 2" { Actions = "Exec onkyo --host 192.168.1.50 volume=2" }
                                 Entry = "volume 15" { Actions = "Exec onkyo --host 192.168.1.50 volume=15" }
                                 Entry = "volume 20" { Actions = "Exec onkyo --host 192.168.1.50 volume=20" }
@@ -56,14 +117,40 @@ Separator {}
                                 Entry = "volume 50" { Actions = "Exec onkyo --host 192.168.1.50 volume=50" }
                                 Entry = "volume 55" { Actions = "Exec onkyo --host 192.168.1.50 volume=55" }
                                 Entry = "volume 60" { Actions = "Exec onkyo --host 192.168.1.50 volume=60" }                                                 
-                            Separator {}
-                            Separator {}
-                                Entry = "volume down" { Actions = "Exec onkyo-iscp 192.168.1.50 MVL DOWN" }
-                                Entry = "volume up" { Actions = "Exec onkyo-iscp 192.168.1.50 MVL UP" }
-                            }
-                        }
+#                       Separator {}
+                                                 }
+#toggle mute                           
+
+                           Submenu = "• input" {
+                                Entry =  "red" { Actions = "Exec onkyo --host 192.168.1.50 source=cbl" }
+                                Entry =  "Boss" { Actions = "Exec onkyo --host 192.168.1.50 source=pc" }
+                                Entry =  "HiFiBerry-DAC+" { Actions = "Exec onkyo --host 192.168.1.50 source=tv/tape" }
+                                Entry =  "Carver-c9" { Actions = "Exec onkyo --host 192.168.1.50 source=cd" }
+                                Entry =  "Phono-low" { Actions = "Exec onkyo --host 192.168.1.50 source=phono" }
+                                Entry =  "Phono-high" { Actions = "Exec onkyo --host 192.168.1.50 source=game" }
+#                                Entry =  "bd" { Actions = "Exec onkyo --host 192.168.1.50 source=bd" }
+                                Entry =  "Bluetooth-PIXI" { Actions = "Exec onkyo --host 192.168.1.50 source=bluetooth" }
+                                Entry =  "dlna" { Actions = "Exec onkyo --host 192.168.1.50 source=dlna" }               
+                                               }
+                           Separator {}          
+#                          Separator {}
+#                                Entry = "Power On" { Actions = "Exec onkyo --host 192.168.1.50 power=on" }
+#                                Entry = "Power Off" { Actions = "Exec onkyo --host 192.168.1.50 power=off" } 
+                                                 }
+                                Entry = "     Toggle Mute" { Actions = "Exec onkyo --host 192.168.1.50 audio-muting=toggle" }
+#                                Entry = "     Toggle z2 Mute" { Actions = "Exec onkyo --host 192.168.1.50 zone2 muting toggle" }
+                                Entry = "     volume up" { Actions = "Exec onkyo-iscp 192.168.1.50 MVL UP" }
+                                Entry = "     volume down" { Actions = "Exec onkyo-iscp 192.168.1.50 MVL DOWN" } 
+                          Separator {}
+                                Entry = "     Zone1 On" { Actions = "Exec onkyo --host 192.168.1.50 power=on" }
+                                Entry = "     Zone1 Off" { Actions = "Exec onkyo --host 192.168.1.50 power=off" } 
+                          Separator {}
+                          Separator {}
+                     }
+
 Separator {}
 Separator {}
+
 				Entry = "Dolphin          " { Actions = "Exec dolphin" }
 				Entry = "krusader" { Actions = "Exec krusader" }
                                 Entry = "konq" { Actions = "Exec konqueror" }
@@ -73,6 +160,7 @@ Separator {}
 				Entry = "kwrite" { Actions = "Exec kwrite" }
 				Entry = "medit" { Actions = "Exec medit" }
 				#Entry = "juffed" { Actions = "Exec juffed" }
+				Entry = "Notes" { Actions = "Exec medit ~/Desktop/Notes" }
 Separator {}
 
 Separator {}
@@ -181,45 +269,26 @@ Separator {}
 		Separator {}
 	}
 	Submenu = "• Media" {
-                        Submenu = "• cast" {
-                                Entry = "gnomeCast" { Actions = "Exec gnomecast" }
-                        Separator {}
-                                ##Entry = "catt play" { Actions = "Exec catt with modded hig" }
-                                #Entry = "catt pause" { Actions = "Exec catt pause" }
-                                #Entry = "catt continue" { Actions = "Exec catt play" }
-                                #Entry = "catt ffwd 30s" { Actions = "Exec catt ffwd 30" }
-                                #Entry = "catt ffwd 1m" { Actions = "Exec catt ffwd 60" }
-                                #Entry = "catt ffwd 2m" { Actions = "Exec catt ffwd 120" }
-                                #Entry = "catt stop" { Actions = "Exec catt stop" }
-                             Separator {}
-                                Entry = "castnow pause/play" { Actions = "Exec castnow --command space" }
-                                Entry = "castnow stop" { Actions = "Exec castnow --command s" }
-                                Entry = "castnow back" { Actions = "Exec castnow --command left" }
-                                Entry = "castnow forward" { Actions = "Exec castnow --command right" }
-                                #Entry = "castnow quit" { Actions = "Exec castnow --command q" }
-                                Entry = "castnow KILL nodejs" { Actions = "Exec killall -9 node-default" }
-                             Separator {}
-                                Entry = "kill mkchromecast" { Actions = "Exec killall -9 mkchromecast" }
-                        }
+                                Entry = "Spotify" { Actions = "Exec spotify" }
 		Separator {}   
-                        Submenu = "• Onkyo" {
-                              Separator {}
-                                Entry = "Power Off" { Actions = "Exec onkyo --host 192.168.1.50 power=off" }
-                                Entry = "Power On" { Actions = "Exec onkyo --host 192.168.1.50 power=on" }
-                                Separator {}
-                                Entry = "volume 15" { Actions = "Exec onkyo --host 192.168.1.50 volume=15" }
-                                Entry = "volume 20" { Actions = "Exec onkyo --host 192.168.1.50 volume=20" }
-                                Entry = "volume 25" { Actions = "Exec onkyo --host 192.168.1.50 volume=25" }
-                                Entry = "volume 30" { Actions = "Exec onkyo --host 192.168.1.50 volume=30" }
-                                Entry = "volume 35" { Actions = "Exec onkyo --host 192.168.1.50 volume=35" }
-                                Entry = "volume 40" { Actions = "Exec onkyo --host 192.168.1.50 volume=40" }
-                                Entry = "volume 45" { Actions = "Exec onkyo --host 192.168.1.50 volume=45" }
-                                Entry = "volume 50" { Actions = "Exec onkyo --host 192.168.1.50 volume=50" }
-                                Entry = "volume 55" { Actions = "Exec onkyo --host 192.168.1.50 volume=55" }
-                                Entry = "volume 60" { Actions = "Exec onkyo --host 192.168.1.50 volume=60" }                     
-                              Separator {}
-                              Separator {}
-                        }
+#                        Submenu = "• Onkyo" {
+#                              Separator {}
+#                                Entry = "Power Off" { Actions = "Exec onkyo --host 192.168.1.50 power=off" }
+#                                Entry = "Power On" { Actions = "Exec onkyo --host 192.168.1.50 power=on" }
+#                                Separator {}
+#                                Entry = "volume 15" { Actions = "Exec onkyo --host 192.168.1.50 volume=15" }
+#                                Entry = "volume 20" { Actions = "Exec onkyo --host 192.168.1.50 volume=20" }
+#                                Entry = "volume 25" { Actions = "Exec onkyo --host 192.168.1.50 volume=25" }
+#                                Entry = "volume 30" { Actions = "Exec onkyo --host 192.168.1.50 volume=30" }
+#                                Entry = "volume 35" { Actions = "Exec onkyo --host 192.168.1.50 volume=35" }
+#                                Entry = "volume 40" { Actions = "Exec onkyo --host 192.168.1.50 volume=40" }
+#                                Entry = "volume 45" { Actions = "Exec onkyo --host 192.168.1.50 volume=45" }
+#                                Entry = "volume 50" { Actions = "Exec onkyo --host 192.168.1.50 volume=50" }
+#                                Entry = "volume 55" { Actions = "Exec onkyo --host 192.168.1.50 volume=55" }
+#                                Entry = "volume 60" { Actions = "Exec onkyo --host 192.168.1.50 volume=60" }                     
+#                              Separator {}
+#                              Separator {}
+#                        }
 		        Submenu = "• Player" {
 		              Separator {}
                                 Entry = "lebiniou" { Actions = "Exec lebiniou --input pulseaudio -x 1920 -y 1080" }
@@ -227,6 +296,7 @@ Separator {}
 				Entry = "cantata" { Actions = "Exec cantata" }
 				Entry = "gmpc" { Actions = "Exec gmpc" }
 				Entry = "clementine" { Actions = "Exec clementine" }
+                                Entry = "strawberry" { Actions = "Exec strawberry" }
 				Entry = "nuvol3" { Actions = "Exec nuvolaplayer3" }
 				Separator {}
 				Separator {}
@@ -238,12 +308,15 @@ Separator {}
 				Entry = "vlc" { Actions = "Exec vlc" }
 				Entry = "smplayer" { Actions = "Exec smplayer" }
 				Entry = "umplayer" { Actions = "Exec umplayer" }
+				Entry = "youtube-dl-gui" { Actions = "Exec youtube-dl-gui" }
 			       Separator {}
 			       Separator {}
 			}
 		Separator {}
 		Separator {}
 		        Submenu = "• AudioTools  " {
+                                Entry = "Asunder" { Actions = "Exec asunder" }
+                                #Entry = "Whipper" { Actions = "Exec dhWhipperScript" }
 		              Separator {}
 		                Entry = "Audacity" { Actions = "Exec audacity" }
 		                Entry = "ConvertAudio" { Actions = "Exec /usr/local/share/applications/ffmpeg_multifile-extract-audio.sh" }
@@ -327,6 +400,28 @@ Separator {}
 			}
 		Separator {}
 		Separator {}
+		        Submenu = "• ChromeCast" {
+                                Entry = "gnomeCast" { Actions = "Exec gnomecast" }
+                        Separator {}
+                                ##Entry = "catt play" { Actions = "Exec catt with modded hig" }
+                                #Entry = "catt pause" { Actions = "Exec catt pause" }
+                                #Entry = "catt continue" { Actions = "Exec catt play" }
+                                #Entry = "catt ffwd 30s" { Actions = "Exec catt ffwd 30" }
+                                #Entry = "catt ffwd 1m" { Actions = "Exec catt ffwd 60" }
+                                #Entry = "catt ffwd 2m" { Actions = "Exec catt ffwd 120" }
+                                #Entry = "catt stop" { Actions = "Exec catt stop" }
+                             Separator {}
+                                Entry = "castnow pause/play" { Actions = "Exec castnow --command space" }
+                                Entry = "castnow stop" { Actions = "Exec castnow --command s" }
+                                Entry = "castnow back" { Actions = "Exec castnow --command left" }
+                                Entry = "castnow forward" { Actions = "Exec castnow --command right" }
+                                #Entry = "castnow quit" { Actions = "Exec castnow --command q" }
+                                Entry = "castnow KILL nodejs" { Actions = "Exec killall -9 node-default" }
+                             Separator {}
+                                Entry = "kill mkchromecast" { Actions = "Exec killall -9 mkchromecast" }
+                        }
+                        Separator {}
+                        Separator {}
 		        Submenu = "• Screencast  " {
 		                Separator {}
 		                Entry = "av-caster" { Actions = "Exec av-caster" }
@@ -348,6 +443,7 @@ Separator {}
 				Entry = "OpenBroadcast " { Actions = "Exec obs" }
 				Entry = "OpenShot" { Actions = "Exec openshot-qt" }
 				Entry = "Pitivi" { Actions = "Exec pitivi" }
+				Entry = "youtube-dl-gui" { Actions = "Exec youtube-dl-gui" }
 			}
                               Separator {}
                               Separator {}
@@ -356,6 +452,7 @@ Separator {}
                                 Entry = "curlew" { Actions = "Exec curlew" }
                                 Entry = "ff MultiConverter" { Actions = "Exec ffmulticonverter" }
                                 Entry = "winFF" { Actions = "Exec winff" }
+                                Entry = "youtube-dl-gui" { Actions = "Exec youtube-dl-gui" }
                          }
 		              Separator {}
 		              Separator {}
@@ -373,6 +470,7 @@ Separator {}
                                 Entry = "kMplayer" { Actions = "Exec kmplayer" }
                 Separator {}
                 Separator {}
+                                Entry = "youtube-dl-gui" { Actions = "Exec youtube-dl-gui" }
                 Separator {}
 	}
 	Submenu = "• Net" {
@@ -398,6 +496,7 @@ Separator {}
                               Separator {}
                               Separator {}
 				Entry = "min" { Actions = "Exec min" }
+				Entry = "midori" { Actions = "Exec midori" }
                               Separator {}
                               Separator {}
                                 Entry = "brave" { Actions = "Exec brave" }
@@ -431,6 +530,8 @@ Separator {}
 				Entry = "kopete" { Actions = "Exec kopete" }
 				Entry = "homechat" { Actions = "Exec homechat" }
 				Entry = "empathy" { Actions = "Exec empathy" }
+			      Separator {}
+				Entry = "Cutegram" { Actions = "Exec cutegram" }
 				Entry = "Telegram" { Actions = "Exec Telegram" }
                               Separator {}
                         }
@@ -677,8 +778,8 @@ Separator {}
                                 Entry = "gPartEd" { Actions = "Exec kdesu gparted" }
                                 Entry = "gSmartControl" { Actions = "Exec kdesu gsmartcontrol" }
                               Separator {}
-                                Entry = "Etcher-su" { Actions = "Exec kdesu /v3/ISOs/0ther/00000_tools/etcher-electron-1.4.9-linux-x64/etcher-electron-1.4.9-x86_64.AppImage" }
-                                Entry = "Etcher" { Actions = "Exec /v3/ISOs/0ther/00000_tools/etcher-electron-1.4.9-linux-x64/etcher-electron-1.4.9-x86_64.AppImage" }
+                                Entry = "Etcher-su" { Actions = "Exec kdesu /v3/ISOs/0ther/00000_tools/etcher/Etcher" }
+                                #Entry = "Etcher" { Actions = "Exec /v3/ISOs/0ther/00000_tools/etcher-electron-1.4.9-linux-x64/etcher-electron-1.4.9-x86_64.AppImage" }
                                 #Entry = "Etcher" { Actions = "Exec /home/bin/0000_AppImages/Etcher-x64.AppImage" }
                                 Entry = "imagewriter" { Actions = "Exec kdesu imagewriter" }
                                 Entry = "live-grub-stick" { Actions = "Exec kdesu live-grub-stick" }
@@ -713,15 +814,20 @@ Separator {}
 #                             #Entry = "akonadi start" { Actions = "Exec akonadictl start"}
 #                             #Entry = "akonaditray" { Actions = "Exec akonaditray"}
 #                           #Separator {}
+                            Entry = "Start1" { Actions = "Exec /home/dh84/.pekwm/scripts/startscripts/start1.sh" }
+                            Separator {}
+                            Separator {}
                               Entry = "klipper" { Actions = "Exec /usr/bin/klipper" }
-                              Entry = "Kmix" { Actions = "Exec kmix" }
-                              Entry = "pnmixer" { Actions = "Exec pnmixer" }
                               Entry = "pulseaudio-dlna" { Actions = "Exec pulseaudio-dlna" }
+                              Entry = "guake" { Actions = "Exec guake" }
+                            Separator {}
+                            Separator {}
+                              Entry = "Kmix" { Actions = "Exec kmix" }
+                              Entry = "pnmixer" { Actions = "Exec pnmixer" }                              
                               Entry = "cantata" { Actions = "Exec cantata" }
                               Entry = "gmpc" { Actions = "Exec gmpc" }
                             Separator {}
-                            Separator {}
-                              Entry = "guake" { Actions = "Exec guake" }
+                            Separator {}                              
                               Entry = "Kleopatra" { Actions = "Exec kleopatra" }
                               Entry = "kGPG" { Actions = "Exec kgpg" }
                               Entry = "qSynergy" { Actions = "Exec qsynergy" }
@@ -730,7 +836,6 @@ Separator {}
                               Entry = "kdeconnect" { Actions = "Exec kdeconnect-indicator" }
                               Entry = "nextcloud client" { Actions = "Exec nextcloud"}
                               Entry = "NoteCase" { Actions = "Exec notecase" } 
-                              Entry = "NX" { Actions = "Exec /usr/NX/bin/nxplayer" }
                               Entry = "thunderbird" { Actions = "Exec thunderbird" }
                            Separator {}
                            Separator {}
@@ -747,7 +852,6 @@ Separator {}
                           Separator {}
                           Separator {}
                               Entry = "OkularSession" { Actions = "Exec ok" }
-#
                           Separator {}
                           Separator {}
                         Submenu = "• tray" {
@@ -769,6 +873,7 @@ Separator {}
                               Entry = "kdeconnect KILL KILL KILL" { Actions = "Exec `killall -9 indicator-kdeconnect`" }
                               Entry = "krunner" { Actions = "Exec krunner" }
                               Entry = "nextcloud client" { Actions = "Exec nextcloud"}
+                              Entry = "NX" { Actions = "Exec /usr/NX/bin/nxplayer" }
                               Entry = "RainCal" { Actions = "Exec ~/bin/rainlendar2/rainlendar2"}
                            Separator {}   
                               Entry = "Baloo start" { Actions = "Exec /home/dh84/.pekwm/scripts/YADstartBaloo.sh" }

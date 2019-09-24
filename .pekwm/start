@@ -1,49 +1,20 @@
 #!/bin/sh
-#export DE="kde"          #removed AGAIN 2016-08 breaks menu and other functions
-#trying to fix qt application freezes
-#export DE="kde"
-#export DE="lxde"
-###seq 0 1 | xargs -l1 -I@ compton -b -d :0.@ --config ~/.compton.config &
 xcompmgr &
 numlockx &
-#
-###following breaks qedit
-##setxkbmap -option ctrl:nocaps &
-### seems to work for pekwm (but not jwm) if moved to ~/.Xmodmap
-###see https://wiki.archlinux.org/index.php/Xmodmap
-###useful commands: xev, xmodmap -pke,
-#
-
 ~/.pekwm/scripts/display-xset.sh &
 feh --bg-scale ~/.pekwm/scripts/walls/0.jpg &
 dunst &
 yakuake &
-nvidia-settings
-####kcmshell4 kcm_baloofileadv
-/opt/trinity/bin/kicker &
+#/opt/trinity/bin/kicker &
 xfce4-panel &
 lxpanel &
 python ~/.pekwm/scripts/switchbg.py ~/.pekwm/scripts/walls/ -s 0.08 &
 kwalletmanager &
-#conky  --config=/home/dh84/.conkyrc.locker &
-#conky --config=/home/dh84/.conkyrc.leftclockW.locker &
 knemo &
-#nextcloud &
 qstardict &
-#gdbus call -e -d org.freedesktop.DBus -o /org/freedesktop/DBus -m org.freedesktop.DBus.StartServiceByName org.freedesktop.Tracker1 0 &
-#tracker daemon -s &
 ~/.pekwm/scripts/flipWacom.sh &
-#~/bin/rainlendar2/rainlendar2 &
-#gnome-activity-journal &
 artha &
-#/opt/trinity/bin/klipper &
-#/usr/bin/klipper &
-#kmix &
-telegram &
-###~/.pekwm/scripts/YADstartBaloo.sh
-##/home/dh84/.pekwm/scripts/rclmon.sh start
-##indicator-kdeconnect &
-##/home/dh84/0000_GIT/000_dotfiles_dh/.pekwm/scripts/kdeconnect.sh &
+telegram-desktop &
 conky  --config=/home/dh84/.conkyrc.locker &
 conky --config=/home/dh84/.conkyrc.leftclockW.locker &
-#/usr/NX/bin/nxplayer &
+
